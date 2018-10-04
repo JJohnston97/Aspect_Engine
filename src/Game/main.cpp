@@ -1,14 +1,26 @@
 #include <iostream>
+#include <Windows.h>
+#include <memory>
+
+#define shared std::shared_ptr
+#define weak std::weak_ptr
 
 int main()
 {
-	int num = 1;
-	char letter = NULL;
 	
-	std::cout<< "hello world" << std::endl;
+	// Initialize engine
+	shared<Core> core = Core::initialize();
+
+	// Create a single in-game Object
+	shared<Entity> entity = core->addEntity();
+
+	// Add a very simple component to it
+	weak<TestScreen> testScreen = entity->addComponent<TestScreen>();
+
+	// Start the engine's main loop
+	core->Start();
 
 	
-
 	return 0;
 
 }
