@@ -1,6 +1,58 @@
 cmake_minimum_required(VERSION 2.6)
-project(GAMEENGINE)
+project(ASPECT)
+
+if(MSVC)
+  include_directories(
+    Contrib/SDL2-2.0.8/include
+    Contrib/glew-1.11.0/include/GL
+    Contrib/freeglut/include/GL
+    
+  )
+
+  link_directories(
+    ${CMAKE_SOURCE_DIR}/Contrib/SDL2-2.0.8/lib/x86
+    ${CMAKE_SOURCE_DIR}/Contrib/glew-1.11.0/lib
+    ${CMAKE_SOURCE_DIR}/Contrib/freeglut/lib
+  )
+endif()
+
+if(MSVC)
+  add_definitions(-DSDL_MAIN_HANDLED)
+endif()
+
+add_library(aspect
+  src/Aspect/Program.cpp
+  src/Aspect/Screen.cpp
+)
 
 add_executable(game
   src/game/main.cpp
 )
+
+if(MSVC)
+  target_link_libraries(aspect
+    SDL2 glew32 opengl32
+  )
+
+target_link_libraries(game aspect)
+
+else()
+  target_link_libraries(aspect
+    SDL2 GLU GLEW GL
+  )
+endif()
+
+
+if(MSVC)
+  add_custom_command(TARGET game POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+      "${CMAKE_SOURCE_DIR}/contrib/msvc-windows-x86/SDL2/bin/SDL2.dll"
+      "$<TARGET_FILE_DIR:game>"
+  )
+
+  add_custom_command(TARGET game POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+      "${CMAKE_SOURCE_DIR}/contrib/msvc-windows-x86/glew/bin/glew32.dll"
+      "$<TARGET_FILE_DIR:game>"
+  )
+endif()
