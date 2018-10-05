@@ -60,22 +60,22 @@ namespace Aspect
 
 			glEnable(GL_DEPTH_TEST);	// Used to make sure what is in front are alwasy in front no matter the order they are drawn
 
-			bool go = true;		// What the engine runs on (Needs to change)
-			while (go)			// While go is true
-			{
+			//bool go = true;		// What the engine runs on (Needs to change)
+			//while (go)			// While go is true
+			//{
 
-				SDL_Event incomingEvent;				// Datatype for the event
-			
-				while (SDL_PollEvent(&incomingEvent))	// Check if there is an event in the queue
-				{
-					switch (incomingEvent.type)			// If there is an event will return true and will fill the incoming event
-					{									// Switch is based on the event type
-					case SDL_QUIT:						// If the event type is quit
-						go = false;						// End the program
-						break;
+			//	SDL_Event incomingEvent;				// Datatype for the event
+			//
+			//	while (SDL_PollEvent(&incomingEvent))	// Check if there is an event in the queue
+			//	{
+			//		switch (incomingEvent.type)			// If there is an event will return true and will fill the incoming event
+			//		{									// Switch is based on the event type
+			//		case SDL_QUIT:						// If the event type is quit
+			//			go = false;						// End the program
+			//			break;
 
-					}
-				}
+			//		}
+			//	}
 
 				unsigned int current = SDL_GetTicks();					 // Get the current time since SDL was initialised
 				float deltaTs = (float)(current - lastTime) / 1000.0f;   // Time from current take away time from last divied by 1000 as its in miliseconds
@@ -95,7 +95,7 @@ namespace Aspect
 				{
 					SDL_Delay((unsigned int)(((1.0f / 50.0f) - deltaTs)*1000.0f));
 				}
-			}
+			//}
 
 			SDL_GL_DeleteContext(glcontext); // Delete context associated with the window
 			SDL_DestroyWindow(window);		 // Destory the window

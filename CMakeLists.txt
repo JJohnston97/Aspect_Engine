@@ -24,7 +24,9 @@ endif()
 
 add_library(aspect
   src/Aspect/Program.cpp
+  src/Aspect/Program.h
   src/Aspect/Screen.cpp
+  src/Aspect/Screen.h
 )
 
 add_executable(game
@@ -54,7 +56,7 @@ if(MSVC)
 
   add_custom_command(TARGET game POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-      "${CMAKE_SOURCE_DIR}/Contrib/glew-1.11.0/bin/Release/Win32.dll"
+      "${CMAKE_SOURCE_DIR}/Contrib/glew-1.11.0/bin/Release/Win32/glew32.dll"
       "$<TARGET_FILE_DIR:game>"
   )
 endif()
