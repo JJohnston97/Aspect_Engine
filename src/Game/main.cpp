@@ -1,26 +1,24 @@
-#include <iostream>
 #include <Windows.h>
-#include <memory>
+#include <GL\glew.h>
+#include <GL\freeglut.h>
 
-#define shared std::shared_ptr
-#define weak std::weak_ptr
+#include <SDL.h>
+#include "SDL.h"
 
-int main()
+#include "Program.h"
+#include "Screen.h"
+
+#include <string>
+#include <iostream>
+
+int main(int argc, char *argv[])
 {
+
+	Aspect::Engine::InitSDL();	// Load Libarys no loop yes or no
+	// Add comp, add ents add ent function to make object loads before game runs
+	// run game with while loop
 	
-	// Initialize engine
-	shared<Core> core = Core::initialize();
+	std::cout << "Ran through" << std::endl;
 
-	// Create a single in-game Object
-	shared<Entity> entity = core->addEntity();
-
-	// Add a very simple component to it
-	weak<TestScreen> testScreen = entity->addComponent<TestScreen>();
-
-	// Start the engine's main loop
-	core->Start();
-
-	
 	return 0;
-
 }
