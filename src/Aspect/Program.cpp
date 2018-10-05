@@ -30,7 +30,8 @@ namespace Aspect
 
 		}
 
-		bool InitSDL()		// Initialise SDL function	
+		//std::shared_ptr<Scene> InitSDL()		// Initialise SDL function	
+		bool InitSDL()
 		{
 			if (SDL_Init(SDL_INIT_VIDEO) < 0)	// If initialisation is not 0 (true) then something has gone wrong
 			{
@@ -97,11 +98,16 @@ namespace Aspect
 				}
 			//}
 
+				//std::shared_ptr<Scene> rtn = std::make_shared<Scene>();
+
+
 			SDL_GL_DeleteContext(glcontext); // Delete context associated with the window
 			SDL_DestroyWindow(window);		 // Destory the window
 			SDL_Quit();						 // Close SDL
 
+
 			return 0;
+			// return rtn when set up
 		}
 
 	}

@@ -12,8 +12,8 @@ namespace Aspect
 		
 		bool InitGlew();		// Initialise Glew
 
-		bool InitSDL();			// Initialise SDL
-
+		//std::shared_ptr<Scene> InitSDL();			// Initialise SDL
+		bool InitSDL();
 	}
 
 }
