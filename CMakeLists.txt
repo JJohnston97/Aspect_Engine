@@ -1,11 +1,13 @@
 cmake_minimum_required(VERSION 2.6)
 project(ASPECT)
 
+include_directories(src)
+
 if(MSVC)
   include_directories(
     Contrib/SDL2-2.0.8/include
-    Contrib/glew-1.11.0/include/GL
-    Contrib/freeglut/include/GL
+    Contrib/glew-1.11.0/include
+    Contrib/freeglut/include
     
   )
 
@@ -46,13 +48,13 @@ endif()
 if(MSVC)
   add_custom_command(TARGET game POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-      "${CMAKE_SOURCE_DIR}/contrib/msvc-windows-x86/SDL2/bin/SDL2.dll"
+      "${CMAKE_SOURCE_DIR}/Contrib/SDL2-2.0.8/lib/x86/SDL2.dll"
       "$<TARGET_FILE_DIR:game>"
   )
 
   add_custom_command(TARGET game POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-      "${CMAKE_SOURCE_DIR}/contrib/msvc-windows-x86/glew/bin/glew32.dll"
+      "${CMAKE_SOURCE_DIR}/Contrib/glew-1.11.0/bin/Release/Win32.dll"
       "$<TARGET_FILE_DIR:game>"
   )
 endif()

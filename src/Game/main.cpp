@@ -5,8 +5,8 @@
 #include <SDL.h>
 #include "SDL.h"
 
-#include "Program.h"
-#include "Screen.h"
+#include <aspect/Program.h>
+#include <aspect/Screen.h>
 
 #include <string>
 #include <iostream>
