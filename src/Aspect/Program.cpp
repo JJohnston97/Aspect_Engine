@@ -30,13 +30,12 @@ namespace Aspect
 
 		}
 
-		//std::shared_ptr<Scene> InitSDL()		// Initialise SDL function	
-		bool InitSDL()
+		std::shared_ptr<Scene> InitSDL()		// Initialise SDL function	
 		{
 			if (SDL_Init(SDL_INIT_VIDEO) < 0)	// If initialisation is not 0 (true) then something has gone wrong
 			{
 				std::cout << "Something has gone wrong, cannot initialise SDL!" << std::endl;	// Output an error message
-				return -1;																		// Exit the program
+				return false;																		// Exit the program
 			}
 																    // We need to do this through SDL, so that it can set up the OpenGL drawing context that matches this
 			SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);	// Using 4.3 OpenGL Major part 4
@@ -54,7 +53,7 @@ namespace Aspect
 
 			if (!InitGlew())	// If glew has not been initialised
 			{
-				return -1;		// Close the program
+				return false;		// Close the program
 			}
 
 			unsigned int lastTime = SDL_GetTicks();	// Used to work out time between frame
@@ -98,7 +97,7 @@ namespace Aspect
 				}
 			//}
 
-				//std::shared_ptr<Scene> rtn = std::make_shared<Scene>();
+			std::shared_ptr<Scene> rtn = std::make_shared<Scene>();
 
 
 			SDL_GL_DeleteContext(glcontext); // Delete context associated with the window
@@ -106,7 +105,7 @@ namespace Aspect
 			SDL_Quit();						 // Close SDL
 
 
-			return 0;
+			return rtn;
 			// return rtn when set up
 		}
 

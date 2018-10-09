@@ -5,11 +5,13 @@
 #include <SDL.h>
 #include "SDL.h"
 
+
 #include <aspect/Program.h>
 #include <aspect/Screen.h>
 
 #include <string>
 #include <iostream>
+#include <memory>
 
 int main(int argc, char *argv[])
 {
@@ -20,7 +22,7 @@ int main(int argc, char *argv[])
 	// run game with while loop
 	
 	std::cout << "Ran through" << std::endl;
-
+	
 
 	return 0;
 }

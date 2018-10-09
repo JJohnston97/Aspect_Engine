@@ -3,6 +3,7 @@
 
 #include <SDL.h>
 #include "SDL.h"
+#include "Screen.h"
 
 namespace Aspect
 {
@@ -12,8 +13,8 @@ namespace Aspect
 		
 		bool InitGlew();		// Initialise Glew
 
-		//std::shared_ptr<Scene> InitSDL();			// Initialise SDL
-		bool InitSDL();
+		std::shared_ptr<Scene> InitSDL();			// Initialise SDL
+		
 	}
 
 }
