@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 {
 
 	Aspect::Engine::Program::InitSDL();	// Load Libarys no loop yes or no
+	//Aspect::Engine::Program::Start();
 	//Aspect::Engine::Entity::addEntity();
 	
 	// Add comp, add ents add ent function to make object loads before game runs

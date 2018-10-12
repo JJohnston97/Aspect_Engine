@@ -139,7 +139,7 @@ namespace Aspect
 		void Program::End()
 		{
 
-
+			running = false;
 
 		}
 
