@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 2.6)
 project(ASPECT)
 
-include_directories(src)
+include_directories(src Contrib)
+
 
 if(MSVC)
   include_directories(
@@ -27,6 +28,9 @@ add_library(aspect
   src/Aspect/Program.h
   src/Aspect/Entity.cpp
   src/Aspect/Entity.h
+  src/Aspect/Component.h
+  src/Aspect/Component.cpp
+
 
 )
 

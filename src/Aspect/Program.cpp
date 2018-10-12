@@ -10,6 +10,8 @@ namespace Aspect
 {
 	namespace Engine
 	{
+		SDL_Window *Program::_window;
+
 		bool Program::InitGlew()
 		{
 			glewExperimental = GL_TRUE; // Enable Glew Experimental features
@@ -48,9 +50,9 @@ namespace Aspect
 			int windowWidth = 1080;
 			int windowHeight = 900;
 
-			SDL_Window *window = SDL_CreateWindow("Aspect Engine", windowPositionX, winowPositionY, windowWidth, windowHeight, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);	// Creates the SDL/OpenGL window
-			SDL_Renderer * renderer = SDL_CreateRenderer(window, -1, 0);	// Creates the render, needs to between -1 and 0
-			SDL_GLContext glcontext = SDL_GL_CreateContext(window);			// Returns the OpenGl context associated with window
+			_window = SDL_CreateWindow("Aspect Engine", windowPositionX, winowPositionY, windowWidth, windowHeight, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);	// Creates the SDL/OpenGL window
+			SDL_Renderer * renderer = SDL_CreateRenderer(_window, -1, 0);	// Creates the render, needs to between -1 and 0
+			SDL_GLContext glcontext = SDL_GL_CreateContext(_window);			// Returns the OpenGl context associated with window
 
 			if (!Program::InitGlew())	// If glew has not been initialised
 			{
@@ -61,22 +63,6 @@ namespace Aspect
 
 			glEnable(GL_DEPTH_TEST);	// Used to make sure what is in front are alwasy in front no matter the order they are drawn
 
-			//bool go = true;		// What the engine runs on (Needs to change)
-			//while (go)			// While go is true
-			//{
-
-			//	SDL_Event incomingEvent;				// Datatype for the event
-			//
-			//	while (SDL_PollEvent(&incomingEvent))	// Check if there is an event in the queue
-			//	{
-			//		switch (incomingEvent.type)			// If there is an event will return true and will fill the incoming event
-			//		{									// Switch is based on the event type
-			//		case SDL_QUIT:						// If the event type is quit
-			//			go = false;						// End the program
-			//			break;
-
-			//		}
-			//	}
 
 			unsigned int current = SDL_GetTicks();					 // Get the current time since SDL was initialised
 			float deltaTs = (float)(current - lastTime) / 1000.0f;   // Time from current take away time from last divied by 1000 as its in miliseconds
@@ -89,7 +75,7 @@ namespace Aspect
 			glClearColor(0.0f, 0.0f, 0.0f, 0.0f);			    // Colour of background
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Write the colour to the framebuffer
 
-			SDL_GL_SwapWindow(window);	// Tells the renderer to show it contect to the screen
+			SDL_GL_SwapWindow(_window);	// Tells the renderer to show it contect to the screen
 
 
 			if (deltaTs < (1.0f / 50.0f))	// Limiter to 50fps incase running to quickly
@@ -102,7 +88,7 @@ namespace Aspect
 
 
 			SDL_GL_DeleteContext(glcontext); // Delete context associated with the window
-			SDL_DestroyWindow(window);		 // Destory the window
+			SDL_DestroyWindow(_window);		 // Destory the window
 			SDL_Quit();						 // Close SDL
 
 
@@ -110,12 +96,59 @@ namespace Aspect
 			// return rtn when set up
 		}
 
+		void Program::Start()
+		{
+			running = true;
+
+			while (running)
+			{
+				SDL_Event incomingEvent;				
+				while (SDL_PollEvent(&incomingEvent))	// Check if there is an event in the queue
+				{
+					switch (incomingEvent.type)			// If there is an event will return true and will fill the incoming event
+					{									// Switch is based on the event type
+					case SDL_QUIT:						// If the event type is quit
+					running = false;						// End the program
+					break;
+
+					}
+				}
+
+
+				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++)
+				{
+					(*it)->count();
+				}
+
+				glClearColor(0.0f, 0.0f, 0.3f, 1.0f);
+				glClear(GL_COLOR_BUFFER_BIT);
+
+				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++)
+				{
+					(*it)->display();
+				}
+
+				SDL_GL_SwapWindow(_window);
+
+
+
+			}
+
+		}
+
+		void Program::End()
+		{
+
+
+
+		}
+
+
 		std::shared_ptr<Entity> Program::addEntity()
 		{
 			std::shared_ptr<Entity> rtn = std::make_shared <Entity>();
-			
-
-
+			//entities.pushback(rtn);
+		
 
 			return rtn;
 		}

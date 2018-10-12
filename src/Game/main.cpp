@@ -2,6 +2,8 @@
 #include <GL\glew.h>
 #include <GL\freeglut.h>
 
+#include <glm/glm.hpp>
+
 #include <SDL.h>
 #include "SDL.h"
 
@@ -23,7 +25,7 @@ int main(int argc, char *argv[])
 	// run game with while loop
 	
 	std::cout << "Ran through" << std::endl;
-	
+
 
 	return 0;
 }
