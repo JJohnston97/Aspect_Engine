@@ -2,18 +2,28 @@
 #define ASPECT_ENGINE_PROGRAM_H
 
 #include <SDL.h>
-#include "SDL.h"
-#include "Screen.h"
+
+#include <memory>
 
 namespace Aspect
 {
 	namespace Engine
 	{
+		class Entity;
 		extern SDL_Renderer *_renderer;  // Allows access to renderer in other files
-		
-		bool InitGlew();		// Initialise Glew
 
-		std::shared_ptr<Scene> InitSDL();			// Initialise SDL
+		class Program
+		{
+		public:
+		
+		static bool InitGlew();		// Initialise Glew
+
+		static std::shared_ptr<Program> InitSDL();			// Initialise SDL
+		static std::shared_ptr<Entity> addEntity();
+
+		bool running;
+
+		};
 		
 	}
 

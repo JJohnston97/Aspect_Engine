@@ -7,7 +7,7 @@
 
 
 #include <aspect/Program.h>
-#include <aspect/Screen.h>
+#include <aspect/Entity.h>
 
 #include <string>
 #include <iostream>
@@ -16,7 +16,8 @@
 int main(int argc, char *argv[])
 {
 
-	Aspect::Engine::InitSDL();	// Load Libarys no loop yes or no
+	Aspect::Engine::Program::InitSDL();	// Load Libarys no loop yes or no
+	//Aspect::Engine::Entity::addEntity();
 	
 	// Add comp, add ents add ent function to make object loads before game runs
 	// run game with while loop

@@ -25,8 +25,8 @@ endif()
 add_library(aspect
   src/Aspect/Program.cpp
   src/Aspect/Program.h
-  src/Aspect/Screen.cpp
-  src/Aspect/Screen.h
+  src/Aspect/Entity.cpp
+  src/Aspect/Entity.h
 
 )
 
