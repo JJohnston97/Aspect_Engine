@@ -3,6 +3,8 @@
 #include <vector>
 #include <memory>
 
+#ifndef _ENTITY_H_
+#define _ENTITY_H_
 
 #define ADDCOMPONENT \
   std::shared_ptr<T> rtn = std::make_shared<T>(); \
@@ -75,3 +77,5 @@ namespace Aspect
 		};
 	}
 }
+
+#endif // _ENTITY_H_

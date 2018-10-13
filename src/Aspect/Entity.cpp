@@ -1,4 +1,4 @@
-#include "Entity.h"
+#include "Entity.h" // Include Entity.h
 #include <iostream>
 #include "Component.h"
 
@@ -17,10 +17,10 @@ namespace Aspect
 			for (std::vector<std::shared_ptr<Component> >::iterator it = components.begin();
 				it != components.end(); it++)
 			{
-				if (!(*it)->began)
+				if (!(*it)->m_begin)
 				{
 					(*it)->onBegin();
-					(*it)->began = true;
+					(*it)->m_begin = true;
 				}
 
 				(*it)->onCount();

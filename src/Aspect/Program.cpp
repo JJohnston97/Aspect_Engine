@@ -92,8 +92,8 @@ namespace Aspect
 			SDL_Quit();						 // Close SDL
 
 
-			return rtn;
-			// return rtn when set up
+			return rtn;			// return rtn when set up
+			
 		}
 
 		void Program::Start()
@@ -108,8 +108,8 @@ namespace Aspect
 					switch (incomingEvent.type)			// If there is an event will return true and will fill the incoming event
 					{									// Switch is based on the event type
 					case SDL_QUIT:						// If the event type is quit
-					running = false;						// End the program
-					break;
+					running = false;					// End the program
+					break;								
 
 					}
 				}
