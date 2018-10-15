@@ -11,12 +11,28 @@
 #include <iostream>	// Inialise use for debug and writing to the console
 #include <memory>	// Initalise memeory for use of smart and weak pointers
 
-int main(int argc, char *argv[])
+void safe_Main()
 {
 
 	std::shared_ptr<Aspect::Engine::Program> p = Aspect::Engine::Program::InitSDL(); // Create a smart pointer call p that is equal to the program
 																					 // initalise function
 	p->Start(); // Starts program loop
+	
+
+}
+
+int main(int argc, char *argv[])
+{
+	try
+	{
+		safe_Main();
+
+	}
+	catch(std::exception& e)
+	{
+		std::cout << "Exception: " << e.what() << std::endl;
+
+	}
 
 	return 0;	// End program
 }

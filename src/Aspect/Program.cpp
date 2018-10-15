@@ -70,7 +70,6 @@ namespace Aspect
 
 
 			// Draw world
-			//std::cout << "Where I would call game function" << std::endl;
 
 			glClearColor(1.0f, 0.0f, 0.0f, 0.0f);			    // Colour of background
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Write the colour to the framebuffer
