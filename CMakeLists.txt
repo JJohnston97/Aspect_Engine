@@ -30,6 +30,13 @@ add_library(aspect
   src/Aspect/Entity.h
   src/Aspect/Component.h
   src/Aspect/Component.cpp
+  src/Aspect/ShaderProgram.h
+  src/Aspect/ShaderProgram.cpp
+  src/Aspect/VertexArray.h
+  src/Aspect/VertexArray.cpp
+  src/Aspect/VertexBuffer.h
+  src/Aspect/VertexBuffer.cpp
+ 
 
 
 )

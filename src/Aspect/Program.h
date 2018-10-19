@@ -26,7 +26,7 @@ namespace Aspect
 		private:
 		
 			bool running;
-			std::vector<std::shared_ptr<Entity> > entities;
+			static std::vector<std::shared_ptr<Entity> > entities;
 			std::weak_ptr<Program> self;
 			static SDL_Window *_window;
 		};

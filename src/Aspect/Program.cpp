@@ -4,12 +4,15 @@
 
 #include "Program.h"
 #include "Entity.h"
+#include "ShaderProgram.h"
 
 
 namespace Aspect
 {
 	namespace Engine
 	{
+		std::vector<std::shared_ptr<Entity> > Program::entities;
+
 		SDL_Window *Program::_window;
 
 		bool Program::InitGlew()
@@ -71,7 +74,7 @@ namespace Aspect
 
 			// Draw world
 
-			glClearColor(1.0f, 0.0f, 0.0f, 0.0f);			    // Colour of background
+			glClearColor(0.0f, 0.0f, 0.0f, 0.0f);			    // Colour of background
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Write the colour to the framebuffer
 
 			SDL_GL_SwapWindow(_window);	// Tells the renderer to show it contect to the screen
@@ -81,14 +84,12 @@ namespace Aspect
 			{
 				SDL_Delay((unsigned int)(((1.0f / 50.0f) - deltaTs)*1000.0f));
 			}
-			//}
+		
 
 			std::shared_ptr<Program> rtn = std::make_shared<Program>();
 
 
 			SDL_GL_DeleteContext(glcontext); // Delete context associated with the window
-			SDL_DestroyWindow(_window);		 // Destory the window
-			SDL_Quit();						 // Close SDL
 
 
 			return rtn;			// return rtn when set up
@@ -98,6 +99,7 @@ namespace Aspect
 		void Program::Start()
 		{
 			running = true;
+			ShaderProgram* s = new ShaderProgram("../Shaders/vert.txt", "../Shaders/frag.txt");
 
 			while (running)
 			{
@@ -107,7 +109,7 @@ namespace Aspect
 					switch (incomingEvent.type)			// If there is an event will return true and will fill the incoming event
 					{									// Switch is based on the event type
 					case SDL_QUIT:						// If the event type is quit
-					running = false;					// End the program
+						End();					// End the program
 					break;								
 
 					}
@@ -139,14 +141,15 @@ namespace Aspect
 		{
 
 			running = false;
+			SDL_DestroyWindow(_window);		 // Destory the window
+			SDL_Quit();
 
 		}
-
 
 		std::shared_ptr<Entity> Program::addEntity()
 		{
 			std::shared_ptr<Entity> rtn = std::make_shared <Entity>();
-			//entities.pushback(rtn);
+			entities.push_back(rtn);
 			return rtn;
 		}
 

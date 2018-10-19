@@ -23,16 +23,17 @@ void safe_Main()
 
 int main(int argc, char *argv[])
 {
-	try
-	{
-		safe_Main();
+	safe_Main();
+	//try
+	//{
+	//	safe_Main();
 
-	}
-	catch(std::exception& e)
-	{
-		std::cout << "Exception: " << e.what() << std::endl;
+	//}
+	//catch(std::exception& e)
+	//{
+	//	std::cout << "Exception: " << e.what() << std::endl;
 
-	}
+	//}
 
 	return 0;	// End program
 }
