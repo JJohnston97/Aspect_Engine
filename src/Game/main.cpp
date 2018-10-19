@@ -3,10 +3,12 @@
 #include <glm/glm.hpp>	// Initalise GLM for Vecs
 #include <SDL.h>		// Initalise SDL
 #include "SDL.h"
-#include <aspect/MeshRender.h>
 
+
+#include <aspect/MeshRender.h> // Allows for the use of MeshRender.h from my engine
 #include <aspect/Program.h>	// Allows for the use of Program.h from my engine
 #include <aspect/Entity.h>	// Allows for the use of Entity.h from my engine
+#include <aspect/Audio.h>   // Allows for the use of Audio.h from my engine
 
 #include <string>	// Initalise for the use of string
 #include <iostream>	// Inialise use for debug and writing to the console
@@ -16,8 +18,13 @@ void safe_Main()
 {
 
 	std::shared_ptr<Aspect::Engine::Program> p = Aspect::Engine::Program::InitSDL(); // Create a smart pointer call p that is equal to the program
-	std::shared_ptr<Aspect::Engine::Entity> e = p->addEntity();																				 // initalise function
+	
+	std::shared_ptr<Aspect::Engine::Entity> e = p->addEntity();							 // initalise function
 	e->addComponent<Aspect::Engine::MeshRender>();
+
+	std::shared_ptr<Aspect::Engine::Audio> ac = std::make_shared<Aspect::Engine::Audio>("../Contrib/choose.ogg");
+	ac->play(1.0f, 0.5f, 0.5f);
+	
 	p->Start(); // Starts program loop
 	
 
@@ -26,16 +33,16 @@ void safe_Main()
 int main(int argc, char *argv[])
 {
 	safe_Main();
-	//try
-	//{
-	//	safe_Main();
+	/*try
+	{
+		safe_Main();
 
-	//}
-	//catch(std::exception& e)
-	//{
-	//	std::cout << "Exception: " << e.what() << std::endl;
+	}
+	catch(std::exception& e)
+	{
+		std::cout << "Exception: " << e.what() << std::endl;
 
-	//}
+	}*/
 
 	return 0;	// End program
 }

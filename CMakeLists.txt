@@ -9,6 +9,9 @@ if(MSVC)
     Contrib/SDL2-2.0.8/include
     Contrib/glew-1.11.0/include
     Contrib/freeglut/include
+	Contrib/openal-soft/include
+	Contrib/ogg/include
+	Contrib/vorbis/include
     
   )
 
@@ -16,6 +19,9 @@ if(MSVC)
     ${CMAKE_SOURCE_DIR}/Contrib/SDL2-2.0.8/lib/x86
     ${CMAKE_SOURCE_DIR}/Contrib/glew-1.11.0/lib
     ${CMAKE_SOURCE_DIR}/Contrib/freeglut/lib
+	${CMAKE_SOURCE_DIR}/Contrib/openal-soft/lib
+	${CMAKE_SOURCE_DIR}/Contrib/ogg/lib
+	${CMAKE_SOURCE_DIR}/Contrib/vorbis/lib
   )
 endif()
 
@@ -38,7 +44,8 @@ add_library(aspect
   src/Aspect/VertexBuffer.cpp
   src/Aspect/MeshRender.h
   src/Aspect/MeshRender.cpp
-
+  src/Aspect/Audio.h
+  src/Aspect/Audio.cpp
 
 )
 
@@ -48,14 +55,14 @@ add_executable(game
 
 if(MSVC)
   target_link_libraries(aspect
-    SDL2 glew32 opengl32
+    SDL2 glew32 opengl32 OpenAL32 ogg vorbis vorbisfile
   )
 
 target_link_libraries(game aspect)
 
 else()
   target_link_libraries(aspect
-    SDL2 GLU GLEW GL
+    SDL2 GLU GLEW GL AL ogg vorbis vorbisfile
   )
 endif()
 
@@ -70,6 +77,12 @@ if(MSVC)
   add_custom_command(TARGET game POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
       "${CMAKE_SOURCE_DIR}/Contrib/glew-1.11.0/bin/Release/Win32/glew32.dll"
+      "$<TARGET_FILE_DIR:game>"
+  )
+   
+   add_custom_command(TARGET game POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+      "${CMAKE_SOURCE_DIR}/Contrib/openal-soft/bin/OpenAL32.dll"
       "$<TARGET_FILE_DIR:game>"
   )
 endif()
