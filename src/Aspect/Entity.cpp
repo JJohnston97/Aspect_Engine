@@ -12,27 +12,27 @@ namespace Aspect
 			return program.lock();
 		}
 
-		void Entity::count()
+		void Entity::count()	// Update
 		{
-			for (std::vector<std::shared_ptr<Component> >::iterator it = components.begin();
-				it != components.end(); it++)
+			for (std::vector<std::shared_ptr<Component> >::iterator it = components.begin(); // Go through the list
+				it != components.end(); it++)												 // If its not the end continue
 			{
-				if (!(*it)->m_begin)
+				if (!(*it)->m_begin)		// If its not the begin
 				{
-					(*it)->onBegin();
-					(*it)->m_begin = true;
+					(*it)->onBegin();		// Make that the start
+					(*it)->m_begin = true;	// Set its began to true
 				}
 
-				(*it)->onCount();
+				(*it)->onCount();	// Update current
 			}
 		}
 
-		void Entity::display()
+		void Entity::display() // Draw
 		{
-			for (std::vector<std::shared_ptr<Component> >::iterator it = components.begin();
-				it != components.end(); it++)
+			for (std::vector<std::shared_ptr<Component> >::iterator it = components.begin(); // Go through the list
+				it != components.end(); it++)												 // If its not the end continue
 			{
-				(*it)->onDisplay();
+				(*it)->onDisplay();		// Draw to the screen
 			}
 		}
 	}

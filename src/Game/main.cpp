@@ -3,6 +3,7 @@
 #include <glm/glm.hpp>	// Initalise GLM for Vecs
 #include <SDL.h>		// Initalise SDL
 #include "SDL.h"
+#include <aspect/MeshRender.h>
 
 #include <aspect/Program.h>	// Allows for the use of Program.h from my engine
 #include <aspect/Entity.h>	// Allows for the use of Entity.h from my engine
@@ -15,7 +16,8 @@ void safe_Main()
 {
 
 	std::shared_ptr<Aspect::Engine::Program> p = Aspect::Engine::Program::InitSDL(); // Create a smart pointer call p that is equal to the program
-																					 // initalise function
+	std::shared_ptr<Aspect::Engine::Entity> e = p->addEntity();																				 // initalise function
+	e->addComponent<Aspect::Engine::MeshRender>();
 	p->Start(); // Starts program loop
 	
 

@@ -36,7 +36,8 @@ add_library(aspect
   src/Aspect/VertexArray.cpp
   src/Aspect/VertexBuffer.h
   src/Aspect/VertexBuffer.cpp
- 
+  src/Aspect/MeshRender.h
+  src/Aspect/MeshRender.cpp
 
 
 )

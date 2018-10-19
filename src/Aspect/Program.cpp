@@ -5,6 +5,7 @@
 #include "Program.h"
 #include "Entity.h"
 #include "ShaderProgram.h"
+#include "MeshRender.h"
 
 
 namespace Aspect
@@ -17,7 +18,7 @@ namespace Aspect
 
 		bool Program::InitGlew()
 		{
-			glewExperimental = GL_TRUE; // Enable Glew Experimental features
+			//glewExperimental = GL_TRUE; // Enable Glew Experimental features
 
 			GLenum err = glewInit();	// Initialise all glew
 			if (GLEW_OK != err)			// If everything is not okay
@@ -44,9 +45,9 @@ namespace Aspect
 				return false;																		// Exit the program
 			}
 			// We need to do this through SDL, so that it can set up the OpenGL drawing context that matches this
-			SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);	// Using 4.3 OpenGL Major part 4
-			SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);	// Minor part 3
-			SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE); // Using the latest version
+			//SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);	// Using 4.3 OpenGL Major part 4
+			//SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);	// Minor part 3
+			//SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE); // Using the latest version
 
 			int windowPositionX = 100;	// Window position (Needs to change from this)
 			int winowPositionY = 100;	// Window Y pos
@@ -54,7 +55,7 @@ namespace Aspect
 			int windowHeight = 900;
 
 			_window = SDL_CreateWindow("Aspect Engine", windowPositionX, winowPositionY, windowWidth, windowHeight, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);	// Creates the SDL/OpenGL window
-			SDL_Renderer * renderer = SDL_CreateRenderer(_window, -1, 0);	// Creates the render, needs to between -1 and 0
+			//SDL_Renderer * renderer = SDL_CreateRenderer(_window, -1, 0);	// Creates the render, needs to between -1 and 0
 			SDL_GLContext glcontext = SDL_GL_CreateContext(_window);			// Returns the OpenGl context associated with window
 
 			if (!Program::InitGlew())	// If glew has not been initialised
@@ -71,15 +72,6 @@ namespace Aspect
 			float deltaTs = (float)(current - lastTime) / 1000.0f;   // Time from current take away time from last divied by 1000 as its in miliseconds
 			lastTime = current;										 // Current fame is next frames last time
 
-
-			// Draw world
-
-			glClearColor(0.0f, 0.0f, 0.0f, 0.0f);			    // Colour of background
-			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Write the colour to the framebuffer
-
-			SDL_GL_SwapWindow(_window);	// Tells the renderer to show it contect to the screen
-
-
 			if (deltaTs < (1.0f / 50.0f))	// Limiter to 50fps incase running to quickly
 			{
 				SDL_Delay((unsigned int)(((1.0f / 50.0f) - deltaTs)*1000.0f));
@@ -89,9 +81,6 @@ namespace Aspect
 			std::shared_ptr<Program> rtn = std::make_shared<Program>();
 
 
-			SDL_GL_DeleteContext(glcontext); // Delete context associated with the window
-
-
 			return rtn;			// return rtn when set up
 			
 		}
@@ -99,7 +88,6 @@ namespace Aspect
 		void Program::Start()
 		{
 			running = true;
-			ShaderProgram* s = new ShaderProgram("../Shaders/vert.txt", "../Shaders/frag.txt");
 
 			while (running)
 			{
@@ -116,22 +104,20 @@ namespace Aspect
 				}
 
 
-				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++)
+				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities
 				{
-					(*it)->count();
+					(*it)->count();	// Update them one at a time
 				}
 
-				glClearColor(0.0f, 0.0f, 0.3f, 1.0f);
-				glClear(GL_COLOR_BUFFER_BIT);
+				glClearColor(0.0f, 0.0f, 0.0f, 1.0f);	// Set the background colour
+				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);			// Clear the buffer
 
-				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++)
+				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities again
 				{
-					(*it)->display();
+					(*it)->display();	// Draw them
 				}
 
-				SDL_GL_SwapWindow(_window);
-
-
+				SDL_GL_SwapWindow(_window); 
 
 			}
 
@@ -139,7 +125,7 @@ namespace Aspect
 
 		void Program::End()
 		{
-
+			//SDL_GL_DeleteContext(glcontext); // Delete context associated with the window
 			running = false;
 			SDL_DestroyWindow(_window);		 // Destory the window
 			SDL_Quit();

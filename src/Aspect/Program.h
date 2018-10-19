@@ -17,18 +17,18 @@ namespace Aspect
 		{
 		public:
 		
-			void Start();
-			void End();
+			void Start();		// Start the program, also contains the game loop
+			void End();			// Clean up and close the program
 			static bool InitGlew();		// Initialise Glew
-			static std::shared_ptr<Program> InitSDL();			// Initialise SDL
-			static std::shared_ptr<Entity> addEntity();
+			static std::shared_ptr<Program> InitSDL();	// Initialise SDL
+			static std::shared_ptr<Entity> addEntity();	// Add entity function
 
 		private:
-		
-			bool running;
-			static std::vector<std::shared_ptr<Entity> > entities;
-			std::weak_ptr<Program> self;
-			static SDL_Window *_window;
+			
+			bool running;	// Bool to tell if the program is running or not
+			static std::vector<std::shared_ptr<Entity> > entities; // List of entities of class entity
+			std::weak_ptr<Program> self;	// Pointer to itself
+			static SDL_Window *_window;		// Pointer window for SDL set up
 		};
 		
 	}

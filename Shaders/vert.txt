@@ -11,4 +11,3 @@ void main()
   gl_Position = in_Projection * in_Model * vec4(in_Position, 1.0);
   ex_Color = in_Color;
 }
-
