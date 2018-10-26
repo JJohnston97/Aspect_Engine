@@ -1,6 +1,7 @@
 #include "ShaderProgram.h"
 #include "VertexArray.h"
 #include "VertexBuffer.h"
+#include "Material.h"
 #include <glm/ext.hpp>
 #include <fstream>
 #include <iostream>
@@ -77,6 +78,9 @@ namespace Aspect
 			glAttachShader(id, fragmentShaderId);
 			glBindAttribLocation(id, 0, "in_Position");
 			glBindAttribLocation(id, 1, "in_Color");
+			glBindAttribLocation(id, 2, "in_TexCoord");
+			glBindAttribLocation(id, 3, "in_Normal");
+
 
 			if (glGetError() != GL_NO_ERROR)
 			{
@@ -149,6 +153,38 @@ namespace Aspect
 			glUniformMatrix4fv(uniformId, 1, GL_FALSE, glm::value_ptr(value));
 			glUseProgram(0);
 		}
+
+		/*void ShaderProgram::setUniform(std::string uniform, Material *material)
+		{
+			GLint uniformId = glGetUniformLocation(id, uniform.c_str());
+
+			if (uniformId == -1)
+			{
+				throw std::exception();
+			}
+
+			for (size_t i = 0; i < samplers.size(); i++)
+			{
+				if (samplers.at(i).id == uniformId)
+				{
+					samplers.at(i).material = material;
+
+					glUseProgram(id);
+					glUniform1i(uniformId, i);
+					glUseProgram(0);
+					return;
+				}
+			}
+
+			Sampler s;
+			s.id = uniformId;
+			s.material = material;
+			samplers.push_back(s);
+
+			glUseProgram(id);
+			glUniform1i(uniformId, samplers.size() - 1);
+			glUseProgram(0);
+		}*/
 
 		GLuint ShaderProgram::getId()
 		{

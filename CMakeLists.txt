@@ -46,6 +46,10 @@ add_library(aspect
   src/Aspect/MeshRender.cpp
   src/Aspect/Audio.h
   src/Aspect/Audio.cpp
+  src/Aspect/Material.cpp
+  src/Aspect/Material.h
+  Contrib/stb_image/stb_image.cpp
+ 
 
 )
 

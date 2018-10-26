@@ -2,6 +2,7 @@
 #include <glm/glm.hpp>
 #include "Component.h"
 
+
 #include <vector>
 
 namespace Aspect
@@ -9,6 +10,7 @@ namespace Aspect
 	namespace Engine
 	{
 		class VertexArray;
+		class Material;
 		class ShaderProgram;
 
 		class MeshRender : public Component
@@ -22,6 +24,7 @@ namespace Aspect
 
 			std::shared_ptr<VertexArray> shape;
 			std::shared_ptr<ShaderProgram> shader;
+			std::shared_ptr<Material> mat;
 
 		};
 
