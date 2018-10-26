@@ -63,6 +63,7 @@ namespace Aspect
 				return false;		// Close the program
 			}
 
+
 			unsigned int lastTime = SDL_GetTicks();	// Used to work out time between frame
 
 			glEnable(GL_DEPTH_TEST);	// Used to make sure what is in front are alwasy in front no matter the order they are drawn
@@ -79,6 +80,28 @@ namespace Aspect
 		
 
 			std::shared_ptr<Program> rtn = std::make_shared<Program>();
+
+			rtn->device = alcOpenDevice(NULL);
+
+			if (!rtn->device)
+			{
+				throw std::exception();
+			}
+
+			rtn->context = alcCreateContext(rtn->device, NULL);
+
+			if (!rtn->context)
+			{
+				alcCloseDevice(rtn->device);
+				throw std::exception();
+			}
+
+			if (!alcMakeContextCurrent(rtn->context))
+			{
+				alcDestroyContext(rtn->context);
+				alcCloseDevice(rtn->device);
+				throw std::exception();
+			}
 
 
 			return rtn;			// return rtn when set up

@@ -11,19 +11,7 @@ namespace Aspect
 		{
 			shader = std::make_shared<ShaderProgram>("../Shaders/vert.txt", "../Shaders/frag.txt");
 
-			std::shared_ptr<VertexBuffer> positions = std::make_shared<VertexBuffer>();
-			positions->add(glm::vec3(0.0f, 0.5f, 0.0f));
-			positions->add(glm::vec3(-0.5f, -0.5f, 0.0f));
-			positions->add(glm::vec3(0.5f, -0.5f, 0.0f));
-
-			std::shared_ptr<VertexBuffer> colors = std::make_shared<VertexBuffer>();
-			colors->add(glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
-			colors->add(glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
-			colors->add(glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
-
-			shape = std::make_shared<VertexArray>();
-			shape->setBuffer("in_Position", positions);
-			shape->setBuffer("in_Color", colors);
+			shape = std::make_shared<VertexArray>("../Objs/Box.obj");
 		}
 
 		void MeshRender::onCount()

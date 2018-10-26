@@ -23,7 +23,7 @@ void safe_Main()
 	e->addComponent<Aspect::Engine::MeshRender>();
 
 	std::shared_ptr<Aspect::Engine::Audio> ac = std::make_shared<Aspect::Engine::Audio>("../Contrib/choose.ogg");
-	ac->play(100.0f, 0.5f, 0.5f);
+	ac->play();
 	
 	p->Start(); // Starts program loop
 	

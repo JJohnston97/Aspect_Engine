@@ -2,6 +2,8 @@
 #define ASPECT_ENGINE_PROGRAM_H
 
 #include <SDL.h>
+#include <AL/al.h>
+#include <AL/alc.h>
 
 #include <memory>
 #include <vector>
@@ -29,6 +31,8 @@ namespace Aspect
 			static std::vector<std::shared_ptr<Entity> > entities; // List of entities of class entity
 			std::weak_ptr<Program> self;	// Pointer to itself
 			static SDL_Window *_window;		// Pointer window for SDL set up
+			ALCdevice* device;
+			ALCcontext* context;
 		};
 		
 	}
