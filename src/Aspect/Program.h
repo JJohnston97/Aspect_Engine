@@ -25,6 +25,7 @@ namespace Aspect
 			static std::shared_ptr<Program> InitSDL();	// Initialise SDL
 			static std::shared_ptr<Entity> addEntity();	// Add entity function
 
+
 		private:
 			
 			bool running;	// Bool to tell if the program is running or not
