@@ -101,15 +101,44 @@ namespace Aspect
 			glDeleteShader(fragmentShaderId);
 		}
 
-		void ShaderProgram::draw(VertexArray& vertexArray)
+		void ShaderProgram::draw(std::shared_ptr<VertexArray> vArray)
 		{
 			glUseProgram(id);
+			glBindVertexArray(vArray->getId());
+
+			for (size_t i = 0; i < samplers.size(); i++)
+			{
+				glActiveTexture(GL_TEXTURE0 + i);
+
+				if (samplers.at(i).mat)
+				{
+					glBindTexture(GL_TEXTURE_2D, samplers.at(i).mat->getId());
+				}
+				else
+				{
+					glBindTexture(GL_TEXTURE_2D, 0);
+				}
+			}
+
+			glDrawArrays(GL_TRIANGLES, 0, vArray->getVertexCount());
+
+			for (size_t i = 0; i < samplers.size(); i++)
+			{
+				glActiveTexture(GL_TEXTURE0 + i);
+				glBindTexture(GL_TEXTURE_2D, 0);
+			}
+
+			glBindVertexArray(0);
+			glUseProgram(0);
+
+
+			/*glUseProgram(id);
 			glBindVertexArray(vertexArray.getId());
 
 			glDrawArrays(GL_TRIANGLES, 0, vertexArray.getVertexCount());
 
 			glBindVertexArray(0);
-			glUseProgram(0);
+			glUseProgram(0);*/
 		}
 
 		void ShaderProgram::setUniform(std::string uniform, glm::vec4 value)
@@ -154,7 +183,7 @@ namespace Aspect
 			glUseProgram(0);
 		}
 
-		/*void ShaderProgram::setUniform(std::string uniform, Material *material)
+		void ShaderProgram::setUniform(std::string uniform, std::shared_ptr<Material> mat)
 		{
 			GLint uniformId = glGetUniformLocation(id, uniform.c_str());
 
@@ -167,7 +196,7 @@ namespace Aspect
 			{
 				if (samplers.at(i).id == uniformId)
 				{
-					samplers.at(i).material = material;
+					samplers.at(i).mat = mat;
 
 					glUseProgram(id);
 					glUniform1i(uniformId, i);
@@ -178,13 +207,13 @@ namespace Aspect
 
 			Sampler s;
 			s.id = uniformId;
-			s.material = material;
+			s.mat = mat;
 			samplers.push_back(s);
 
 			glUseProgram(id);
 			glUniform1i(uniformId, samplers.size() - 1);
 			glUseProgram(0);
-		}*/
+		}
 
 		GLuint ShaderProgram::getId()
 		{
