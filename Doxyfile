@@ -1,0 +1,15 @@
+# Doxyfile 1.8.14
+
+
+PROJECT_NAME           = "Aspect Engine"
+
+EXTRACT_ALL            = YES
+
+INPUT 		       = src/Aspect
+
+RECURSIVE              = YES
+
+CLASS_DIAGRAMS         = YES
+
+PROJECT_LOGO 	       = Aspect_Logo.jpg
+

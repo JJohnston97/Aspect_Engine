@@ -49,6 +49,8 @@ add_library(aspect
   src/Aspect/Material.cpp
   src/Aspect/Material.h
   Contrib/stb_image/stb_image.cpp
+  src/Aspect/Transform.h
+  src/Aspect/Transform.cpp
  
 
 )

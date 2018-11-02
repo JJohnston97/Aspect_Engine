@@ -6,6 +6,7 @@
 #include "Entity.h"
 #include "ShaderProgram.h"
 #include "MeshRender.h"
+#include "Transform.h"
 
 
 namespace Aspect
@@ -159,6 +160,11 @@ namespace Aspect
 		{
 			std::shared_ptr<Entity> rtn = std::make_shared <Entity>();
 			entities.push_back(rtn);
+			rtn->addComponent<Transform>();
+			rtn->self = rtn;
+			
+			//rtn->program = rtn;
+			
 			return rtn;
 		}
 

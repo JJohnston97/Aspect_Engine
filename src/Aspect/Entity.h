@@ -8,6 +8,8 @@
 
 #define ADDCOMPONENT \
   std::shared_ptr<T> rtn = std::make_shared<T>(); \
+  rtn->entity = self; \
+  rtn->m_begin = false; \
   components.push_back(rtn);
 
 
@@ -37,7 +39,7 @@ namespace Aspect
 			}
 
 			template <typename T>				// Type t template class to add a single component
-			std::shared_ptr<T> addComponent()	// Function
+			std::shared_ptr<T> addComponent()	///<Function
 			{
 				ADDCOMPONENT			
 					rtn->onInit();				// Add the single component depending on class type and return
@@ -69,6 +71,7 @@ namespace Aspect
 			std::vector<std::shared_ptr<Component> > components; // Vector list of components to store all the components of the entity
 			std::shared_ptr<Program> getProgram();				// Get program function
 			std::weak_ptr<Program> program;						// Weak pointer to program
+			std::weak_ptr<Entity> self;
 		};
 	}
 }

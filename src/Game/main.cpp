@@ -9,23 +9,33 @@
 #include <aspect/Program.h>	// Allows for the use of Program.h from my engine
 #include <aspect/Entity.h>	// Allows for the use of Entity.h from my engine
 #include <aspect/Audio.h>   // Allows for the use of Audio.h from my engine
+#include <aspect/Transform.h>
 
 #include <string>	// Initalise for the use of string
 #include <iostream>	// Inialise use for debug and writing to the console
 #include <memory>	// Initalise memeory for use of smart and weak pointers
 
+
+ // https://gamedev.stackexchange.com/questions/70648/build-unity-like-transform-class
 void safe_Main()
 {
 
 	std::shared_ptr<Aspect::Engine::Program> p = Aspect::Engine::Program::InitSDL(); // Create a smart pointer call p that is equal to the program
 	
 	std::shared_ptr<Aspect::Engine::Entity> e = p->addEntity();							 // initalise function
+	
 	e->addComponent<Aspect::Engine::MeshRender>();
+
+	e->getComponent<Aspect::Engine::Transform>()->setPosition(glm::vec3(3.0f, -2.5f, -10.0f));
 
 	std::shared_ptr<Aspect::Engine::Audio> ac = std::make_shared<Aspect::Engine::Audio>("../Contrib/choose.ogg");
 	ac->play();
+
 	
-	p->Start(); // Starts program loop
+
+
+
+	p->Start(); // The start of the game
 	
 
 }
