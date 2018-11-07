@@ -28,6 +28,8 @@ void safe_Main()
 	e->addComponent<Aspect::Engine::MeshRender>();
 	e->addComponent<Aspect::Engine::BoxCollider>();
 
+	e->getComponent <Aspect::Engine::Transform>()->Rotate(0, -10, 0);
+	//e->getComponent<Aspect::Engine::Transform>()->setScale(1.5f, 3.0f, 3.0f);
 
 	std::shared_ptr<Aspect::Engine::Audio> ac = std::make_shared<Aspect::Engine::Audio>("../Contrib/choose.ogg");
 	ac->play();

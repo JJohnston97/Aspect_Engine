@@ -48,6 +48,7 @@ namespace Aspect
 			glm::vec3 scale;
 			glm::mat4 translation;
 			glm::mat4 orientation;
+			glm::mat4 modelMatrix;
 
 
 		};

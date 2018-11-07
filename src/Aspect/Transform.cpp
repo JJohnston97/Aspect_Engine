@@ -7,11 +7,14 @@
 #include <SDL.h>
 #include "Transform.h"
 
+#define GLM_FORCE_CTOR_INIT
+
 namespace Aspect
 {
 	namespace Engine
 	{
 		class Transform;
+		
 
 		Transform::Transform()
 		{
@@ -30,8 +33,18 @@ namespace Aspect
 
 		glm::mat4 Transform::getModelMatrix()
 		{
-			//glm::scale(glm::translate(glm::mat4(1.0f), position), scale);
-			return glm::translate(glm::mat4(1.0f), position);
+			/*while (rotation.y > (3.14159265358979323846 * 2.0))
+			{
+				rotation.y -= (float)(3.14159265358979323846 * 2.0);
+			}*/
+		
+
+			modelMatrix = glm::translate(glm::mat4(1.0f), position);
+			modelMatrix = glm::scale(modelMatrix, scale);
+			modelMatrix = glm::rotate(modelMatrix, rotation.y, glm::vec3(rotation.x, rotation.y, rotation.z));
+		
+
+			return modelMatrix;
 		}
 
 		void Transform::setPosition(glm::vec3 &pos)
@@ -63,11 +76,11 @@ namespace Aspect
 			return orientation;
 		}
 
-		glm::mat4 Transform::getTranslation()
-		{
-			//translation = glm::translate(position.x, position.y, position.z);
-			return translation;
-		}
+		//glm::mat4 Transform::getTranslation()
+		//{
+		//	//translation = glm::translate(position.x, position.y, position.z);
+		//	return translation;
+		//}
 
 
 

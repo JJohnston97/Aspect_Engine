@@ -164,8 +164,8 @@ namespace Aspect
 			entities.push_back(rtn);
 			rtn->addComponent<Transform>();
 			rtn->getComponent<Transform>()->setRotation(glm::vec3(0, 0, 0));
-			rtn->getComponent<Transform>()->setPosition(glm::vec3(0.0f, -2.5f, -10.0f));
-			rtn->getComponent<Transform>()->setScale(5.0f, 5.0f, 5.0f);
+			rtn->getComponent<Transform>()->setPosition(glm::vec3(0.0f, 0.0f, -10.0f));
+			rtn->getComponent<Transform>()->setScale(1.0f, 1.0f, 1.0f);
 	
 			//*******************************************************************************************
 			
