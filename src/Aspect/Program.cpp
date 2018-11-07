@@ -1,6 +1,8 @@
 #include <GL\glew.h>
 #include <GL\freeglut.h>
 #include <iostream>
+#include <GLM/gtc/type_ptr.hpp>
+#include <GLM/gtc/matrix_transform.hpp>
 
 #include "Program.h"
 #include "Entity.h"
@@ -161,9 +163,26 @@ namespace Aspect
 			std::shared_ptr<Entity> rtn = std::make_shared <Entity>();
 			entities.push_back(rtn);
 			rtn->addComponent<Transform>();
+			rtn->getComponent<Transform>()->setRotation(glm::vec3(0, 0, 0));
+			rtn->getComponent<Transform>()->setPosition(glm::vec3(0.0f, -2.5f, -10.0f));
+			rtn->getComponent<Transform>()->setScale(5.0f, 5.0f, 5.0f);
+	
+			//*******************************************************************************************
+			
+			//Scale doesnt work, need to get the model matrix and get the model matrix to be
+			//modelmatrix = glm::scale(modelMatrix, scale)
+			//scale is going to be equal to the next x.y.z put in when created
+			//something todo with transform getModelMatrix funcion and this section I think
+			//rtn->getComponent<Aspect::Engine::Transform>()->getModelMatrix = glm::scale(rtn->getComponent<Aspect::Engine::Transform>()->getModelMatrix, (2.0f, 2.0f, 2.0f));
+			//Might need to be in update trying to do to much in add entity
+			//onCount is update? Need both this info
+
+			//*******************************************************************************************
+			
 			rtn->self = rtn;
 			
 			//rtn->program = rtn;
+
 			
 			return rtn;
 		}

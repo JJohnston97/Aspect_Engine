@@ -51,6 +51,8 @@ add_library(aspect
   Contrib/stb_image/stb_image.cpp
   src/Aspect/Transform.h
   src/Aspect/Transform.cpp
+  src/Aspect/BoxCollider.h
+  src/Aspect/BoxCollider.cpp
  
 
 )

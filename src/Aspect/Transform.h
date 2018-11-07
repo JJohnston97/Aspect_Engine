@@ -23,8 +23,8 @@ namespace Aspect
 			void Rotate(float x, float y, float z);
 			void Rotate(const glm::vec3 &dir);
 			void setRotation(const glm::vec3 &rot);
-			void Scale(const glm::vec3 &scale);
-			void Scale(float x, float y, float z);
+			//void setScale(const glm::vec3 &size);
+			//void Scale(float x, float y, float z);
 
 			glm::mat4 getModelMatrix();
 
@@ -38,7 +38,7 @@ namespace Aspect
 			glm::vec3 getPosition() { return position; }
 			glm::vec3 getRotation() { return rotation; }
 
-			void setScale(float x, float y, float z) { scale.x = x; scale.y = y; scale.z = z; }
+			void setScale(float scaleX, float scaleY, float scaleZ) { scale.x = scaleX; scale.y = scaleY; scale.z = scaleZ; }
 
 
 		private:

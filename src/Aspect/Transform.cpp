@@ -30,10 +30,11 @@ namespace Aspect
 
 		glm::mat4 Transform::getModelMatrix()
 		{
+			//glm::scale(glm::translate(glm::mat4(1.0f), position), scale);
 			return glm::translate(glm::mat4(1.0f), position);
 		}
 
-		void Transform::setPosition(glm::vec3 & pos)
+		void Transform::setPosition(glm::vec3 &pos)
 		{
 			position = pos;
 		}
@@ -43,22 +44,12 @@ namespace Aspect
 			rotation += glm::vec3(x, y, z);
 		}
 
-		void Transform::Rotate(const glm::vec3 & dir)
+		void Transform::Rotate(const glm::vec3 &dir)
 		{
 			rotation += dir;
 		}
 
-		void Transform::setRotation(const glm::vec3 & rot)
-		{
-
-		}
-
-		void Transform::Scale(const glm::vec3 & scale)
-		{
-
-		}
-
-		void Transform::Scale(float x, float y, float z)
+		void Transform::setRotation(const glm::vec3 &rot)
 		{
 
 		}

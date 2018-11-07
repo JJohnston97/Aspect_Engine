@@ -22,7 +22,7 @@ namespace Aspect
 		}
 		void Component::onCount()
 		{
-
+			//model matrix = glm::scale 
 		}
 		void Component::onDisplay()
 		{

@@ -10,6 +10,7 @@
 #include <aspect/Entity.h>	// Allows for the use of Entity.h from my engine
 #include <aspect/Audio.h>   // Allows for the use of Audio.h from my engine
 #include <aspect/Transform.h>
+#include <aspect/BoxCollider.h>
 
 #include <string>	// Initalise for the use of string
 #include <iostream>	// Inialise use for debug and writing to the console
@@ -25,8 +26,8 @@ void safe_Main()
 	std::shared_ptr<Aspect::Engine::Entity> e = p->addEntity();							 // initalise function
 	
 	e->addComponent<Aspect::Engine::MeshRender>();
+	e->addComponent<Aspect::Engine::BoxCollider>();
 
-	e->getComponent<Aspect::Engine::Transform>()->setPosition(glm::vec3(3.0f, -2.5f, -10.0f));
 
 	std::shared_ptr<Aspect::Engine::Audio> ac = std::make_shared<Aspect::Engine::Audio>("../Contrib/choose.ogg");
 	ac->play();

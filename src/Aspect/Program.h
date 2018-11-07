@@ -5,6 +5,7 @@
 #include <AL/al.h>
 #include <AL/alc.h>
 
+
 #include <memory>
 #include <vector>
 
@@ -34,6 +35,9 @@ namespace Aspect
 			static SDL_Window *_window;		// Pointer window for SDL set up
 			ALCdevice* device;
 			ALCcontext* context;
+
+		protected:
+			static glm::mat4 modelMatrix;
 		};
 		
 	}
