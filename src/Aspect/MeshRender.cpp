@@ -43,7 +43,8 @@ namespace Aspect
 			shader->setUniform("in_Projection", glm::perspective(glm::radians(45.0f),
 				(float)1080/ (float)900, 0.1f, 100.f));
 
-			shader->setUniform("in_View", glm::mat4(1.0));
+			shader->setUniform("in_View", getEntity()->getComponent<Transform>()->getViewMatrix());
+				//glm::mat4(1.0));
 			
 			shader->setUniform("in_Material", mat);
 

@@ -130,6 +130,9 @@ namespace Aspect
 				}
 
 
+
+
+
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities
 				{
 					(*it)->count();	// Update them one at a time

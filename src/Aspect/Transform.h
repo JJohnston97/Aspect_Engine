@@ -26,7 +26,10 @@ namespace Aspect
 			//void setScale(const glm::vec3 &size);
 			//void Scale(float x, float y, float z);
 
+			void onCount() override;
+
 			glm::mat4 getModelMatrix();
+			glm::mat4 getViewMatrix();
 
 			
 
@@ -43,12 +46,20 @@ namespace Aspect
 
 		private:
 
+			float cameraAngleX, cameraAngleY;
+
 			glm::vec3 position;
 			glm::vec3 rotation;
 			glm::vec3 scale;
 			glm::mat4 translation;
 			glm::mat4 orientation;
 			glm::mat4 modelMatrix;
+
+			glm::mat4 rotMatrix;
+			
+			
+			glm::mat4 viewMatrix;
+			glm::quat cameraOrientation;
 
 
 		};

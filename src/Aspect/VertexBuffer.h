@@ -11,10 +11,10 @@ namespace Aspect
 		{
 			GLuint id;
 			int components;
-			std::vector<GLfloat> data;
 			bool dirty;
 
 		public:
+			std::vector<GLfloat> data;
 			VertexBuffer();
 			void add(glm::vec3 value);
 			void add(glm::vec4 value);

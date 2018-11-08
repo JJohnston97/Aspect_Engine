@@ -24,13 +24,15 @@ void safe_Main()
 	std::shared_ptr<Aspect::Engine::Program> p = Aspect::Engine::Program::InitSDL(); // Create a smart pointer call p that is equal to the program
 	
 	std::shared_ptr<Aspect::Engine::Entity> e = p->addEntity();							 // initalise function
+	std::shared_ptr<Aspect::Engine::Entity> n = p->addEntity();
 	
 	e->addComponent<Aspect::Engine::MeshRender>();
 	e->addComponent<Aspect::Engine::BoxCollider>();
+	e->getComponent <Aspect::Engine::Transform>()->Rotate(0, 90, 0);
+	e->getComponent<Aspect::Engine::Transform>()->Translate(5.0f, 0.0f, -10.0f);
+	e->getComponent<Aspect::Engine::Transform>()->setScale(3.0f, 3.0f, 3.0f);
 
-	e->getComponent <Aspect::Engine::Transform>()->Rotate(0, -10, 0);
-	//e->getComponent<Aspect::Engine::Transform>()->setScale(1.5f, 3.0f, 3.0f);
-
+	
 	std::shared_ptr<Aspect::Engine::Audio> ac = std::make_shared<Aspect::Engine::Audio>("../Contrib/choose.ogg");
 	ac->play();
 

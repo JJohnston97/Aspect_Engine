@@ -226,7 +226,6 @@ namespace Aspect
 
 						glVertexAttribPointer(i, buffers.at(i)->getComponents(), GL_FLOAT, GL_FALSE,
 							buffers.at(i)->getComponents() * sizeof(GLfloat), (void *)0);
-
 						glEnableVertexAttribArray(i);
 					}
 					else

@@ -38,6 +38,7 @@ namespace Aspect
 				throw std::exception(); // Any issues, throw an exception
 			}
 
+		
 			template <typename T>				// Type t template class to add a single component
 			std::shared_ptr<T> addComponent()	///<Function
 			{
