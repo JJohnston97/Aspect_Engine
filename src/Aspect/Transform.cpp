@@ -42,19 +42,16 @@ namespace Aspect
 
 		glm::mat4 Transform::getModelMatrix()
 		{
-			/*while (rotation.y > (3.14159265358979323846 * 2.0))
+			while (rotation.y > (3.14159265358979323846 * 2.0))
 			{
 				rotation.y -= (float)(3.14159265358979323846 * 2.0);
-			}*/
+			}
 		
-
-			//modelMatrix = glm::translate(glm::mat4(1.0f), position);
-			//modelMatrix = glm::scale(modelMatrix, scale);
 			
 			rotMatrix = glm::rotate(glm::mat4(1.0f), rotation.y, glm::vec3(0, 1, 0));
 			rotMatrix = glm::rotate(rotMatrix, rotation.x, glm::vec3(1, 0, 0));
 			rotMatrix = glm::rotate(rotMatrix, rotation.z, glm::vec3(0, 0, 1));
-			//modelMatrix = getOrientation();
+			
 
 			modelMatrix = glm::translate(glm::mat4(1.0f), position) * rotMatrix * glm::scale(glm::mat4(1), scale);
 
@@ -63,13 +60,14 @@ namespace Aspect
 
 		glm::mat4 Transform::getViewMatrix()
 		{
-			viewMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, -10.0f));
+			/*viewMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, -10.0f));
 			viewMatrix = glm::rotate(viewMatrix, cameraAngleX, glm::vec3(1, 0, 0));		//Allows player to rotate camera using player object as pivot
 			viewMatrix = glm::rotate(viewMatrix, cameraAngleY, glm::vec3(0, 1, 0));
 			viewMatrix = viewMatrix * glm::mat4_cast(glm::inverse(cameraOrientation));	//Orient towards player direction
-			//viewMatrix = glm::translate(viewMatrix, -playerPos);
 
-			return viewMatrix;
+			return viewMatrix;*/
+
+			return glm::inverse(getModelMatrix());
 		}
 
 		void Transform::setPosition(glm::vec3 &pos)

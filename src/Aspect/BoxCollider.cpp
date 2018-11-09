@@ -6,6 +6,8 @@
 
 
 #include "BoxCollider.h"
+#include "Entity.h"
+#include "Transform.h"
 
 namespace Aspect
 {
@@ -15,23 +17,22 @@ namespace Aspect
 
 		void BoxCollider::BoxCollision(std::shared_ptr<Entity> _object)
 		{
-			
-			
-
-
-			/*if (e->GetPosition().x <= (_object->getPosition().x + _object->getScale().x / 1)		//If the player x position greater than or equal to the object x position + a whole of the object
-				&& e->GetPosition().x >= (_object->getPosition().x) - _object->getScale().x / 1)		//Bounding Box collsiion
+			if (getEntity()->getComponent<Transform>()->getPosition().x <= (_object->getComponent<Transform>()->getPosition().x + _object->getComponent<Transform>()->getScale().x /1)
+				&& getEntity()->getComponent<Transform>()->getPosition().x >= (_object->getComponent<Transform>()->getPosition().x - _object->getComponent<Transform>()->getScale().x / 1))
 			{
-				if (e->GetPosition().y <= (_object->getPosition().y + _object->getScale().y / 1)			//Using Y and Z because my objects are in space and could be hit from any position
-					&& e->GetPosition().y >= (_object->getPosition().y - _object->getScale().y / 1))
+				if (getEntity()->getComponent<Transform>()->getPosition().y <= (_object->getComponent<Transform>()->getPosition().y + _object->getComponent<Transform>()->getScale().y /1)
+					&& getEntity()->getComponent<Transform>()->getPosition().y >= (_object->getComponent<Transform>()->getPosition().y - _object->getComponent<Transform>()->getScale().y / 1))
 				{
-					if (e->GetPosition().z <= (_object->getPosition().z + _object->getScale().z / 1)
-						&& e->GetPosition().z >= (_object->getPosition().z - _object->getScale().z / 1))	//Add a whole of the scale and minus a whole of the scale for bounding box
+					if (getEntity()->getComponent<Transform>()->getPosition().z <= (_object->getComponent<Transform>()->getPosition().z + _object->getComponent<Transform>()->getScale().z / 1)
+						&& getEntity()->getComponent<Transform>()->getPosition().z >= (_object->getComponent<Transform>()->getPosition().z - _object->getComponent<Transform>()->getScale().z / 1))
 					{
-						std::cout<<"hit"<<std::endl;
+
+						std::cout << "hit" << std::endl;
+
 					}
 				}
-			}*/
+			}
+			
 		}
 		
 	}
