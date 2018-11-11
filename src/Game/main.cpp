@@ -34,14 +34,17 @@ void safe_Main()
 	e->getComponent<Aspect::Engine::Transform>()->Translate(2.0f, 1.0f, 0.0f);
 	e->getComponent<Aspect::Engine::Transform>()->setScale(1.0f, 1.0f, 1.0f);
 
-	n->getComponent<Aspect::Engine::Transform>()->Translate(0.0f, 5.0f, 10.0f); //THIS IS THE CAMERA
+
+
+	n->getComponent<Aspect::Engine::Transform>()->Translate(3.0f, 0.0f, 10.0f); //THIS IS THE CAMERA
 	
 	std::shared_ptr<Aspect::Engine::Audio> ac = std::make_shared<Aspect::Engine::Audio>("../Contrib/choose.ogg");
+	
 	ac->play();
 
 	
 
-	p->Start(); // The start of the game
+	p->Start(n); // The start of the game
 	
 
 }

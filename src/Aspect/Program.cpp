@@ -70,16 +70,6 @@ namespace Aspect
 			unsigned int lastTime = SDL_GetTicks();	// Used to work out time between frame
 
 			glEnable(GL_DEPTH_TEST);	// Used to make sure what is in front are alwasy in front no matter the order they are drawn
-
-
-			unsigned int current = SDL_GetTicks();					 // Get the current time since SDL was initialised
-			float deltaTs = (float)(current - lastTime) / 1000.0f;   // Time from current take away time from last divied by 1000 as its in miliseconds
-			lastTime = current;										 // Current fame is next frames last time
-
-			if (deltaTs < (1.0f / 50.0f))	// Limiter to 50fps incase running to quickly
-			{
-				SDL_Delay((unsigned int)(((1.0f / 50.0f) - deltaTs)*1000.0f));
-			}
 		
 
 			std::shared_ptr<Program> rtn = std::make_shared<Program>();
@@ -111,9 +101,11 @@ namespace Aspect
 			
 		}
 
-		void Program::Start()
+		void Program::Start(std::shared_ptr<Entity> _cam)
 		{
 			running = true;
+
+			bool cmdMoveForward = false, cmdMoveBackwards = false, cmdLeft = false, cmdRight = false;
 
 			while (running)
 			{
@@ -124,13 +116,79 @@ namespace Aspect
 					{									// Switch is based on the event type
 					case SDL_QUIT:						// If the event type is quit
 						End();					// End the program
-					break;								
-
+						break;
+					case SDL_KEYDOWN:
+						switch (incomingEvent.key.keysym.sym)
+						{
+						case SDLK_s:
+						{
+							cmdMoveForward = true;
+							break;
+						}
+						case SDLK_d:
+						{
+							cmdLeft = true;
+							break;
+						}
+						case SDLK_a:
+						{
+							cmdRight = true;
+							break;
+						}
+						case SDLK_w:
+						{
+							cmdMoveBackwards = true;
+							break;
+						}
+						}
+						break;
+					case SDL_KEYUP:
+						switch (incomingEvent.key.keysym.sym)
+						{
+						case SDLK_s:
+						{
+							cmdMoveForward = false;
+							break;
+						}
+						case SDLK_d:
+						{
+							cmdLeft = false;
+							break;
+						}
+						case SDLK_a:
+						{
+							cmdRight = false;
+							break;
+						}
+						case SDLK_w:
+						{
+							cmdMoveBackwards = false;
+							break;
+						}
+						}
+						break;
+					
 					}
+					
 				}
 
 
-
+				if (cmdMoveForward & !cmdMoveBackwards & !cmdLeft & !cmdRight)
+				{
+					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, 1);
+				}
+				if (cmdLeft & !cmdRight & !cmdMoveBackwards & !cmdMoveForward)
+				{
+					_cam->getComponent<Aspect::Engine::Transform>()->Translate(1, 0, 0);
+				}
+				if (cmdRight & !cmdLeft & !cmdMoveForward & !cmdMoveBackwards)
+				{
+					_cam->getComponent <Aspect::Engine::Transform>()->Translate(-1, 0, 0);
+				}
+				if (cmdMoveBackwards & !cmdMoveForward & !cmdLeft & !cmdRight)
+				{
+					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, -1);
+				}
 
 
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities
@@ -167,20 +225,9 @@ namespace Aspect
 			entities.push_back(rtn);
 			rtn->addComponent<Transform>();
 			rtn->getComponent<Transform>()->setRotation(glm::vec3(0, 0, 0));
-			rtn->getComponent<Transform>()->setPosition(glm::vec3(0.0f, 0.0f, -10.0f));
+			rtn->getComponent<Transform>()->setPosition(glm::vec3(0.0f, 0.0f, 0.0f));
 			rtn->getComponent<Transform>()->setScale(1.0f, 1.0f, 1.0f);
 	
-			//*******************************************************************************************
-			
-			//Scale doesnt work, need to get the model matrix and get the model matrix to be
-			//modelmatrix = glm::scale(modelMatrix, scale)
-			//scale is going to be equal to the next x.y.z put in when created
-			//something todo with transform getModelMatrix funcion and this section I think
-			//rtn->getComponent<Aspect::Engine::Transform>()->getModelMatrix = glm::scale(rtn->getComponent<Aspect::Engine::Transform>()->getModelMatrix, (2.0f, 2.0f, 2.0f));
-			//Might need to be in update trying to do to much in add entity
-			//onCount is update? Need both this info
-
-			//*******************************************************************************************
 			
 			rtn->self = rtn;
 			
