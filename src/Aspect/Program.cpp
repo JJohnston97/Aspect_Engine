@@ -216,7 +216,7 @@ namespace Aspect
 
 
 				glClearColor(0.0f, 0.0f, 0.0f, 1.0f);	// Set the background colour
-				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);			// Clear the buffer
+				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Clear the buffer
 
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities again
 				{

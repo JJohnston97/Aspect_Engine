@@ -32,6 +32,8 @@ void safe_Main()
 	mr->camera = n;
 	mr2->camera = n;
 
+	r->getComponent<Aspect::Engine::Transform>()->Translate(3, 0, 0);
+
 
 	e->addComponent<Aspect::Engine::BoxCollider>();
 	r->addComponent<Aspect::Engine::BoxCollider>();
