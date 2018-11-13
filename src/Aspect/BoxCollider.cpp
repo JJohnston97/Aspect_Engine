@@ -17,11 +17,6 @@ namespace Aspect
 
 		void BoxCollider::BoxCollision(std::shared_ptr<Entity> _object)
 		{
-			if (getEntity() == getEntity())
-			{
-				return;
-			}
-
 			if (getEntity()->getComponent<Transform>()->getPosition().x <= (_object->getComponent<Transform>()->getPosition().x + _object->getComponent<Transform>()->getScale().x / 1)
 				&& getEntity()->getComponent<Transform>()->getPosition().x >= (_object->getComponent<Transform>()->getPosition().x - _object->getComponent<Transform>()->getScale().x / 1))
 			{

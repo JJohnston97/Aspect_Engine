@@ -38,6 +38,22 @@ namespace Aspect
 				throw std::exception(); // Any issues, throw an exception
 			}
 
+			template <typename T>				// Type T Template class to get a single component
+			bool hasComponent()	// Function
+			{
+				for (size_t i = 0; i < components.size(); i++)	// Loop through the list of components
+				{
+					std::shared_ptr<T> tst = std::dynamic_pointer_cast<T>(components.at(i)); // For each cast a dynamic pointer
+
+					if (tst)	// If it is equal to itself, hence the list has ran all the way through
+					{
+						return true;	// Return
+					}
+				}
+
+				return false;
+			}
+
 		
 			template <typename T>				// Type t template class to add a single component
 			std::shared_ptr<T> addComponent()	///<Function

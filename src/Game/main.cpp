@@ -22,27 +22,26 @@ void safe_Main()
 
 	std::shared_ptr<Aspect::Engine::Program> p = Aspect::Engine::Program::InitSDL(); // Create a smart pointer call p that is equal to the program
 	
-	std::shared_ptr<Aspect::Engine::Entity> e = p->addEntity();							 // initalise function
+	std::shared_ptr<Aspect::Engine::Entity> e = p->addEntity();
 	std::shared_ptr<Aspect::Engine::Entity> n = p->addEntity();
-	
+	std::shared_ptr<Aspect::Engine::Entity> r = p->addEntity();
+
 	std::shared_ptr<Aspect::Engine::MeshRender> mr = e->addComponent<Aspect::Engine::MeshRender>();
+	std::shared_ptr<Aspect::Engine::MeshRender> mr2 = r->addComponent<Aspect::Engine::MeshRender>();
+	
 	mr->camera = n;
-	
-	
+	mr2->camera = n;
+
+
 	e->addComponent<Aspect::Engine::BoxCollider>();
-	e->getComponent<Aspect::Engine::Transform>()->Rotate(90, 90, 0);
-	e->getComponent<Aspect::Engine::Transform>()->Translate(2.0f, 1.0f, 0.0f);
-	e->getComponent<Aspect::Engine::Transform>()->setScale(1.0f, 1.0f, 1.0f);
+	r->addComponent<Aspect::Engine::BoxCollider>();
 
-
-
-	n->getComponent<Aspect::Engine::Transform>()->Translate(3.0f, 0.0f, 10.0f); //THIS IS THE CAMERA
+	n->getComponent<Aspect::Engine::Transform>()->Translate(3.0f, 0.0f, 20.0f); //THIS IS THE CAMERA
 	
 	std::shared_ptr<Aspect::Engine::Audio> ac = std::make_shared<Aspect::Engine::Audio>("../Contrib/choose.ogg");
 	
 	ac->play();
 
-	
 
 	p->Start(n); // The start of the game
 	

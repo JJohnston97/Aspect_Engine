@@ -9,7 +9,7 @@
 #include "ShaderProgram.h"
 #include "MeshRender.h"
 #include "Transform.h"
-
+#include "BoxCollider.h"
 
 namespace Aspect
 {
@@ -67,8 +67,6 @@ namespace Aspect
 			}
 
 
-			unsigned int lastTime = SDL_GetTicks();	// Used to work out time between frame
-
 			glEnable(GL_DEPTH_TEST);	// Used to make sure what is in front are alwasy in front no matter the order they are drawn
 		
 
@@ -105,6 +103,7 @@ namespace Aspect
 		{
 			running = true;
 
+			unsigned int lastTime = SDL_GetTicks();	// Used to work out time between frame
 			bool cmdMoveForward = false, cmdMoveBackwards = false, cmdLeft = false, cmdRight = false;
 
 			while (running)
@@ -125,12 +124,12 @@ namespace Aspect
 							cmdMoveForward = true;
 							break;
 						}
-						case SDLK_d:
+						case SDLK_a:
 						{
 							cmdLeft = true;
 							break;
 						}
-						case SDLK_a:
+						case SDLK_d:
 						{
 							cmdRight = true;
 							break;
@@ -150,12 +149,12 @@ namespace Aspect
 							cmdMoveForward = false;
 							break;
 						}
-						case SDLK_d:
+						case SDLK_a:
 						{
 							cmdLeft = false;
 							break;
 						}
-						case SDLK_a:
+						case SDLK_d:
 						{
 							cmdRight = false;
 							break;
@@ -172,29 +171,49 @@ namespace Aspect
 					
 				}
 
+				unsigned int current = SDL_GetTicks();
+
+				float deltaTs = (float)(current - lastTime) / 1000.0f;
+				lastTime - current;
+
+
+
 
 				if (cmdMoveForward & !cmdMoveBackwards & !cmdLeft & !cmdRight)
 				{
-					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, 1);
+					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, 0.1 * deltaTs);
 				}
 				if (cmdLeft & !cmdRight & !cmdMoveBackwards & !cmdMoveForward)
 				{
-					_cam->getComponent<Aspect::Engine::Transform>()->Translate(1, 0, 0);
+					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0.1 * deltaTs, 0, 0);
 				}
 				if (cmdRight & !cmdLeft & !cmdMoveForward & !cmdMoveBackwards)
 				{
-					_cam->getComponent <Aspect::Engine::Transform>()->Translate(-1, 0, 0);
+					_cam->getComponent <Aspect::Engine::Transform>()->Translate(-0.1 * deltaTs, 0, 0);
 				}
 				if (cmdMoveBackwards & !cmdMoveForward & !cmdLeft & !cmdRight)
 				{
-					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, -1);
+					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, -0.1 * deltaTs);
 				}
 
 
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities
 				{
 					(*it)->count();	// Update them one at a time
+
+					for (std::vector<std::shared_ptr<Entity> >::iterator it2 = entities.begin(); it2 != entities.end(); it2++)
+					{
+						if (*it == *it2 || (*it)->hasComponent<BoxCollider>() == false || (*it2)->hasComponent<BoxCollider>() == false)
+						{
+							continue;
+						}
+						else
+						{
+							(*it)->getComponent<BoxCollider>()->BoxCollision(*it2);
+						}
+					}
 				}
+
 
 				glClearColor(0.0f, 0.0f, 0.0f, 1.0f);	// Set the background colour
 				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);			// Clear the buffer
