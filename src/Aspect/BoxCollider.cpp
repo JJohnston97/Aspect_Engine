@@ -26,7 +26,7 @@ namespace Aspect
 					if (getEntity()->getComponent<Transform>()->getPosition().z <= (_object->getComponent<Transform>()->getPosition().z + _object->getComponent<Transform>()->getScale().z / 1)
 						&& getEntity()->getComponent<Transform>()->getPosition().z >= (_object->getComponent<Transform>()->getPosition().z - _object->getComponent<Transform>()->getScale().z / 1))
 					{
-
+						
 						std::cout << "hit" << std::endl;
 
 					}

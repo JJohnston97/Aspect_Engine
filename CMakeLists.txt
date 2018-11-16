@@ -53,6 +53,8 @@ add_library(aspect
   src/Aspect/Transform.cpp
   src/Aspect/BoxCollider.h
   src/Aspect/BoxCollider.cpp
+  src/Aspect/Camera.h
+  src/Aspect/Camera.cpp
  
 
 )

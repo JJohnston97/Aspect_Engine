@@ -10,6 +10,7 @@
 #include "MeshRender.h"
 #include "Transform.h"
 #include "BoxCollider.h"
+#include "Camera.h"
 
 namespace Aspect
 {
@@ -18,6 +19,7 @@ namespace Aspect
 		std::vector<std::shared_ptr<Entity> > Program::entities;
 
 		SDL_Window *Program::_window;
+		std::weak_ptr<Program> Program::self;
 
 		bool Program::InitGlew()
 		{
@@ -71,6 +73,7 @@ namespace Aspect
 		
 
 			std::shared_ptr<Program> rtn = std::make_shared<Program>();
+			self = rtn;
 
 			rtn->device = alcOpenDevice(NULL);
 
@@ -105,6 +108,7 @@ namespace Aspect
 
 			unsigned int lastTime = SDL_GetTicks();	// Used to work out time between frame
 			bool cmdMoveForward = false, cmdMoveBackwards = false, cmdLeft = false, cmdRight = false;
+			float vel = 0.1f;
 
 			while (running)
 			{
@@ -124,12 +128,12 @@ namespace Aspect
 							cmdMoveForward = true;
 							break;
 						}
-						case SDLK_a:
+						case SDLK_d:
 						{
 							cmdLeft = true;
 							break;
 						}
-						case SDLK_d:
+						case SDLK_a:
 						{
 							cmdRight = true;
 							break;
@@ -149,12 +153,12 @@ namespace Aspect
 							cmdMoveForward = false;
 							break;
 						}
-						case SDLK_a:
+						case SDLK_d:
 						{
 							cmdLeft = false;
 							break;
 						}
-						case SDLK_d:
+						case SDLK_a:
 						{
 							cmdRight = false;
 							break;
@@ -175,8 +179,11 @@ namespace Aspect
 
 				float deltaTs = (float)(current - lastTime) / 1000.0f;
 				lastTime - current;
+				
 
+				
 
+			
 
 
 				if (cmdMoveForward & !cmdMoveBackwards & !cmdLeft & !cmdRight)
@@ -195,6 +202,18 @@ namespace Aspect
 				{
 					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, -0.1 * deltaTs);
 				}
+
+				entities[0]->getComponent<Transform>()->Translate(vel, 0, 0);
+				
+				if ((entities[0]->getComponent<Transform>()->getPosition().x <= 0 && vel < 0) || (entities[0]->getComponent<Transform>()->getPosition().x > 10 && vel > 0))
+				{
+					vel = - vel;
+				}
+				
+
+	
+				
+
 
 
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities
@@ -217,6 +236,25 @@ namespace Aspect
 
 				glClearColor(0.0f, 0.0f, 0.0f, 1.0f);	// Set the background colour
 				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Clear the buffer
+
+				std::vector <std::shared_ptr<Entity>> cameras;
+
+				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities
+				{
+					(*it)->count();	// Update them one at a time
+
+					if ((*it)->hasComponent<Camera>() == true)
+					{
+						cameras.push_back(*it);
+					}
+				}
+
+				for (std::vector<std::shared_ptr<Entity> >::iterator it = cameras.begin(); it != cameras.end(); it++) // Loop through all the entities again
+				{
+					setCurrentCamera((*it)->getComponent<Camera>());
+					(*it)->display();	// Draw them
+				}
+			
 
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities again
 				{
@@ -242,6 +280,7 @@ namespace Aspect
 		{
 			std::shared_ptr<Entity> rtn = std::make_shared <Entity>();
 			entities.push_back(rtn);
+			rtn->program = self.lock();
 			rtn->addComponent<Transform>();
 			rtn->getComponent<Transform>()->setRotation(glm::vec3(0, 0, 0));
 			rtn->getComponent<Transform>()->setPosition(glm::vec3(0.0f, 0.0f, 0.0f));
@@ -255,6 +294,17 @@ namespace Aspect
 			
 			return rtn;
 		}
+
+		void Program::setCurrentCamera(std::shared_ptr<Camera> cam)
+		{
+			currentCam = cam;
+		}
+
+		std::shared_ptr<Camera> Program::getCurrentCamera()
+		{
+			return currentCam.lock();
+		}
+
 
 	}
 

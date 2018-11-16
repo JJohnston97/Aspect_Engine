@@ -14,6 +14,7 @@ namespace Aspect
 	namespace Engine
 	{
 		class Entity;
+		class Camera;
 		extern SDL_Renderer *_renderer;  // Allows access to renderer in other files
 
 		class Program
@@ -25,16 +26,20 @@ namespace Aspect
 			static bool InitGlew();		// Initialise Glew
 			static std::shared_ptr<Program> InitSDL();	// Initialise SDL
 			static std::shared_ptr<Entity> addEntity();	// Add entity function
+			void setCurrentCamera(std::shared_ptr<Camera> cam);
+			std::shared_ptr<Camera> getCurrentCamera();
 
 
 		private:
 			
 			bool running;	// Bool to tell if the program is running or not
 			static std::vector<std::shared_ptr<Entity> > entities; // List of entities of class entity
-			std::weak_ptr<Program> self;	// Pointer to itself
+			
+			static std::weak_ptr<Program> self;	// Pointer to itself
 			static SDL_Window *_window;		// Pointer window for SDL set up
 			ALCdevice* device;
 			ALCcontext* context;
+			std::weak_ptr<Camera> currentCam;
 
 		protected:
 			static glm::mat4 modelMatrix;

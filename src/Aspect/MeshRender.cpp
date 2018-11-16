@@ -9,6 +9,7 @@
 #include "Entity.h"
 #include "Transform.h"
 #include "ShaderProgram.h"
+#include "Camera.h"
 
 // glm max...
 
@@ -40,8 +41,7 @@ namespace Aspect
 				//glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, -10))); 
 			shader->setUniform("in_Projection", glm::mat4(1.0f));
 
-			shader->setUniform("in_Projection", glm::perspective(glm::radians(45.0f),
-				(float)1080/ (float)900, 0.1f, 100.f));
+			shader->setUniform("in_Projection", getProgram()->getCurrentCamera()->getProjectionMatrix());  //->getComponent<Camera>()->getProjectionMatrix());
 
 			shader->setUniform("in_View", camera->getComponent<Transform>()->getViewMatrix());
 				//glm::mat4(1.0));

@@ -11,6 +11,7 @@
 #include <aspect/Audio.h>   // Allows for the use of Audio.h from my engine
 #include <aspect/Transform.h>
 #include <aspect/BoxCollider.h>
+#include <aspect/Camera.h>
 
 #include <string>	// Initalise for the use of string
 #include <iostream>	// Inialise use for debug and writing to the console
@@ -37,6 +38,7 @@ void safe_Main()
 
 	e->addComponent<Aspect::Engine::BoxCollider>();
 	r->addComponent<Aspect::Engine::BoxCollider>();
+	n->addComponent<Aspect::Engine::Camera>();			// Add second cam
 
 	n->getComponent<Aspect::Engine::Transform>()->Translate(3.0f, 0.0f, 20.0f); //THIS IS THE CAMERA
 	

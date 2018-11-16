@@ -130,15 +130,6 @@ namespace Aspect
 
 			glBindVertexArray(0);
 			glUseProgram(0);
-
-
-			/*glUseProgram(id);
-			glBindVertexArray(vertexArray.getId());
-
-			glDrawArrays(GL_TRIANGLES, 0, vertexArray.getVertexCount());
-
-			glBindVertexArray(0);
-			glUseProgram(0);*/
 		}
 
 		void ShaderProgram::setUniform(std::string uniform, glm::vec4 value)
