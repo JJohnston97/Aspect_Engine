@@ -85,6 +85,9 @@ namespace Aspect
 			
 			void count();			// Update function
 			void display();			// Draw function
+			void setDestroy(bool destroy) { this->destroy = destroy; };
+			bool isDestroyed() { return destroy; }
+			bool destroy;
 			std::vector<std::shared_ptr<Component> > components; // Vector list of components to store all the components of the entity
 			std::shared_ptr<Program> getProgram();				// Get program function
 			std::weak_ptr<Program> program;						// Weak pointer to program

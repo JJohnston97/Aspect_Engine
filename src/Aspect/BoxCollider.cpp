@@ -28,6 +28,8 @@ namespace Aspect
 					{
 						
 						std::cout << "hit" << std::endl;
+						_object->setDestroy(true);
+
 
 					}
 				}

@@ -42,6 +42,7 @@ void safe_Main()
 
 	n->getComponent<Aspect::Engine::Transform>()->Translate(3.0f, 0.0f, 20.0f); //THIS IS THE CAMERA
 	
+	
 	std::shared_ptr<Aspect::Engine::Audio> ac = std::make_shared<Aspect::Engine::Audio>("../Contrib/choose.ogg");
 	
 	ac->play();

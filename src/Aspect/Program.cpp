@@ -181,9 +181,6 @@ namespace Aspect
 				lastTime - current;
 				
 
-				
-
-			
 
 
 				if (cmdMoveForward & !cmdMoveBackwards & !cmdLeft & !cmdRight)
@@ -211,10 +208,6 @@ namespace Aspect
 				}
 				
 
-	
-				
-
-
 
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities
 				{
@@ -230,6 +223,16 @@ namespace Aspect
 						{
 							(*it)->getComponent<BoxCollider>()->BoxCollision(*it2);
 						}
+					}
+				}
+
+				for (int x = 0; x < entities.size(); x++) // Loop through all the entities
+				{
+					if (entities.at(x)->isDestroyed() )
+					{
+						delete entities.at(x);
+						
+
 					}
 				}
 

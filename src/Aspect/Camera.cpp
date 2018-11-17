@@ -14,7 +14,7 @@ namespace Aspect
 		void Camera::onInit()
 		{
 
-
+			
 
 		}
 
