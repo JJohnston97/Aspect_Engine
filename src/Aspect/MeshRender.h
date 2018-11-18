@@ -18,6 +18,7 @@ namespace Aspect
 		public:
 			void onInit();
 			std::shared_ptr<Entity> camera;
+			bool MrEnable = true;
 
 		private:
 			void onDisplay();

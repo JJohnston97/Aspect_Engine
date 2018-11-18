@@ -8,12 +8,14 @@
 #include "BoxCollider.h"
 #include "Entity.h"
 #include "Transform.h"
+#include "MeshRender.h"
 
 namespace Aspect
 {
 	namespace Engine
 	{
 		class BoxCollider;
+		
 
 		void BoxCollider::BoxCollision(std::shared_ptr<Entity> _object)
 		{
@@ -27,13 +29,13 @@ namespace Aspect
 						&& getEntity()->getComponent<Transform>()->getPosition().z >= (_object->getComponent<Transform>()->getPosition().z - _object->getComponent<Transform>()->getScale().z / 1))
 					{
 						
-						std::cout << "hit" << std::endl;
 						_object->setDestroy(true);
-
-
+				
 					}
 				}
 			}
+
+			
 		}
 
 	}

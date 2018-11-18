@@ -108,7 +108,7 @@ namespace Aspect
 
 			unsigned int lastTime = SDL_GetTicks();	// Used to work out time between frame
 			bool cmdMoveForward = false, cmdMoveBackwards = false, cmdLeft = false, cmdRight = false;
-			float vel = 0.1f;
+			float vel = -0.1f;
 
 			while (running)
 			{
@@ -180,7 +180,7 @@ namespace Aspect
 				float deltaTs = (float)(current - lastTime) / 1000.0f;
 				lastTime - current;
 				
-
+				
 
 
 				if (cmdMoveForward & !cmdMoveBackwards & !cmdLeft & !cmdRight)
@@ -200,14 +200,16 @@ namespace Aspect
 					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, -0.1 * deltaTs);
 				}
 
-				entities[0]->getComponent<Transform>()->Translate(vel, 0, 0);
-				
-				if ((entities[0]->getComponent<Transform>()->getPosition().x <= 0 && vel < 0) || (entities[0]->getComponent<Transform>()->getPosition().x > 10 && vel > 0))
-				{
-					vel = - vel;
-				}
+				entities[0]->getComponent<Transform>()->Translate(0, vel, 0);
+
+				std::cout << entities[0]->getComponent<Transform>()->getPosition().y << std::endl;
 				
 
+				if ((entities[0]->getComponent<Transform>()->getPosition().y >= -10.0f))
+				{
+					entities[0]->getComponent<MeshRender>()->MrEnable = false;
+					
+				}
 
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities
 				{
@@ -224,18 +226,17 @@ namespace Aspect
 							(*it)->getComponent<BoxCollider>()->BoxCollision(*it2);
 						}
 					}
+					
 				}
 
-				for (int x = 0; x < entities.size(); x++) // Loop through all the entities
+				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities again
 				{
-					if (entities.at(x)->isDestroyed() )
+					if ((*it)->isDestroyed() == true)
 					{
-						delete entities.at(x);
-						
-
+						(*it)->getComponent<MeshRender>()->MrEnable = false;
 					}
 				}
-
+				
 
 				glClearColor(0.0f, 0.0f, 0.0f, 1.0f);	// Set the background colour
 				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Clear the buffer
@@ -259,11 +260,14 @@ namespace Aspect
 				}
 			
 
+			
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities again
 				{
 					(*it)->display();	// Draw them
 				}
 
+
+				
 				SDL_GL_SwapWindow(_window); 
 
 			}

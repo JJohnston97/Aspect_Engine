@@ -27,6 +27,7 @@ void safe_Main()
 	std::shared_ptr<Aspect::Engine::Entity> n = p->addEntity();
 	std::shared_ptr<Aspect::Engine::Entity> r = p->addEntity();
 
+
 	std::shared_ptr<Aspect::Engine::MeshRender> mr = e->addComponent<Aspect::Engine::MeshRender>();
 	std::shared_ptr<Aspect::Engine::MeshRender> mr2 = r->addComponent<Aspect::Engine::MeshRender>();
 	
@@ -36,9 +37,11 @@ void safe_Main()
 	r->getComponent<Aspect::Engine::Transform>()->Translate(3, 0, 0);
 
 
+
 	e->addComponent<Aspect::Engine::BoxCollider>();
 	r->addComponent<Aspect::Engine::BoxCollider>();
 	n->addComponent<Aspect::Engine::Camera>();			// Add second cam
+	
 
 	n->getComponent<Aspect::Engine::Transform>()->Translate(3.0f, 0.0f, 20.0f); //THIS IS THE CAMERA
 	
