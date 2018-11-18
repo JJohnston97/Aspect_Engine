@@ -267,20 +267,39 @@ namespace Aspect
 				}
 
 				entities[0]->getComponent<Transform>()->Translate(0, vel, 0);
+				
+				//entities[1]->getComponent<Transform>()->Translate(0, vel, 0);
 
 				std::cout << entities[0]->getComponent<Transform>()->getPosition().y << std::endl;
 				
 
-				if ((entities[0]->getComponent<Transform>()->getPosition().y <= -9.0f))
+				if ((entities[0]->getComponent<Transform>()->getPosition().y <= -7.0f))
 				{
 					//entities[0]->getComponent<MeshRender>()->MrEnable = false;
 					vel = -vel;
 				}
-				if ((entities[0]->getComponent<Transform>()->getPosition().y >= 9.0f))
+				if ((entities[0]->getComponent<Transform>()->getPosition().y >= 7.0f))
 				{
 					//entities[0]->getComponent<MeshRender>()->MrEnable = false;
 					vel = -vel;
 				}
+
+
+				/*entities[1]->getComponent<Transform>()->Translate(0, vel, 0);
+
+				std::cout << entities[1]->getComponent<Transform>()->getPosition().y << std::endl;
+
+
+				if ((entities[1]->getComponent<Transform>()->getPosition().y <= -9.0f))
+				{
+					//entities[0]->getComponent<MeshRender>()->MrEnable = false;
+					vel = -vel;
+				}
+				if ((entities[1]->getComponent<Transform>()->getPosition().y >= 9.0f))
+				{
+					//entities[0]->getComponent<MeshRender>()->MrEnable = false;
+					vel = -vel;
+				}*/
 
 
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities

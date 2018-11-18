@@ -41,11 +41,6 @@ void safe_Main()
 
 	c->getComponent<Aspect::Engine::Transform>()->Translate(0.0f, 0.0f, 20.0f); //THIS IS THE CAMERA
 	
-	
-	/*std::shared_ptr<Aspect::Engine::Audio> ac = std::make_shared<Aspect::Engine::Audio>("../Contrib/Game_Music.ogg");
-	
-	ac->play();*/
-
 
 	p->Start(c, player); // The start of the game
 	
