@@ -11,6 +11,7 @@
 #include "Transform.h"
 #include "BoxCollider.h"
 #include "Camera.h"
+#include "Audio.h"
 
 namespace Aspect
 {
@@ -102,16 +103,23 @@ namespace Aspect
 			
 		}
 
-		void Program::Start(std::shared_ptr<Entity> _cam)
+		void Program::Start(std::shared_ptr<Entity> _cam, std::shared_ptr<Entity> _player)
 		{
 			running = true;
 
 			unsigned int lastTime = SDL_GetTicks();	// Used to work out time between frame
 			bool cmdMoveForward = false, cmdMoveBackwards = false, cmdLeft = false, cmdRight = false;
+			bool camMoveForward = false, camMoveBackwards = false, camLeft = false, camRight = false;
+
 			float vel = -0.1f;
+			
+			std::shared_ptr<Aspect::Engine::Audio> ac = std::make_shared<Aspect::Engine::Audio>("../Contrib/Game_Music.ogg");
+			ac->play();
 
 			while (running)
 			{
+
+
 				SDL_Event incomingEvent;				
 				while (SDL_PollEvent(&incomingEvent))	// Check if there is an event in the queue
 				{
@@ -143,6 +151,26 @@ namespace Aspect
 							cmdMoveBackwards = true;
 							break;
 						}
+						case SDLK_UP:
+						{
+							camMoveForward = true;
+							break;
+						}
+						case SDLK_DOWN:
+						{
+							camMoveBackwards = true;
+							break;
+						}
+						case SDLK_LEFT:
+						{
+							camLeft = true;
+							break;
+						}
+						case SDLK_RIGHT:
+						{
+							camRight = true;
+							break;
+						}
 						}
 						break;
 					case SDL_KEYUP:
@@ -168,6 +196,26 @@ namespace Aspect
 							cmdMoveBackwards = false;
 							break;
 						}
+						case SDLK_UP:
+						{
+							camMoveForward = false;
+							break;
+						}
+						case SDLK_DOWN:
+						{
+							camMoveBackwards = false;
+							break;
+						}
+						case SDLK_LEFT:
+						{
+							camLeft = false;
+							break;
+						}
+						case SDLK_RIGHT:
+						{
+							camRight = false;
+							break;
+						}
 						}
 						break;
 					
@@ -182,20 +230,38 @@ namespace Aspect
 				
 				
 
-
+				// Player movement
 				if (cmdMoveForward & !cmdMoveBackwards & !cmdLeft & !cmdRight)
 				{
-					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, 0.1 * deltaTs);
+					_player->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, 0.1 * deltaTs);
 				}
 				if (cmdLeft & !cmdRight & !cmdMoveBackwards & !cmdMoveForward)
 				{
-					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0.1 * deltaTs, 0, 0);
+					_player->getComponent<Aspect::Engine::Transform>()->Translate(0.1 * deltaTs, 0, 0);
 				}
 				if (cmdRight & !cmdLeft & !cmdMoveForward & !cmdMoveBackwards)
 				{
-					_cam->getComponent <Aspect::Engine::Transform>()->Translate(-0.1 * deltaTs, 0, 0);
+					_player->getComponent <Aspect::Engine::Transform>()->Translate(-0.1 * deltaTs, 0, 0);
 				}
 				if (cmdMoveBackwards & !cmdMoveForward & !cmdLeft & !cmdRight)
+				{
+					_player->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, -0.1 * deltaTs);
+				}
+
+				// Camera movement with arrow keys
+				if (camMoveForward & !camMoveBackwards & !camLeft & !camRight)
+				{
+					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, 0.1 * deltaTs);
+				}
+				if (camLeft & !cmdRight & !camMoveBackwards & !camMoveForward)
+				{
+					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0.1 * deltaTs, 0, 0);
+				}
+				if (camRight & !camLeft & !camMoveForward & !camMoveBackwards)
+				{
+					_cam->getComponent <Aspect::Engine::Transform>()->Translate(-0.1 * deltaTs, 0, 0);
+				}
+				if (camMoveBackwards & !camMoveForward & !camLeft & !camRight)
 				{
 					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, -0.1 * deltaTs);
 				}
@@ -205,11 +271,17 @@ namespace Aspect
 				std::cout << entities[0]->getComponent<Transform>()->getPosition().y << std::endl;
 				
 
-				if ((entities[0]->getComponent<Transform>()->getPosition().y >= -10.0f))
+				if ((entities[0]->getComponent<Transform>()->getPosition().y <= -9.0f))
 				{
-					entities[0]->getComponent<MeshRender>()->MrEnable = false;
-					
+					//entities[0]->getComponent<MeshRender>()->MrEnable = false;
+					vel = -vel;
 				}
+				if ((entities[0]->getComponent<Transform>()->getPosition().y >= 9.0f))
+				{
+					//entities[0]->getComponent<MeshRender>()->MrEnable = false;
+					vel = -vel;
+				}
+
 
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities
 				{

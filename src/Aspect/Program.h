@@ -21,7 +21,7 @@ namespace Aspect
 		{
 		public:
 		
-			void Start(std::shared_ptr<Entity> _cam);		// Start the program, also contains the game loop
+			void Start(std::shared_ptr<Entity> _cam, std::shared_ptr<Entity> _player);		// Start the program, also contains the game loop
 			void End();			// Clean up and close the program
 			static bool InitGlew();		// Initialise Glew
 			static std::shared_ptr<Program> InitSDL();	// Initialise SDL
