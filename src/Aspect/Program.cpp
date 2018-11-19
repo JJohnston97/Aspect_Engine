@@ -111,14 +111,15 @@ namespace Aspect
 			bool cmdMoveForward = false, cmdMoveBackwards = false, cmdLeft = false, cmdRight = false;
 			bool camMoveForward = false, camMoveBackwards = false, camLeft = false, camRight = false;
 
-			float vel = -0.1f;
+			float velFast = -0.3f;
+			float velSlow = 0.1;
+			float lastCubeX = -6.0f;
 			
 			std::shared_ptr<Aspect::Engine::Audio> ac = std::make_shared<Aspect::Engine::Audio>("../Contrib/Game_Music.ogg");
 			ac->play();
 
 			while (running)
 			{
-
 
 				SDL_Event incomingEvent;				
 				while (SDL_PollEvent(&incomingEvent))	// Check if there is an event in the queue
@@ -228,7 +229,26 @@ namespace Aspect
 				float deltaTs = (float)(current - lastTime) / 1000.0f;
 				lastTime - current;
 				
+				if (lastCubeX - _player->getComponent<Transform>()->getPosition().x < 2)
+				{
+					std::cout << "New spawn" << std::endl;
+					std::shared_ptr<Entity> en = self.lock()->addEntity();
+					en->getProgram()->addEntity();
+					std::shared_ptr<MeshRender> gmr = en->addComponent<Aspect::Engine::MeshRender>();
+					en->addComponent<BoxCollider>();
+					en->addComponent<Transform>();
+
+					en->getComponent<Transform>()->Translate(glm::vec3 (lastCubeX + 3.0f, 0.0f, 0.0f));
+					lastCubeX += 3;
+
+					std::cout << en->getComponent<Transform>()->getPosition().x << std::endl;
+					std::cout << en->getComponent<Transform>()->getPosition().y << std::endl;
+					std::cout << en->getComponent<Transform>()->getPosition().z << std::endl;
+				}
+			
+				//std::cout << _player->getComponent<Transform>()->getPosition().x << std::endl;
 				
+				_cam->getComponent<Transform>()->Translate(0.02, 0.0, 0.0);
 
 				// Player movement
 				if (cmdMoveForward & !cmdMoveBackwards & !cmdLeft & !cmdRight)
@@ -266,40 +286,36 @@ namespace Aspect
 					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, -0.1 * deltaTs);
 				}
 
-				entities[0]->getComponent<Transform>()->Translate(0, vel, 0);
 				
 				//entities[1]->getComponent<Transform>()->Translate(0, vel, 0);
 
-				std::cout << entities[0]->getComponent<Transform>()->getPosition().y << std::endl;
+				//std::cout << entities[0]->getComponent<Transform>()->getPosition().y << std::endl;
 				
 
-				if ((entities[0]->getComponent<Transform>()->getPosition().y <= -7.0f))
-				{
-					//entities[0]->getComponent<MeshRender>()->MrEnable = false;
-					vel = -vel;
-				}
-				if ((entities[0]->getComponent<Transform>()->getPosition().y >= 7.0f))
-				{
-					//entities[0]->getComponent<MeshRender>()->MrEnable = false;
-					vel = -vel;
-				}
+					entities[0]->getComponent<Transform>()->Translate(0, velFast, 0);
+					entities[1]->getComponent<Transform>()->Translate(0, velSlow, 0);
+					
+					if ((entities[0]->getComponent<Transform>()->getPosition().y <= -7.0f))
+					{
+							velFast = -velFast;
+					}
+					else if ((entities[0]->getComponent<Transform>()->getPosition().y >= 7.0f))
+					{
+						velFast = -velFast;
+					}
+
+					if ((entities[1]->getComponent<Transform>()->getPosition().y <= -7.0f))
+					{
+						velSlow = -velSlow;
+					}
+					else if ((entities[1]->getComponent<Transform>()->getPosition().y >= 7.0f))
+					{
+						velSlow = -velSlow;
+					}
+				
 
 
-				/*entities[1]->getComponent<Transform>()->Translate(0, vel, 0);
-
-				std::cout << entities[1]->getComponent<Transform>()->getPosition().y << std::endl;
-
-
-				if ((entities[1]->getComponent<Transform>()->getPosition().y <= -9.0f))
-				{
-					//entities[0]->getComponent<MeshRender>()->MrEnable = false;
-					vel = -vel;
-				}
-				if ((entities[1]->getComponent<Transform>()->getPosition().y >= 9.0f))
-				{
-					//entities[0]->getComponent<MeshRender>()->MrEnable = false;
-					vel = -vel;
-				}*/
+			
 
 
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities

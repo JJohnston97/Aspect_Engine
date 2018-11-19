@@ -24,20 +24,36 @@ void safe_Main()
 	std::shared_ptr<Aspect::Engine::Program> p = Aspect::Engine::Program::InitSDL(); // Create a smart pointer call p that is equal to the program
 	
 	std::shared_ptr<Aspect::Engine::Entity> e = p->addEntity();
+	std::shared_ptr <Aspect::Engine::Entity> o = p->addEntity();
 	std::shared_ptr<Aspect::Engine::Entity> c = p->addEntity();
 	std::shared_ptr<Aspect::Engine::Entity> player = p->addEntity();
 
 
 	std::shared_ptr<Aspect::Engine::MeshRender> mr = e->addComponent<Aspect::Engine::MeshRender>();
 	std::shared_ptr<Aspect::Engine::MeshRender> mr2 = player->addComponent<Aspect::Engine::MeshRender>();
+	std::shared_ptr<Aspect::Engine::MeshRender> mr3 = o->addComponent<Aspect::Engine::MeshRender>();
 	
-	player->getComponent<Aspect::Engine::Transform>()->Translate(3, 0, 0);
+	player->getComponent<Aspect::Engine::Transform>()->Translate(-8.6802f, -7.0f, 0.0f);
+	o->getComponent<Aspect::Engine::Transform>()->Translate(-4, 0, 0);
 
 	
 	e->addComponent<Aspect::Engine::BoxCollider>();
 	player->addComponent<Aspect::Engine::BoxCollider>();
+	o->addComponent<Aspect::Engine::BoxCollider>();
 	c->addComponent<Aspect::Engine::Camera>();			// Add second cam
 	
+
+	/*for (size_t i = 0; i < 5; i++)
+	{
+		for (size_t x = 0; x < 3; x=+2)
+		{
+			std::shared_ptr<Aspect::Engine::Entity> en = p->addEntity();
+			std::shared_ptr<Aspect::Engine::MeshRender> gmr = en->addComponent<Aspect::Engine::MeshRender>();
+			en->getComponent<Aspect::Engine::Transform>()->Translate(x, 0.0, 0.0);
+			en->addComponent<Aspect::Engine::BoxCollider>();
+		}
+	}*/
+
 
 	c->getComponent<Aspect::Engine::Transform>()->Translate(0.0f, 0.0f, 20.0f); //THIS IS THE CAMERA
 	

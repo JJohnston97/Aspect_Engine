@@ -11,7 +11,6 @@
 #include "ShaderProgram.h"
 #include "Camera.h"
 
-// glm max...
 
 namespace Aspect
 {
@@ -49,6 +48,7 @@ namespace Aspect
 				shader->setUniform("in_Material", mat);
 
 				shader->draw(shape);
+			
 			}
 		}
 	}
