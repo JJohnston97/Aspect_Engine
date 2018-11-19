@@ -241,12 +241,20 @@ namespace Aspect
 					en->getComponent<Transform>()->Translate(glm::vec3 (lastCubeX + 3.0f, 0.0f, 0.0f));
 					lastCubeX += 3;
 
-					std::cout << en->getComponent<Transform>()->getPosition().x << std::endl;
-					std::cout << en->getComponent<Transform>()->getPosition().y << std::endl;
-					std::cout << en->getComponent<Transform>()->getPosition().z << std::endl;
+					en->getComponent<Transform>()->Translate(0.0f, velFast, 0.0f);
+
+					if (en->getComponent<Transform>()->getPosition().y >= -7.0f)
+					{
+						velFast = -velFast;
+					}
+					else if (en->getComponent<Transform>()->getPosition().y <= -7.0f)
+					{
+						velFast = -velFast;
+					}
+
+
 				}
 			
-				//std::cout << _player->getComponent<Transform>()->getPosition().x << std::endl;
 				
 				_cam->getComponent<Transform>()->Translate(0.02, 0.0, 0.0);
 
@@ -286,32 +294,34 @@ namespace Aspect
 					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, -0.1 * deltaTs);
 				}
 
+			
 				
-				//entities[1]->getComponent<Transform>()->Translate(0, vel, 0);
+				//for (float i = 0; i < entities.size(); i++)
+				//{
 
-				//std::cout << entities[0]->getComponent<Transform>()->getPosition().y << std::endl;
-				
+				//	std::cout << "Y: " << entities[i]->getComponent<Transform>()->getPosition().y << std::endl;
+				//	//entities[1]->getComponent<Transform>()->Translate(0, velSlow, 0);
 
-					entities[0]->getComponent<Transform>()->Translate(0, velFast, 0);
-					entities[1]->getComponent<Transform>()->Translate(0, velSlow, 0);
-					
-					if ((entities[0]->getComponent<Transform>()->getPosition().y <= -7.0f))
-					{
-							velFast = -velFast;
-					}
-					else if ((entities[0]->getComponent<Transform>()->getPosition().y >= 7.0f))
-					{
-						velFast = -velFast;
-					}
+				//	if ((!entities[0] && entities[i]->getComponent<Transform>()->getPosition().y >= -7.0f))
+				//	{
+				//		entities[i]->getComponent<Transform>()->Translate(0, velFast, 0);
+				//		velFast = -velFast;
+				//	}
+				//	else if ((!entities[0] && entities[i]->getComponent<Transform>()->getPosition().y >= 7.0f))
+				//	{
+				//		velFast = -velFast;
+				//	}
 
-					if ((entities[1]->getComponent<Transform>()->getPosition().y <= -7.0f))
+
+					/*if ((entities[i]->getComponent<Transform>()->getPosition().y <= -7.0f))
 					{
 						velSlow = -velSlow;
 					}
-					else if ((entities[1]->getComponent<Transform>()->getPosition().y >= 7.0f))
+					else if ((entities[i]->getComponent<Transform>()->getPosition().y >= 7.0f))
 					{
 						velSlow = -velSlow;
-					}
+					}*/
+				}
 				
 
 
@@ -372,6 +382,7 @@ namespace Aspect
 				{
 					(*it)->display();	// Draw them
 				}
+
 
 
 				

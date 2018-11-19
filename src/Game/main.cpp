@@ -41,18 +41,6 @@ void safe_Main()
 	player->addComponent<Aspect::Engine::BoxCollider>();
 	o->addComponent<Aspect::Engine::BoxCollider>();
 	c->addComponent<Aspect::Engine::Camera>();			// Add second cam
-	
-
-	/*for (size_t i = 0; i < 5; i++)
-	{
-		for (size_t x = 0; x < 3; x=+2)
-		{
-			std::shared_ptr<Aspect::Engine::Entity> en = p->addEntity();
-			std::shared_ptr<Aspect::Engine::MeshRender> gmr = en->addComponent<Aspect::Engine::MeshRender>();
-			en->getComponent<Aspect::Engine::Transform>()->Translate(x, 0.0, 0.0);
-			en->addComponent<Aspect::Engine::BoxCollider>();
-		}
-	}*/
 
 
 	c->getComponent<Aspect::Engine::Transform>()->Translate(0.0f, 0.0f, 20.0f); //THIS IS THE CAMERA

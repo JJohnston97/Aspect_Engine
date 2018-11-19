@@ -22,6 +22,7 @@ namespace Aspect
 			shader = std::make_shared<ShaderProgram>("../Shaders/vert.txt", "../Shaders/frag.txt");
 
 			shape = std::make_shared<VertexArray>("../Objs/Box.obj");
+
 			mat = std::make_shared<Material>("../Images/something.png");
 		}
 
