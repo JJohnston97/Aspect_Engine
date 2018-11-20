@@ -28,6 +28,7 @@ namespace Aspect
 			static std::shared_ptr<Entity> addEntity();	// Add entity function
 			void setCurrentCamera(std::shared_ptr<Camera> cam);
 			std::shared_ptr<Camera> getCurrentCamera();
+			float lastCubeX = -6.0f;
 
 
 		private:

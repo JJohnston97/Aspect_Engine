@@ -108,13 +108,15 @@ namespace Aspect
 		{
 			running = true;
 
-			unsigned int lastTime = SDL_GetTicks();	// Used to work out time between frame
 			bool cmdMoveForward = false, cmdMoveBackwards = false, cmdLeft = false, cmdRight = false;
 			bool camMoveForward = false, camMoveBackwards = false, camLeft = false, camRight = false;
 
 			float velFast = -0.3f;
 			float velSlow = 0.1;
-			float lastCubeX = -6.0f;
+			int scoreTime = 0;
+			int score = 0;
+			
+			unsigned int lastTime = SDL_GetTicks();	// Used to work out time between frame
 			
 			std::shared_ptr<Aspect::Engine::Audio> ac = std::make_shared<Aspect::Engine::Audio>("../Contrib/Game_Music.ogg");
 			ac->play();
@@ -133,11 +135,6 @@ namespace Aspect
 					case SDL_KEYDOWN:
 						switch (incomingEvent.key.keysym.sym)
 						{
-						case SDLK_s:
-						{
-							cmdMoveForward = true;
-							break;
-						}
 						case SDLK_d:
 						{
 							cmdLeft = true;
@@ -146,11 +143,6 @@ namespace Aspect
 						case SDLK_a:
 						{
 							cmdRight = true;
-							break;
-						}
-						case SDLK_w:
-						{
-							cmdMoveBackwards = true;
 							break;
 						}
 						case SDLK_UP:
@@ -165,12 +157,12 @@ namespace Aspect
 						}
 						case SDLK_LEFT:
 						{
-							camLeft = true;
+							camRight = true;
 							break;
 						}
 						case SDLK_RIGHT:
 						{
-							camRight = true;
+							camLeft = true;
 							break;
 						}
 						}
@@ -178,11 +170,6 @@ namespace Aspect
 					case SDL_KEYUP:
 						switch (incomingEvent.key.keysym.sym)
 						{
-						case SDLK_s:
-						{
-							cmdMoveForward = false;
-							break;
-						}
 						case SDLK_d:
 						{
 							cmdLeft = false;
@@ -191,11 +178,6 @@ namespace Aspect
 						case SDLK_a:
 						{
 							cmdRight = false;
-							break;
-						}
-						case SDLK_w:
-						{
-							cmdMoveBackwards = false;
 							break;
 						}
 						case SDLK_UP:
@@ -210,12 +192,12 @@ namespace Aspect
 						}
 						case SDLK_LEFT:
 						{
-							camLeft = false;
+							camRight = false;
 							break;
 						}
 						case SDLK_RIGHT:
 						{
-							camRight = false;
+							camLeft = false;
 							break;
 						}
 						}
@@ -230,107 +212,85 @@ namespace Aspect
 				float deltaTs = (float)(current - lastTime) / 1000.0f;
 				lastTime - current;
 				
-				if (lastCubeX - _player->getComponent<Transform>()->getPosition().x < 2)
+				
+				
+				if (lastCubeX - _player->getComponent<Transform>()->getPosition().x < 20)
 				{
 					std::cout << "New spawn" << std::endl;
 					std::shared_ptr<Entity> en = self.lock()->addEntity();
 					en->getProgram()->addEntity();
 					std::shared_ptr<MeshRender> gmr = en->addComponent<Aspect::Engine::MeshRender>();
+					gmr->setTexture("../Images/Please_give_me_70.png");
 					en->addComponent<BoxCollider>();
 					en->addComponent<Transform>();
 					en->addComponent<Movement>();
 
+					en->getComponent<Transform>()->Rotate(180.0f, 90.0f, 0.0f);
 					en->getComponent<Transform>()->Translate(glm::vec3 (lastCubeX + 3.0f, 0.0f, 0.0f));
-					lastCubeX += 3;
-
-
+					lastCubeX += 5;
 
 				}
-			
+
+	
 				
-				_cam->getComponent<Transform>()->Translate(0.02, 0.0, 0.0);
+
+				if (_player->getComponent<Transform>()->getPosition().x > lastCubeX - _player->getComponent<Transform>()->getPosition().x)
+				{
+
+					scoreTime++;
+					if (scoreTime > 3)
+					{
+						score++;
+						scoreTime = 0;
+					}
+					std::cout << score << std::endl;
+				}
+
+				if (score <= 100)
+				{
+					_cam->getComponent<Transform>()->Translate(0.04, 0.0, 0.0);
+				}
+				else if (score >= 150)
+				{
+					_cam->getComponent<Transform>()->Translate(0.09, 0.0, 0.0);
+				}
+				else if (score >= 200)
+				{
+					_cam->getComponent<Transform>()->Translate(0.12, 0.0, 0.0);
+				}
+				
+				
 
 				// Player movement
-				if (cmdMoveForward & !cmdMoveBackwards & !cmdLeft & !cmdRight)
-				{
-					_player->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, 0.1 * deltaTs);
-				}
 				if (cmdLeft & !cmdRight & !cmdMoveBackwards & !cmdMoveForward)
 				{
-					_player->getComponent<Aspect::Engine::Transform>()->Translate(0.1 * deltaTs, 0, 0);
+					_player->getComponent<Aspect::Engine::Transform>()->Translate(0.1*deltaTs, 0, 0);
 				}
 				if (cmdRight & !cmdLeft & !cmdMoveForward & !cmdMoveBackwards)
 				{
-					_player->getComponent <Aspect::Engine::Transform>()->Translate(-0.1 * deltaTs, 0, 0);
+					_player->getComponent <Aspect::Engine::Transform>()->Translate(-0.1*deltaTs, 0, 0);
 				}
-				if (cmdMoveBackwards & !cmdMoveForward & !cmdLeft & !cmdRight)
-				{
-					_player->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, -0.1 * deltaTs);
-				}
+				
 
 				// Camera movement with arrow keys
 				if (camMoveForward & !camMoveBackwards & !camLeft & !camRight)
 				{
-					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, 0.1 * deltaTs);
+					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, 0.1*deltaTs);
 				}
 				if (camLeft & !cmdRight & !camMoveBackwards & !camMoveForward)
 				{
-					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0.1 * deltaTs, 0, 0);
+					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0.1*deltaTs, 0, 0);
 				}
 				if (camRight & !camLeft & !camMoveForward & !camMoveBackwards)
 				{
-					_cam->getComponent <Aspect::Engine::Transform>()->Translate(-0.1 * deltaTs, 0, 0);
+					_cam->getComponent <Aspect::Engine::Transform>()->Translate(-0.1*deltaTs, 0, 0);
 				}
 				if (camMoveBackwards & !camMoveForward & !camLeft & !camRight)
 				{
-					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, -0.1 * deltaTs);
+					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, -0.1*deltaTs);
 				}
 
-			
-				/*entities[0]->getComponent<Transform>()->Translate(0, velFast, 0);
-
-
-
-				entities[1]->getComponent<Transform>()->Translate(0, velSlow, 0);
-
-
-				if ((entities[0]->getComponent<Transform>()->getPosition().y <= -7.0f))
-				{
-					velFast = -velFast;
-				}
-
-				else if ((entities[0]->getComponent<Transform>()->getPosition().y >= 7.0f))
-				{
-					velFast = -velFast;
-				}
-
-				std::cout << entities[1]->getComponent<Transform>()->getPosition().y << std::endl;
-
-				if ((entities[1]->getComponent<Transform>()->getPosition().y <= -7.0f))
-				{
-					velSlow = -velSlow;
-					
-				}
-				else if ((entities[1]->getComponent<Transform>()->getPosition().y >= 7.0f))
-				{
-					velSlow = -velSlow;
-				}*/
-
-
-			
-				//for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities
-				//{
-				//	(*it)->count();	// Update them one at a time
-
-				//	if (!_player && (*it)->getComponent<Transform>()->getPosition().y <= -7.0f || (*it)->getComponent<Transform>()->getPosition().y >= 7.0f)
-				//	{
-				//		velSlow = -velSlow;
-				//	}
-
-				//	(*it)->getComponent<Transform>()->Translate(0.0f, velSlow, 0.0f);
-				//	
-				//	
-				//}
+		
 
 
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities
@@ -356,8 +316,10 @@ namespace Aspect
 					if ((*it)->isDestroyed() == true)
 					{
 						(*it)->getComponent<MeshRender>()->MrEnable = false;
+						(*it)->getComponent<BoxCollider>()->Hitbox = false;
 					}
 				}
+				
 				
 
 				glClearColor(0.0f, 0.0f, 0.0f, 1.0f);	// Set the background colour
@@ -388,15 +350,20 @@ namespace Aspect
 					(*it)->display();	// Draw them
 				}
 
-
-
-
 				
 				SDL_GL_SwapWindow(_window); 
+
+
+				if (deltaTs < (1.0f / 50.0f))
+				{
+					SDL_Delay((unsigned int)(((1.0f / 50.0f) - deltaTs)*1000.0f));
+				}
 
 			}
 
 		}
+
+
 
 		void Program::End()
 		{
@@ -435,6 +402,7 @@ namespace Aspect
 		{
 			return currentCam.lock();
 		}
+
 
 
 	}

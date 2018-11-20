@@ -23,25 +23,21 @@ void safe_Main()
 
 	std::shared_ptr<Aspect::Engine::Program> p = Aspect::Engine::Program::InitSDL(); // Create a smart pointer call p that is equal to the program
 	
-	std::shared_ptr<Aspect::Engine::Entity> e = p->addEntity();
-	std::shared_ptr <Aspect::Engine::Entity> o = p->addEntity();
+	
 	std::shared_ptr<Aspect::Engine::Entity> c = p->addEntity();
 	std::shared_ptr<Aspect::Engine::Entity> player = p->addEntity();
 
 
-	std::shared_ptr<Aspect::Engine::MeshRender> mr = e->addComponent<Aspect::Engine::MeshRender>();
-	std::shared_ptr<Aspect::Engine::MeshRender> mr2 = player->addComponent<Aspect::Engine::MeshRender>();
-	std::shared_ptr<Aspect::Engine::MeshRender> mr3 = o->addComponent<Aspect::Engine::MeshRender>();
+	
+	std::shared_ptr<Aspect::Engine::MeshRender> mr = player->addComponent<Aspect::Engine::MeshRender>();
 
-	mr2->Triangle();
+	mr->Triangle();
+	mr->setTexture("../Images/send_help.png");
 
 	player->getComponent<Aspect::Engine::Transform>()->Translate(-8.6802f, -7.0f, 0.0f);
-	o->getComponent<Aspect::Engine::Transform>()->Translate(-4, 0, 0);
-
 	
-	e->addComponent<Aspect::Engine::BoxCollider>();
+
 	player->addComponent<Aspect::Engine::BoxCollider>();
-	o->addComponent<Aspect::Engine::BoxCollider>();
 	c->addComponent<Aspect::Engine::Camera>();			// Add second cam
 
 

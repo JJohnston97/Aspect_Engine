@@ -29,6 +29,7 @@ namespace Aspect
 			//void Scale(float x, float y, float z);
 
 			void onCount() override;
+			float vel = 0.1f;
 
 			glm::mat4 getModelMatrix();
 			glm::mat4 getViewMatrix();

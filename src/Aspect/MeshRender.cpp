@@ -23,7 +23,7 @@ namespace Aspect
 
 			shape = std::make_shared<VertexArray>("../Objs/Box.obj");
 
-			mat = std::make_shared<Material>("../Images/something.png");
+			mat = std::make_shared<Material>("../Images/Default.png");
 		}
 
 		void MeshRender::onCount()

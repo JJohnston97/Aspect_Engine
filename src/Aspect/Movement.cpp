@@ -31,10 +31,10 @@ namespace Aspect
 	
 				if (getEntity()->getComponent<Transform>()->getPosition().y <= -7.0f || getEntity()->getComponent<Transform>()->getPosition().y >= 7.0f)
 				{
-					velSlow = -velSlow;
+					getEntity()->getComponent<Transform>()->vel = -getEntity()->getComponent<Transform>()->vel;
 				}
 
-				getEntity()->getComponent<Transform>()->Translate(0.0f, velSlow, 0.0f);
+				getEntity()->getComponent<Transform>()->Translate(0.0f, getEntity()->getComponent<Transform>()->vel, 0.0f);
 
 
 		}

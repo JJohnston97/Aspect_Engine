@@ -14,7 +14,7 @@ namespace Aspect
 		{
 		public:
 			void BoxCollision(std::shared_ptr<Entity> _object);
-
+			bool Hitbox = true;
 
 
 		};

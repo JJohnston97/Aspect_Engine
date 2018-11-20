@@ -19,23 +19,24 @@ namespace Aspect
 
 		void BoxCollider::BoxCollision(std::shared_ptr<Entity> _object)
 		{
-			if (getEntity()->getComponent<Transform>()->getPosition().x <= (_object->getComponent<Transform>()->getPosition().x + _object->getComponent<Transform>()->getScale().x / 1)
-				&& getEntity()->getComponent<Transform>()->getPosition().x >= (_object->getComponent<Transform>()->getPosition().x - _object->getComponent<Transform>()->getScale().x / 1))
+			if (Hitbox == true)
 			{
-				if (getEntity()->getComponent<Transform>()->getPosition().y <= (_object->getComponent<Transform>()->getPosition().y + _object->getComponent<Transform>()->getScale().y / 1)
-					&& getEntity()->getComponent<Transform>()->getPosition().y >= (_object->getComponent<Transform>()->getPosition().y - _object->getComponent<Transform>()->getScale().y / 1))
+				if (getEntity()->getComponent<Transform>()->getPosition().x <= (_object->getComponent<Transform>()->getPosition().x + _object->getComponent<Transform>()->getScale().x / 0.7f)
+					&& getEntity()->getComponent<Transform>()->getPosition().x >= (_object->getComponent<Transform>()->getPosition().x - _object->getComponent<Transform>()->getScale().x / 0.7f))
 				{
-					if (getEntity()->getComponent<Transform>()->getPosition().z <= (_object->getComponent<Transform>()->getPosition().z + _object->getComponent<Transform>()->getScale().z / 1)
-						&& getEntity()->getComponent<Transform>()->getPosition().z >= (_object->getComponent<Transform>()->getPosition().z - _object->getComponent<Transform>()->getScale().z / 1))
+					if (getEntity()->getComponent<Transform>()->getPosition().y <= (_object->getComponent<Transform>()->getPosition().y + _object->getComponent<Transform>()->getScale().y / 0.7f)
+						&& getEntity()->getComponent<Transform>()->getPosition().y >= (_object->getComponent<Transform>()->getPosition().y - _object->getComponent<Transform>()->getScale().y / 0.7f))
 					{
-						
-						_object->setDestroy(true);
-				
+						if (getEntity()->getComponent<Transform>()->getPosition().z <= (_object->getComponent<Transform>()->getPosition().z + _object->getComponent<Transform>()->getScale().z / 0.7f)
+							&& getEntity()->getComponent<Transform>()->getPosition().z >= (_object->getComponent<Transform>()->getPosition().z - _object->getComponent<Transform>()->getScale().z / 0.7f))
+						{
+							getEntity()->getComponent<Transform>()->vel = -getEntity()->getComponent<Transform>()->vel;
+							_object->setDestroy(true);
+
+						}
 					}
 				}
 			}
-
-			
 		}
 
 	}
