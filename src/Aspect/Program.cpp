@@ -11,6 +11,7 @@
 #include "Transform.h"
 #include "BoxCollider.h"
 #include "Camera.h"
+#include "Movement.h"
 #include "Audio.h"
 
 namespace Aspect
@@ -237,6 +238,7 @@ namespace Aspect
 					std::shared_ptr<MeshRender> gmr = en->addComponent<Aspect::Engine::MeshRender>();
 					en->addComponent<BoxCollider>();
 					en->addComponent<Transform>();
+					en->addComponent<Movement>();
 
 					en->getComponent<Transform>()->Translate(glm::vec3 (lastCubeX + 3.0f, 0.0f, 0.0f));
 					lastCubeX += 3;
@@ -285,7 +287,7 @@ namespace Aspect
 				}
 
 			
-				entities[0]->getComponent<Transform>()->Translate(0, velFast, 0);
+				/*entities[0]->getComponent<Transform>()->Translate(0, velFast, 0);
 
 
 
@@ -307,14 +309,28 @@ namespace Aspect
 				if ((entities[1]->getComponent<Transform>()->getPosition().y <= -7.0f))
 				{
 					velSlow = -velSlow;
+					
 				}
 				else if ((entities[1]->getComponent<Transform>()->getPosition().y >= 7.0f))
 				{
 					velSlow = -velSlow;
-				}
+				}*/
 
 
 			
+				//for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities
+				//{
+				//	(*it)->count();	// Update them one at a time
+
+				//	if (!_player && (*it)->getComponent<Transform>()->getPosition().y <= -7.0f || (*it)->getComponent<Transform>()->getPosition().y >= 7.0f)
+				//	{
+				//		velSlow = -velSlow;
+				//	}
+
+				//	(*it)->getComponent<Transform>()->Translate(0.0f, velSlow, 0.0f);
+				//	
+				//	
+				//}
 
 
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities
@@ -371,6 +387,7 @@ namespace Aspect
 				{
 					(*it)->display();	// Draw them
 				}
+
 
 
 

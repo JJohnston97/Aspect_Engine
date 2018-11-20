@@ -32,7 +32,9 @@ void safe_Main()
 	std::shared_ptr<Aspect::Engine::MeshRender> mr = e->addComponent<Aspect::Engine::MeshRender>();
 	std::shared_ptr<Aspect::Engine::MeshRender> mr2 = player->addComponent<Aspect::Engine::MeshRender>();
 	std::shared_ptr<Aspect::Engine::MeshRender> mr3 = o->addComponent<Aspect::Engine::MeshRender>();
-	
+
+	mr2->Triangle();
+
 	player->getComponent<Aspect::Engine::Transform>()->Translate(-8.6802f, -7.0f, 0.0f);
 	o->getComponent<Aspect::Engine::Transform>()->Translate(-4, 0, 0);
 

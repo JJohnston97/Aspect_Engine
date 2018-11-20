@@ -52,6 +52,25 @@ namespace Aspect
 			
 			}
 		}
+		void MeshRender::Cube()
+		{
+			shape = std::make_shared<VertexArray>("../Objs/Box.obj");
+		}
+
+		void MeshRender::Triangle()
+		{
+			shape = std::make_shared <VertexArray>("../Objs/Triangle.obj");
+		}
+
+		void MeshRender::Mesh(const std::string& _mesh)
+		{
+			shape = std::make_shared<VertexArray>(_mesh);
+		}
+
+		void MeshRender::setTexture(const std::string& _texture)
+		{
+			mat = std::make_shared<Material>(_texture);
+		}
 	}
 
 	

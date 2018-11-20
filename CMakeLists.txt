@@ -55,6 +55,8 @@ add_library(aspect
   src/Aspect/BoxCollider.cpp
   src/Aspect/Camera.h
   src/Aspect/Camera.cpp
+  src/Aspect/Movement.h
+  src/Aspect/Movement.cpp
  
 
 )

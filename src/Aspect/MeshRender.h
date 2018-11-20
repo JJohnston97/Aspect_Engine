@@ -19,6 +19,10 @@ namespace Aspect
 			void onInit();
 			std::shared_ptr<Entity> camera;
 			bool MrEnable = true;
+			void Cube();
+			void Triangle();
+			void Mesh(const std::string& _mesh);
+			void setTexture(const std::string& _texture);
 
 		private:
 			void onDisplay();
