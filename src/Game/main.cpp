@@ -31,17 +31,17 @@ void safe_Main()
 	
 	std::shared_ptr<Aspect::Engine::MeshRender> mr = player->addComponent<Aspect::Engine::MeshRender>();
 
-	mr->Triangle();
+	mr->Cube();
 	mr->setTexture("../Images/send_help.png");
 
-	player->getComponent<Aspect::Engine::Transform>()->Translate(-8.6802f, -7.0f, 0.0f);
+	player->getComponent<Aspect::Engine::Transform>()->Translate(-7.6802f, -7.7f, 0.0f);
 	
 
 	player->addComponent<Aspect::Engine::BoxCollider>();
 	c->addComponent<Aspect::Engine::Camera>();			// Add second cam
 
 
-	c->getComponent<Aspect::Engine::Transform>()->Translate(0.0f, 0.0f, 20.0f); //THIS IS THE CAMERA
+	c->getComponent<Aspect::Engine::Transform>()->Translate(0.0f, 0.0f, 22.0f); //THIS IS THE CAMERA
 	
 
 	p->Start(c, player); // The start of the game

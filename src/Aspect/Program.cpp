@@ -124,7 +124,7 @@ namespace Aspect
 			while (running)
 			{
 
-				SDL_Event incomingEvent;				
+				SDL_Event incomingEvent;
 				while (SDL_PollEvent(&incomingEvent))	// Check if there is an event in the queue
 				{
 					switch (incomingEvent.type)			// If there is an event will return true and will fill the incoming event
@@ -202,18 +202,19 @@ namespace Aspect
 						}
 						}
 						break;
-					
+
 					}
-					
+
 				}
+				std::cout << _cam->getComponent<Transform>()->getPosition().z << std::endl;
 
 				unsigned int current = SDL_GetTicks();
 
 				float deltaTs = (float)(current - lastTime) / 1000.0f;
-				lastTime - current;
-				
-				
-				
+				lastTime = current;
+
+
+
 				if (lastCubeX - _player->getComponent<Transform>()->getPosition().x < 20)
 				{
 					std::cout << "New spawn" << std::endl;
@@ -225,14 +226,48 @@ namespace Aspect
 					en->addComponent<Transform>();
 					en->addComponent<Movement>();
 
-					en->getComponent<Transform>()->Rotate(180.0f, 90.0f, 0.0f);
-					en->getComponent<Transform>()->Translate(glm::vec3 (lastCubeX + 3.0f, 0.0f, 0.0f));
+					en->getComponent<Transform>()->Rotate(0.0f, 0.0f, 00.0f);
+					en->getComponent<Transform>()->Translate(glm::vec3(lastCubeX + 3.0f, 0.0f, 0.0f));
 					lastCubeX += 5;
 
 				}
 
-	
-				
+				//cause random block movement and they bounce off each box you cant see
+				if (RandomX - _player->getComponent<Transform>()->getPosition().x < 25)
+				{
+					std::cout << "New Background" << std::endl;
+					std::shared_ptr<Entity> bb = self.lock()->addEntity();
+					bb->getProgram()->addEntity();
+					std::shared_ptr<MeshRender> gmr = bb->addComponent<Aspect::Engine::MeshRender>();
+					gmr->setTexture("../Images/Please_give_me_70.png");
+					bb->addComponent<BoxCollider>();
+					bb->addComponent<Transform>();
+					bb->addComponent<Movement>();
+
+					bb->getComponent<Transform>()->Rotate(180.0f, 90.0f, 0.0f);
+					bb->getComponent<Transform>()->Translate(glm::vec3(lastCubeX + 3.0f, 0.0f, 0.0f));
+					bb->getComponent<Transform>()->setScale(5, 5, 1);
+					RandomX += 10;
+
+				}
+
+				if (backgroundX - _player->getComponent<Transform>()->getPosition().x < 25)
+				{
+					std::cout << "New Background" << std::endl;
+					std::shared_ptr<Entity> bkg = self.lock()->addEntity();
+					bkg->getProgram()->addEntity();
+					std::shared_ptr<MeshRender> gmr = bkg->addComponent<Aspect::Engine::MeshRender>();
+					gmr->setTexture("../Images/bkg.png");
+
+					bkg->addComponent<Transform>();
+					bkg->getComponent<Transform>()->Translate(glm::vec3(backgroundX + 5.0f, 0.0f, -10.0f));
+					bkg->getComponent<Transform>()->setScale(7, 10, 1);
+					backgroundX += 14;
+
+				}
+
+
+
 
 				if (_player->getComponent<Transform>()->getPosition().x > lastCubeX - _player->getComponent<Transform>()->getPosition().x)
 				{
@@ -258,39 +293,39 @@ namespace Aspect
 				{
 					_cam->getComponent<Transform>()->Translate(0.12, 0.0, 0.0);
 				}
-				
-				
+
+
 
 				// Player movement
 				if (cmdLeft & !cmdRight & !cmdMoveBackwards & !cmdMoveForward)
 				{
-					_player->getComponent<Aspect::Engine::Transform>()->Translate(0.1*deltaTs, 0, 0);
+					_player->getComponent<Aspect::Engine::Transform>()->Translate(10.0f*deltaTs, 0, 0);
 				}
 				if (cmdRight & !cmdLeft & !cmdMoveForward & !cmdMoveBackwards)
 				{
-					_player->getComponent <Aspect::Engine::Transform>()->Translate(-0.1*deltaTs, 0, 0);
+					_player->getComponent <Aspect::Engine::Transform>()->Translate(-10.0f*deltaTs, 0, 0);
 				}
-				
+
 
 				// Camera movement with arrow keys
 				if (camMoveForward & !camMoveBackwards & !camLeft & !camRight)
 				{
-					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, 0.1*deltaTs);
+					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, 10.0f*deltaTs);
 				}
 				if (camLeft & !cmdRight & !camMoveBackwards & !camMoveForward)
 				{
-					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0.1*deltaTs, 0, 0);
+					_cam->getComponent<Aspect::Engine::Transform>()->Translate(15.0f*deltaTs, 0, 0);
 				}
 				if (camRight & !camLeft & !camMoveForward & !camMoveBackwards)
 				{
-					_cam->getComponent <Aspect::Engine::Transform>()->Translate(-0.1*deltaTs, 0, 0);
+					_cam->getComponent <Aspect::Engine::Transform>()->Translate(-10.0f*deltaTs, 0, 0);
 				}
 				if (camMoveBackwards & !camMoveForward & !camLeft & !camRight)
 				{
-					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, -0.1*deltaTs);
+					_cam->getComponent<Aspect::Engine::Transform>()->Translate(0, 0, -10.0f*deltaTs);
 				}
 
-		
+
 
 
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities
@@ -308,7 +343,7 @@ namespace Aspect
 							(*it)->getComponent<BoxCollider>()->BoxCollision(*it2);
 						}
 					}
-					
+
 				}
 
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities again
@@ -319,8 +354,8 @@ namespace Aspect
 						(*it)->getComponent<BoxCollider>()->Hitbox = false;
 					}
 				}
-				
-				
+
+
 
 				glClearColor(0.0f, 0.0f, 0.0f, 1.0f);	// Set the background colour
 				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Clear the buffer
@@ -342,16 +377,16 @@ namespace Aspect
 					setCurrentCamera((*it)->getComponent<Camera>());
 					(*it)->display();	// Draw them
 				}
-			
 
-			
+
+
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities again
 				{
 					(*it)->display();	// Draw them
 				}
 
-				
-				SDL_GL_SwapWindow(_window); 
+
+				SDL_GL_SwapWindow(_window);
 
 
 				if (deltaTs < (1.0f / 50.0f))

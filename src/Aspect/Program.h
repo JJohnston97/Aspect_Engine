@@ -29,11 +29,12 @@ namespace Aspect
 			void setCurrentCamera(std::shared_ptr<Camera> cam);
 			std::shared_ptr<Camera> getCurrentCamera();
 			float lastCubeX = -6.0f;
-
+			float RandomX = -10.0f;
+			float backgroundX = -10.0f;
+			bool running;	// Bool to tell if the program is running or not
 
 		private:
 			
-			bool running;	// Bool to tell if the program is running or not
 			static std::vector<std::shared_ptr<Entity> > entities; // List of entities of class entity
 			
 			static std::weak_ptr<Program> self;	// Pointer to itself
