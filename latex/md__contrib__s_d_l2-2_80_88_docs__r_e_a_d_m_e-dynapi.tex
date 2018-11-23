@@ -1,0 +1,62 @@
+Originally posted by Ryan at\+: \href{https://plus.google.com/103391075724026391227/posts/TB8UfnDYu4U}{\tt https\+://plus.\+google.\+com/103391075724026391227/posts/\+T\+B8\+Ufn\+D\+Yu4U}
+
+Background\+:
+
+
+\begin{DoxyItemize}
+\item The Steam Runtime has (at least in theory) a really kick-\/ass build of S\+D\+L2, but developers are shipping their own S\+D\+L2 with individual Steam games. These games might stop getting updates, but a newer S\+D\+L2 might be needed later. Certainly we\textquotesingle{}ll always be fixing bugs in S\+DL, even if a new video target isn\textquotesingle{}t ever needed, and these fixes won\textquotesingle{}t make it to a game shipping its own S\+DL.
+\item Even if we replace the S\+D\+L2 in those games with a compatible one, that is to say, edit a developer\textquotesingle{}s Steam depot (yuck!), there are developers that are statically linking S\+D\+L2 that we can\textquotesingle{}t do this for. We can\textquotesingle{}t even force the dynamic loader to ignore their S\+D\+L2 in this case, of course.
+\item If you don\textquotesingle{}t ship an S\+D\+L2 with the game in some form, people that disabled the Steam Runtime, or just tried to run the game from the command line instead of Steam might find themselves unable to run the game, due to a missing dependency.
+\item If you want to ship on non-\/\+Steam platforms like G\+OG or Humble Bundle, or target generic Linux boxes that may or may not have S\+D\+L2 installed, you have to ship the library or risk a total failure to launch. So now, you might have to have a non-\/\+Steam build plus a Steam build (that is, one with and one without S\+D\+L2 included), which is inconvenient if you could have had one universal build that works everywhere.
+\item We like the zlib license, but the biggest complaint from the open source community about the license change is the static linking. The L\+G\+PL forced this as a legal, not technical issue, but zlib doesn\textquotesingle{}t care. Even those that aren\textquotesingle{}t concerned about the G\+NU freedoms found themselves solving the same problems\+: swapping in a newer S\+DL to an older game often times can save the day. Static linking stops this dead.
+\end{DoxyItemize}
+
+So here\textquotesingle{}s what we did\+:
+
+S\+DL now has, internally, a table of function pointers. So, this is what S\+D\+L\+\_\+\+Init now looks like\+: \begin{DoxyVerb}UInt32 SDL_Init(Uint32 flags)
+{
+    return jump_table.SDL_Init(flags);
+}
+\end{DoxyVerb}
+
+
+Except that is all done with a bunch of macro magic so we don\textquotesingle{}t have to maintain every one of these.
+
+What is jump\+\_\+table.\+S\+D\+L\+\_\+init()? Eventually, that\textquotesingle{}s a function pointer of the real \mbox{\hyperlink{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8}{S\+D\+L\+\_\+\+Init()}} that you\textquotesingle{}ve been calling all this time. But at startup, it looks more like this\+: \begin{DoxyVerb}Uint32 SDL_Init_DEFAULT(Uint32 flags)
+{
+    SDL_InitDynamicAPI();
+    return jump_table.SDL_Init(flags);
+}
+\end{DoxyVerb}
+
+
+S\+D\+L\+\_\+\+Init\+Dynamic\+A\+P\+I() fills in jump\+\_\+table with all the actual S\+DL function pointers, which means that this \+\_\+\+D\+E\+F\+A\+U\+LT function never gets called again. First call to any S\+DL function sets the whole thing up.
+
+So you might be asking, what was the value in that? Isn\textquotesingle{}t this what the operating system\textquotesingle{}s dynamic loader was supposed to do for us? Yes, but now we\textquotesingle{}ve got this level of indirection, we can do things like this\+: \begin{DoxyVerb}export SDL_DYNAMIC_API=/my/actual/libSDL-2.0.so.0
+./MyGameThatIsStaticallyLinkedToSDL2
+\end{DoxyVerb}
+
+
+And now, this game that is statically linked to S\+DL, can still be overridden with a newer, or better, S\+DL. The statically linked one will only be used as far as calling into the jump table in this case. But in cases where no override is desired, the statically linked version will provide its own jump table, and everyone is happy.
+
+So now\+:
+\begin{DoxyItemize}
+\item Developers can statically link S\+DL, and users can still replace it. (We\textquotesingle{}d still rather you ship a shared library, though!)
+\item Developers can ship an S\+DL with their game, Valve can override it for, say, new features on Steam\+OS, or distros can override it for their own needs, but it\textquotesingle{}ll also just work in the default case.
+\item Developers can ship the same package to everyone (Humble Bundle, G\+OG, etc), and it\textquotesingle{}ll do the right thing.
+\item End users (and Valve) can update a game\textquotesingle{}s S\+DL in almost any case, to keep abandoned games running on newer platforms.
+\item Everyone develops with S\+DL exactly as they have been doing all along. Same headers, same A\+BI. Just get the latest version to enable this magic.
+\end{DoxyItemize}
+
+A little more about S\+D\+L\+\_\+\+Init\+Dynamic\+A\+P\+I()\+:
+
+Internally, Init\+A\+PI does some locking to make sure everything waits until a single thread initializes everything (although even \mbox{\hyperlink{_s_d_l__thread_8h_aca3013d4f50e918b17d2721b37e59082}{S\+D\+L\+\_\+\+Create\+Thread()}} goes through here before spinning a thread, too), and then decides if it should use an external S\+DL library. If not, it sets up the jump table using the current S\+DL\textquotesingle{}s function pointers (which might be statically linked into a program, or in a shared library of its own). If so, it loads that library and looks for and calls a single function\+: \begin{DoxyVerb}SInt32 SDL_DYNAPI_entry(Uint32 version, void *table, Uint32 tablesize);
+\end{DoxyVerb}
+
+
+That function takes a version number (more on that in a moment), the address of the jump table, and the size, in bytes, of the table. Now, we\textquotesingle{}ve got policy here\+: this table\textquotesingle{}s layout never changes; new stuff gets added to the end. Therefore S\+D\+L\+\_\+\+D\+Y\+N\+A\+P\+I\+\_\+entry() knows that it can provide all the needed functions if tablesize $<$= sizeof its own jump table. If tablesize is bigger (say, S\+DL 2.\+0.\+4 is trying to load S\+DL 2.\+0.\+3), then we know to abort, but if it\textquotesingle{}s smaller, we know we can provide the entire A\+PI that the caller needs.
+
+The version variable is a failsafe switch. Right now it\textquotesingle{}s always 1. This number changes when there are major A\+PI changes (so we know if the tablesize might be smaller, or entries in it have changed). Right now S\+D\+L\+\_\+\+D\+Y\+N\+A\+P\+I\+\_\+entry gives up if the version doesn\textquotesingle{}t match, but it\textquotesingle{}s not inconceivable to have a small dispatch library that only supplies this one function and loads different, otherwise-\/incompatible S\+DL libraries and has the right one initialize the jump table based on the version. For something that must generically catch lots of different versions of S\+DL over time, like the Steam Client, this isn\textquotesingle{}t a bad option.
+
+Finally, I\textquotesingle{}m sure some people are reading this and thinking, \char`\"{}\+I don\textquotesingle{}t want that overhead in my project!\char`\"{} ~\newline
+To which I would point out that the extra function call through the jump table probably wouldn\textquotesingle{}t even show up in a profile, but lucky you\+: this can all be disabled. You can build S\+DL without this if you absolutely must, but we would encourage you not to do that. However, on heavily locked down platforms like i\+OS, or maybe when debugging, it makes sense to disable it. The way this is designed in S\+DL, you just have to change one \#define, and the entire system vaporizes out, and S\+DL functions exactly like it always did. Most of it is macro magic, so the system is contained to one C file and a few headers. However, this is on by default and you have to edit a header file to turn it off. Our hopes is that if we make it easy to disable, but not too easy, everyone will ultimately be able to get what they want, but we\textquotesingle{}ve gently nudged everyone towards what we think is the best solution. 

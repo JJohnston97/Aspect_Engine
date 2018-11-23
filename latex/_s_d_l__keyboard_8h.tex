@@ -1,0 +1,327 @@
+\hypertarget{_s_d_l__keyboard_8h}{}\section{Contrib/\+S\+D\+L2-\/2.0.8/include/\+S\+D\+L\+\_\+keyboard.h File Reference}
+\label{_s_d_l__keyboard_8h}\index{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+keyboard.\+h@{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+keyboard.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+keycode.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_d_l___keysym}{S\+D\+L\+\_\+\+Keysym}}
+\begin{DoxyCompactList}\small\item\em The S\+DL keysym structure, used in key events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_s_d_l___keysym}{S\+D\+L\+\_\+\+Keysym}} \mbox{\hyperlink{_s_d_l__keyboard_8h_af8f3eff5b50843b93c04d3fd3685358f}{S\+D\+L\+\_\+\+Keysym}}
+\begin{DoxyCompactList}\small\item\em The S\+DL keysym structure, used in key events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_a20cb9d78980660f2f97f83e9080a9791}{S\+D\+L\+\_\+\+Get\+Keyboard\+Focus}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\begin{DoxyCompactList}\small\item\em Get the window which currently has keyboard focus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}} $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_add4d65672474cedfbfe9f3d9c2972aa8}{S\+D\+L\+\_\+\+Get\+Keyboard\+State}} (int $\ast$numkeys)
+\begin{DoxyCompactList}\small\item\em Get a snapshot of the current state of the keyboard. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__keycode_8h_afa050ad71f0a5b86aa05cb13f542d747}{S\+D\+L\+\_\+\+Keymod}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_a7b2ee63de74c442ac456cac9db5f8ed0}{S\+D\+L\+\_\+\+Get\+Mod\+State}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\begin{DoxyCompactList}\small\item\em Get the current key modifier state for the keyboard. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_a705c85881304eab01f00abeca2ef5846}{S\+D\+L\+\_\+\+Set\+Mod\+State}} (\mbox{\hyperlink{_s_d_l__keycode_8h_afa050ad71f0a5b86aa05cb13f542d747}{S\+D\+L\+\_\+\+Keymod}} modstate)
+\begin{DoxyCompactList}\small\item\em Set the current key modifier state for the keyboard. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__keycode_8h_ae9265f064f13f0f74dfca26a67875171}{S\+D\+L\+\_\+\+Keycode}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_aa74e6944ede98feeb09408fd97aaad57}{S\+D\+L\+\_\+\+Get\+Key\+From\+Scancode}} (\mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777b}{S\+D\+L\+\_\+\+Scancode}} scancode)
+\begin{DoxyCompactList}\small\item\em Get the key code corresponding to the given scancode according to the current keyboard layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777b}{S\+D\+L\+\_\+\+Scancode}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_a36216054a385bea6898a35ded18d9c0f}{S\+D\+L\+\_\+\+Get\+Scancode\+From\+Key}} (\mbox{\hyperlink{_s_d_l__keycode_8h_ae9265f064f13f0f74dfca26a67875171}{S\+D\+L\+\_\+\+Keycode}} key)
+\begin{DoxyCompactList}\small\item\em Get the scancode corresponding to the given key code according to the current keyboard layout. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_ad81526318501fd88c503491909d9c07e}{S\+D\+L\+\_\+\+Get\+Scancode\+Name}} (\mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777b}{S\+D\+L\+\_\+\+Scancode}} scancode)
+\begin{DoxyCompactList}\small\item\em Get a human-\/readable name for a scancode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777b}{S\+D\+L\+\_\+\+Scancode}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_a0cb32dd58d3dc5b77c9daf0b6000f93c}{S\+D\+L\+\_\+\+Get\+Scancode\+From\+Name}} (const char $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}})
+\begin{DoxyCompactList}\small\item\em Get a scancode from a human-\/readable name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_a5d30971127cd386655b891f429b76fe9}{S\+D\+L\+\_\+\+Get\+Key\+Name}} (\mbox{\hyperlink{_s_d_l__keycode_8h_ae9265f064f13f0f74dfca26a67875171}{S\+D\+L\+\_\+\+Keycode}} key)
+\begin{DoxyCompactList}\small\item\em Get a human-\/readable name for a key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__keycode_8h_ae9265f064f13f0f74dfca26a67875171}{S\+D\+L\+\_\+\+Keycode}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_ad4d4e79f117a9092ec269601c5423337}{S\+D\+L\+\_\+\+Get\+Key\+From\+Name}} (const char $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}})
+\begin{DoxyCompactList}\small\item\em Get a key code from a human-\/readable name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_ab2c8474b9a8b6d07cae4f8eceab38870}{S\+D\+L\+\_\+\+Start\+Text\+Input}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\begin{DoxyCompactList}\small\item\em Start accepting Unicode text input events. This function will show the on-\/screen keyboard if supported. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_a6c84ed1daac21f8224d43bcb9d5bc597}{S\+D\+L\+\_\+\+Is\+Text\+Input\+Active}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\begin{DoxyCompactList}\small\item\em Return whether or not Unicode text input events are enabled. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_ab08b914cdfb2eaed26165cb2f6b110ec}{S\+D\+L\+\_\+\+Stop\+Text\+Input}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\begin{DoxyCompactList}\small\item\em Stop receiving any text input events. This function will hide the on-\/screen keyboard if supported. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_a949fd9d16d5156a9d5aa0dc74580dbae}{S\+D\+L\+\_\+\+Set\+Text\+Input\+Rect}} (\mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$rect)
+\begin{DoxyCompactList}\small\item\em Set the rectangle used to type Unicode text inputs. This is used as a hint for I\+ME and on-\/screen keyboard placement. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_a106356274c192b53844c8f1a821b00d7}{S\+D\+L\+\_\+\+Has\+Screen\+Keyboard\+Support}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\begin{DoxyCompactList}\small\item\em Returns whether the platform has some screen keyboard support. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__keyboard_8h_a92f5b73c7b71efeb68f5e9616cb918b7}{S\+D\+L\+\_\+\+Is\+Screen\+Keyboard\+Shown}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Returns whether the screen keyboard is shown for given window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include file for S\+DL keyboard event handling 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_af8f3eff5b50843b93c04d3fd3685358f}\label{_s_d_l__keyboard_8h_af8f3eff5b50843b93c04d3fd3685358f}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Keysym@{S\+D\+L\+\_\+\+Keysym}}
+\index{S\+D\+L\+\_\+\+Keysym@{S\+D\+L\+\_\+\+Keysym}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Keysym}{SDL\_Keysym}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_s_d_l___keysym}{S\+D\+L\+\_\+\+Keysym}}  \mbox{\hyperlink{struct_s_d_l___keysym}{S\+D\+L\+\_\+\+Keysym}}}
+
+
+
+The S\+DL keysym structure, used in key events. 
+
+\begin{DoxyNote}{Note}
+If you are looking for translated character input, see the \mbox{\hyperlink{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa4fa2570088f6b9cbd109ae91b511368f}{S\+D\+L\+\_\+\+T\+E\+X\+T\+I\+N\+P\+UT}} event. 
+\end{DoxyNote}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_a20cb9d78980660f2f97f83e9080a9791}\label{_s_d_l__keyboard_8h_a20cb9d78980660f2f97f83e9080a9791}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Get\+Keyboard\+Focus@{S\+D\+L\+\_\+\+Get\+Keyboard\+Focus}}
+\index{S\+D\+L\+\_\+\+Get\+Keyboard\+Focus@{S\+D\+L\+\_\+\+Get\+Keyboard\+Focus}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Keyboard\+Focus()}{SDL\_GetKeyboardFocus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}}$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Keyboard\+Focus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the window which currently has keyboard focus. 
+
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_add4d65672474cedfbfe9f3d9c2972aa8}\label{_s_d_l__keyboard_8h_add4d65672474cedfbfe9f3d9c2972aa8}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Get\+Keyboard\+State@{S\+D\+L\+\_\+\+Get\+Keyboard\+State}}
+\index{S\+D\+L\+\_\+\+Get\+Keyboard\+State@{S\+D\+L\+\_\+\+Get\+Keyboard\+State}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Keyboard\+State()}{SDL\_GetKeyboardState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}}$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Keyboard\+State (\begin{DoxyParamCaption}\item[{int $\ast$}]{numkeys }\end{DoxyParamCaption})}
+
+
+
+Get a snapshot of the current state of the keyboard. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numkeys} & if non-\/\+N\+U\+LL, receives the length of the returned array.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of key states. Indexes into this array are obtained by using \mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777b}{S\+D\+L\+\_\+\+Scancode}} values.
+\end{DoxyReturn}
+{\bfseries Example\+:} 
+\begin{DoxyCode}
+\textcolor{keyword}{const} \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}} *state = \mbox{\hyperlink{_s_d_l__keyboard_8h_add4d65672474cedfbfe9f3d9c2972aa8}{SDL\_GetKeyboardState}}(\mbox{\hyperlink{begin__code_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+\textcolor{keywordflow}{if} ( state[\mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777ba76a75d2436c9061b989672ffa54b796d}{SDL\_SCANCODE\_RETURN}}] )   \{
+    printf(\textcolor{stringliteral}{"<RETURN> is pressed.\(\backslash\)n"});
+\}
+\end{DoxyCode}
+ \mbox{\Hypertarget{_s_d_l__keyboard_8h_ad4d4e79f117a9092ec269601c5423337}\label{_s_d_l__keyboard_8h_ad4d4e79f117a9092ec269601c5423337}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Get\+Key\+From\+Name@{S\+D\+L\+\_\+\+Get\+Key\+From\+Name}}
+\index{S\+D\+L\+\_\+\+Get\+Key\+From\+Name@{S\+D\+L\+\_\+\+Get\+Key\+From\+Name}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Key\+From\+Name()}{SDL\_GetKeyFromName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__keycode_8h_ae9265f064f13f0f74dfca26a67875171}{S\+D\+L\+\_\+\+Keycode}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Key\+From\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Get a key code from a human-\/readable name. 
+
+\begin{DoxyReturn}{Returns}
+key code, or S\+D\+L\+K\+\_\+\+U\+N\+K\+N\+O\+WN if the name wasn\textquotesingle{}t recognized
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__keycode_8h_ae9265f064f13f0f74dfca26a67875171}{S\+D\+L\+\_\+\+Keycode}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_aa74e6944ede98feeb09408fd97aaad57}\label{_s_d_l__keyboard_8h_aa74e6944ede98feeb09408fd97aaad57}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Get\+Key\+From\+Scancode@{S\+D\+L\+\_\+\+Get\+Key\+From\+Scancode}}
+\index{S\+D\+L\+\_\+\+Get\+Key\+From\+Scancode@{S\+D\+L\+\_\+\+Get\+Key\+From\+Scancode}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Key\+From\+Scancode()}{SDL\_GetKeyFromScancode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__keycode_8h_ae9265f064f13f0f74dfca26a67875171}{S\+D\+L\+\_\+\+Keycode}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Key\+From\+Scancode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777b}{S\+D\+L\+\_\+\+Scancode}}}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Get the key code corresponding to the given scancode according to the current keyboard layout. 
+
+See \mbox{\hyperlink{_s_d_l__keycode_8h_ae9265f064f13f0f74dfca26a67875171}{S\+D\+L\+\_\+\+Keycode}} for details.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__keyboard_8h_a5d30971127cd386655b891f429b76fe9}{S\+D\+L\+\_\+\+Get\+Key\+Name()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_a5d30971127cd386655b891f429b76fe9}\label{_s_d_l__keyboard_8h_a5d30971127cd386655b891f429b76fe9}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Get\+Key\+Name@{S\+D\+L\+\_\+\+Get\+Key\+Name}}
+\index{S\+D\+L\+\_\+\+Get\+Key\+Name@{S\+D\+L\+\_\+\+Get\+Key\+Name}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Key\+Name()}{SDL\_GetKeyName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Key\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__keycode_8h_ae9265f064f13f0f74dfca26a67875171}{S\+D\+L\+\_\+\+Keycode}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Get a human-\/readable name for a key. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to a U\+T\+F-\/8 string that stays valid at least until the next call to this function. If you need it around any longer, you must copy it. If the key doesn\textquotesingle{}t have a name, this function returns an empty string (\char`\"{}\char`\"{}).
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__keycode_8h_ae9265f064f13f0f74dfca26a67875171}{S\+D\+L\+\_\+\+Keycode}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_a7b2ee63de74c442ac456cac9db5f8ed0}\label{_s_d_l__keyboard_8h_a7b2ee63de74c442ac456cac9db5f8ed0}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Get\+Mod\+State@{S\+D\+L\+\_\+\+Get\+Mod\+State}}
+\index{S\+D\+L\+\_\+\+Get\+Mod\+State@{S\+D\+L\+\_\+\+Get\+Mod\+State}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Mod\+State()}{SDL\_GetModState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__keycode_8h_afa050ad71f0a5b86aa05cb13f542d747}{S\+D\+L\+\_\+\+Keymod}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Mod\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the current key modifier state for the keyboard. 
+
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_a36216054a385bea6898a35ded18d9c0f}\label{_s_d_l__keyboard_8h_a36216054a385bea6898a35ded18d9c0f}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Get\+Scancode\+From\+Key@{S\+D\+L\+\_\+\+Get\+Scancode\+From\+Key}}
+\index{S\+D\+L\+\_\+\+Get\+Scancode\+From\+Key@{S\+D\+L\+\_\+\+Get\+Scancode\+From\+Key}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Scancode\+From\+Key()}{SDL\_GetScancodeFromKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777b}{S\+D\+L\+\_\+\+Scancode}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Scancode\+From\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__keycode_8h_ae9265f064f13f0f74dfca26a67875171}{S\+D\+L\+\_\+\+Keycode}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Get the scancode corresponding to the given key code according to the current keyboard layout. 
+
+See \mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777b}{S\+D\+L\+\_\+\+Scancode}} for details.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__keyboard_8h_ad81526318501fd88c503491909d9c07e}{S\+D\+L\+\_\+\+Get\+Scancode\+Name()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_a0cb32dd58d3dc5b77c9daf0b6000f93c}\label{_s_d_l__keyboard_8h_a0cb32dd58d3dc5b77c9daf0b6000f93c}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Get\+Scancode\+From\+Name@{S\+D\+L\+\_\+\+Get\+Scancode\+From\+Name}}
+\index{S\+D\+L\+\_\+\+Get\+Scancode\+From\+Name@{S\+D\+L\+\_\+\+Get\+Scancode\+From\+Name}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Scancode\+From\+Name()}{SDL\_GetScancodeFromName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777b}{S\+D\+L\+\_\+\+Scancode}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Scancode\+From\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Get a scancode from a human-\/readable name. 
+
+\begin{DoxyReturn}{Returns}
+scancode, or S\+D\+L\+\_\+\+S\+C\+A\+N\+C\+O\+D\+E\+\_\+\+U\+N\+K\+N\+O\+WN if the name wasn\textquotesingle{}t recognized
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777b}{S\+D\+L\+\_\+\+Scancode}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_ad81526318501fd88c503491909d9c07e}\label{_s_d_l__keyboard_8h_ad81526318501fd88c503491909d9c07e}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Get\+Scancode\+Name@{S\+D\+L\+\_\+\+Get\+Scancode\+Name}}
+\index{S\+D\+L\+\_\+\+Get\+Scancode\+Name@{S\+D\+L\+\_\+\+Get\+Scancode\+Name}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Scancode\+Name()}{SDL\_GetScancodeName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Scancode\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777b}{S\+D\+L\+\_\+\+Scancode}}}]{scancode }\end{DoxyParamCaption})}
+
+
+
+Get a human-\/readable name for a scancode. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the name for the scancode. If the scancode doesn\textquotesingle{}t have a name, this function returns an empty string (\char`\"{}\char`\"{}).
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777b}{S\+D\+L\+\_\+\+Scancode}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_a106356274c192b53844c8f1a821b00d7}\label{_s_d_l__keyboard_8h_a106356274c192b53844c8f1a821b00d7}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Has\+Screen\+Keyboard\+Support@{S\+D\+L\+\_\+\+Has\+Screen\+Keyboard\+Support}}
+\index{S\+D\+L\+\_\+\+Has\+Screen\+Keyboard\+Support@{S\+D\+L\+\_\+\+Has\+Screen\+Keyboard\+Support}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Has\+Screen\+Keyboard\+Support()}{SDL\_HasScreenKeyboardSupport()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Has\+Screen\+Keyboard\+Support (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns whether the platform has some screen keyboard support. 
+
+\begin{DoxyReturn}{Returns}
+S\+D\+L\+\_\+\+T\+R\+UE if some keyboard support is available else S\+D\+L\+\_\+\+F\+A\+L\+SE.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Not all screen keyboard functions are supported on all platforms.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__keyboard_8h_a92f5b73c7b71efeb68f5e9616cb918b7}{S\+D\+L\+\_\+\+Is\+Screen\+Keyboard\+Shown()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_a92f5b73c7b71efeb68f5e9616cb918b7}\label{_s_d_l__keyboard_8h_a92f5b73c7b71efeb68f5e9616cb918b7}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Is\+Screen\+Keyboard\+Shown@{S\+D\+L\+\_\+\+Is\+Screen\+Keyboard\+Shown}}
+\index{S\+D\+L\+\_\+\+Is\+Screen\+Keyboard\+Shown@{S\+D\+L\+\_\+\+Is\+Screen\+Keyboard\+Shown}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Is\+Screen\+Keyboard\+Shown()}{SDL\_IsScreenKeyboardShown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Is\+Screen\+Keyboard\+Shown (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Returns whether the screen keyboard is shown for given window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window for which screen keyboard should be queried.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+D\+L\+\_\+\+T\+R\+UE if screen keyboard is shown else S\+D\+L\+\_\+\+F\+A\+L\+SE.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__keyboard_8h_a106356274c192b53844c8f1a821b00d7}{S\+D\+L\+\_\+\+Has\+Screen\+Keyboard\+Support()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_a6c84ed1daac21f8224d43bcb9d5bc597}\label{_s_d_l__keyboard_8h_a6c84ed1daac21f8224d43bcb9d5bc597}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Is\+Text\+Input\+Active@{S\+D\+L\+\_\+\+Is\+Text\+Input\+Active}}
+\index{S\+D\+L\+\_\+\+Is\+Text\+Input\+Active@{S\+D\+L\+\_\+\+Is\+Text\+Input\+Active}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Is\+Text\+Input\+Active()}{SDL\_IsTextInputActive()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Is\+Text\+Input\+Active (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Return whether or not Unicode text input events are enabled. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__keyboard_8h_ab2c8474b9a8b6d07cae4f8eceab38870}{S\+D\+L\+\_\+\+Start\+Text\+Input()}} 
+
+\mbox{\hyperlink{_s_d_l__keyboard_8h_ab08b914cdfb2eaed26165cb2f6b110ec}{S\+D\+L\+\_\+\+Stop\+Text\+Input()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_a705c85881304eab01f00abeca2ef5846}\label{_s_d_l__keyboard_8h_a705c85881304eab01f00abeca2ef5846}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Set\+Mod\+State@{S\+D\+L\+\_\+\+Set\+Mod\+State}}
+\index{S\+D\+L\+\_\+\+Set\+Mod\+State@{S\+D\+L\+\_\+\+Set\+Mod\+State}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Set\+Mod\+State()}{SDL\_SetModState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Set\+Mod\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__keycode_8h_afa050ad71f0a5b86aa05cb13f542d747}{S\+D\+L\+\_\+\+Keymod}}}]{modstate }\end{DoxyParamCaption})}
+
+
+
+Set the current key modifier state for the keyboard. 
+
+\begin{DoxyNote}{Note}
+This does not change the keyboard state, only the key modifier flags. 
+\end{DoxyNote}
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_a949fd9d16d5156a9d5aa0dc74580dbae}\label{_s_d_l__keyboard_8h_a949fd9d16d5156a9d5aa0dc74580dbae}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Set\+Text\+Input\+Rect@{S\+D\+L\+\_\+\+Set\+Text\+Input\+Rect}}
+\index{S\+D\+L\+\_\+\+Set\+Text\+Input\+Rect@{S\+D\+L\+\_\+\+Set\+Text\+Input\+Rect}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Set\+Text\+Input\+Rect()}{SDL\_SetTextInputRect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Set\+Text\+Input\+Rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{rect }\end{DoxyParamCaption})}
+
+
+
+Set the rectangle used to type Unicode text inputs. This is used as a hint for I\+ME and on-\/screen keyboard placement. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__keyboard_8h_ab2c8474b9a8b6d07cae4f8eceab38870}{S\+D\+L\+\_\+\+Start\+Text\+Input()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_ab2c8474b9a8b6d07cae4f8eceab38870}\label{_s_d_l__keyboard_8h_ab2c8474b9a8b6d07cae4f8eceab38870}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Start\+Text\+Input@{S\+D\+L\+\_\+\+Start\+Text\+Input}}
+\index{S\+D\+L\+\_\+\+Start\+Text\+Input@{S\+D\+L\+\_\+\+Start\+Text\+Input}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Start\+Text\+Input()}{SDL\_StartTextInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Start\+Text\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Start accepting Unicode text input events. This function will show the on-\/screen keyboard if supported. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__keyboard_8h_ab08b914cdfb2eaed26165cb2f6b110ec}{S\+D\+L\+\_\+\+Stop\+Text\+Input()}} 
+
+\mbox{\hyperlink{_s_d_l__keyboard_8h_a949fd9d16d5156a9d5aa0dc74580dbae}{S\+D\+L\+\_\+\+Set\+Text\+Input\+Rect()}} 
+
+\mbox{\hyperlink{_s_d_l__keyboard_8h_a106356274c192b53844c8f1a821b00d7}{S\+D\+L\+\_\+\+Has\+Screen\+Keyboard\+Support()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__keyboard_8h_ab08b914cdfb2eaed26165cb2f6b110ec}\label{_s_d_l__keyboard_8h_ab08b914cdfb2eaed26165cb2f6b110ec}} 
+\index{S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}!S\+D\+L\+\_\+\+Stop\+Text\+Input@{S\+D\+L\+\_\+\+Stop\+Text\+Input}}
+\index{S\+D\+L\+\_\+\+Stop\+Text\+Input@{S\+D\+L\+\_\+\+Stop\+Text\+Input}!S\+D\+L\+\_\+keyboard.\+h@{S\+D\+L\+\_\+keyboard.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Stop\+Text\+Input()}{SDL\_StopTextInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Stop\+Text\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Stop receiving any text input events. This function will hide the on-\/screen keyboard if supported. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__keyboard_8h_ab2c8474b9a8b6d07cae4f8eceab38870}{S\+D\+L\+\_\+\+Start\+Text\+Input()}} 
+
+\mbox{\hyperlink{_s_d_l__keyboard_8h_a106356274c192b53844c8f1a821b00d7}{S\+D\+L\+\_\+\+Has\+Screen\+Keyboard\+Support()}} 
+\end{DoxySeeAlso}

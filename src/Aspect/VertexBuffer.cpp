@@ -1,3 +1,7 @@
+/// @Vertex Buffer
+/// @File used from labs, content written by Karsten Pedersen
+
+// Project Includes
 #include "VertexBuffer.h"
 
 namespace Aspect

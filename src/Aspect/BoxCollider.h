@@ -1,20 +1,19 @@
-#include <iostream>
-#include <memory>
-#include <GL/glew.h>
-#include <glm/glm.hpp>
-#include <SDL.h>
+#include <iostream>    // Include iosteam for debugging
+#include <memory>	   // Include Memory for shared_ptr
+#include <GL/glew.h>   // Glew include
+#include <glm/glm.hpp> // Include GLM
+#include <SDL.h>	   // SDL include
+#include "Component.h" // Include Component header
 
-#include "Component.h"
-
-namespace Aspect
+namespace Aspect // Aspect namespace
 {
-	namespace Engine
+	namespace Engine // Aspect namespace
 	{
-		class BoxCollider : public Component
+		class BoxCollider : public Component		/// Box collide class, inherits from component
 		{
 		public:
-			void BoxCollision(std::shared_ptr<Entity> _object);
-			bool Hitbox = true;
+			void BoxCollision(std::shared_ptr<Entity> _object);  /// Box collision check function
+			bool Hitbox = true;									 /// Hit Box enable / disable
 
 
 		};

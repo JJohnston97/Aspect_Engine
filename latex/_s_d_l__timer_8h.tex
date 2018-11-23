@@ -1,0 +1,141 @@
+\hypertarget{_s_d_l__timer_8h}{}\section{Contrib/\+S\+D\+L2-\/2.0.8/include/\+S\+D\+L\+\_\+timer.h File Reference}
+\label{_s_d_l__timer_8h}\index{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+timer.\+h@{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+timer.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__timer_8h_a5cc109e24ba0c46f6becb28353cd8921}{S\+D\+L\+\_\+\+T\+I\+C\+K\+S\+\_\+\+P\+A\+S\+S\+ED}}(A,  B)~((\mbox{\hyperlink{_s_d_l__stdinc_8h_a7a90b941db9d4582e9ad7abb9940ff7e}{Sint32}})((B) -\/ (A)) $<$= 0)
+\begin{DoxyCompactList}\small\item\em Compare S\+DL ticks values, and return true if A has passed B. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}(\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} $\ast$ \mbox{\hyperlink{_s_d_l__timer_8h_a3c5c867db975d245e4a82fcf0cd7de80}{S\+D\+L\+\_\+\+Timer\+Callback}}) (\mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} interval, \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ac7c896d55e93a6cf7ff8524005b4e7b4}{param}})
+\item 
+typedef int \mbox{\hyperlink{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}{S\+D\+L\+\_\+\+Timer\+ID}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__timer_8h_a0b9bc71d6287e0ffafdc3419760fe2b3}{S\+D\+L\+\_\+\+Get\+Ticks}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\begin{DoxyCompactList}\small\item\em Get the number of milliseconds since the S\+DL library initialization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_ac006cf2bd55a42a9cc8ae9f123aa7e13}{Uint64}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__timer_8h_a2dbeb63c4f0564811a4adf3938808977}{S\+D\+L\+\_\+\+Get\+Performance\+Counter}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\begin{DoxyCompactList}\small\item\em Get the current value of the high resolution counter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_ac006cf2bd55a42a9cc8ae9f123aa7e13}{Uint64}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__timer_8h_a507ebea12e31dacc9f85f7d9febe0efb}{S\+D\+L\+\_\+\+Get\+Performance\+Frequency}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\begin{DoxyCompactList}\small\item\em Get the count per second of the high resolution counter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__timer_8h_ae8050b95373b95249064467592ab4e21}{S\+D\+L\+\_\+\+Delay}} (\mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} ms)
+\begin{DoxyCompactList}\small\item\em Wait a specified number of milliseconds before returning. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}{S\+D\+L\+\_\+\+Timer\+ID}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__timer_8h_a56ceea49587e3fa5796b2e4bf85603b8}{S\+D\+L\+\_\+\+Add\+Timer}} (\mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} interval, \mbox{\hyperlink{_s_d_l__timer_8h_a3c5c867db975d245e4a82fcf0cd7de80}{S\+D\+L\+\_\+\+Timer\+Callback}} callback, \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ac7c896d55e93a6cf7ff8524005b4e7b4}{param}})
+\begin{DoxyCompactList}\small\item\em Add a new timer to the pool of timers already running. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__timer_8h_afe8d418e59a24ae6ad820b92137ab9b2}{S\+D\+L\+\_\+\+Remove\+Timer}} (\mbox{\hyperlink{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}{S\+D\+L\+\_\+\+Timer\+ID}} \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a58c2a664503e14ffb8f21012aabff3e9}{id}})
+\begin{DoxyCompactList}\small\item\em Remove a timer knowing its ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header for the S\+DL time management routines. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_s_d_l__timer_8h_a5cc109e24ba0c46f6becb28353cd8921}\label{_s_d_l__timer_8h_a5cc109e24ba0c46f6becb28353cd8921}} 
+\index{S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}!S\+D\+L\+\_\+\+T\+I\+C\+K\+S\+\_\+\+P\+A\+S\+S\+ED@{S\+D\+L\+\_\+\+T\+I\+C\+K\+S\+\_\+\+P\+A\+S\+S\+ED}}
+\index{S\+D\+L\+\_\+\+T\+I\+C\+K\+S\+\_\+\+P\+A\+S\+S\+ED@{S\+D\+L\+\_\+\+T\+I\+C\+K\+S\+\_\+\+P\+A\+S\+S\+ED}!S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+T\+I\+C\+K\+S\+\_\+\+P\+A\+S\+S\+ED}{SDL\_TICKS\_PASSED}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+T\+I\+C\+K\+S\+\_\+\+P\+A\+S\+S\+ED(\begin{DoxyParamCaption}\item[{}]{A,  }\item[{}]{B }\end{DoxyParamCaption})~((\mbox{\hyperlink{_s_d_l__stdinc_8h_a7a90b941db9d4582e9ad7abb9940ff7e}{Sint32}})((B) -\/ (A)) $<$= 0)}
+
+
+
+Compare S\+DL ticks values, and return true if A has passed B. 
+
+e.\+g. if you want to wait 100 ms, you could do this\+: Uint32 timeout = \mbox{\hyperlink{_s_d_l__timer_8h_a0b9bc71d6287e0ffafdc3419760fe2b3}{S\+D\+L\+\_\+\+Get\+Ticks()}} + 100; while (!\+S\+D\+L\+\_\+\+T\+I\+C\+K\+S\+\_\+\+P\+A\+S\+S\+ED(\mbox{\hyperlink{_s_d_l__timer_8h_a0b9bc71d6287e0ffafdc3419760fe2b3}{S\+D\+L\+\_\+\+Get\+Ticks()}}, timeout)) \{ ... do work until timeout has elapsed \} 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_s_d_l__timer_8h_a3c5c867db975d245e4a82fcf0cd7de80}\label{_s_d_l__timer_8h_a3c5c867db975d245e4a82fcf0cd7de80}} 
+\index{S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}!S\+D\+L\+\_\+\+Timer\+Callback@{S\+D\+L\+\_\+\+Timer\+Callback}}
+\index{S\+D\+L\+\_\+\+Timer\+Callback@{S\+D\+L\+\_\+\+Timer\+Callback}!S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Timer\+Callback}{SDL\_TimerCallback}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}(\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} $\ast$ S\+D\+L\+\_\+\+Timer\+Callback) (\mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} interval, \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ac7c896d55e93a6cf7ff8524005b4e7b4}{param}})}
+
+Function prototype for the timer callback function.
+
+The callback function is passed the current timer interval and returns the next timer interval. If the returned value is the same as the one passed in, the periodic alarm continues, otherwise a new alarm is scheduled. If the callback returns 0, the periodic alarm is cancelled. \mbox{\Hypertarget{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}\label{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}} 
+\index{S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}!S\+D\+L\+\_\+\+Timer\+ID@{S\+D\+L\+\_\+\+Timer\+ID}}
+\index{S\+D\+L\+\_\+\+Timer\+ID@{S\+D\+L\+\_\+\+Timer\+ID}!S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Timer\+ID}{SDL\_TimerID}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}{S\+D\+L\+\_\+\+Timer\+ID}}}
+
+Definition of the timer ID type. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_s_d_l__timer_8h_a56ceea49587e3fa5796b2e4bf85603b8}\label{_s_d_l__timer_8h_a56ceea49587e3fa5796b2e4bf85603b8}} 
+\index{S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}!S\+D\+L\+\_\+\+Add\+Timer@{S\+D\+L\+\_\+\+Add\+Timer}}
+\index{S\+D\+L\+\_\+\+Add\+Timer@{S\+D\+L\+\_\+\+Add\+Timer}!S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Add\+Timer()}{SDL\_AddTimer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}{S\+D\+L\+\_\+\+Timer\+ID}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Add\+Timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}}]{interval,  }\item[{\mbox{\hyperlink{_s_d_l__timer_8h_a3c5c867db975d245e4a82fcf0cd7de80}{S\+D\+L\+\_\+\+Timer\+Callback}}}]{callback,  }\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$}]{param }\end{DoxyParamCaption})}
+
+
+
+Add a new timer to the pool of timers already running. 
+
+\begin{DoxyReturn}{Returns}
+A timer ID, or 0 when an error occurs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__timer_8h_ae8050b95373b95249064467592ab4e21}\label{_s_d_l__timer_8h_ae8050b95373b95249064467592ab4e21}} 
+\index{S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}!S\+D\+L\+\_\+\+Delay@{S\+D\+L\+\_\+\+Delay}}
+\index{S\+D\+L\+\_\+\+Delay@{S\+D\+L\+\_\+\+Delay}!S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Delay()}{SDL\_Delay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Delay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}}]{ms }\end{DoxyParamCaption})}
+
+
+
+Wait a specified number of milliseconds before returning. 
+
+\mbox{\Hypertarget{_s_d_l__timer_8h_a2dbeb63c4f0564811a4adf3938808977}\label{_s_d_l__timer_8h_a2dbeb63c4f0564811a4adf3938808977}} 
+\index{S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}!S\+D\+L\+\_\+\+Get\+Performance\+Counter@{S\+D\+L\+\_\+\+Get\+Performance\+Counter}}
+\index{S\+D\+L\+\_\+\+Get\+Performance\+Counter@{S\+D\+L\+\_\+\+Get\+Performance\+Counter}!S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Performance\+Counter()}{SDL\_GetPerformanceCounter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_ac006cf2bd55a42a9cc8ae9f123aa7e13}{Uint64}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Performance\+Counter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the current value of the high resolution counter. 
+
+\mbox{\Hypertarget{_s_d_l__timer_8h_a507ebea12e31dacc9f85f7d9febe0efb}\label{_s_d_l__timer_8h_a507ebea12e31dacc9f85f7d9febe0efb}} 
+\index{S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}!S\+D\+L\+\_\+\+Get\+Performance\+Frequency@{S\+D\+L\+\_\+\+Get\+Performance\+Frequency}}
+\index{S\+D\+L\+\_\+\+Get\+Performance\+Frequency@{S\+D\+L\+\_\+\+Get\+Performance\+Frequency}!S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Performance\+Frequency()}{SDL\_GetPerformanceFrequency()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_ac006cf2bd55a42a9cc8ae9f123aa7e13}{Uint64}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Performance\+Frequency (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the count per second of the high resolution counter. 
+
+\mbox{\Hypertarget{_s_d_l__timer_8h_a0b9bc71d6287e0ffafdc3419760fe2b3}\label{_s_d_l__timer_8h_a0b9bc71d6287e0ffafdc3419760fe2b3}} 
+\index{S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}!S\+D\+L\+\_\+\+Get\+Ticks@{S\+D\+L\+\_\+\+Get\+Ticks}}
+\index{S\+D\+L\+\_\+\+Get\+Ticks@{S\+D\+L\+\_\+\+Get\+Ticks}!S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Ticks()}{SDL\_GetTicks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Ticks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the number of milliseconds since the S\+DL library initialization. 
+
+\begin{DoxyNote}{Note}
+This value wraps if the program runs for more than $\sim$49 days. 
+\end{DoxyNote}
+\mbox{\Hypertarget{_s_d_l__timer_8h_afe8d418e59a24ae6ad820b92137ab9b2}\label{_s_d_l__timer_8h_afe8d418e59a24ae6ad820b92137ab9b2}} 
+\index{S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}!S\+D\+L\+\_\+\+Remove\+Timer@{S\+D\+L\+\_\+\+Remove\+Timer}}
+\index{S\+D\+L\+\_\+\+Remove\+Timer@{S\+D\+L\+\_\+\+Remove\+Timer}!S\+D\+L\+\_\+timer.\+h@{S\+D\+L\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Remove\+Timer()}{SDL\_RemoveTimer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Remove\+Timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}{S\+D\+L\+\_\+\+Timer\+ID}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Remove a timer knowing its ID. 
+
+\begin{DoxyReturn}{Returns}
+A boolean value indicating success or failure.
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+It is not safe to remove a timer multiple times. 
+\end{DoxyWarning}

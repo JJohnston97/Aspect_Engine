@@ -1,0 +1,1155 @@
+\hypertarget{_s_d_l__hints_8h}{}\section{Contrib/\+S\+D\+L2-\/2.0.8/include/\+S\+D\+L\+\_\+hints.h File Reference}
+\label{_s_d_l__hints_8h}\index{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+hints.\+h@{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+hints.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a4f14744afc8f84bf52e3bfaec2667824}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+F\+R\+A\+M\+E\+B\+U\+F\+F\+E\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}}~\char`\"{}S\+D\+L\+\_\+\+F\+R\+A\+M\+E\+B\+U\+F\+F\+E\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling how 3D acceleration is used to accelerate the S\+DL screen surface. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a1ecf7a77582e3af7938b2f7c8d900aee}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+R\+I\+V\+ER}}~\char`\"{}S\+D\+L\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+R\+I\+V\+ER\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable specifying which render driver to use. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a156051f550fba6a1d8dfafd8bc90b1b2}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+S\+H\+A\+D\+E\+RS}}~\char`\"{}S\+D\+L\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+S\+H\+A\+D\+E\+RS\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether the Open\+GL render driver uses shaders if they are available. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a6e06533f9f12c456accacb7c1f40a58d}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE}}~\char`\"{}S\+D\+L\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether the Direct3D device is initialized for thread-\/safe operations. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ac25a4eba109ed065d639f6054d2b842c}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D11\+\_\+\+D\+E\+B\+UG}}~\char`\"{}S\+D\+L\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D11\+\_\+\+D\+E\+B\+UG\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether to enable Direct3D 11+\textquotesingle{}s Debug Layer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a2b4f2979611c7eedbe80e37a644bac7d}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+L\+O\+G\+I\+C\+A\+L\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+O\+DE}}~\char`\"{}S\+D\+L\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+L\+O\+G\+I\+C\+A\+L\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+O\+DE\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling the scaling policy for S\+D\+L\+\_\+\+Render\+Set\+Logical\+Size. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a10b6e40601439f51131d8a264070ab2e}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+S\+C\+A\+L\+E\+\_\+\+Q\+U\+A\+L\+I\+TY}}~\char`\"{}S\+D\+L\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+S\+C\+A\+L\+E\+\_\+\+Q\+U\+A\+L\+I\+TY\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling the scaling quality. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ab512fdde4a91d3a271df7b59297fcf98}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+V\+S\+Y\+NC}}~\char`\"{}S\+D\+L\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+V\+S\+Y\+NC\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether updates to the S\+DL screen surface should be synchronized with the vertical refresh, to avoid tearing. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a7d3457c4003d46ddb560a96844ca1f85}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+A\+L\+L\+O\+W\+\_\+\+S\+C\+R\+E\+E\+N\+S\+A\+V\+ER}}~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+A\+L\+L\+O\+W\+\_\+\+S\+C\+R\+E\+E\+N\+S\+A\+V\+ER\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether the screensaver is enabled. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a866aaf8bf196921021eb7bda46b7a781}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+V\+I\+D\+M\+O\+DE}}~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+V\+I\+D\+M\+O\+DE\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether the X11 Vid\+Mode extension should be used. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ad40f9ea3808d57729baf6d69c019af4b}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+I\+N\+E\+R\+A\+MA}}~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+I\+N\+E\+R\+A\+MA\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether the X11 Xinerama extension should be used. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ab78bba735481c64f25a01799c0266058}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+R\+A\+N\+DR}}~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+R\+A\+N\+DR\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether the X11 X\+RandR extension should be used. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a64cf86da8e0fab9201f5d6e677df1a87}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+P\+I\+NG}}~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+P\+I\+NG\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether the X11 \+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+P\+I\+NG protocol should be supported. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_abc592ad47225c77acdec3d778782a37e}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+OR}}~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+OR\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether the X11 \+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+OR hint should be used. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ab34ea46e0365bd0546c6fa6f4b56d86e}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+R\+A\+M\+E\+\_\+\+U\+S\+A\+B\+L\+E\+\_\+\+W\+H\+I\+L\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+H\+I\+D\+D\+EN}}~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+R\+A\+M\+E\+\_\+\+U\+S\+A\+B\+L\+E\+\_\+\+W\+H\+I\+L\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+H\+I\+D\+D\+EN\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether the window frame and title bar are interactive when the cursor is hidden. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a2a5b224b4a44f6a884a3b4bb6bd4fc97}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+ON}}~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+ON\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable to specify custom icon resource id from RC file on Windows platform. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a7da3b0170a9ad3d1ee9e9e9d491d697a}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+O\+N\+\_\+\+S\+M\+A\+LL}}~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+O\+N\+\_\+\+S\+M\+A\+LL\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a4751d59cbeb36e0e41139f2f3273602d}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+L\+O\+OP}}~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+L\+O\+OP\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether the windows message loop is processed by S\+DL. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a5295df139727cd78a0663afb0b91010b}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+R\+A\+B\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}}~\char`\"{}S\+D\+L\+\_\+\+G\+R\+A\+B\+\_\+\+K\+E\+Y\+B\+O\+A\+RD\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether grabbing input grabs the keyboard. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a1a5034b3e1f390aed827bd627ebdd555}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE}}~\char`\"{}S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable setting the speed scale for mouse motion, in floating point, when the mouse is not in relative mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ad69c295983ec1db56ea26af46f184ce7}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE}}~\char`\"{}S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable setting the scale for mouse motion, in floating point, when the mouse is in relative mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ad2592e57adcf22b77618347fef431790}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+M\+O\+D\+E\+\_\+\+W\+A\+RP}}~\char`\"{}S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+M\+O\+D\+E\+\_\+\+W\+A\+RP\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether relative mouse mode is implemented using mouse warping. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a59083735a2377046c2fc72eb0a3e855f}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+F\+O\+C\+U\+S\+\_\+\+C\+L\+I\+C\+K\+T\+H\+R\+O\+U\+GH}}~\char`\"{}S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+\_\+\+F\+O\+C\+U\+S\+\_\+\+C\+L\+I\+C\+K\+T\+H\+R\+O\+U\+GH\char`\"{}
+\begin{DoxyCompactList}\small\item\em Allow mouse click events when clicking to focus an S\+DL window. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a334b89b47382e48b03e24defe96b6163}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+U\+C\+H\+\_\+\+M\+O\+U\+S\+E\+\_\+\+E\+V\+E\+N\+TS}}~\char`\"{}S\+D\+L\+\_\+\+T\+O\+U\+C\+H\+\_\+\+M\+O\+U\+S\+E\+\_\+\+E\+V\+E\+N\+TS\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether touch events should generate synthetic mouse events. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a85488274590bff72c3d1dba5829443f6}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+E\+\_\+\+O\+N\+\_\+\+F\+O\+C\+U\+S\+\_\+\+L\+O\+SS}}~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+E\+\_\+\+O\+N\+\_\+\+F\+O\+C\+U\+S\+\_\+\+L\+O\+SS\char`\"{}
+\begin{DoxyCompactList}\small\item\em Minimize your S\+D\+L\+\_\+\+Window if it loses key focus when in fullscreen mode. Defaults to true. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_abe9410e8b6809c9fdcb1f69e6894a2e8}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+D\+L\+E\+\_\+\+T\+I\+M\+E\+R\+\_\+\+D\+I\+S\+A\+B\+L\+ED}}~\char`\"{}S\+D\+L\+\_\+\+I\+O\+S\+\_\+\+I\+D\+L\+E\+\_\+\+T\+I\+M\+E\+R\+\_\+\+D\+I\+S\+A\+B\+L\+ED\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether the idle timer is disabled on i\+OS. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a1e2eef18b43aa15121d8250a408421ce}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS}}~\char`\"{}S\+D\+L\+\_\+\+I\+O\+S\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling which orientations are allowed on i\+OS. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a0301d6377ef50a5a435653743d2771f4}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+I\+\_\+\+E\+V\+E\+N\+TS}}~\char`\"{}S\+D\+L\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+I\+\_\+\+E\+V\+E\+N\+TS\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether controllers used with the Apple TV generate UI events. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a9b66ef93d2b547e671881bbfdf6c2ddc}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+O\+T\+A\+T\+I\+ON}}~\char`\"{}S\+D\+L\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+O\+T\+A\+T\+I\+ON\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether the Apple TV remote\textquotesingle{}s joystick axes will automatically match the rotation of the remote. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a7f03e5cd7f050a5e9304e3bc46586b06}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+O\+S\+\_\+\+H\+I\+D\+E\+\_\+\+H\+O\+M\+E\+\_\+\+I\+N\+D\+I\+C\+A\+T\+OR}}~\char`\"{}S\+D\+L\+\_\+\+I\+O\+S\+\_\+\+H\+I\+D\+E\+\_\+\+H\+O\+M\+E\+\_\+\+I\+N\+D\+I\+C\+A\+T\+OR\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether the home indicator bar on i\+Phone X should be hidden. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a3864d9d3569d0edcf7b0a07d8b769810}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK}}~\char`\"{}S\+D\+L\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether the Android / i\+OS built-\/in accelerometer should be listed as a joystick device. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a798d47734b79941d6acb861fb91811f4}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK}}~\char`\"{}S\+D\+L\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling whether the Android / tv\+OS remotes should be listed as joystick devices, instead of sending keyboard events. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a74031ed3b17889222462108800b91c3c}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+E\+N\+A\+B\+L\+ED}}~\char`\"{}S\+D\+L\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+E\+N\+A\+B\+L\+ED\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable that lets you disable the detection and use of Xinput gamepad devices. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a7a7ae9f9a2a771b1f83b5cd165f1c3bb}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+U\+S\+E\+\_\+\+O\+L\+D\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+M\+A\+P\+P\+I\+NG}}~\char`\"{}S\+D\+L\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+U\+S\+E\+\_\+\+O\+L\+D\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+M\+A\+P\+P\+I\+NG\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable that causes S\+DL to use the old axis and button mapping for X\+Input devices. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ae6733a084fded26033d0b3a1ab1480a4}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+C\+O\+N\+F\+IG}}~\char`\"{}S\+D\+L\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+C\+O\+N\+F\+IG\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable that lets you manually hint extra gamecontroller db entries. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ad14dbbb2b528c47f178f3daf35d9136b}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+ES}}~\char`\"{}S\+D\+L\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+ES\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a207169494144e4c339c41d5401c945fd}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+E\+X\+C\+E\+PT}}~\char`\"{}S\+D\+L\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+E\+X\+C\+E\+PT\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ab343c91586c6b4789763e4a82b35de0b}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+L\+L\+O\+W\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+E\+V\+E\+N\+TS}}~\char`\"{}S\+D\+L\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+L\+L\+O\+W\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+E\+V\+E\+N\+TS\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable that lets you enable joystick (and gamecontroller) events even when your app is in the background. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ac0deec953ae4635131cbe321192236ff}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST}}~\char`\"{}S\+D\+L\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST\char`\"{}
+\begin{DoxyCompactList}\small\item\em If set to \char`\"{}0\char`\"{} then never set the top most bit on a S\+DL Window, even if the video mode expects it. This is a debugging aid for developers and not expected to be used by end users. The default is \char`\"{}1\char`\"{}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_afbc6ba9f809e07557eb369f763299174}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON}}~\char`\"{}S\+D\+L\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable that controls the timer resolution, in milliseconds. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a1abf971bf456c82d8cc06868b75fd564}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}~\char`\"{}S\+D\+L\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable describing the content orientation on Qt\+Wayland-\/based platforms. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a8893a7653ab4562b99f25aad9e5f41cb}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+L\+A\+GS}}~\char`\"{}S\+D\+L\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+L\+A\+GS\char`\"{}
+\begin{DoxyCompactList}\small\item\em Flags to set on Qt\+Wayland windows to integrate with the native window manager. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a70a6e1364071cde0cba942d47bc7a246}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}}~\char`\"{}S\+D\+L\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE\char`\"{}
+\begin{DoxyCompactList}\small\item\em A string specifying S\+DL\textquotesingle{}s threads stack size in bytes or \char`\"{}0\char`\"{} for the backend\textquotesingle{}s default size. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ac4537a3cf34a3a2d2a1dd674ea7daa6f}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+H\+I\+G\+H\+D\+P\+I\+\_\+\+D\+I\+S\+A\+B\+L\+ED}}~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+H\+I\+G\+H\+D\+P\+I\+\_\+\+D\+I\+S\+A\+B\+L\+ED\char`\"{}
+\begin{DoxyCompactList}\small\item\em If set to 1, then do not allow high-\/\+D\+PI windows. (\char`\"{}\+Retina\char`\"{} on Mac and i\+OS) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a63dd635fa195f590f645c1170f50968d}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+A\+C\+\_\+\+C\+T\+R\+L\+\_\+\+C\+L\+I\+C\+K\+\_\+\+E\+M\+U\+L\+A\+T\+E\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK}}~\char`\"{}S\+D\+L\+\_\+\+M\+A\+C\+\_\+\+C\+T\+R\+L\+\_\+\+C\+L\+I\+C\+K\+\_\+\+E\+M\+U\+L\+A\+T\+E\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable that determines whether ctrl+click should generate a right-\/click event on Mac. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a1e91c63c1b9c4afd7c0349b4392270fd}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+\_\+\+D3\+D\+C\+O\+M\+P\+I\+L\+ER}}~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+\_\+\+D3\+D\+C\+O\+M\+P\+I\+L\+ER\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable specifying which shader compiler to preload when using the Chrome A\+N\+G\+LE binaries. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a007f98915e3ca58963c3cace38ed3a05}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+H\+A\+R\+E\+\_\+\+P\+I\+X\+E\+L\+\_\+\+F\+O\+R\+M\+AT}}~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+H\+A\+R\+E\+\_\+\+P\+I\+X\+E\+L\+\_\+\+F\+O\+R\+M\+AT\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable that is the address of another S\+D\+L\+\_\+\+Window$\ast$ (as a hex string formatted with \char`\"{}\%p\char`\"{}). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a5f898b6a1c5658f84c812540bb857560}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+U\+RL}}~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+U\+RL\char`\"{}
+\begin{DoxyCompactList}\small\item\em A U\+RL to a Win\+RT app\textquotesingle{}s privacy policy. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a2e703ae1982069e228243e2633cf41c7}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+L\+A\+B\+EL}}~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+L\+A\+B\+EL\char`\"{}
+\begin{DoxyCompactList}\small\item\em Label text for a Win\+RT app\textquotesingle{}s privacy policy link. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a50fab1c4959c71f2e066b7eec874ef90}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+T\+T\+ON}}~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+T\+T\+ON\char`\"{}
+\begin{DoxyCompactList}\small\item\em Allows back-\/button-\/press events on Windows Phone to be marked as handled. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a7f78bfa36d29dc21728bfabce8b336c3}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+A\+C\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N\+\_\+\+S\+P\+A\+C\+ES}}~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+A\+C\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N\+\_\+\+S\+P\+A\+C\+ES\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable that dictates policy for fullscreen Spaces on Mac OS X. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a1b75df316decc7aae5bc31b0595c1b01}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+A\+C\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+A\+PP}}~\char`\"{}S\+D\+L\+\_\+\+M\+A\+C\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+A\+PP\char`\"{}
+\begin{DoxyCompactList}\small\item\em When set don\textquotesingle{}t force the S\+DL app to become a foreground process. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a83f55aca7bd64c9157f00ad356bda81e}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+M\+A\+I\+N\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}~\char`\"{}S\+D\+L\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+M\+A\+I\+N\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON\char`\"{}
+\begin{DoxyCompactList}\small\item\em Android A\+PK expansion main file version. Should be a string number like \char`\"{}1\char`\"{}, \char`\"{}2\char`\"{} etc. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ac2dce1bbb095169a9de048eeee233e2d}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+P\+A\+T\+C\+H\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}~\char`\"{}S\+D\+L\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+P\+A\+T\+C\+H\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON\char`\"{}
+\begin{DoxyCompactList}\small\item\em Android A\+PK expansion patch file version. Should be a string number like \char`\"{}1\char`\"{}, \char`\"{}2\char`\"{} etc. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a17c7ae7e0cbbdb6a5049f559a58228ad}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+M\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+D\+I\+T\+I\+NG}}~\char`\"{}S\+D\+L\+\_\+\+I\+M\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+D\+I\+T\+I\+NG\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable to control whether certain I\+M\+Es should handle text editing internally instead of sending S\+D\+L\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+I\+NG events. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a46ee702b1e7f6c0fd1a35e64a1e68fe6}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+E\+\_\+\+M\+O\+U\+S\+E\+\_\+\+A\+N\+D\+\_\+\+T\+O\+U\+CH}}~\char`\"{}S\+D\+L\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+E\+\_\+\+M\+O\+U\+S\+E\+\_\+\+A\+N\+D\+\_\+\+T\+O\+U\+CH\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable to control whether mouse and touch events are to be treated together or separately. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ae840652b9ebd21e4317ee80e7b527339}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+K\+E\+Y\+\_\+\+H\+I\+D\+E\+S\+\_\+\+I\+ME}}~\char`\"{}S\+D\+L\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+K\+E\+Y\+\_\+\+H\+I\+D\+E\+S\+\_\+\+I\+ME\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable to control whether the return key on the soft keyboard should hide the soft keyboard on Android and i\+OS. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a70b9664a38b946b73b669be38add94ef}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+E\+M\+S\+C\+R\+I\+P\+T\+E\+N\+\_\+\+K\+E\+Y\+B\+O\+A\+R\+D\+\_\+\+E\+L\+E\+M\+E\+NT}}~\char`\"{}S\+D\+L\+\_\+\+E\+M\+S\+C\+R\+I\+P\+T\+E\+N\+\_\+\+K\+E\+Y\+B\+O\+A\+R\+D\+\_\+\+E\+L\+E\+M\+E\+NT\char`\"{}
+\begin{DoxyCompactList}\small\item\em override the binding element for keyboard inputs for Emscripten builds \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a58db46309f4295553ed4b0f1a4ccfa54}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+N\+O\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+H\+A\+N\+D\+L\+E\+RS}}~\char`\"{}S\+D\+L\+\_\+\+N\+O\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+H\+A\+N\+D\+L\+E\+RS\char`\"{}
+\begin{DoxyCompactList}\small\item\em Tell S\+DL not to catch the S\+I\+G\+I\+NT or S\+I\+G\+T\+E\+RM signals. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a591d43be8d8b8cc6ad9dd37f69e50630}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+N\+O\+\_\+\+C\+L\+O\+S\+E\+\_\+\+O\+N\+\_\+\+A\+L\+T\+\_\+\+F4}}~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+N\+O\+\_\+\+C\+L\+O\+S\+E\+\_\+\+O\+N\+\_\+\+A\+L\+T\+\_\+\+F4\char`\"{}
+\begin{DoxyCompactList}\small\item\em Tell S\+DL not to generate window-\/close events for Alt+\+F4 on Windows. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a75c4ce4bba90833587eae21903d3d3fe}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+B\+M\+P\+\_\+\+S\+A\+V\+E\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+F\+O\+R\+M\+AT}}~\char`\"{}S\+D\+L\+\_\+\+B\+M\+P\+\_\+\+S\+A\+V\+E\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+F\+O\+R\+M\+AT\char`\"{}
+\begin{DoxyCompactList}\small\item\em Prevent S\+DL from using version 4 of the bitmap header when saving B\+M\+Ps. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_af9f679cc77a01ece373e3aff177f2802}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+N\+A\+M\+I\+NG}}~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+N\+A\+M\+I\+NG\char`\"{}
+\begin{DoxyCompactList}\small\item\em Tell S\+DL not to name threads on Windows with the 0x406\+D1388 Exception. The 0x406\+D1388 Exception is a trick used to inform Visual Studio of a thread\textquotesingle{}s name, but it tends to cause problems with other debuggers, and the .N\+ET runtime. Note that S\+DL 2.\+0.\+6 and later will still use the (safer) Set\+Thread\+Description A\+PI, introduced in the Windows 10 Creators Update, if available. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_a0e762eabcf52604adb9bcb9a554e3f32}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+P\+I\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+A\+Y\+ER}}~\char`\"{}S\+D\+L\+\_\+\+R\+P\+I\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+A\+Y\+ER\char`\"{}
+\begin{DoxyCompactList}\small\item\em Tell S\+DL which Dispmanx layer to use on a Raspberry PI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ab419844280b39c7c713ec7d7246e71a4}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+B\+U\+F\+F\+ER\char`\"{}
+\begin{DoxyCompactList}\small\item\em Tell the video driver that we only want a double buffer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_adce02dd2716ef92d3c787789ccfbb98e}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+E\+S\+\_\+\+D\+R\+I\+V\+ER}}~\char`\"{}S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+E\+S\+\_\+\+D\+R\+I\+V\+ER\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling what driver to use for Open\+GL ES contexts. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_ac95cc95cd003647ccc6b1446a7e3c408}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+E\+S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+M\+O\+DE}}~\char`\"{}S\+D\+L\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+E\+S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+M\+O\+DE\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling speed/quality tradeoff of audio resampling. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_s_d_l__hints_8h_aadfee7d079b71eebc291fc42622ead38}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+A\+T\+E\+G\+O\+RY}}~\char`\"{}S\+D\+L\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+A\+T\+E\+G\+O\+RY\char`\"{}
+\begin{DoxyCompactList}\small\item\em A variable controlling the audio category on i\+OS and Mac OS X. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}(\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} $\ast$ \mbox{\hyperlink{_s_d_l__hints_8h_a393a846a6c2dbc4ec9e52bd9bef14e02}{S\+D\+L\+\_\+\+Hint\+Callback}}) (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$userdata, const char $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}}, const char $\ast$old\+Value, const char $\ast$new\+Value)
+\begin{DoxyCompactList}\small\item\em type definition of the hint callback function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_s_d_l__hints_8h_ab85f3099d9bb0445b0c6b5002cfaa7ed}{S\+D\+L\+\_\+\+Hint\+Priority}} \{ \mbox{\hyperlink{_s_d_l__hints_8h_ab85f3099d9bb0445b0c6b5002cfaa7eda3dd1382c2b23c690411c1aacfac9b634}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT}}, 
+\mbox{\hyperlink{_s_d_l__hints_8h_ab85f3099d9bb0445b0c6b5002cfaa7edaef363821cdc9c74e84d79cfea42e32b9}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+N\+O\+R\+M\+AL}}, 
+\mbox{\hyperlink{_s_d_l__hints_8h_ab85f3099d9bb0445b0c6b5002cfaa7edac85d90168e4a0cd4cd52ba38a68bcebf}{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+ \}
+\begin{DoxyCompactList}\small\item\em An enumeration of hint priorities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__hints_8h_aa8dbcd854090784ae237aeeefb7e6232}{S\+D\+L\+\_\+\+Set\+Hint\+With\+Priority}} (const char $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}}, const char $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8ad81492d410ff2ac11f754f4042150f}{value}}, \mbox{\hyperlink{_s_d_l__hints_8h_ab85f3099d9bb0445b0c6b5002cfaa7ed}{S\+D\+L\+\_\+\+Hint\+Priority}} priority)
+\begin{DoxyCompactList}\small\item\em Set a hint with a specific priority. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__hints_8h_a9b47f5aa3911644f0a5a3f0cfa9198a4}{S\+D\+L\+\_\+\+Set\+Hint}} (const char $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}}, const char $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8ad81492d410ff2ac11f754f4042150f}{value}})
+\begin{DoxyCompactList}\small\item\em Set a hint with normal priority. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__hints_8h_a7b26a63a33768fab43d50e3fd0d41eb5}{S\+D\+L\+\_\+\+Get\+Hint}} (const char $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}})
+\begin{DoxyCompactList}\small\item\em Get a hint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__hints_8h_ac64146ba3607164ed325956ea3d6d392}{S\+D\+L\+\_\+\+Get\+Hint\+Boolean}} (const char $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}}, \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} default\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Get a hint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__hints_8h_a8731ae1704dd7a70f63cc6cdd242b5ae}{S\+D\+L\+\_\+\+Add\+Hint\+Callback}} (const char $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}}, \mbox{\hyperlink{_s_d_l__hints_8h_a393a846a6c2dbc4ec9e52bd9bef14e02}{S\+D\+L\+\_\+\+Hint\+Callback}} callback, \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$userdata)
+\begin{DoxyCompactList}\small\item\em Add a function to watch a particular hint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__hints_8h_aff84d56f5de197e49a778e18ad76ab0e}{S\+D\+L\+\_\+\+Del\+Hint\+Callback}} (const char $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}}, \mbox{\hyperlink{_s_d_l__hints_8h_a393a846a6c2dbc4ec9e52bd9bef14e02}{S\+D\+L\+\_\+\+Hint\+Callback}} callback, \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$userdata)
+\begin{DoxyCompactList}\small\item\em Remove a function watching a particular hint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__hints_8h_a7feb78f92319c07e9d53d7be8185cdbb}{S\+D\+L\+\_\+\+Clear\+Hints}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\begin{DoxyCompactList}\small\item\em Clear all hints. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Official documentation for S\+DL configuration variables
+
+This file contains functions to set and get configuration hints, as well as listing each of them alphabetically.
+
+The convention for naming hints is S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+X, where \char`\"{}\+S\+D\+L\+\_\+\+X\char`\"{} is the environment variable that can be used to override the default.
+
+In general these hints are just that -\/ they may or may not be supported or applicable on any given platform, but they provide a way for an application or user to give the library a hint as to how they would like the library to work. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_s_d_l__hints_8h_a3864d9d3569d0edcf7b0a07d8b769810}\label{_s_d_l__hints_8h_a3864d9d3569d0edcf7b0a07d8b769810}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK}{SDL\_HINT\_ACCELEROMETER\_AS\_JOYSTICK}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK~\char`\"{}S\+D\+L\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK\char`\"{}}
+
+
+
+A variable controlling whether the Android / i\+OS built-\/in accelerometer should be listed as a joystick device. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ The accelerometer is not listed as a joystick \char`\"{}1\char`\"{} -\/ The accelerometer is available as a 3 axis joystick (the default). \mbox{\Hypertarget{_s_d_l__hints_8h_ac0deec953ae4635131cbe321192236ff}\label{_s_d_l__hints_8h_ac0deec953ae4635131cbe321192236ff}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST}{SDL\_HINT\_ALLOW\_TOPMOST}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST~\char`\"{}S\+D\+L\+\_\+\+A\+L\+L\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST\char`\"{}}
+
+
+
+If set to \char`\"{}0\char`\"{} then never set the top most bit on a S\+DL Window, even if the video mode expects it. This is a debugging aid for developers and not expected to be used by end users. The default is \char`\"{}1\char`\"{}. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ don\textquotesingle{}t allow topmost \char`\"{}1\char`\"{} -\/ allow topmost \mbox{\Hypertarget{_s_d_l__hints_8h_a83f55aca7bd64c9157f00ad356bda81e}\label{_s_d_l__hints_8h_a83f55aca7bd64c9157f00ad356bda81e}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+M\+A\+I\+N\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+M\+A\+I\+N\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+M\+A\+I\+N\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+M\+A\+I\+N\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+M\+A\+I\+N\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON}{SDL\_HINT\_ANDROID\_APK\_EXPANSION\_MAIN\_FILE\_VERSION}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+M\+A\+I\+N\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON~\char`\"{}S\+D\+L\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+M\+A\+I\+N\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON\char`\"{}}
+
+
+
+Android A\+PK expansion main file version. Should be a string number like \char`\"{}1\char`\"{}, \char`\"{}2\char`\"{} etc. 
+
+Must be set together with S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+P\+A\+T\+C\+H\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON.
+
+If both hints were set then \mbox{\hyperlink{_s_d_l__rwops_8h_aef7e843c3486bd1770667a594aa0b439}{S\+D\+L\+\_\+\+R\+W\+From\+File()}} will look into expansion files after a given relative path was not found in the internal storage and assets.
+
+By default this hint is not set and the A\+PK expansion files are not searched. \mbox{\Hypertarget{_s_d_l__hints_8h_ac2dce1bbb095169a9de048eeee233e2d}\label{_s_d_l__hints_8h_ac2dce1bbb095169a9de048eeee233e2d}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+P\+A\+T\+C\+H\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+P\+A\+T\+C\+H\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+P\+A\+T\+C\+H\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+P\+A\+T\+C\+H\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+P\+A\+T\+C\+H\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON}{SDL\_HINT\_ANDROID\_APK\_EXPANSION\_PATCH\_FILE\_VERSION}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+P\+A\+T\+C\+H\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON~\char`\"{}S\+D\+L\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+P\+A\+T\+C\+H\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON\char`\"{}}
+
+
+
+Android A\+PK expansion patch file version. Should be a string number like \char`\"{}1\char`\"{}, \char`\"{}2\char`\"{} etc. 
+
+Must be set together with S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+P\+K\+\_\+\+E\+X\+P\+A\+N\+S\+I\+O\+N\+\_\+\+M\+A\+I\+N\+\_\+\+F\+I\+L\+E\+\_\+\+V\+E\+R\+S\+I\+ON.
+
+If both hints were set then \mbox{\hyperlink{_s_d_l__rwops_8h_aef7e843c3486bd1770667a594aa0b439}{S\+D\+L\+\_\+\+R\+W\+From\+File()}} will look into expansion files after a given relative path was not found in the internal storage and assets.
+
+By default this hint is not set and the A\+PK expansion files are not searched. \mbox{\Hypertarget{_s_d_l__hints_8h_a46ee702b1e7f6c0fd1a35e64a1e68fe6}\label{_s_d_l__hints_8h_a46ee702b1e7f6c0fd1a35e64a1e68fe6}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+E\+\_\+\+M\+O\+U\+S\+E\+\_\+\+A\+N\+D\+\_\+\+T\+O\+U\+CH@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+E\+\_\+\+M\+O\+U\+S\+E\+\_\+\+A\+N\+D\+\_\+\+T\+O\+U\+CH}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+E\+\_\+\+M\+O\+U\+S\+E\+\_\+\+A\+N\+D\+\_\+\+T\+O\+U\+CH@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+E\+\_\+\+M\+O\+U\+S\+E\+\_\+\+A\+N\+D\+\_\+\+T\+O\+U\+CH}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+E\+\_\+\+M\+O\+U\+S\+E\+\_\+\+A\+N\+D\+\_\+\+T\+O\+U\+CH}{SDL\_HINT\_ANDROID\_SEPARATE\_MOUSE\_AND\_TOUCH}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+E\+\_\+\+M\+O\+U\+S\+E\+\_\+\+A\+N\+D\+\_\+\+T\+O\+U\+CH~\char`\"{}S\+D\+L\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+E\+\_\+\+M\+O\+U\+S\+E\+\_\+\+A\+N\+D\+\_\+\+T\+O\+U\+CH\char`\"{}}
+
+
+
+A variable to control whether mouse and touch events are to be treated together or separately. 
+
+The variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Mouse events will be handled as touch events, and touch will raise fake mouse events. This is the behaviour of S\+DL $<$= 2.\+0.\+3. (default) \char`\"{}1\char`\"{} -\/ Mouse events will be handled separately from pure touch events.
+
+The value of this hint is used at runtime, so it can be changed at any time. \mbox{\Hypertarget{_s_d_l__hints_8h_a0301d6377ef50a5a435653743d2771f4}\label{_s_d_l__hints_8h_a0301d6377ef50a5a435653743d2771f4}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+I\+\_\+\+E\+V\+E\+N\+TS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+I\+\_\+\+E\+V\+E\+N\+TS}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+I\+\_\+\+E\+V\+E\+N\+TS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+I\+\_\+\+E\+V\+E\+N\+TS}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+I\+\_\+\+E\+V\+E\+N\+TS}{SDL\_HINT\_APPLE\_TV\_CONTROLLER\_UI\_EVENTS}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+I\+\_\+\+E\+V\+E\+N\+TS~\char`\"{}S\+D\+L\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+U\+I\+\_\+\+E\+V\+E\+N\+TS\char`\"{}}
+
+
+
+A variable controlling whether controllers used with the Apple TV generate UI events. 
+
+When UI events are generated by controller input, the app will be backgrounded when the Apple TV remote\textquotesingle{}s menu button is pressed, and when the pause or B buttons on gamepads are pressed.
+
+More information about properly making use of controllers for the Apple TV can be found here\+: \href{https://developer.apple.com/tvos/human-interface-guidelines/remote-and-controllers/}{\tt https\+://developer.\+apple.\+com/tvos/human-\/interface-\/guidelines/remote-\/and-\/controllers/}
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Controller input does not generate UI events (the default). \char`\"{}1\char`\"{} -\/ Controller input generates UI events. \mbox{\Hypertarget{_s_d_l__hints_8h_a9b66ef93d2b547e671881bbfdf6c2ddc}\label{_s_d_l__hints_8h_a9b66ef93d2b547e671881bbfdf6c2ddc}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+O\+T\+A\+T\+I\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+O\+T\+A\+T\+I\+ON}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+O\+T\+A\+T\+I\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+O\+T\+A\+T\+I\+ON}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+O\+T\+A\+T\+I\+ON}{SDL\_HINT\_APPLE\_TV\_REMOTE\_ALLOW\_ROTATION}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+O\+T\+A\+T\+I\+ON~\char`\"{}S\+D\+L\+\_\+\+A\+P\+P\+L\+E\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+R\+O\+T\+A\+T\+I\+ON\char`\"{}}
+
+
+
+A variable controlling whether the Apple TV remote\textquotesingle{}s joystick axes will automatically match the rotation of the remote. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Remote orientation does not affect joystick axes (the default). \char`\"{}1\char`\"{} -\/ Joystick axes are based on the orientation of the remote. \mbox{\Hypertarget{_s_d_l__hints_8h_aadfee7d079b71eebc291fc42622ead38}\label{_s_d_l__hints_8h_aadfee7d079b71eebc291fc42622ead38}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+A\+T\+E\+G\+O\+RY@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+A\+T\+E\+G\+O\+RY}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+A\+T\+E\+G\+O\+RY@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+A\+T\+E\+G\+O\+RY}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+A\+T\+E\+G\+O\+RY}{SDL\_HINT\_AUDIO\_CATEGORY}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+A\+T\+E\+G\+O\+RY~\char`\"{}S\+D\+L\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+A\+T\+E\+G\+O\+RY\char`\"{}}
+
+
+
+A variable controlling the audio category on i\+OS and Mac OS X. 
+
+This variable can be set to the following values\+:
+
+\char`\"{}ambient\char`\"{} -\/ Use the A\+V\+Audio\+Session\+Category\+Ambient audio category, will be muted by the phone mute switch (default) \char`\"{}playback\char`\"{} -\/ Use the A\+V\+Audio\+Session\+Category\+Playback category
+
+For more information, see Apple\textquotesingle{}s documentation\+: \href{https://developer.apple.com/library/content/documentation/Audio/Conceptual/AudioSessionProgrammingGuide/AudioSessionCategoriesandModes/AudioSessionCategoriesandModes.html}{\tt https\+://developer.\+apple.\+com/library/content/documentation/\+Audio/\+Conceptual/\+Audio\+Session\+Programming\+Guide/\+Audio\+Session\+Categoriesand\+Modes/\+Audio\+Session\+Categoriesand\+Modes.\+html} \mbox{\Hypertarget{_s_d_l__hints_8h_ac95cc95cd003647ccc6b1446a7e3c408}\label{_s_d_l__hints_8h_ac95cc95cd003647ccc6b1446a7e3c408}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+E\+S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+M\+O\+DE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+E\+S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+M\+O\+DE}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+E\+S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+M\+O\+DE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+E\+S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+M\+O\+DE}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+E\+S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+M\+O\+DE}{SDL\_HINT\_AUDIO\_RESAMPLING\_MODE}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+E\+S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+M\+O\+DE~\char`\"{}S\+D\+L\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+E\+S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+M\+O\+DE\char`\"{}}
+
+
+
+A variable controlling speed/quality tradeoff of audio resampling. 
+
+If available, S\+DL can use libsamplerate ( \href{http://www.mega-nerd.com/SRC/}{\tt http\+://www.\+mega-\/nerd.\+com/\+S\+R\+C/} ) to handle audio resampling. There are different resampling modes available that produce different levels of quality, using more C\+PU.
+
+If this hint isn\textquotesingle{}t specified to a valid setting, or libsamplerate isn\textquotesingle{}t available, S\+DL will use the default, internal resampling algorithm.
+
+Note that this is currently only applicable to resampling audio that is being written to a device for playback or audio being read from a device for capture. \mbox{\hyperlink{struct_s_d_l___audio_c_v_t}{S\+D\+L\+\_\+\+Audio\+C\+VT}} always uses the default resampler (although this might change for S\+DL 2.\+1).
+
+This hint is currently only checked at audio subsystem initialization.
+
+This variable can be set to the following values\+:
+
+\char`\"{}0\char`\"{} or \char`\"{}default\char`\"{} -\/ Use S\+DL\textquotesingle{}s internal resampling (Default when not set -\/ low quality, fast) \char`\"{}1\char`\"{} or \char`\"{}fast\char`\"{} -\/ Use fast, slightly higher quality resampling, if available \char`\"{}2\char`\"{} or \char`\"{}medium\char`\"{} -\/ Use medium quality resampling, if available \char`\"{}3\char`\"{} or \char`\"{}best\char`\"{} -\/ Use high quality resampling, if available \mbox{\Hypertarget{_s_d_l__hints_8h_a75c4ce4bba90833587eae21903d3d3fe}\label{_s_d_l__hints_8h_a75c4ce4bba90833587eae21903d3d3fe}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+B\+M\+P\+\_\+\+S\+A\+V\+E\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+F\+O\+R\+M\+AT@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+B\+M\+P\+\_\+\+S\+A\+V\+E\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+F\+O\+R\+M\+AT}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+B\+M\+P\+\_\+\+S\+A\+V\+E\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+F\+O\+R\+M\+AT@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+B\+M\+P\+\_\+\+S\+A\+V\+E\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+F\+O\+R\+M\+AT}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+B\+M\+P\+\_\+\+S\+A\+V\+E\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+F\+O\+R\+M\+AT}{SDL\_HINT\_BMP\_SAVE\_LEGACY\_FORMAT}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+B\+M\+P\+\_\+\+S\+A\+V\+E\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+F\+O\+R\+M\+AT~\char`\"{}S\+D\+L\+\_\+\+B\+M\+P\+\_\+\+S\+A\+V\+E\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+F\+O\+R\+M\+AT\char`\"{}}
+
+
+
+Prevent S\+DL from using version 4 of the bitmap header when saving B\+M\+Ps. 
+
+The bitmap header version 4 is required for proper alpha channel support and S\+DL will use it when required. Should this not be desired, this hint can force the use of the 40 byte header version which is supported everywhere.
+
+The variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Surfaces with a colorkey or an alpha channel are saved to a 32-\/bit B\+MP file with an alpha mask. S\+DL will use the bitmap header version 4 and set the alpha mask accordingly. \char`\"{}1\char`\"{} -\/ Surfaces with a colorkey or an alpha channel are saved to a 32-\/bit B\+MP file without an alpha mask. The alpha channel data will be in the file, but applications are going to ignore it.
+
+The default value is \char`\"{}0\char`\"{}. \mbox{\Hypertarget{_s_d_l__hints_8h_a70b9664a38b946b73b669be38add94ef}\label{_s_d_l__hints_8h_a70b9664a38b946b73b669be38add94ef}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+E\+M\+S\+C\+R\+I\+P\+T\+E\+N\+\_\+\+K\+E\+Y\+B\+O\+A\+R\+D\+\_\+\+E\+L\+E\+M\+E\+NT@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+E\+M\+S\+C\+R\+I\+P\+T\+E\+N\+\_\+\+K\+E\+Y\+B\+O\+A\+R\+D\+\_\+\+E\+L\+E\+M\+E\+NT}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+E\+M\+S\+C\+R\+I\+P\+T\+E\+N\+\_\+\+K\+E\+Y\+B\+O\+A\+R\+D\+\_\+\+E\+L\+E\+M\+E\+NT@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+E\+M\+S\+C\+R\+I\+P\+T\+E\+N\+\_\+\+K\+E\+Y\+B\+O\+A\+R\+D\+\_\+\+E\+L\+E\+M\+E\+NT}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+E\+M\+S\+C\+R\+I\+P\+T\+E\+N\+\_\+\+K\+E\+Y\+B\+O\+A\+R\+D\+\_\+\+E\+L\+E\+M\+E\+NT}{SDL\_HINT\_EMSCRIPTEN\_KEYBOARD\_ELEMENT}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+E\+M\+S\+C\+R\+I\+P\+T\+E\+N\+\_\+\+K\+E\+Y\+B\+O\+A\+R\+D\+\_\+\+E\+L\+E\+M\+E\+NT~\char`\"{}S\+D\+L\+\_\+\+E\+M\+S\+C\+R\+I\+P\+T\+E\+N\+\_\+\+K\+E\+Y\+B\+O\+A\+R\+D\+\_\+\+E\+L\+E\+M\+E\+NT\char`\"{}}
+
+
+
+override the binding element for keyboard inputs for Emscripten builds 
+
+This hint only applies to the emscripten platform
+
+The variable can be one of \char`\"{}\#window\char`\"{} -\/ The javascript window object (this is the default) \char`\"{}\#document\char`\"{} -\/ The javascript document object \char`\"{}\#screen\char`\"{} -\/ the javascript window.\+screen object \char`\"{}\#canvas\char`\"{} -\/ the Web\+GL canvas element any other string without a leading \# sign applies to the element on the page with that ID. \mbox{\Hypertarget{_s_d_l__hints_8h_a4f14744afc8f84bf52e3bfaec2667824}\label{_s_d_l__hints_8h_a4f14744afc8f84bf52e3bfaec2667824}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+F\+R\+A\+M\+E\+B\+U\+F\+F\+E\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+F\+R\+A\+M\+E\+B\+U\+F\+F\+E\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+F\+R\+A\+M\+E\+B\+U\+F\+F\+E\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+F\+R\+A\+M\+E\+B\+U\+F\+F\+E\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+F\+R\+A\+M\+E\+B\+U\+F\+F\+E\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON}{SDL\_HINT\_FRAMEBUFFER\_ACCELERATION}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+F\+R\+A\+M\+E\+B\+U\+F\+F\+E\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON~\char`\"{}S\+D\+L\+\_\+\+F\+R\+A\+M\+E\+B\+U\+F\+F\+E\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+ON\char`\"{}}
+
+
+
+A variable controlling how 3D acceleration is used to accelerate the S\+DL screen surface. 
+
+S\+DL can try to accelerate the S\+DL screen surface by using streaming textures with a 3D rendering engine. This variable controls whether and how this is done.
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Disable 3D acceleration \char`\"{}1\char`\"{} -\/ Enable 3D acceleration, using the default renderer. \char`\"{}\+X\char`\"{} -\/ Enable 3D acceleration, using X where X is one of the valid rendering drivers. (e.\+g. \char`\"{}direct3d\char`\"{}, \char`\"{}opengl\char`\"{}, etc.)
+
+By default S\+DL tries to make a best guess for each platform whether to use acceleration or not. \mbox{\Hypertarget{_s_d_l__hints_8h_ad14dbbb2b528c47f178f3daf35d9136b}\label{_s_d_l__hints_8h_ad14dbbb2b528c47f178f3daf35d9136b}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+ES@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+ES}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+ES@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+ES}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+ES}{SDL\_HINT\_GAMECONTROLLER\_IGNORE\_DEVICES}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+ES~\char`\"{}S\+D\+L\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+ES\char`\"{}}
+
+\mbox{\Hypertarget{_s_d_l__hints_8h_a207169494144e4c339c41d5401c945fd}\label{_s_d_l__hints_8h_a207169494144e4c339c41d5401c945fd}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+E\+X\+C\+E\+PT@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+E\+X\+C\+E\+PT}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+E\+X\+C\+E\+PT@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+E\+X\+C\+E\+PT}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+E\+X\+C\+E\+PT}{SDL\_HINT\_GAMECONTROLLER\_IGNORE\_DEVICES\_EXCEPT}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+E\+X\+C\+E\+PT~\char`\"{}S\+D\+L\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+D\+E\+V\+I\+C\+E\+S\+\_\+\+E\+X\+C\+E\+PT\char`\"{}}
+
+\mbox{\Hypertarget{_s_d_l__hints_8h_ae6733a084fded26033d0b3a1ab1480a4}\label{_s_d_l__hints_8h_ae6733a084fded26033d0b3a1ab1480a4}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+C\+O\+N\+F\+IG@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+C\+O\+N\+F\+IG}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+C\+O\+N\+F\+IG@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+C\+O\+N\+F\+IG}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+C\+O\+N\+F\+IG}{SDL\_HINT\_GAMECONTROLLERCONFIG}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+C\+O\+N\+F\+IG~\char`\"{}S\+D\+L\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+C\+O\+N\+F\+IG\char`\"{}}
+
+
+
+A variable that lets you manually hint extra gamecontroller db entries. 
+
+The variable should be newline delimited rows of gamecontroller config data, see S\+D\+L\+\_\+gamecontroller.\+h
+
+This hint must be set before calling S\+D\+L\+\_\+\+Init(\+S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R) You can update mappings after the system is initialized with \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a2bd404799b40e27d75d3699c866904cf}{S\+D\+L\+\_\+\+Game\+Controller\+Mapping\+For\+G\+U\+I\+D()}} and \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a62cb682b1c589135cd32cce381d403f8}{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mapping()}} \mbox{\Hypertarget{_s_d_l__hints_8h_a5295df139727cd78a0663afb0b91010b}\label{_s_d_l__hints_8h_a5295df139727cd78a0663afb0b91010b}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+R\+A\+B\+\_\+\+K\+E\+Y\+B\+O\+A\+RD@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+R\+A\+B\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+R\+A\+B\+\_\+\+K\+E\+Y\+B\+O\+A\+RD@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+R\+A\+B\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+R\+A\+B\+\_\+\+K\+E\+Y\+B\+O\+A\+RD}{SDL\_HINT\_GRAB\_KEYBOARD}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+R\+A\+B\+\_\+\+K\+E\+Y\+B\+O\+A\+RD~\char`\"{}S\+D\+L\+\_\+\+G\+R\+A\+B\+\_\+\+K\+E\+Y\+B\+O\+A\+RD\char`\"{}}
+
+
+
+A variable controlling whether grabbing input grabs the keyboard. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Grab will affect only the mouse \char`\"{}1\char`\"{} -\/ Grab will affect mouse and keyboard
+
+By default S\+DL will not grab the keyboard so system shortcuts still work. \mbox{\Hypertarget{_s_d_l__hints_8h_abe9410e8b6809c9fdcb1f69e6894a2e8}\label{_s_d_l__hints_8h_abe9410e8b6809c9fdcb1f69e6894a2e8}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+D\+L\+E\+\_\+\+T\+I\+M\+E\+R\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+D\+L\+E\+\_\+\+T\+I\+M\+E\+R\+\_\+\+D\+I\+S\+A\+B\+L\+ED}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+D\+L\+E\+\_\+\+T\+I\+M\+E\+R\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+D\+L\+E\+\_\+\+T\+I\+M\+E\+R\+\_\+\+D\+I\+S\+A\+B\+L\+ED}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+D\+L\+E\+\_\+\+T\+I\+M\+E\+R\+\_\+\+D\+I\+S\+A\+B\+L\+ED}{SDL\_HINT\_IDLE\_TIMER\_DISABLED}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+D\+L\+E\+\_\+\+T\+I\+M\+E\+R\+\_\+\+D\+I\+S\+A\+B\+L\+ED~\char`\"{}S\+D\+L\+\_\+\+I\+O\+S\+\_\+\+I\+D\+L\+E\+\_\+\+T\+I\+M\+E\+R\+\_\+\+D\+I\+S\+A\+B\+L\+ED\char`\"{}}
+
+
+
+A variable controlling whether the idle timer is disabled on i\+OS. 
+
+When an i\+OS app does not receive touches for some time, the screen is dimmed automatically. For games where the accelerometer is the only input this is problematic. This functionality can be disabled by setting this hint.
+
+As of S\+DL 2.\+0.\+4, \mbox{\hyperlink{_s_d_l__video_8h_a17846c713066aa29a86e1be205a7fc3e}{S\+D\+L\+\_\+\+Enable\+Screen\+Saver()}} and \mbox{\hyperlink{_s_d_l__video_8h_a68eb0d850934fa1c7ac12c30f2d56a84}{S\+D\+L\+\_\+\+Disable\+Screen\+Saver()}} accomplish the same thing on i\+OS. They should be preferred over this hint.
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Enable idle timer \char`\"{}1\char`\"{} -\/ Disable idle timer \mbox{\Hypertarget{_s_d_l__hints_8h_a17c7ae7e0cbbdb6a5049f559a58228ad}\label{_s_d_l__hints_8h_a17c7ae7e0cbbdb6a5049f559a58228ad}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+M\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+D\+I\+T\+I\+NG@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+M\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+D\+I\+T\+I\+NG}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+M\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+D\+I\+T\+I\+NG@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+M\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+D\+I\+T\+I\+NG}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+M\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+D\+I\+T\+I\+NG}{SDL\_HINT\_IME\_INTERNAL\_EDITING}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+M\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+D\+I\+T\+I\+NG~\char`\"{}S\+D\+L\+\_\+\+I\+M\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+D\+I\+T\+I\+NG\char`\"{}}
+
+
+
+A variable to control whether certain I\+M\+Es should handle text editing internally instead of sending S\+D\+L\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+I\+NG events. 
+
+The variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ S\+D\+L\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+I\+NG events are sent, and it is the application\textquotesingle{}s responsibility to render the text from these events and differentiate it somehow from committed text. (default) \char`\"{}1\char`\"{} -\/ If supported by the I\+ME then S\+D\+L\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+I\+NG events are not sent, and text that is being composed will be rendered in its own UI. \mbox{\Hypertarget{_s_d_l__hints_8h_a7f03e5cd7f050a5e9304e3bc46586b06}\label{_s_d_l__hints_8h_a7f03e5cd7f050a5e9304e3bc46586b06}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+O\+S\+\_\+\+H\+I\+D\+E\+\_\+\+H\+O\+M\+E\+\_\+\+I\+N\+D\+I\+C\+A\+T\+OR@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+O\+S\+\_\+\+H\+I\+D\+E\+\_\+\+H\+O\+M\+E\+\_\+\+I\+N\+D\+I\+C\+A\+T\+OR}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+O\+S\+\_\+\+H\+I\+D\+E\+\_\+\+H\+O\+M\+E\+\_\+\+I\+N\+D\+I\+C\+A\+T\+OR@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+O\+S\+\_\+\+H\+I\+D\+E\+\_\+\+H\+O\+M\+E\+\_\+\+I\+N\+D\+I\+C\+A\+T\+OR}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+O\+S\+\_\+\+H\+I\+D\+E\+\_\+\+H\+O\+M\+E\+\_\+\+I\+N\+D\+I\+C\+A\+T\+OR}{SDL\_HINT\_IOS\_HIDE\_HOME\_INDICATOR}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+I\+O\+S\+\_\+\+H\+I\+D\+E\+\_\+\+H\+O\+M\+E\+\_\+\+I\+N\+D\+I\+C\+A\+T\+OR~\char`\"{}S\+D\+L\+\_\+\+I\+O\+S\+\_\+\+H\+I\+D\+E\+\_\+\+H\+O\+M\+E\+\_\+\+I\+N\+D\+I\+C\+A\+T\+OR\char`\"{}}
+
+
+
+A variable controlling whether the home indicator bar on i\+Phone X should be hidden. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ The indicator bar is not hidden (default for windowed applications) \char`\"{}1\char`\"{} -\/ The indicator bar is hidden and is shown when the screen is touched (useful for movie playback applications) \char`\"{}2\char`\"{} -\/ The indicator bar is dim and the first swipe makes it visible and the second swipe performs the \char`\"{}home\char`\"{} action (default for fullscreen applications) \mbox{\Hypertarget{_s_d_l__hints_8h_ab343c91586c6b4789763e4a82b35de0b}\label{_s_d_l__hints_8h_ab343c91586c6b4789763e4a82b35de0b}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+L\+L\+O\+W\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+E\+V\+E\+N\+TS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+L\+L\+O\+W\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+E\+V\+E\+N\+TS}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+L\+L\+O\+W\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+E\+V\+E\+N\+TS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+L\+L\+O\+W\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+E\+V\+E\+N\+TS}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+L\+L\+O\+W\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+E\+V\+E\+N\+TS}{SDL\_HINT\_JOYSTICK\_ALLOW\_BACKGROUND\_EVENTS}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+L\+L\+O\+W\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+E\+V\+E\+N\+TS~\char`\"{}S\+D\+L\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+L\+L\+O\+W\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+E\+V\+E\+N\+TS\char`\"{}}
+
+
+
+A variable that lets you enable joystick (and gamecontroller) events even when your app is in the background. 
+
+The variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Disable joystick \& gamecontroller input events when the application is in the background. \char`\"{}1\char`\"{} -\/ Enable joystick \& gamecontroller input events when the application is in the background.
+
+The default value is \char`\"{}0\char`\"{}. This hint may be set at any time. \mbox{\Hypertarget{_s_d_l__hints_8h_a1b75df316decc7aae5bc31b0595c1b01}\label{_s_d_l__hints_8h_a1b75df316decc7aae5bc31b0595c1b01}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+A\+C\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+A\+PP@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+A\+C\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+A\+PP}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+A\+C\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+A\+PP@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+A\+C\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+A\+PP}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+A\+C\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+A\+PP}{SDL\_HINT\_MAC\_BACKGROUND\_APP}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+A\+C\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+A\+PP~\char`\"{}S\+D\+L\+\_\+\+M\+A\+C\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+A\+PP\char`\"{}}
+
+
+
+When set don\textquotesingle{}t force the S\+DL app to become a foreground process. 
+
+This hint only applies to Mac OS X. \mbox{\Hypertarget{_s_d_l__hints_8h_a63dd635fa195f590f645c1170f50968d}\label{_s_d_l__hints_8h_a63dd635fa195f590f645c1170f50968d}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+A\+C\+\_\+\+C\+T\+R\+L\+\_\+\+C\+L\+I\+C\+K\+\_\+\+E\+M\+U\+L\+A\+T\+E\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+A\+C\+\_\+\+C\+T\+R\+L\+\_\+\+C\+L\+I\+C\+K\+\_\+\+E\+M\+U\+L\+A\+T\+E\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+A\+C\+\_\+\+C\+T\+R\+L\+\_\+\+C\+L\+I\+C\+K\+\_\+\+E\+M\+U\+L\+A\+T\+E\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+A\+C\+\_\+\+C\+T\+R\+L\+\_\+\+C\+L\+I\+C\+K\+\_\+\+E\+M\+U\+L\+A\+T\+E\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+A\+C\+\_\+\+C\+T\+R\+L\+\_\+\+C\+L\+I\+C\+K\+\_\+\+E\+M\+U\+L\+A\+T\+E\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK}{SDL\_HINT\_MAC\_CTRL\_CLICK\_EMULATE\_RIGHT\_CLICK}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+A\+C\+\_\+\+C\+T\+R\+L\+\_\+\+C\+L\+I\+C\+K\+\_\+\+E\+M\+U\+L\+A\+T\+E\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK~\char`\"{}S\+D\+L\+\_\+\+M\+A\+C\+\_\+\+C\+T\+R\+L\+\_\+\+C\+L\+I\+C\+K\+\_\+\+E\+M\+U\+L\+A\+T\+E\+\_\+\+R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK\char`\"{}}
+
+
+
+A variable that determines whether ctrl+click should generate a right-\/click event on Mac. 
+
+If present, holding ctrl while left clicking will generate a right click event when on Mac. \mbox{\Hypertarget{_s_d_l__hints_8h_a59083735a2377046c2fc72eb0a3e855f}\label{_s_d_l__hints_8h_a59083735a2377046c2fc72eb0a3e855f}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+F\+O\+C\+U\+S\+\_\+\+C\+L\+I\+C\+K\+T\+H\+R\+O\+U\+GH@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+F\+O\+C\+U\+S\+\_\+\+C\+L\+I\+C\+K\+T\+H\+R\+O\+U\+GH}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+F\+O\+C\+U\+S\+\_\+\+C\+L\+I\+C\+K\+T\+H\+R\+O\+U\+GH@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+F\+O\+C\+U\+S\+\_\+\+C\+L\+I\+C\+K\+T\+H\+R\+O\+U\+GH}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+F\+O\+C\+U\+S\+\_\+\+C\+L\+I\+C\+K\+T\+H\+R\+O\+U\+GH}{SDL\_HINT\_MOUSE\_FOCUS\_CLICKTHROUGH}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+F\+O\+C\+U\+S\+\_\+\+C\+L\+I\+C\+K\+T\+H\+R\+O\+U\+GH~\char`\"{}S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+\_\+\+F\+O\+C\+U\+S\+\_\+\+C\+L\+I\+C\+K\+T\+H\+R\+O\+U\+GH\char`\"{}}
+
+
+
+Allow mouse click events when clicking to focus an S\+DL window. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Ignore mouse clicks that activate a window \char`\"{}1\char`\"{} -\/ Generate events for mouse clicks that activate a window
+
+By default S\+DL will ignore mouse clicks that activate a window \mbox{\Hypertarget{_s_d_l__hints_8h_a1a5034b3e1f390aed827bd627ebdd555}\label{_s_d_l__hints_8h_a1a5034b3e1f390aed827bd627ebdd555}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE}{SDL\_HINT\_MOUSE\_NORMAL\_SPEED\_SCALE}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE~\char`\"{}S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE\char`\"{}}
+
+
+
+A variable setting the speed scale for mouse motion, in floating point, when the mouse is not in relative mode. 
+
+\mbox{\Hypertarget{_s_d_l__hints_8h_ad2592e57adcf22b77618347fef431790}\label{_s_d_l__hints_8h_ad2592e57adcf22b77618347fef431790}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+M\+O\+D\+E\+\_\+\+W\+A\+RP@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+M\+O\+D\+E\+\_\+\+W\+A\+RP}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+M\+O\+D\+E\+\_\+\+W\+A\+RP@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+M\+O\+D\+E\+\_\+\+W\+A\+RP}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+M\+O\+D\+E\+\_\+\+W\+A\+RP}{SDL\_HINT\_MOUSE\_RELATIVE\_MODE\_WARP}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+M\+O\+D\+E\+\_\+\+W\+A\+RP~\char`\"{}S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+M\+O\+D\+E\+\_\+\+W\+A\+RP\char`\"{}}
+
+
+
+A variable controlling whether relative mouse mode is implemented using mouse warping. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Relative mouse mode uses raw input \char`\"{}1\char`\"{} -\/ Relative mouse mode uses mouse warping
+
+By default S\+DL will use raw input for relative mouse mode \mbox{\Hypertarget{_s_d_l__hints_8h_ad69c295983ec1db56ea26af46f184ce7}\label{_s_d_l__hints_8h_ad69c295983ec1db56ea26af46f184ce7}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE}{SDL\_HINT\_MOUSE\_RELATIVE\_SPEED\_SCALE}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE~\char`\"{}S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+C\+A\+LE\char`\"{}}
+
+
+
+A variable setting the scale for mouse motion, in floating point, when the mouse is in relative mode. 
+
+\mbox{\Hypertarget{_s_d_l__hints_8h_a58db46309f4295553ed4b0f1a4ccfa54}\label{_s_d_l__hints_8h_a58db46309f4295553ed4b0f1a4ccfa54}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+N\+O\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+H\+A\+N\+D\+L\+E\+RS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+N\+O\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+H\+A\+N\+D\+L\+E\+RS}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+N\+O\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+H\+A\+N\+D\+L\+E\+RS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+N\+O\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+H\+A\+N\+D\+L\+E\+RS}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+N\+O\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+H\+A\+N\+D\+L\+E\+RS}{SDL\_HINT\_NO\_SIGNAL\_HANDLERS}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+N\+O\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+H\+A\+N\+D\+L\+E\+RS~\char`\"{}S\+D\+L\+\_\+\+N\+O\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+H\+A\+N\+D\+L\+E\+RS\char`\"{}}
+
+
+
+Tell S\+DL not to catch the S\+I\+G\+I\+NT or S\+I\+G\+T\+E\+RM signals. 
+
+This hint only applies to Unix-\/like platforms.
+
+The variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ S\+DL will install a S\+I\+G\+I\+NT and S\+I\+G\+T\+E\+RM handler, and when it catches a signal, convert it into an S\+D\+L\+\_\+\+Q\+U\+IT event. \char`\"{}1\char`\"{} -\/ S\+DL will not install a signal handler at all. \mbox{\Hypertarget{_s_d_l__hints_8h_adce02dd2716ef92d3c787789ccfbb98e}\label{_s_d_l__hints_8h_adce02dd2716ef92d3c787789ccfbb98e}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+E\+S\+\_\+\+D\+R\+I\+V\+ER@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+E\+S\+\_\+\+D\+R\+I\+V\+ER}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+E\+S\+\_\+\+D\+R\+I\+V\+ER@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+E\+S\+\_\+\+D\+R\+I\+V\+ER}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+E\+S\+\_\+\+D\+R\+I\+V\+ER}{SDL\_HINT\_OPENGL\_ES\_DRIVER}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+E\+S\+\_\+\+D\+R\+I\+V\+ER~\char`\"{}S\+D\+L\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+E\+S\+\_\+\+D\+R\+I\+V\+ER\char`\"{}}
+
+
+
+A variable controlling what driver to use for Open\+GL ES contexts. 
+
+On some platforms, currently Windows and X11, Open\+GL drivers may support creating contexts with an Open\+GL ES profile. By default S\+DL uses these profiles, when available, otherwise it attempts to load an Open\+GL ES library, e.\+g. that provided by the A\+N\+G\+LE project. This variable controls whether S\+DL follows this default behaviour or will always load an Open\+GL ES library.
+
+Circumstances where this is useful include
+\begin{DoxyItemize}
+\item Testing an app with a particular Open\+GL ES implementation, e.\+g A\+N\+G\+LE, or emulator, e.\+g. those from A\+RM, Imagination or Qualcomm.
+\item Resolving Open\+GL ES function addresses at link time by linking with the Open\+GL ES library instead of querying them at run time with \mbox{\hyperlink{_s_d_l__video_8h_a6329bc32811639fe6f71606801cd9e7b}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Proc\+Address()}}.
+\end{DoxyItemize}
+
+Caution\+: for an application to work with the default behaviour across different Open\+GL drivers it must query the Open\+GL ES function addresses at run time using \mbox{\hyperlink{_s_d_l__video_8h_a6329bc32811639fe6f71606801cd9e7b}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Proc\+Address()}}.
+
+This variable is ignored on most platforms because Open\+GL ES is native or not supported.
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Use ES profile of Open\+GL, if available. (Default when not set.) \char`\"{}1\char`\"{} -\/ Load Open\+GL ES library using the default library names. \mbox{\Hypertarget{_s_d_l__hints_8h_a1e2eef18b43aa15121d8250a408421ce}\label{_s_d_l__hints_8h_a1e2eef18b43aa15121d8250a408421ce}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS}{SDL\_HINT\_ORIENTATIONS}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS~\char`\"{}S\+D\+L\+\_\+\+I\+O\+S\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS\char`\"{}}
+
+
+
+A variable controlling which orientations are allowed on i\+OS. 
+
+In some circumstances it is necessary to be able to explicitly control which UI orientations are allowed.
+
+This variable is a space delimited list of the following values\+: \char`\"{}\+Landscape\+Left\char`\"{}, \char`\"{}\+Landscape\+Right\char`\"{}, \char`\"{}\+Portrait\char`\"{} \char`\"{}\+Portrait\+Upside\+Down\char`\"{} \mbox{\Hypertarget{_s_d_l__hints_8h_a1abf971bf456c82d8cc06868b75fd564}\label{_s_d_l__hints_8h_a1abf971bf456c82d8cc06868b75fd564}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}{SDL\_HINT\_QTWAYLAND\_CONTENT\_ORIENTATION}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON~\char`\"{}S\+D\+L\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+C\+O\+N\+T\+E\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON\char`\"{}}
+
+
+
+A variable describing the content orientation on Qt\+Wayland-\/based platforms. 
+
+On Qt\+Wayland platforms, windows are rotated client-\/side to allow for custom transitions. In order to correctly position overlays (e.\+g. volume bar) and gestures (e.\+g. events view, close/minimize gestures), the system needs to know in which orientation the application is currently drawing its contents.
+
+This does not cause the window to be rotated or resized, the application needs to take care of drawing the content in the right orientation (the framebuffer is always in portrait mode).
+
+This variable can be one of the following values\+: \char`\"{}primary\char`\"{} (default), \char`\"{}portrait\char`\"{}, \char`\"{}landscape\char`\"{}, \char`\"{}inverted-\/portrait\char`\"{}, \char`\"{}inverted-\/landscape\char`\"{} \mbox{\Hypertarget{_s_d_l__hints_8h_a8893a7653ab4562b99f25aad9e5f41cb}\label{_s_d_l__hints_8h_a8893a7653ab4562b99f25aad9e5f41cb}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+L\+A\+GS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+L\+A\+GS}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+L\+A\+GS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+L\+A\+GS}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+L\+A\+GS}{SDL\_HINT\_QTWAYLAND\_WINDOW\_FLAGS}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+L\+A\+GS~\char`\"{}S\+D\+L\+\_\+\+Q\+T\+W\+A\+Y\+L\+A\+N\+D\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+L\+A\+GS\char`\"{}}
+
+
+
+Flags to set on Qt\+Wayland windows to integrate with the native window manager. 
+
+On Qt\+Wayland platforms, this hint controls the flags to set on the windows. For example, on Sailfish OS \char`\"{}\+Overrides\+System\+Gestures\char`\"{} disables swipe gestures.
+
+This variable is a space-\/separated list of the following values (empty = no flags)\+: \char`\"{}\+Overrides\+System\+Gestures\char`\"{}, \char`\"{}\+Stays\+On\+Top\char`\"{}, \char`\"{}\+Bypass\+Window\+Manager\char`\"{} \mbox{\Hypertarget{_s_d_l__hints_8h_ac25a4eba109ed065d639f6054d2b842c}\label{_s_d_l__hints_8h_ac25a4eba109ed065d639f6054d2b842c}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D11\+\_\+\+D\+E\+B\+UG@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D11\+\_\+\+D\+E\+B\+UG}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D11\+\_\+\+D\+E\+B\+UG@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D11\+\_\+\+D\+E\+B\+UG}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D11\+\_\+\+D\+E\+B\+UG}{SDL\_HINT\_RENDER\_DIRECT3D11\_DEBUG}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D11\+\_\+\+D\+E\+B\+UG~\char`\"{}S\+D\+L\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D11\+\_\+\+D\+E\+B\+UG\char`\"{}}
+
+
+
+A variable controlling whether to enable Direct3D 11+\textquotesingle{}s Debug Layer. 
+
+This variable does not have any effect on the Direct3D 9 based renderer.
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Disable Debug Layer use \char`\"{}1\char`\"{} -\/ Enable Debug Layer use
+
+By default, S\+DL does not use Direct3D Debug Layer. \mbox{\Hypertarget{_s_d_l__hints_8h_a6e06533f9f12c456accacb7c1f40a58d}\label{_s_d_l__hints_8h_a6e06533f9f12c456accacb7c1f40a58d}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE}{SDL\_HINT\_RENDER\_DIRECT3D\_THREADSAFE}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE~\char`\"{}S\+D\+L\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T3\+D\+\_\+\+T\+H\+R\+E\+A\+D\+S\+A\+FE\char`\"{}}
+
+
+
+A variable controlling whether the Direct3D device is initialized for thread-\/safe operations. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Thread-\/safety is not enabled (faster) \char`\"{}1\char`\"{} -\/ Thread-\/safety is enabled
+
+By default the Direct3D device is created with thread-\/safety disabled. \mbox{\Hypertarget{_s_d_l__hints_8h_a1ecf7a77582e3af7938b2f7c8d900aee}\label{_s_d_l__hints_8h_a1ecf7a77582e3af7938b2f7c8d900aee}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+R\+I\+V\+ER@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+R\+I\+V\+ER}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+R\+I\+V\+ER@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+R\+I\+V\+ER}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+R\+I\+V\+ER}{SDL\_HINT\_RENDER\_DRIVER}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+R\+I\+V\+ER~\char`\"{}S\+D\+L\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+R\+I\+V\+ER\char`\"{}}
+
+
+
+A variable specifying which render driver to use. 
+
+If the application doesn\textquotesingle{}t pick a specific renderer to use, this variable specifies the name of the preferred renderer. If the preferred renderer can\textquotesingle{}t be initialized, the normal default renderer is used.
+
+This variable is case insensitive and can be set to the following values\+: \char`\"{}direct3d\char`\"{} \char`\"{}opengl\char`\"{} \char`\"{}opengles2\char`\"{} \char`\"{}opengles\char`\"{} \char`\"{}metal\char`\"{} \char`\"{}software\char`\"{}
+
+The default varies by platform, but it\textquotesingle{}s the first one in the list that is available on the current platform. \mbox{\Hypertarget{_s_d_l__hints_8h_a2b4f2979611c7eedbe80e37a644bac7d}\label{_s_d_l__hints_8h_a2b4f2979611c7eedbe80e37a644bac7d}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+L\+O\+G\+I\+C\+A\+L\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+O\+DE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+L\+O\+G\+I\+C\+A\+L\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+O\+DE}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+L\+O\+G\+I\+C\+A\+L\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+O\+DE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+L\+O\+G\+I\+C\+A\+L\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+O\+DE}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+L\+O\+G\+I\+C\+A\+L\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+O\+DE}{SDL\_HINT\_RENDER\_LOGICAL\_SIZE\_MODE}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+L\+O\+G\+I\+C\+A\+L\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+O\+DE~\char`\"{}S\+D\+L\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+L\+O\+G\+I\+C\+A\+L\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+O\+DE\char`\"{}}
+
+
+
+A variable controlling the scaling policy for S\+D\+L\+\_\+\+Render\+Set\+Logical\+Size. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} or \char`\"{}letterbox\char`\"{} -\/ Uses letterbox/sidebars to fit the entire rendering on screen \char`\"{}1\char`\"{} or \char`\"{}overscan\char`\"{} -\/ Will zoom the rendering so it fills the entire screen, allowing edges to be drawn offscreen
+
+By default letterbox is used \mbox{\Hypertarget{_s_d_l__hints_8h_a156051f550fba6a1d8dfafd8bc90b1b2}\label{_s_d_l__hints_8h_a156051f550fba6a1d8dfafd8bc90b1b2}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+S\+H\+A\+D\+E\+RS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+S\+H\+A\+D\+E\+RS}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+S\+H\+A\+D\+E\+RS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+S\+H\+A\+D\+E\+RS}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+S\+H\+A\+D\+E\+RS}{SDL\_HINT\_RENDER\_OPENGL\_SHADERS}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+S\+H\+A\+D\+E\+RS~\char`\"{}S\+D\+L\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+O\+P\+E\+N\+G\+L\+\_\+\+S\+H\+A\+D\+E\+RS\char`\"{}}
+
+
+
+A variable controlling whether the Open\+GL render driver uses shaders if they are available. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Disable shaders \char`\"{}1\char`\"{} -\/ Enable shaders
+
+By default shaders are used if Open\+GL supports them. \mbox{\Hypertarget{_s_d_l__hints_8h_a10b6e40601439f51131d8a264070ab2e}\label{_s_d_l__hints_8h_a10b6e40601439f51131d8a264070ab2e}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+S\+C\+A\+L\+E\+\_\+\+Q\+U\+A\+L\+I\+TY@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+S\+C\+A\+L\+E\+\_\+\+Q\+U\+A\+L\+I\+TY}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+S\+C\+A\+L\+E\+\_\+\+Q\+U\+A\+L\+I\+TY@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+S\+C\+A\+L\+E\+\_\+\+Q\+U\+A\+L\+I\+TY}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+S\+C\+A\+L\+E\+\_\+\+Q\+U\+A\+L\+I\+TY}{SDL\_HINT\_RENDER\_SCALE\_QUALITY}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+S\+C\+A\+L\+E\+\_\+\+Q\+U\+A\+L\+I\+TY~\char`\"{}S\+D\+L\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+S\+C\+A\+L\+E\+\_\+\+Q\+U\+A\+L\+I\+TY\char`\"{}}
+
+
+
+A variable controlling the scaling quality. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} or \char`\"{}nearest\char`\"{} -\/ Nearest pixel sampling \char`\"{}1\char`\"{} or \char`\"{}linear\char`\"{} -\/ Linear filtering (supported by Open\+GL and Direct3D) \char`\"{}2\char`\"{} or \char`\"{}best\char`\"{} -\/ Currently this is the same as \char`\"{}linear\char`\"{}
+
+By default nearest pixel sampling is used \mbox{\Hypertarget{_s_d_l__hints_8h_ab512fdde4a91d3a271df7b59297fcf98}\label{_s_d_l__hints_8h_ab512fdde4a91d3a271df7b59297fcf98}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+V\+S\+Y\+NC@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+V\+S\+Y\+NC}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+V\+S\+Y\+NC@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+V\+S\+Y\+NC}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+V\+S\+Y\+NC}{SDL\_HINT\_RENDER\_VSYNC}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+V\+S\+Y\+NC~\char`\"{}S\+D\+L\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+V\+S\+Y\+NC\char`\"{}}
+
+
+
+A variable controlling whether updates to the S\+DL screen surface should be synchronized with the vertical refresh, to avoid tearing. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Disable vsync \char`\"{}1\char`\"{} -\/ Enable vsync
+
+By default S\+DL does not sync screen surface updates with vertical refresh. \mbox{\Hypertarget{_s_d_l__hints_8h_ae840652b9ebd21e4317ee80e7b527339}\label{_s_d_l__hints_8h_ae840652b9ebd21e4317ee80e7b527339}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+K\+E\+Y\+\_\+\+H\+I\+D\+E\+S\+\_\+\+I\+ME@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+K\+E\+Y\+\_\+\+H\+I\+D\+E\+S\+\_\+\+I\+ME}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+K\+E\+Y\+\_\+\+H\+I\+D\+E\+S\+\_\+\+I\+ME@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+K\+E\+Y\+\_\+\+H\+I\+D\+E\+S\+\_\+\+I\+ME}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+K\+E\+Y\+\_\+\+H\+I\+D\+E\+S\+\_\+\+I\+ME}{SDL\_HINT\_RETURN\_KEY\_HIDES\_IME}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+K\+E\+Y\+\_\+\+H\+I\+D\+E\+S\+\_\+\+I\+ME~\char`\"{}S\+D\+L\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+K\+E\+Y\+\_\+\+H\+I\+D\+E\+S\+\_\+\+I\+ME\char`\"{}}
+
+
+
+A variable to control whether the return key on the soft keyboard should hide the soft keyboard on Android and i\+OS. 
+
+The variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ The return key will be handled as a key event. This is the behaviour of S\+DL $<$= 2.\+0.\+3. (default) \char`\"{}1\char`\"{} -\/ The return key will hide the keyboard.
+
+The value of this hint is used at runtime, so it can be changed at any time. \mbox{\Hypertarget{_s_d_l__hints_8h_a0e762eabcf52604adb9bcb9a554e3f32}\label{_s_d_l__hints_8h_a0e762eabcf52604adb9bcb9a554e3f32}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+P\+I\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+A\+Y\+ER@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+P\+I\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+A\+Y\+ER}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+P\+I\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+A\+Y\+ER@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+P\+I\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+A\+Y\+ER}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+P\+I\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+A\+Y\+ER}{SDL\_HINT\_RPI\_VIDEO\_LAYER}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+R\+P\+I\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+A\+Y\+ER~\char`\"{}S\+D\+L\+\_\+\+R\+P\+I\+\_\+\+V\+I\+D\+E\+O\+\_\+\+L\+A\+Y\+ER\char`\"{}}
+
+
+
+Tell S\+DL which Dispmanx layer to use on a Raspberry PI. 
+
+Also known as Z-\/order. The variable can take a negative or positive value. The default is 10000. \mbox{\Hypertarget{_s_d_l__hints_8h_a70a6e1364071cde0cba942d47bc7a246}\label{_s_d_l__hints_8h_a70a6e1364071cde0cba942d47bc7a246}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}{SDL\_HINT\_THREAD\_STACK\_SIZE}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE~\char`\"{}S\+D\+L\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE\char`\"{}}
+
+
+
+A string specifying S\+DL\textquotesingle{}s threads stack size in bytes or \char`\"{}0\char`\"{} for the backend\textquotesingle{}s default size. 
+
+Use this hint in case you need to set S\+DL\textquotesingle{}s threads stack size to other than the default. This is specially useful if you build S\+DL against a non glibc libc library (such as musl) which provides a relatively small default thread stack size (a few kilobytes versus the default 8\+MB glibc uses). Support for this hint is currently available only in the pthread, Windows, and P\+SP backend. \mbox{\Hypertarget{_s_d_l__hints_8h_afbc6ba9f809e07557eb369f763299174}\label{_s_d_l__hints_8h_afbc6ba9f809e07557eb369f763299174}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON}{SDL\_HINT\_TIMER\_RESOLUTION}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON~\char`\"{}S\+D\+L\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON\char`\"{}}
+
+
+
+A variable that controls the timer resolution, in milliseconds. 
+
+The higher resolution the timer, the more frequently the C\+PU services timer interrupts, and the more precise delays are, but this takes up power and C\+PU time. This hint is only used on Windows 7 and earlier.
+
+See this blog post for more information\+: \href{http://randomascii.wordpress.com/2013/07/08/windows-timer-resolution-megawatts-wasted/}{\tt http\+://randomascii.\+wordpress.\+com/2013/07/08/windows-\/timer-\/resolution-\/megawatts-\/wasted/}
+
+If this variable is set to \char`\"{}0\char`\"{}, the system timer resolution is not set.
+
+The default value is \char`\"{}1\char`\"{}. This hint may be set at any time. \mbox{\Hypertarget{_s_d_l__hints_8h_a334b89b47382e48b03e24defe96b6163}\label{_s_d_l__hints_8h_a334b89b47382e48b03e24defe96b6163}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+U\+C\+H\+\_\+\+M\+O\+U\+S\+E\+\_\+\+E\+V\+E\+N\+TS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+U\+C\+H\+\_\+\+M\+O\+U\+S\+E\+\_\+\+E\+V\+E\+N\+TS}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+U\+C\+H\+\_\+\+M\+O\+U\+S\+E\+\_\+\+E\+V\+E\+N\+TS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+U\+C\+H\+\_\+\+M\+O\+U\+S\+E\+\_\+\+E\+V\+E\+N\+TS}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+U\+C\+H\+\_\+\+M\+O\+U\+S\+E\+\_\+\+E\+V\+E\+N\+TS}{SDL\_HINT\_TOUCH\_MOUSE\_EVENTS}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+U\+C\+H\+\_\+\+M\+O\+U\+S\+E\+\_\+\+E\+V\+E\+N\+TS~\char`\"{}S\+D\+L\+\_\+\+T\+O\+U\+C\+H\+\_\+\+M\+O\+U\+S\+E\+\_\+\+E\+V\+E\+N\+TS\char`\"{}}
+
+
+
+A variable controlling whether touch events should generate synthetic mouse events. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Touch events will not generate mouse events \char`\"{}1\char`\"{} -\/ Touch events will generate mouse events
+
+By default S\+DL will generate mouse events for touch events \mbox{\Hypertarget{_s_d_l__hints_8h_a798d47734b79941d6acb861fb91811f4}\label{_s_d_l__hints_8h_a798d47734b79941d6acb861fb91811f4}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK}{SDL\_HINT\_TV\_REMOTE\_AS\_JOYSTICK}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK~\char`\"{}S\+D\+L\+\_\+\+T\+V\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+S\+\_\+\+J\+O\+Y\+S\+T\+I\+CK\char`\"{}}
+
+
+
+A variable controlling whether the Android / tv\+OS remotes should be listed as joystick devices, instead of sending keyboard events. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Remotes send enter/escape/arrow key events \char`\"{}1\char`\"{} -\/ Remotes are available as 2 axis, 2 button joysticks (the default). \mbox{\Hypertarget{_s_d_l__hints_8h_a7d3457c4003d46ddb560a96844ca1f85}\label{_s_d_l__hints_8h_a7d3457c4003d46ddb560a96844ca1f85}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+A\+L\+L\+O\+W\+\_\+\+S\+C\+R\+E\+E\+N\+S\+A\+V\+ER@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+A\+L\+L\+O\+W\+\_\+\+S\+C\+R\+E\+E\+N\+S\+A\+V\+ER}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+A\+L\+L\+O\+W\+\_\+\+S\+C\+R\+E\+E\+N\+S\+A\+V\+ER@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+A\+L\+L\+O\+W\+\_\+\+S\+C\+R\+E\+E\+N\+S\+A\+V\+ER}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+A\+L\+L\+O\+W\+\_\+\+S\+C\+R\+E\+E\+N\+S\+A\+V\+ER}{SDL\_HINT\_VIDEO\_ALLOW\_SCREENSAVER}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+A\+L\+L\+O\+W\+\_\+\+S\+C\+R\+E\+E\+N\+S\+A\+V\+ER~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+A\+L\+L\+O\+W\+\_\+\+S\+C\+R\+E\+E\+N\+S\+A\+V\+ER\char`\"{}}
+
+
+
+A variable controlling whether the screensaver is enabled. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Disable screensaver \char`\"{}1\char`\"{} -\/ Enable screensaver
+
+By default S\+DL will disable the screensaver. \mbox{\Hypertarget{_s_d_l__hints_8h_ab419844280b39c7c713ec7d7246e71a4}\label{_s_d_l__hints_8h_ab419844280b39c7c713ec7d7246e71a4}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+B\+U\+F\+F\+ER}{SDL\_HINT\_VIDEO\_DOUBLE\_BUFFER}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+B\+U\+F\+F\+ER~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+B\+U\+F\+F\+ER\char`\"{}}
+
+
+
+Tell the video driver that we only want a double buffer. 
+
+By default, most lowlevel 2D A\+P\+Is will use a triple buffer scheme that wastes no C\+PU time on waiting for vsync after issuing a flip, but introduces a frame of latency. On the other hand, using a double buffer scheme instead is recommended for cases where low latency is an important factor because we save a whole frame of latency. We do so by waiting for vsync immediately after issuing a flip, usually just after egl\+Swap\+Buffers call in the backend\textquotesingle{}s $\ast$\+\_\+\+Swap\+Window function.
+
+Since it\textquotesingle{}s driver-\/specific, it\textquotesingle{}s only supported where possible and implemented. Currently supported the following drivers\+:
+\begin{DoxyItemize}
+\item K\+M\+S\+D\+RM (kmsdrm)
+\item Raspberry Pi (raspberrypi) 
+\end{DoxyItemize}\mbox{\Hypertarget{_s_d_l__hints_8h_ac4537a3cf34a3a2d2a1dd674ea7daa6f}\label{_s_d_l__hints_8h_ac4537a3cf34a3a2d2a1dd674ea7daa6f}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+H\+I\+G\+H\+D\+P\+I\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+H\+I\+G\+H\+D\+P\+I\+\_\+\+D\+I\+S\+A\+B\+L\+ED}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+H\+I\+G\+H\+D\+P\+I\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+H\+I\+G\+H\+D\+P\+I\+\_\+\+D\+I\+S\+A\+B\+L\+ED}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+H\+I\+G\+H\+D\+P\+I\+\_\+\+D\+I\+S\+A\+B\+L\+ED}{SDL\_HINT\_VIDEO\_HIGHDPI\_DISABLED}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+H\+I\+G\+H\+D\+P\+I\+\_\+\+D\+I\+S\+A\+B\+L\+ED~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+H\+I\+G\+H\+D\+P\+I\+\_\+\+D\+I\+S\+A\+B\+L\+ED\char`\"{}}
+
+
+
+If set to 1, then do not allow high-\/\+D\+PI windows. (\char`\"{}\+Retina\char`\"{} on Mac and i\+OS) 
+
+\mbox{\Hypertarget{_s_d_l__hints_8h_a7f78bfa36d29dc21728bfabce8b336c3}\label{_s_d_l__hints_8h_a7f78bfa36d29dc21728bfabce8b336c3}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+A\+C\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N\+\_\+\+S\+P\+A\+C\+ES@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+A\+C\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N\+\_\+\+S\+P\+A\+C\+ES}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+A\+C\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N\+\_\+\+S\+P\+A\+C\+ES@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+A\+C\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N\+\_\+\+S\+P\+A\+C\+ES}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+A\+C\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N\+\_\+\+S\+P\+A\+C\+ES}{SDL\_HINT\_VIDEO\_MAC\_FULLSCREEN\_SPACES}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+A\+C\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N\+\_\+\+S\+P\+A\+C\+ES~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+A\+C\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N\+\_\+\+S\+P\+A\+C\+ES\char`\"{}}
+
+
+
+A variable that dictates policy for fullscreen Spaces on Mac OS X. 
+
+This hint only applies to Mac OS X.
+
+The variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Disable Spaces support (F\+U\+L\+L\+S\+C\+R\+E\+E\+N\+\_\+\+D\+E\+S\+K\+T\+OP won\textquotesingle{}t use them and S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+R\+E\+S\+I\+Z\+A\+B\+LE windows won\textquotesingle{}t offer the \char`\"{}fullscreen\char`\"{} button on their titlebars). \char`\"{}1\char`\"{} -\/ Enable Spaces support (F\+U\+L\+L\+S\+C\+R\+E\+E\+N\+\_\+\+D\+E\+S\+K\+T\+OP will use them and S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+R\+E\+S\+I\+Z\+A\+B\+LE windows will offer the \char`\"{}fullscreen\char`\"{} button on their titlebars).
+
+The default value is \char`\"{}1\char`\"{}. Spaces are disabled regardless of this hint if the OS isn\textquotesingle{}t at least Mac OS X Lion (10.\+7). This hint must be set before any windows are created. \mbox{\Hypertarget{_s_d_l__hints_8h_a85488274590bff72c3d1dba5829443f6}\label{_s_d_l__hints_8h_a85488274590bff72c3d1dba5829443f6}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+E\+\_\+\+O\+N\+\_\+\+F\+O\+C\+U\+S\+\_\+\+L\+O\+SS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+E\+\_\+\+O\+N\+\_\+\+F\+O\+C\+U\+S\+\_\+\+L\+O\+SS}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+E\+\_\+\+O\+N\+\_\+\+F\+O\+C\+U\+S\+\_\+\+L\+O\+SS@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+E\+\_\+\+O\+N\+\_\+\+F\+O\+C\+U\+S\+\_\+\+L\+O\+SS}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+E\+\_\+\+O\+N\+\_\+\+F\+O\+C\+U\+S\+\_\+\+L\+O\+SS}{SDL\_HINT\_VIDEO\_MINIMIZE\_ON\_FOCUS\_LOSS}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+E\+\_\+\+O\+N\+\_\+\+F\+O\+C\+U\+S\+\_\+\+L\+O\+SS~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+E\+\_\+\+O\+N\+\_\+\+F\+O\+C\+U\+S\+\_\+\+L\+O\+SS\char`\"{}}
+
+
+
+Minimize your S\+D\+L\+\_\+\+Window if it loses key focus when in fullscreen mode. Defaults to true. 
+
+\mbox{\Hypertarget{_s_d_l__hints_8h_a1e91c63c1b9c4afd7c0349b4392270fd}\label{_s_d_l__hints_8h_a1e91c63c1b9c4afd7c0349b4392270fd}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+\_\+\+D3\+D\+C\+O\+M\+P\+I\+L\+ER@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+\_\+\+D3\+D\+C\+O\+M\+P\+I\+L\+ER}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+\_\+\+D3\+D\+C\+O\+M\+P\+I\+L\+ER@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+\_\+\+D3\+D\+C\+O\+M\+P\+I\+L\+ER}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+\_\+\+D3\+D\+C\+O\+M\+P\+I\+L\+ER}{SDL\_HINT\_VIDEO\_WIN\_D3DCOMPILER}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+\_\+\+D3\+D\+C\+O\+M\+P\+I\+L\+ER~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+\_\+\+D3\+D\+C\+O\+M\+P\+I\+L\+ER\char`\"{}}
+
+
+
+A variable specifying which shader compiler to preload when using the Chrome A\+N\+G\+LE binaries. 
+
+S\+DL has E\+GL and Open\+GL E\+S2 support on Windows via the A\+N\+G\+LE project. It can use two different sets of binaries, those compiled by the user from source or those provided by the Chrome browser. In the later case, these binaries require that S\+DL loads a D\+LL providing the shader compiler.
+
+This variable can be set to the following values\+: \char`\"{}d3dcompiler\+\_\+46.\+dll\char`\"{} -\/ default, best for Vista or later. \char`\"{}d3dcompiler\+\_\+43.\+dll\char`\"{} -\/ for XP support. \char`\"{}none\char`\"{} -\/ do not load any library, useful if you compiled A\+N\+G\+LE from source and included the compiler in your binaries. \mbox{\Hypertarget{_s_d_l__hints_8h_a007f98915e3ca58963c3cace38ed3a05}\label{_s_d_l__hints_8h_a007f98915e3ca58963c3cace38ed3a05}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+H\+A\+R\+E\+\_\+\+P\+I\+X\+E\+L\+\_\+\+F\+O\+R\+M\+AT@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+H\+A\+R\+E\+\_\+\+P\+I\+X\+E\+L\+\_\+\+F\+O\+R\+M\+AT}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+H\+A\+R\+E\+\_\+\+P\+I\+X\+E\+L\+\_\+\+F\+O\+R\+M\+AT@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+H\+A\+R\+E\+\_\+\+P\+I\+X\+E\+L\+\_\+\+F\+O\+R\+M\+AT}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+H\+A\+R\+E\+\_\+\+P\+I\+X\+E\+L\+\_\+\+F\+O\+R\+M\+AT}{SDL\_HINT\_VIDEO\_WINDOW\_SHARE\_PIXEL\_FORMAT}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+H\+A\+R\+E\+\_\+\+P\+I\+X\+E\+L\+\_\+\+F\+O\+R\+M\+AT~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+H\+A\+R\+E\+\_\+\+P\+I\+X\+E\+L\+\_\+\+F\+O\+R\+M\+AT\char`\"{}}
+
+
+
+A variable that is the address of another S\+D\+L\+\_\+\+Window$\ast$ (as a hex string formatted with \char`\"{}\%p\char`\"{}). 
+
+If this hint is set before \mbox{\hyperlink{_s_d_l__video_8h_a54b9e13dbc5bf587a8765a9ec0a29772}{S\+D\+L\+\_\+\+Create\+Window\+From()}} and the S\+D\+L\+\_\+\+Window$\ast$ it is set to has S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+O\+P\+E\+N\+GL set (and running on W\+GL only, currently), then two things will occur on the newly created S\+D\+L\+\_\+\+Window\+:
+
+
+\begin{DoxyEnumerate}
+\item Its pixel format will be set to the same pixel format as this S\+D\+L\+\_\+\+Window. This is needed for example when sharing an Open\+GL context across multiple windows.
+\item The flag S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+O\+P\+E\+N\+GL will be set on the new window so it can be used for Open\+GL rendering.
+\end{DoxyEnumerate}
+
+This variable can be set to the following values\+: The address (as a string \char`\"{}\%p\char`\"{}) of the S\+D\+L\+\_\+\+Window$\ast$ that new windows created with \mbox{\hyperlink{_s_d_l__video_8h_a54b9e13dbc5bf587a8765a9ec0a29772}{S\+D\+L\+\_\+\+Create\+Window\+From()}} should share a pixel format with. \mbox{\Hypertarget{_s_d_l__hints_8h_abc592ad47225c77acdec3d778782a37e}\label{_s_d_l__hints_8h_abc592ad47225c77acdec3d778782a37e}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+OR@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+OR}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+OR@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+OR}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+OR}{SDL\_HINT\_VIDEO\_X11\_NET\_WM\_BYPASS\_COMPOSITOR}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+OR~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+OR\char`\"{}}
+
+
+
+A variable controlling whether the X11 \+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+OR hint should be used. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Disable \+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+OR \char`\"{}1\char`\"{} -\/ Enable \+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+OR
+
+By default S\+DL will use \+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+C\+O\+M\+P\+O\+S\+I\+T\+OR \mbox{\Hypertarget{_s_d_l__hints_8h_a64cf86da8e0fab9201f5d6e677df1a87}\label{_s_d_l__hints_8h_a64cf86da8e0fab9201f5d6e677df1a87}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+P\+I\+NG@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+P\+I\+NG}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+P\+I\+NG@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+P\+I\+NG}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+P\+I\+NG}{SDL\_HINT\_VIDEO\_X11\_NET\_WM\_PING}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+P\+I\+NG~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+P\+I\+NG\char`\"{}}
+
+
+
+A variable controlling whether the X11 \+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+P\+I\+NG protocol should be supported. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Disable \+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+P\+I\+NG \char`\"{}1\char`\"{} -\/ Enable \+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+P\+I\+NG
+
+By default S\+DL will use \+\_\+\+N\+E\+T\+\_\+\+W\+M\+\_\+\+P\+I\+NG, but for applications that know they will not always be able to respond to ping requests in a timely manner they can turn it off to avoid the window manager thinking the app is hung. The hint is checked in Create\+Window. \mbox{\Hypertarget{_s_d_l__hints_8h_ad40f9ea3808d57729baf6d69c019af4b}\label{_s_d_l__hints_8h_ad40f9ea3808d57729baf6d69c019af4b}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+I\+N\+E\+R\+A\+MA@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+I\+N\+E\+R\+A\+MA}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+I\+N\+E\+R\+A\+MA@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+I\+N\+E\+R\+A\+MA}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+I\+N\+E\+R\+A\+MA}{SDL\_HINT\_VIDEO\_X11\_XINERAMA}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+I\+N\+E\+R\+A\+MA~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+I\+N\+E\+R\+A\+MA\char`\"{}}
+
+
+
+A variable controlling whether the X11 Xinerama extension should be used. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Disable Xinerama \char`\"{}1\char`\"{} -\/ Enable Xinerama
+
+By default S\+DL will use Xinerama if it is available. \mbox{\Hypertarget{_s_d_l__hints_8h_ab78bba735481c64f25a01799c0266058}\label{_s_d_l__hints_8h_ab78bba735481c64f25a01799c0266058}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+R\+A\+N\+DR@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+R\+A\+N\+DR}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+R\+A\+N\+DR@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+R\+A\+N\+DR}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+R\+A\+N\+DR}{SDL\_HINT\_VIDEO\_X11\_XRANDR}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+R\+A\+N\+DR~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+R\+A\+N\+DR\char`\"{}}
+
+
+
+A variable controlling whether the X11 X\+RandR extension should be used. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Disable X\+RandR \char`\"{}1\char`\"{} -\/ Enable X\+RandR
+
+By default S\+DL will not use X\+RandR because of window manager issues. \mbox{\Hypertarget{_s_d_l__hints_8h_a866aaf8bf196921021eb7bda46b7a781}\label{_s_d_l__hints_8h_a866aaf8bf196921021eb7bda46b7a781}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+V\+I\+D\+M\+O\+DE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+V\+I\+D\+M\+O\+DE}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+V\+I\+D\+M\+O\+DE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+V\+I\+D\+M\+O\+DE}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+V\+I\+D\+M\+O\+DE}{SDL\_HINT\_VIDEO\_X11\_XVIDMODE}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+V\+I\+D\+M\+O\+DE~\char`\"{}S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+X11\+\_\+\+X\+V\+I\+D\+M\+O\+DE\char`\"{}}
+
+
+
+A variable controlling whether the X11 Vid\+Mode extension should be used. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Disable X\+Vid\+Mode \char`\"{}1\char`\"{} -\/ Enable X\+Vid\+Mode
+
+By default S\+DL will use X\+Vid\+Mode if it is available. \mbox{\Hypertarget{_s_d_l__hints_8h_ab34ea46e0365bd0546c6fa6f4b56d86e}\label{_s_d_l__hints_8h_ab34ea46e0365bd0546c6fa6f4b56d86e}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+R\+A\+M\+E\+\_\+\+U\+S\+A\+B\+L\+E\+\_\+\+W\+H\+I\+L\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+H\+I\+D\+D\+EN@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+R\+A\+M\+E\+\_\+\+U\+S\+A\+B\+L\+E\+\_\+\+W\+H\+I\+L\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+H\+I\+D\+D\+EN}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+R\+A\+M\+E\+\_\+\+U\+S\+A\+B\+L\+E\+\_\+\+W\+H\+I\+L\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+H\+I\+D\+D\+EN@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+R\+A\+M\+E\+\_\+\+U\+S\+A\+B\+L\+E\+\_\+\+W\+H\+I\+L\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+H\+I\+D\+D\+EN}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+R\+A\+M\+E\+\_\+\+U\+S\+A\+B\+L\+E\+\_\+\+W\+H\+I\+L\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+H\+I\+D\+D\+EN}{SDL\_HINT\_WINDOW\_FRAME\_USABLE\_WHILE\_CURSOR\_HIDDEN}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+R\+A\+M\+E\+\_\+\+U\+S\+A\+B\+L\+E\+\_\+\+W\+H\+I\+L\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+H\+I\+D\+D\+EN~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+R\+A\+M\+E\+\_\+\+U\+S\+A\+B\+L\+E\+\_\+\+W\+H\+I\+L\+E\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+H\+I\+D\+D\+EN\char`\"{}}
+
+
+
+A variable controlling whether the window frame and title bar are interactive when the cursor is hidden. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ The window frame is not interactive when the cursor is hidden (no move, resize, etc) \char`\"{}1\char`\"{} -\/ The window frame is interactive when the cursor is hidden
+
+By default S\+DL will allow interaction with the window frame when the cursor is hidden \mbox{\Hypertarget{_s_d_l__hints_8h_af9f679cc77a01ece373e3aff177f2802}\label{_s_d_l__hints_8h_af9f679cc77a01ece373e3aff177f2802}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+N\+A\+M\+I\+NG@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+N\+A\+M\+I\+NG}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+N\+A\+M\+I\+NG@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+N\+A\+M\+I\+NG}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+N\+A\+M\+I\+NG}{SDL\_HINT\_WINDOWS\_DISABLE\_THREAD\_NAMING}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+N\+A\+M\+I\+NG~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+N\+A\+M\+I\+NG\char`\"{}}
+
+
+
+Tell S\+DL not to name threads on Windows with the 0x406\+D1388 Exception. The 0x406\+D1388 Exception is a trick used to inform Visual Studio of a thread\textquotesingle{}s name, but it tends to cause problems with other debuggers, and the .N\+ET runtime. Note that S\+DL 2.\+0.\+6 and later will still use the (safer) Set\+Thread\+Description A\+PI, introduced in the Windows 10 Creators Update, if available. 
+
+The variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ S\+DL will raise the 0x406\+D1388 Exception to name threads. This is the default behavior of S\+DL $<$= 2.\+0.\+4. \char`\"{}1\char`\"{} -\/ S\+DL will not raise this exception, and threads will be unnamed. (default) This is necessary with .N\+ET languages or debuggers that aren\textquotesingle{}t Visual Studio. \mbox{\Hypertarget{_s_d_l__hints_8h_a4751d59cbeb36e0e41139f2f3273602d}\label{_s_d_l__hints_8h_a4751d59cbeb36e0e41139f2f3273602d}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+L\+O\+OP@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+L\+O\+OP}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+L\+O\+OP@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+L\+O\+OP}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+L\+O\+OP}{SDL\_HINT\_WINDOWS\_ENABLE\_MESSAGELOOP}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+L\+O\+OP~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+L\+O\+OP\char`\"{}}
+
+
+
+A variable controlling whether the windows message loop is processed by S\+DL. 
+
+This variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ The window message loop is not run \char`\"{}1\char`\"{} -\/ The window message loop is processed in \mbox{\hyperlink{_s_d_l__events_8h_aa15403d1c8fc341cd9cf750e27a66d19}{S\+D\+L\+\_\+\+Pump\+Events()}}
+
+By default S\+DL will process the windows message loop \mbox{\Hypertarget{_s_d_l__hints_8h_a2a5b224b4a44f6a884a3b4bb6bd4fc97}\label{_s_d_l__hints_8h_a2a5b224b4a44f6a884a3b4bb6bd4fc97}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+ON}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+ON}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+ON}{SDL\_HINT\_WINDOWS\_INTRESOURCE\_ICON}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+ON~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+ON\char`\"{}}
+
+
+
+A variable to specify custom icon resource id from RC file on Windows platform. 
+
+\mbox{\Hypertarget{_s_d_l__hints_8h_a7da3b0170a9ad3d1ee9e9e9d491d697a}\label{_s_d_l__hints_8h_a7da3b0170a9ad3d1ee9e9e9d491d697a}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+O\+N\+\_\+\+S\+M\+A\+LL@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+O\+N\+\_\+\+S\+M\+A\+LL}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+O\+N\+\_\+\+S\+M\+A\+LL@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+O\+N\+\_\+\+S\+M\+A\+LL}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+O\+N\+\_\+\+S\+M\+A\+LL}{SDL\_HINT\_WINDOWS\_INTRESOURCE\_ICON\_SMALL}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+O\+N\+\_\+\+S\+M\+A\+LL~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+I\+N\+T\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+C\+O\+N\+\_\+\+S\+M\+A\+LL\char`\"{}}
+
+\mbox{\Hypertarget{_s_d_l__hints_8h_a591d43be8d8b8cc6ad9dd37f69e50630}\label{_s_d_l__hints_8h_a591d43be8d8b8cc6ad9dd37f69e50630}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+N\+O\+\_\+\+C\+L\+O\+S\+E\+\_\+\+O\+N\+\_\+\+A\+L\+T\+\_\+\+F4@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+N\+O\+\_\+\+C\+L\+O\+S\+E\+\_\+\+O\+N\+\_\+\+A\+L\+T\+\_\+\+F4}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+N\+O\+\_\+\+C\+L\+O\+S\+E\+\_\+\+O\+N\+\_\+\+A\+L\+T\+\_\+\+F4@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+N\+O\+\_\+\+C\+L\+O\+S\+E\+\_\+\+O\+N\+\_\+\+A\+L\+T\+\_\+\+F4}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+N\+O\+\_\+\+C\+L\+O\+S\+E\+\_\+\+O\+N\+\_\+\+A\+L\+T\+\_\+\+F4}{SDL\_HINT\_WINDOWS\_NO\_CLOSE\_ON\_ALT\_F4}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+N\+O\+\_\+\+C\+L\+O\+S\+E\+\_\+\+O\+N\+\_\+\+A\+L\+T\+\_\+\+F4~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+S\+\_\+\+N\+O\+\_\+\+C\+L\+O\+S\+E\+\_\+\+O\+N\+\_\+\+A\+L\+T\+\_\+\+F4\char`\"{}}
+
+
+
+Tell S\+DL not to generate window-\/close events for Alt+\+F4 on Windows. 
+
+The variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ S\+DL will generate a window-\/close event when it sees Alt+\+F4. \char`\"{}1\char`\"{} -\/ S\+DL will only do normal key handling for Alt+\+F4. \mbox{\Hypertarget{_s_d_l__hints_8h_a50fab1c4959c71f2e066b7eec874ef90}\label{_s_d_l__hints_8h_a50fab1c4959c71f2e066b7eec874ef90}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+T\+T\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+T\+T\+ON}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+T\+T\+ON@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+T\+T\+ON}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+T\+T\+ON}{SDL\_HINT\_WINRT\_HANDLE\_BACK\_BUTTON}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+T\+T\+ON~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+T\+T\+ON\char`\"{}}
+
+
+
+Allows back-\/button-\/press events on Windows Phone to be marked as handled. 
+
+Windows Phone devices typically feature a Back button. When pressed, the OS will emit back-\/button-\/press events, which apps are expected to handle in an appropriate manner. If apps do not explicitly mark these events as \textquotesingle{}Handled\textquotesingle{}, then the OS will invoke its default behavior for unhandled back-\/button-\/press events, which on Windows Phone 8 and 8.\+1 is to terminate the app (and attempt to switch to the previous app, or to the device\textquotesingle{}s home screen).
+
+Setting the S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+T\+T\+ON hint to \char`\"{}1\char`\"{} will cause S\+DL to mark back-\/button-\/press events as Handled, if and when one is sent to the app.
+
+Internally, Windows Phone sends back button events as parameters to special back-\/button-\/press callback functions. Apps that need to respond to back-\/button-\/press events are expected to register one or more callback functions for such, shortly after being launched (during the app\textquotesingle{}s initialization phase). After the back button is pressed, the OS will invoke these callbacks. If the app\textquotesingle{}s callback(s) do not explicitly mark the event as handled by the time they return, or if the app never registers one of these callback, the OS will consider the event un-\/handled, and it will apply its default back button behavior (terminate the app).
+
+S\+DL registers its own back-\/button-\/press callback with the Windows Phone OS. This callback will emit a pair of S\+DL key-\/press events (S\+D\+L\+\_\+\+K\+E\+Y\+D\+O\+WN and S\+D\+L\+\_\+\+K\+E\+Y\+UP), each with a scancode of S\+D\+L\+\_\+\+S\+C\+A\+N\+C\+O\+D\+E\+\_\+\+A\+C\+\_\+\+B\+A\+CK, after which it will check the contents of the hint, S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+T\+T\+ON. If the hint\textquotesingle{}s value is set to \char`\"{}1\char`\"{}, the back button event\textquotesingle{}s Handled property will get set to \textquotesingle{}true\textquotesingle{}. If the hint\textquotesingle{}s value is set to something else, or if it is unset, S\+DL will leave the event\textquotesingle{}s Handled property alone. (By default, the OS sets this property to \textquotesingle{}false\textquotesingle{}, to note.)
+
+S\+DL apps can either set S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+T\+T\+ON well before a back button is pressed, or can set it in direct-\/response to a back button being pressed.
+
+In order to get notified when a back button is pressed, S\+DL apps should register a callback function with \mbox{\hyperlink{_s_d_l__events_8h_ad81eba7df9eae4fd0acd046b7f983202}{S\+D\+L\+\_\+\+Add\+Event\+Watch()}}, and have it listen for S\+D\+L\+\_\+\+K\+E\+Y\+D\+O\+WN events that have a scancode of S\+D\+L\+\_\+\+S\+C\+A\+N\+C\+O\+D\+E\+\_\+\+A\+C\+\_\+\+B\+A\+CK. (Alternatively, S\+D\+L\+\_\+\+K\+E\+Y\+UP events can be listened-\/for. Listening for either event type is suitable.) Any value of S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+B\+A\+C\+K\+\_\+\+B\+U\+T\+T\+ON set by such a callback, will be applied to the OS\textquotesingle{} current back-\/button-\/press event.
+
+More details on back button behavior in Windows Phone apps can be found at the following page, on Microsoft\textquotesingle{}s developer site\+: \href{http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj247550(v=vs.105).aspx}{\tt http\+://msdn.\+microsoft.\+com/en-\/us/library/windowsphone/develop/jj247550(v=vs.\+105).\+aspx} \mbox{\Hypertarget{_s_d_l__hints_8h_a2e703ae1982069e228243e2633cf41c7}\label{_s_d_l__hints_8h_a2e703ae1982069e228243e2633cf41c7}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+L\+A\+B\+EL@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+L\+A\+B\+EL}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+L\+A\+B\+EL@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+L\+A\+B\+EL}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+L\+A\+B\+EL}{SDL\_HINT\_WINRT\_PRIVACY\_POLICY\_LABEL}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+L\+A\+B\+EL~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+L\+A\+B\+EL\char`\"{}}
+
+
+
+Label text for a Win\+RT app\textquotesingle{}s privacy policy link. 
+
+Network-\/enabled Win\+RT apps must include a privacy policy. On Windows 8, 8.\+1, and RT, Microsoft mandates that this policy be available via the Windows Settings charm. S\+DL provides code to add a link there, with its label text being set via the optional hint, S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+L\+A\+B\+EL.
+
+Please note that a privacy policy\textquotesingle{}s contents are not set via this hint. A separate hint, S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+U\+RL, is used to link to the actual text of the policy.
+
+The contents of this hint should be encoded as a U\+T\+F8 string.
+
+The default value is \char`\"{}\+Privacy Policy\char`\"{}. This hint should only be set during app initialization, preferably before any calls to \mbox{\hyperlink{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8}{S\+D\+L\+\_\+\+Init()}}.
+
+For additional information on linking to a privacy policy, see the documentation for S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+U\+RL. \mbox{\Hypertarget{_s_d_l__hints_8h_a5f898b6a1c5658f84c812540bb857560}\label{_s_d_l__hints_8h_a5f898b6a1c5658f84c812540bb857560}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+U\+RL@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+U\+RL}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+U\+RL@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+U\+RL}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+U\+RL}{SDL\_HINT\_WINRT\_PRIVACY\_POLICY\_URL}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+U\+RL~\char`\"{}S\+D\+L\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+U\+RL\char`\"{}}
+
+
+
+A U\+RL to a Win\+RT app\textquotesingle{}s privacy policy. 
+
+All network-\/enabled Win\+RT apps must make a privacy policy available to its users. On Windows 8, 8.\+1, and RT, Microsoft mandates that this policy be be available in the Windows Settings charm, as accessed from within the app. S\+DL provides code to add a U\+R\+L-\/based link there, which can point to the app\textquotesingle{}s privacy policy.
+
+To setup a U\+RL to an app\textquotesingle{}s privacy policy, set S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+U\+RL before calling any \mbox{\hyperlink{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8}{S\+D\+L\+\_\+\+Init()}} functions. The contents of the hint should be a valid U\+RL. For example, \char`\"{}http\+://www.\+example.\+com\char`\"{}.
+
+The default value is \char`\"{}\char`\"{}, which will prevent S\+DL from adding a privacy policy link to the Settings charm. This hint should only be set during app init.
+
+The label text of an app\textquotesingle{}s \char`\"{}\+Privacy Policy\char`\"{} link may be customized via another hint, S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+L\+A\+B\+EL.
+
+Please note that on Windows Phone, Microsoft does not provide standard UI for displaying a privacy policy link, and as such, S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+W\+I\+N\+R\+T\+\_\+\+P\+R\+I\+V\+A\+C\+Y\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+U\+RL will not get used on that platform. Network-\/enabled phone apps should display their privacy policy through some other, in-\/app means. \mbox{\Hypertarget{_s_d_l__hints_8h_a74031ed3b17889222462108800b91c3c}\label{_s_d_l__hints_8h_a74031ed3b17889222462108800b91c3c}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+E\+N\+A\+B\+L\+ED@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+E\+N\+A\+B\+L\+ED@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+E\+N\+A\+B\+L\+ED}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+E\+N\+A\+B\+L\+ED}{SDL\_HINT\_XINPUT\_ENABLED}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+E\+N\+A\+B\+L\+ED~\char`\"{}S\+D\+L\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+E\+N\+A\+B\+L\+ED\char`\"{}}
+
+
+
+A variable that lets you disable the detection and use of Xinput gamepad devices. 
+
+The variable can be set to the following values\+: \char`\"{}0\char`\"{} -\/ Disable X\+Input detection (only uses direct input) \char`\"{}1\char`\"{} -\/ Enable X\+Input detection (the default) \mbox{\Hypertarget{_s_d_l__hints_8h_a7a7ae9f9a2a771b1f83b5cd165f1c3bb}\label{_s_d_l__hints_8h_a7a7ae9f9a2a771b1f83b5cd165f1c3bb}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+U\+S\+E\+\_\+\+O\+L\+D\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+M\+A\+P\+P\+I\+NG@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+U\+S\+E\+\_\+\+O\+L\+D\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+M\+A\+P\+P\+I\+NG}}
+\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+U\+S\+E\+\_\+\+O\+L\+D\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+M\+A\+P\+P\+I\+NG@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+U\+S\+E\+\_\+\+O\+L\+D\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+M\+A\+P\+P\+I\+NG}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+U\+S\+E\+\_\+\+O\+L\+D\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+M\+A\+P\+P\+I\+NG}{SDL\_HINT\_XINPUT\_USE\_OLD\_JOYSTICK\_MAPPING}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+U\+S\+E\+\_\+\+O\+L\+D\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+M\+A\+P\+P\+I\+NG~\char`\"{}S\+D\+L\+\_\+\+X\+I\+N\+P\+U\+T\+\_\+\+U\+S\+E\+\_\+\+O\+L\+D\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+M\+A\+P\+P\+I\+NG\char`\"{}}
+
+
+
+A variable that causes S\+DL to use the old axis and button mapping for X\+Input devices. 
+
+This hint is for backwards compatibility only and will be removed in S\+DL 2.\+1
+
+The default value is \char`\"{}0\char`\"{}. This hint must be set before \mbox{\hyperlink{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8}{S\+D\+L\+\_\+\+Init()}} 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_s_d_l__hints_8h_a393a846a6c2dbc4ec9e52bd9bef14e02}\label{_s_d_l__hints_8h_a393a846a6c2dbc4ec9e52bd9bef14e02}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+Hint\+Callback@{S\+D\+L\+\_\+\+Hint\+Callback}}
+\index{S\+D\+L\+\_\+\+Hint\+Callback@{S\+D\+L\+\_\+\+Hint\+Callback}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Hint\+Callback}{SDL\_HintCallback}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}(\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} $\ast$ S\+D\+L\+\_\+\+Hint\+Callback) (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$userdata, const char $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}}, const char $\ast$old\+Value, const char $\ast$new\+Value)}
+
+
+
+type definition of the hint callback function. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_s_d_l__hints_8h_ab85f3099d9bb0445b0c6b5002cfaa7ed}\label{_s_d_l__hints_8h_ab85f3099d9bb0445b0c6b5002cfaa7ed}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+Hint\+Priority@{S\+D\+L\+\_\+\+Hint\+Priority}}
+\index{S\+D\+L\+\_\+\+Hint\+Priority@{S\+D\+L\+\_\+\+Hint\+Priority}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Hint\+Priority}{SDL\_HintPriority}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__hints_8h_ab85f3099d9bb0445b0c6b5002cfaa7ed}{S\+D\+L\+\_\+\+Hint\+Priority}}}
+
+
+
+An enumeration of hint priorities. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT}}}\mbox{\Hypertarget{_s_d_l__hints_8h_ab85f3099d9bb0445b0c6b5002cfaa7eda3dd1382c2b23c690411c1aacfac9b634}\label{_s_d_l__hints_8h_ab85f3099d9bb0445b0c6b5002cfaa7eda3dd1382c2b23c690411c1aacfac9b634}} 
+S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+N\+O\+R\+M\+AL@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+N\+O\+R\+M\+AL}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+N\+O\+R\+M\+AL@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+N\+O\+R\+M\+AL}}}\mbox{\Hypertarget{_s_d_l__hints_8h_ab85f3099d9bb0445b0c6b5002cfaa7edaef363821cdc9c74e84d79cfea42e32b9}\label{_s_d_l__hints_8h_ab85f3099d9bb0445b0c6b5002cfaa7edaef363821cdc9c74e84d79cfea42e32b9}} 
+S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+N\+O\+R\+M\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+V\+E\+R\+R\+I\+DE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+V\+E\+R\+R\+I\+DE}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+V\+E\+R\+R\+I\+DE@{S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}}\mbox{\Hypertarget{_s_d_l__hints_8h_ab85f3099d9bb0445b0c6b5002cfaa7edac85d90168e4a0cd4cd52ba38a68bcebf}\label{_s_d_l__hints_8h_ab85f3099d9bb0445b0c6b5002cfaa7edac85d90168e4a0cd4cd52ba38a68bcebf}} 
+S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+O\+V\+E\+R\+R\+I\+DE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_s_d_l__hints_8h_a8731ae1704dd7a70f63cc6cdd242b5ae}\label{_s_d_l__hints_8h_a8731ae1704dd7a70f63cc6cdd242b5ae}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+Add\+Hint\+Callback@{S\+D\+L\+\_\+\+Add\+Hint\+Callback}}
+\index{S\+D\+L\+\_\+\+Add\+Hint\+Callback@{S\+D\+L\+\_\+\+Add\+Hint\+Callback}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Add\+Hint\+Callback()}{SDL\_AddHintCallback()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Add\+Hint\+Callback (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{_s_d_l__hints_8h_a393a846a6c2dbc4ec9e52bd9bef14e02}{S\+D\+L\+\_\+\+Hint\+Callback}}}]{callback,  }\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$}]{userdata }\end{DoxyParamCaption})}
+
+
+
+Add a function to watch a particular hint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The hint to watch \\
+\hline
+{\em callback} & The function to call when the hint value changes \\
+\hline
+{\em userdata} & A pointer to pass to the callback function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_s_d_l__hints_8h_a7feb78f92319c07e9d53d7be8185cdbb}\label{_s_d_l__hints_8h_a7feb78f92319c07e9d53d7be8185cdbb}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+Clear\+Hints@{S\+D\+L\+\_\+\+Clear\+Hints}}
+\index{S\+D\+L\+\_\+\+Clear\+Hints@{S\+D\+L\+\_\+\+Clear\+Hints}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Clear\+Hints()}{SDL\_ClearHints()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Clear\+Hints (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Clear all hints. 
+
+This function is called during \mbox{\hyperlink{_s_d_l_8h_afdabaf714781099083592051f2d9ac11}{S\+D\+L\+\_\+\+Quit()}} to free stored hints. \mbox{\Hypertarget{_s_d_l__hints_8h_aff84d56f5de197e49a778e18ad76ab0e}\label{_s_d_l__hints_8h_aff84d56f5de197e49a778e18ad76ab0e}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+Del\+Hint\+Callback@{S\+D\+L\+\_\+\+Del\+Hint\+Callback}}
+\index{S\+D\+L\+\_\+\+Del\+Hint\+Callback@{S\+D\+L\+\_\+\+Del\+Hint\+Callback}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Del\+Hint\+Callback()}{SDL\_DelHintCallback()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Del\+Hint\+Callback (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{_s_d_l__hints_8h_a393a846a6c2dbc4ec9e52bd9bef14e02}{S\+D\+L\+\_\+\+Hint\+Callback}}}]{callback,  }\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$}]{userdata }\end{DoxyParamCaption})}
+
+
+
+Remove a function watching a particular hint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The hint being watched \\
+\hline
+{\em callback} & The function being called when the hint value changes \\
+\hline
+{\em userdata} & A pointer being passed to the callback function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_s_d_l__hints_8h_a7b26a63a33768fab43d50e3fd0d41eb5}\label{_s_d_l__hints_8h_a7b26a63a33768fab43d50e3fd0d41eb5}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+Get\+Hint@{S\+D\+L\+\_\+\+Get\+Hint}}
+\index{S\+D\+L\+\_\+\+Get\+Hint@{S\+D\+L\+\_\+\+Get\+Hint}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Hint()}{SDL\_GetHint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Hint (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Get a hint. 
+
+\begin{DoxyReturn}{Returns}
+The string value of a hint variable. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__hints_8h_ac64146ba3607164ed325956ea3d6d392}\label{_s_d_l__hints_8h_ac64146ba3607164ed325956ea3d6d392}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+Get\+Hint\+Boolean@{S\+D\+L\+\_\+\+Get\+Hint\+Boolean}}
+\index{S\+D\+L\+\_\+\+Get\+Hint\+Boolean@{S\+D\+L\+\_\+\+Get\+Hint\+Boolean}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Hint\+Boolean()}{SDL\_GetHintBoolean()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Hint\+Boolean (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}}}]{default\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Get a hint. 
+
+\begin{DoxyReturn}{Returns}
+The boolean value of a hint variable. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__hints_8h_a9b47f5aa3911644f0a5a3f0cfa9198a4}\label{_s_d_l__hints_8h_a9b47f5aa3911644f0a5a3f0cfa9198a4}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+Set\+Hint@{S\+D\+L\+\_\+\+Set\+Hint}}
+\index{S\+D\+L\+\_\+\+Set\+Hint@{S\+D\+L\+\_\+\+Set\+Hint}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Set\+Hint()}{SDL\_SetHint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Set\+Hint (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Set a hint with normal priority. 
+
+\begin{DoxyReturn}{Returns}
+S\+D\+L\+\_\+\+T\+R\+UE if the hint was set, S\+D\+L\+\_\+\+F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__hints_8h_aa8dbcd854090784ae237aeeefb7e6232}\label{_s_d_l__hints_8h_aa8dbcd854090784ae237aeeefb7e6232}} 
+\index{S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}!S\+D\+L\+\_\+\+Set\+Hint\+With\+Priority@{S\+D\+L\+\_\+\+Set\+Hint\+With\+Priority}}
+\index{S\+D\+L\+\_\+\+Set\+Hint\+With\+Priority@{S\+D\+L\+\_\+\+Set\+Hint\+With\+Priority}!S\+D\+L\+\_\+hints.\+h@{S\+D\+L\+\_\+hints.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Set\+Hint\+With\+Priority()}{SDL\_SetHintWithPriority()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Set\+Hint\+With\+Priority (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{value,  }\item[{\mbox{\hyperlink{_s_d_l__hints_8h_ab85f3099d9bb0445b0c6b5002cfaa7ed}{S\+D\+L\+\_\+\+Hint\+Priority}}}]{priority }\end{DoxyParamCaption})}
+
+
+
+Set a hint with a specific priority. 
+
+The priority controls the behavior when setting a hint that already has a value. Hints will replace existing hints of their priority and lower. Environment variables are considered to have override priority.
+
+\begin{DoxyReturn}{Returns}
+S\+D\+L\+\_\+\+T\+R\+UE if the hint was set, S\+D\+L\+\_\+\+F\+A\+L\+SE otherwise 
+\end{DoxyReturn}

@@ -1,39 +1,44 @@
-#include <GL/glew.h>
-#include <glm/glm.hpp>
-#include "Component.h"
+#include <GL/glew.h>    // Include Glew
+#include <glm/glm.hpp>  // Include GLM
+#include "Component.h"	// Include component
 
+#include <vector>		// Include vector for the use of vectors
 
-#include <vector>
+#ifndef _MESHRENDER_H_
+#define _MESHRENDER_H_
 
-namespace Aspect
+namespace Aspect	// Namespace 1
 {
-	namespace Engine
+	namespace Engine // Namespace 2
 	{
-		class VertexArray;
-		class Material;
-		class ShaderProgram;
+		class VertexArray;   /// Initialise Vertex Array class
+		class Material;		 /// Initialise Material Class
+		class ShaderProgram; /// Initialise Shader Program
 
-		class MeshRender : public Component
+		class MeshRender : public Component  /// MeshRender is an inherited class of component
 		{
 		public:
-			void onInit();
-			std::shared_ptr<Entity> camera;
-			bool MrEnable = true;
-			void Cube();
-			void Triangle();
-			void Mesh(const std::string& _mesh);
-			void setTexture(const std::string& _texture);
+			void onInit();   /// On init component function
+			std::shared_ptr<Entity> camera;  // List of cameras
+			bool MrEnable = true;			 // Mesh renderer enable / disable
+			void Cube();					 /// Draw cube object
+			void Triangle();				 /// Draw Triangle
+			void Mesh(const std::string& _mesh); /// Draw a mesh of any obj
+			void setTexture(const std::string& _texture); /// Set the texture of that model
 
 		private:
-			void onDisplay();
-			void onCount();
+			void onDisplay();  /// On display works similar to draw function
+			void onCount();	   /// On count is update
 
-			std::shared_ptr<VertexArray> shape;
-			std::shared_ptr<ShaderProgram> shader;
-			std::shared_ptr<Material> mat;
+			std::shared_ptr<VertexArray> shape;    // shape object
+			std::shared_ptr<ShaderProgram> shader; // shader object
+			std::shared_ptr<Material> mat;         // Material object
 
 		};
 
 	}
 
 }
+
+
+#endif // _MESHRENDER_H_

@@ -1,0 +1,64 @@
+\hypertarget{scalar__multiplication_8hpp}{}\section{Contrib/glm/gtx/scalar\+\_\+multiplication.hpp File Reference}
+\label{scalar__multiplication_8hpp}\index{Contrib/glm/gtx/scalar\+\_\+multiplication.\+hpp@{Contrib/glm/gtx/scalar\+\_\+multiplication.\+hpp}}
+{\ttfamily \#include \char`\"{}../detail/setup.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../vec2.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../vec3.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../vec4.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../mat2x2.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceglm}{glm}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{scalar__multiplication_8hpp_aa1e74ac9f6e034680f02523fb962bd0c}{G\+L\+M\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+S\+C\+A\+L\+\_\+\+M\+U\+LT}}(Vec)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename Vec $>$ }\\using \mbox{\hyperlink{namespaceglm_a68a5dc6ff1dbac4fda02c3b177afa4aa}{glm\+::return\+\_\+type\+\_\+scalar\+\_\+multiplication}} = typename std\+::enable\+\_\+if$<$ !std\+::is\+\_\+same$<$ T, float $>$\+::\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8ad81492d410ff2ac11f754f4042150f}{value}} \&\&std\+::is\+\_\+arithmetic$<$ T $>$\+::\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8ad81492d410ff2ac11f754f4042150f}{value}}, Vec $>$\+::\mbox{\hyperlink{_s_d_l__opengl_8h_ad5ddf6fca7b585646515660e810e0188}{type}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{group__gtx}{Experimental extensions}}
+
+\begin{DoxyAuthor}{Author}
+Joshua Moerman
+\end{DoxyAuthor}
+Include $<$\mbox{\hyperlink{scalar__multiplication_8hpp}{glm/gtx/scalar\+\_\+multiplication.\+hpp}}$>$ to use the features of this extension.
+
+Enables scalar multiplication for all types
+
+Since G\+L\+SL is very strict about types, the following (often used) combinations do not work\+: double $\ast$ vec4 int $\ast$ vec4 vec4 / int So we\textquotesingle{}ll fix that! Of course \char`\"{}float $\ast$ vec4\char`\"{} should remain the same (hence the enable\+\_\+if magic) 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{scalar__multiplication_8hpp_aa1e74ac9f6e034680f02523fb962bd0c}\label{scalar__multiplication_8hpp_aa1e74ac9f6e034680f02523fb962bd0c}} 
+\index{scalar\+\_\+multiplication.\+hpp@{scalar\+\_\+multiplication.\+hpp}!G\+L\+M\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+S\+C\+A\+L\+\_\+\+M\+U\+LT@{G\+L\+M\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+S\+C\+A\+L\+\_\+\+M\+U\+LT}}
+\index{G\+L\+M\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+S\+C\+A\+L\+\_\+\+M\+U\+LT@{G\+L\+M\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+S\+C\+A\+L\+\_\+\+M\+U\+LT}!scalar\+\_\+multiplication.\+hpp@{scalar\+\_\+multiplication.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+S\+C\+A\+L\+\_\+\+M\+U\+LT}{GLM\_IMPLEMENT\_SCAL\_MULT}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+S\+C\+A\+L\+\_\+\+M\+U\+LT(\begin{DoxyParamCaption}\item[{}]{Vec }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\mbox{\hyperlink{namespaceglm_aafc7cc63c9c88cdb32f4f9c1c03ad715}{template<typename T> \(\backslash\)}}
+\mbox{\hyperlink{namespaceglm_aafc7cc63c9c88cdb32f4f9c1c03ad715}{    return\_type\_scalar\_multiplication<T, Vec> \(\backslash\)}}
+\mbox{\hyperlink{namespaceglm_aafc7cc63c9c88cdb32f4f9c1c03ad715}{    operator*}}(T \textcolor{keyword}{const}& \mbox{\hyperlink{_s_d_l__opengl_8h_a4af680a6c683f88ed67b76f207f2e6e4}{s}}, Vec rh)\{ \(\backslash\)
+        return rh *= \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(\mbox{\hyperlink{_s_d_l__opengl_8h_a4af680a6c683f88ed67b76f207f2e6e4}{s}}); \(\backslash\)
+    \} \(\backslash\)
+     \(\backslash\)
+    template<typename T> \(\backslash\)
+    return\_type\_scalar\_multiplication<T, Vec> \(\backslash\)
+    operator*(Vec lh, T \textcolor{keyword}{const}& \mbox{\hyperlink{_s_d_l__opengl_8h_a4af680a6c683f88ed67b76f207f2e6e4}{s}})\{ \(\backslash\)
+        return lh *= \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(\mbox{\hyperlink{_s_d_l__opengl_8h_a4af680a6c683f88ed67b76f207f2e6e4}{s}}); \(\backslash\)
+    \} \(\backslash\)
+     \(\backslash\)
+    template<typename T> \(\backslash\)
+    return\_type\_scalar\_multiplication<T, Vec> \(\backslash\)
+    operator/(Vec lh, T \textcolor{keyword}{const}& \mbox{\hyperlink{_s_d_l__opengl_8h_a4af680a6c683f88ed67b76f207f2e6e4}{s}})\{ \(\backslash\)
+        return lh *= 1.0f / \mbox{\hyperlink{_s_d_l__opengl_8h_a4af680a6c683f88ed67b76f207f2e6e4}{s}}; \(\backslash\)
+    \}
+\end{DoxyCode}

@@ -1,9 +1,14 @@
+/// @Program.cpp
+/// @Handles the main body of the program, game loop and creation of objects
+
+// System Includes
 #include <GL\glew.h>
 #include <GL\freeglut.h>
 #include <iostream>
 #include <GLM/gtc/type_ptr.hpp>
 #include <GLM/gtc/matrix_transform.hpp>
 
+// Project Includes
 #include "Program.h"
 #include "Entity.h"
 #include "ShaderProgram.h"
@@ -18,7 +23,7 @@ namespace Aspect
 {
 	namespace Engine
 	{
-		std::vector<std::shared_ptr<Entity> > Program::entities;
+		std::vector<std::shared_ptr<Entity> > Program::entities; // Entities list that all game objects are stored in
 
 		SDL_Window *Program::_window;
 		std::weak_ptr<Program> Program::self;
@@ -104,13 +109,14 @@ namespace Aspect
 			
 		}
 
-		void Program::Start(std::shared_ptr<Entity> _cam, std::shared_ptr<Entity> _player)
+		void Program::Start(std::shared_ptr<Entity> _cam, std::shared_ptr<Entity> _player)	// Start function controls game loop
 		{
 			running = true;
 
-			bool cmdMoveForward = false, cmdMoveBackwards = false, cmdLeft = false, cmdRight = false;
-			bool camMoveForward = false, camMoveBackwards = false, camLeft = false, camRight = false;
+			bool cmdMoveForward = false, cmdMoveBackwards = false, cmdLeft = false, cmdRight = false; // Movement commands for player
+			bool camMoveForward = false, camMoveBackwards = false, camLeft = false, camRight = false; // Movement commands for camera
 
+			// Velocity and score values
 			float velFast = -0.3f;
 			float velSlow = 0.1;
 			int scoreTime = 0;
@@ -118,7 +124,7 @@ namespace Aspect
 			
 			unsigned int lastTime = SDL_GetTicks();	// Used to work out time between frame
 			
-			std::shared_ptr<Aspect::Engine::Audio> ac = std::make_shared<Aspect::Engine::Audio>("../Contrib/Game_Music.ogg");
+			std::shared_ptr<Aspect::Engine::Audio> ac = std::make_shared<Aspect::Engine::Audio>("../Contrib/Game_Music.ogg"); // Audio clip
 			ac->play();
 
 			while (running)
@@ -206,15 +212,15 @@ namespace Aspect
 					}
 
 				}
-				std::cout << _cam->getComponent<Transform>()->getPosition().z << std::endl;
 
+				// calculate delta time
 				unsigned int current = SDL_GetTicks();
 
 				float deltaTs = (float)(current - lastTime) / 1000.0f;
 				lastTime = current;
 
 
-
+				// Create enemys depending on how far away the player is to the next object that has already been created
 				if (lastCubeX - _player->getComponent<Transform>()->getPosition().x < 20)
 				{
 					std::cout << "New spawn" << std::endl;
@@ -251,6 +257,7 @@ namespace Aspect
 
 				}
 
+				// Create background depending on how far away the player is to the next object that has already been created
 				if (backgroundX - _player->getComponent<Transform>()->getPosition().x < 25)
 				{
 					std::cout << "New Background" << std::endl;
@@ -266,14 +273,12 @@ namespace Aspect
 
 				}
 
-
-
-
+				// Score for the game, Controlls the camera speed depending on speed
 				if (_player->getComponent<Transform>()->getPosition().x > lastCubeX - _player->getComponent<Transform>()->getPosition().x)
 				{
 
 					scoreTime++;
-					if (scoreTime > 3)
+					if (scoreTime > 3) // slows down the increase of score
 					{
 						score++;
 						scoreTime = 0;
@@ -281,6 +286,7 @@ namespace Aspect
 					std::cout << score << std::endl;
 				}
 
+				// Controls the camera pan speed
 				if (score <= 100)
 				{
 					_cam->getComponent<Transform>()->Translate(0.04, 0.0, 0.0);
@@ -327,7 +333,7 @@ namespace Aspect
 
 
 
-
+				// Collision checks, checking if any entity in the scene is colliding
 				for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin(); it != entities.end(); it++) // Loop through all the entities
 				{
 					(*it)->count();	// Update them one at a time
@@ -340,7 +346,7 @@ namespace Aspect
 						}
 						else
 						{
-							(*it)->getComponent<BoxCollider>()->BoxCollision(*it2);
+							(*it)->getComponent<BoxCollider>()->BoxCollision(*it2); // Send the entites to be checked
 						}
 					}
 
@@ -350,8 +356,8 @@ namespace Aspect
 				{
 					if ((*it)->isDestroyed() == true)
 					{
-						(*it)->getComponent<MeshRender>()->MrEnable = false;
-						(*it)->getComponent<BoxCollider>()->Hitbox = false;
+						(*it)->getComponent<MeshRender>()->MrEnable = false; // Turn the mesh renderer off
+						(*it)->getComponent<BoxCollider>()->Hitbox = false; // Turn off the hit box (collider)
 					}
 				}
 
@@ -388,7 +394,7 @@ namespace Aspect
 
 				SDL_GL_SwapWindow(_window);
 
-
+				// Delta time
 				if (deltaTs < (1.0f / 50.0f))
 				{
 					SDL_Delay((unsigned int)(((1.0f / 50.0f) - deltaTs)*1000.0f));
@@ -411,13 +417,13 @@ namespace Aspect
 
 		std::shared_ptr<Entity> Program::addEntity()
 		{
-			std::shared_ptr<Entity> rtn = std::make_shared <Entity>();
-			entities.push_back(rtn);
-			rtn->program = self.lock();
-			rtn->addComponent<Transform>();
-			rtn->getComponent<Transform>()->setRotation(glm::vec3(0, 0, 0));
-			rtn->getComponent<Transform>()->setPosition(glm::vec3(0.0f, 0.0f, 0.0f));
-			rtn->getComponent<Transform>()->setScale(1.0f, 1.0f, 1.0f);
+			std::shared_ptr<Entity> rtn = std::make_shared <Entity>(); // Creates a new entity
+			entities.push_back(rtn); // Pushes it back into the entities list
+			rtn->program = self.lock(); // Add it back to the program
+			rtn->addComponent<Transform>(); // Add a trransform
+			rtn->getComponent<Transform>()->setRotation(glm::vec3(0, 0, 0));			// Set 0 rotation
+			rtn->getComponent<Transform>()->setPosition(glm::vec3(0.0f, 0.0f, 0.0f));	// Set 0 position
+			rtn->getComponent<Transform>()->setScale(1.0f, 1.0f, 1.0f);					// Set scale to 1
 	
 			
 			rtn->self = rtn;
@@ -428,12 +434,12 @@ namespace Aspect
 			return rtn;
 		}
 
-		void Program::setCurrentCamera(std::shared_ptr<Camera> cam)
+		void Program::setCurrentCamera(std::shared_ptr<Camera> cam)	// Set the current camera to be the cam
 		{
 			currentCam = cam;
 		}
 
-		std::shared_ptr<Camera> Program::getCurrentCamera()
+		std::shared_ptr<Camera> Program::getCurrentCamera() // Get the current camera
 		{
 			return currentCam.lock();
 		}

@@ -2,34 +2,49 @@
 \label{class_aspect_1_1_engine_1_1_material}\index{Aspect\+::\+Engine\+::\+Material@{Aspect\+::\+Engine\+::\+Material}}
 
 
+Class material used for textures.  
+
+
+
+
 {\ttfamily \#include $<$Material.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_aspect_1_1_engine_1_1_material_a2c9f3f523dc327399c24b4222d4a978c}{Material}} (std\+::string path)
+\mbox{\hyperlink{class_aspect_1_1_engine_1_1_material_a2c9f3f523dc327399c24b4222d4a978c}{Material}} (\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ab25d8cd967ccbd19b630d7100ff8f67e}{path}})
 \item 
-glm\+::vec2 \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material_a8779008ace71c3d1ee2cd551373933be}{get\+Size}} ()
-\item 
-G\+Luint \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material_ac4177400efde4d6ced260e707b3e5ad0}{get\+Id}} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm\+::vec2}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material_a8779008ace71c3d1ee2cd551373933be}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material}{Material}} takes in a string, the name of the texture file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{glew_8h_a68c4714e43d8e827d80759f9cb864f3c}{G\+Luint}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material_ac4177400efde4d6ced260e707b3e5ad0}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Get size function to return the size of texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material_a2c52f153e9878530ae68627c9a1f16be}{w}}
-\item 
+\begin{DoxyCompactList}\small\item\em Get ID to get texture ID. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material_a495fcbe4e64c1814971cd9d815dd0e16}{h}}
 \item 
 int \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material_ae0b4f29080da1fdfb87763c8b72f3110}{channels}}
 \end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{glew_8h_a68c4714e43d8e827d80759f9cb864f3c}{G\+Luint}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material_aa8b60314ef144a43fe75e20158295cbb}{id}}
+\item 
+\mbox{\hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm\+::vec2}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material_afc0e0a80a84d07e41e482ff773afbbdf}{size}}
+\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Class material used for textures. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_material_a2c9f3f523dc327399c24b4222d4a978c}\label{class_aspect_1_1_engine_1_1_material_a2c9f3f523dc327399c24b4222d4a978c}} 
 \index{Aspect\+::\+Engine\+::\+Material@{Aspect\+::\+Engine\+::\+Material}!Material@{Material}}
 \index{Material@{Material}!Aspect\+::\+Engine\+::\+Material@{Aspect\+::\+Engine\+::\+Material}}
 \subsubsection{\texorpdfstring{Material()}{Material()}}
-{\footnotesize\ttfamily Aspect\+::\+Engine\+::\+Material\+::\+Material (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Aspect\+::\+Engine\+::\+Material\+::\+Material (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}}}]{path }\end{DoxyParamCaption})}
 
 
 
@@ -38,13 +53,21 @@ int \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material_ae0b4f29080da1fdfb8776
 \index{Aspect\+::\+Engine\+::\+Material@{Aspect\+::\+Engine\+::\+Material}!get\+Id@{get\+Id}}
 \index{get\+Id@{get\+Id}!Aspect\+::\+Engine\+::\+Material@{Aspect\+::\+Engine\+::\+Material}}
 \subsubsection{\texorpdfstring{get\+Id()}{getId()}}
-{\footnotesize\ttfamily G\+Luint Aspect\+::\+Engine\+::\+Material\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{glew_8h_a68c4714e43d8e827d80759f9cb864f3c}{G\+Luint}} Aspect\+::\+Engine\+::\+Material\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get size function to return the size of texture. 
 
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_material_a8779008ace71c3d1ee2cd551373933be}\label{class_aspect_1_1_engine_1_1_material_a8779008ace71c3d1ee2cd551373933be}} 
 \index{Aspect\+::\+Engine\+::\+Material@{Aspect\+::\+Engine\+::\+Material}!get\+Size@{get\+Size}}
 \index{get\+Size@{get\+Size}!Aspect\+::\+Engine\+::\+Material@{Aspect\+::\+Engine\+::\+Material}}
 \subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
-{\footnotesize\ttfamily glm\+::vec2 Aspect\+::\+Engine\+::\+Material\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm\+::vec2}} Aspect\+::\+Engine\+::\+Material\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_aspect_1_1_engine_1_1_material}{Material}} takes in a string, the name of the texture file. 
 
 
 
@@ -61,11 +84,27 @@ int \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material_ae0b4f29080da1fdfb8776
 \subsubsection{\texorpdfstring{h}{h}}
 {\footnotesize\ttfamily int Aspect\+::\+Engine\+::\+Material\+::h}
 
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_material_aa8b60314ef144a43fe75e20158295cbb}\label{class_aspect_1_1_engine_1_1_material_aa8b60314ef144a43fe75e20158295cbb}} 
+\index{Aspect\+::\+Engine\+::\+Material@{Aspect\+::\+Engine\+::\+Material}!id@{id}}
+\index{id@{id}!Aspect\+::\+Engine\+::\+Material@{Aspect\+::\+Engine\+::\+Material}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{glew_8h_a68c4714e43d8e827d80759f9cb864f3c}{G\+Luint}} Aspect\+::\+Engine\+::\+Material\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_material_afc0e0a80a84d07e41e482ff773afbbdf}\label{class_aspect_1_1_engine_1_1_material_afc0e0a80a84d07e41e482ff773afbbdf}} 
+\index{Aspect\+::\+Engine\+::\+Material@{Aspect\+::\+Engine\+::\+Material}!size@{size}}
+\index{size@{size}!Aspect\+::\+Engine\+::\+Material@{Aspect\+::\+Engine\+::\+Material}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_gaa1618f51db67eaa145db101d8c8431d8}{glm\+::vec2}} Aspect\+::\+Engine\+::\+Material\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_material_a2c52f153e9878530ae68627c9a1f16be}\label{class_aspect_1_1_engine_1_1_material_a2c52f153e9878530ae68627c9a1f16be}} 
 \index{Aspect\+::\+Engine\+::\+Material@{Aspect\+::\+Engine\+::\+Material}!w@{w}}
 \index{w@{w}!Aspect\+::\+Engine\+::\+Material@{Aspect\+::\+Engine\+::\+Material}}
 \subsubsection{\texorpdfstring{w}{w}}
 {\footnotesize\ttfamily int Aspect\+::\+Engine\+::\+Material\+::w}
+
+
+
+Get ID to get texture ID. 
 
 
 

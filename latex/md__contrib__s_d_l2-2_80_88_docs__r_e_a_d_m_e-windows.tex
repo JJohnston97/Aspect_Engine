@@ -1,0 +1,23 @@
+================================================================================ \section*{Open\+GL ES 2.\+x support }
+
+S\+DL has support for Open\+GL ES 2.\+x under Windows via two alternative implementations. The most straightforward method consists in running your app in a system with a graphic card paired with a relatively recent (as of November of 2013) driver which supports the W\+G\+L\+\_\+\+E\+X\+T\+\_\+create\+\_\+context\+\_\+es2\+\_\+profile extension. Vendors known to ship said extension on Windows currently include n\+Vidia and Intel.
+
+The other method involves using the A\+N\+G\+LE library (\href{https://code.google.com/p/angleproject/}{\tt https\+://code.\+google.\+com/p/angleproject/}) If an Open\+GL ES 2.\+x context is requested and no W\+G\+L\+\_\+\+E\+X\+T\+\_\+create\+\_\+context\+\_\+es2\+\_\+profile extension is found, S\+DL will try to load the lib\+E\+G\+L.\+dll library provided by A\+N\+G\+LE. To obtain the A\+N\+G\+LE binaries, you can either compile from source from \href{https://chromium.googlesource.com/angle/angle}{\tt https\+://chromium.\+googlesource.\+com/angle/angle} or copy the relevant binaries from a recent Chrome/\+Chromium install for Windows. The files you need are\+: \begin{DoxyVerb}* libEGL.dll
+* libGLESv2.dll
+* d3dcompiler_46.dll (supports Windows Vista or later, better shader compiler)
+or...
+* d3dcompiler_43.dll (supports Windows XP or later)
+\end{DoxyVerb}
+
+
+If you compile A\+N\+G\+LE from source, you can configure it so it does not need the d3dcompiler\+\_\+$\ast$ D\+LL at all (for details on this, see their documentation). However, by default S\+DL will try to preload the d3dcompiler\+\_\+46.\+dll to comply with A\+N\+G\+LE\textquotesingle{}s requirements. If you wish S\+DL to preload d3dcompiler\+\_\+43.\+dll (to support Windows XP) or to skip this step at all, you can use the S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+W\+I\+N\+\_\+\+D3\+D\+C\+O\+M\+P\+I\+L\+ER hint (see S\+D\+L\+\_\+hints.\+h for more details).
+
+Known Bugs\+: \begin{DoxyVerb}* SDL_GL_SetSwapInterval is currently a no op when using ANGLE. It appears
+  that there's a bug in the library which prevents the window contents from
+  refreshing if this is set to anything other than the default value.
+\end{DoxyVerb}
+
+
+\section*{Vulkan Surface Support }
+
+Support for creating Vulkan surfaces is configured on by default. To disable it change the value of {\ttfamily S\+D\+L\+\_\+\+V\+I\+D\+E\+O\+\_\+\+V\+U\+L\+K\+AN} to 0 in {\ttfamily S\+D\+L\+\_\+config\+\_\+windows.\+h}. You must install the \href{https://www.lunarg.com/vulkan-sdk/}{\tt Vulkan S\+DK} in order to use Vulkan graphics in your application. 

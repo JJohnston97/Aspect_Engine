@@ -2,6 +2,11 @@
 \label{class_aspect_1_1_engine_1_1_mesh_render}\index{Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}}
 
 
+Initialise Shader \mbox{\hyperlink{class_aspect_1_1_engine_1_1_program}{Program}}.  
+
+
+
+
 {\ttfamily \#include $<$Mesh\+Render.\+h$>$}
 
 Inheritance diagram for Aspect\+:\+:Engine\+:\+:Mesh\+Render\+:\begin{figure}[H]
@@ -13,20 +18,161 @@ Inheritance diagram for Aspect\+:\+:Engine\+:\+:Mesh\+Render\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_a54bb4394dafdc30e919a0ba5d9854871}{on\+Init}} ()
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_a54bb4394dafdc30e919a0ba5d9854871}{on\+Init}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_a31478e2366177bf2e3c98fe71c769c33}{Cube}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_ae8ca6b05b335b228943f4c034c02100d}{Triangle}} ()
+\begin{DoxyCompactList}\small\item\em Draw cube object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_a16ef5a49a05bd542a33a78e67b4e3067}{Mesh}} (const \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} \&\+\_\+mesh)
+\begin{DoxyCompactList}\small\item\em Draw Triangle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_aadfc13cdafe27ff3f63e80e68fdfbaa0}{set\+Texture}} (const \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} \&\+\_\+texture)
+\begin{DoxyCompactList}\small\item\em Draw a mesh of any obj. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_acd7bb5d1bfd42ecfe1a3d94b12271068}{camera}}
+\begin{DoxyCompactList}\small\item\em On init component function. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_a242e0980538e23b839f7ad8434bb1aa7}{Mr\+Enable}} = true
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_aed81ecbd6bf1d63acb06171f729e4927}{on\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Set the texture of that model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_aebaa5a60d373d3363a13336cfbaa4141}{on\+Count}} ()
+\begin{DoxyCompactList}\small\item\em On display works similar to draw function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array}{Vertex\+Array}} $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_af137747f679a92eec890a25cbdbc9e8a}{shape}}
+\begin{DoxyCompactList}\small\item\em On count is update. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program}{Shader\+Program}} $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_af49c803c0ee4b4e72e8d87455e74ae5e}{shader}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material}{Material}} $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_ad1db374346473ead0d1c8c1801390dbe}{mat}}
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Initialise Shader \mbox{\hyperlink{class_aspect_1_1_engine_1_1_program}{Program}}. 
+
+\mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render}{Mesh\+Render}} is an inherited class of component 
+
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_mesh_render_a31478e2366177bf2e3c98fe71c769c33}\label{class_aspect_1_1_engine_1_1_mesh_render_a31478e2366177bf2e3c98fe71c769c33}} 
+\index{Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}!Cube@{Cube}}
+\index{Cube@{Cube}!Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}}
+\subsubsection{\texorpdfstring{Cube()}{Cube()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Mesh\+Render\+::\+Cube (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_mesh_render_a16ef5a49a05bd542a33a78e67b4e3067}\label{class_aspect_1_1_engine_1_1_mesh_render_a16ef5a49a05bd542a33a78e67b4e3067}} 
+\index{Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}}
+\subsubsection{\texorpdfstring{Mesh()}{Mesh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Mesh\+Render\+::\+Mesh (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} \&}]{\+\_\+mesh }\end{DoxyParamCaption})}
+
+
+
+Draw Triangle. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_mesh_render_aebaa5a60d373d3363a13336cfbaa4141}\label{class_aspect_1_1_engine_1_1_mesh_render_aebaa5a60d373d3363a13336cfbaa4141}} 
+\index{Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}!on\+Count@{on\+Count}}
+\index{on\+Count@{on\+Count}!Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}}
+\subsubsection{\texorpdfstring{on\+Count()}{onCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Mesh\+Render\+::on\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+On display works similar to draw function. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_a02de673a0591459bd0d39e3022c1d3fc}{Aspect\+::\+Engine\+::\+Component}}.
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_mesh_render_aed81ecbd6bf1d63acb06171f729e4927}\label{class_aspect_1_1_engine_1_1_mesh_render_aed81ecbd6bf1d63acb06171f729e4927}} 
+\index{Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}!on\+Display@{on\+Display}}
+\index{on\+Display@{on\+Display}!Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}}
+\subsubsection{\texorpdfstring{on\+Display()}{onDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Mesh\+Render\+::on\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Set the texture of that model. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_ac67307dba854cdc9535a0de75e5a3d09}{Aspect\+::\+Engine\+::\+Component}}.
+
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_mesh_render_a54bb4394dafdc30e919a0ba5d9854871}\label{class_aspect_1_1_engine_1_1_mesh_render_a54bb4394dafdc30e919a0ba5d9854871}} 
 \index{Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}!on\+Init@{on\+Init}}
 \index{on\+Init@{on\+Init}!Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}}
 \subsubsection{\texorpdfstring{on\+Init()}{onInit()}}
-{\footnotesize\ttfamily void Aspect\+::\+Engine\+::\+Mesh\+Render\+::on\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Mesh\+Render\+::on\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Reimplemented from \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component}{Aspect\+::\+Engine\+::\+Component}}.
+Reimplemented from \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_a3a1fbf76e3fd208be7ffe0ffa449dcf9}{Aspect\+::\+Engine\+::\+Component}}.
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_mesh_render_aadfc13cdafe27ff3f63e80e68fdfbaa0}\label{class_aspect_1_1_engine_1_1_mesh_render_aadfc13cdafe27ff3f63e80e68fdfbaa0}} 
+\index{Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}!set\+Texture@{set\+Texture}}
+\index{set\+Texture@{set\+Texture}!Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}}
+\subsubsection{\texorpdfstring{set\+Texture()}{setTexture()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Mesh\+Render\+::set\+Texture (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} \&}]{\+\_\+texture }\end{DoxyParamCaption})}
+
+
+
+Draw a mesh of any obj. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_mesh_render_ae8ca6b05b335b228943f4c034c02100d}\label{class_aspect_1_1_engine_1_1_mesh_render_ae8ca6b05b335b228943f4c034c02100d}} 
+\index{Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}!Triangle@{Triangle}}
+\index{Triangle@{Triangle}!Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}}
+\subsubsection{\texorpdfstring{Triangle()}{Triangle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Mesh\+Render\+::\+Triangle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draw cube object. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_mesh_render_acd7bb5d1bfd42ecfe1a3d94b12271068}\label{class_aspect_1_1_engine_1_1_mesh_render_acd7bb5d1bfd42ecfe1a3d94b12271068}} 
+\index{Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}!camera@{camera}}
+\index{camera@{camera}!Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}}
+\subsubsection{\texorpdfstring{camera}{camera}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity}{Entity}}$>$ Aspect\+::\+Engine\+::\+Mesh\+Render\+::camera}
+
+
+
+On init component function. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_mesh_render_ad1db374346473ead0d1c8c1801390dbe}\label{class_aspect_1_1_engine_1_1_mesh_render_ad1db374346473ead0d1c8c1801390dbe}} 
+\index{Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}!mat@{mat}}
+\index{mat@{mat}!Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}}
+\subsubsection{\texorpdfstring{mat}{mat}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_aspect_1_1_engine_1_1_material}{Material}}$>$ Aspect\+::\+Engine\+::\+Mesh\+Render\+::mat\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_mesh_render_a242e0980538e23b839f7ad8434bb1aa7}\label{class_aspect_1_1_engine_1_1_mesh_render_a242e0980538e23b839f7ad8434bb1aa7}} 
+\index{Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}!Mr\+Enable@{Mr\+Enable}}
+\index{Mr\+Enable@{Mr\+Enable}!Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}}
+\subsubsection{\texorpdfstring{Mr\+Enable}{MrEnable}}
+{\footnotesize\ttfamily bool Aspect\+::\+Engine\+::\+Mesh\+Render\+::\+Mr\+Enable = true}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_mesh_render_af49c803c0ee4b4e72e8d87455e74ae5e}\label{class_aspect_1_1_engine_1_1_mesh_render_af49c803c0ee4b4e72e8d87455e74ae5e}} 
+\index{Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}!shader@{shader}}
+\index{shader@{shader}!Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}}
+\subsubsection{\texorpdfstring{shader}{shader}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program}{Shader\+Program}}$>$ Aspect\+::\+Engine\+::\+Mesh\+Render\+::shader\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_mesh_render_af137747f679a92eec890a25cbdbc9e8a}\label{class_aspect_1_1_engine_1_1_mesh_render_af137747f679a92eec890a25cbdbc9e8a}} 
+\index{Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}!shape@{shape}}
+\index{shape@{shape}!Aspect\+::\+Engine\+::\+Mesh\+Render@{Aspect\+::\+Engine\+::\+Mesh\+Render}}
+\subsubsection{\texorpdfstring{shape}{shape}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array}{Vertex\+Array}}$>$ Aspect\+::\+Engine\+::\+Mesh\+Render\+::shape\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+On count is update. 
 
 
 

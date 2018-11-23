@@ -1,3 +1,7 @@
+/// @Movement.cpp
+/// @Controls my enemy movement in game
+
+// System Includes
 #include <iostream>
 #include <memory>
 #include <windows.h>
@@ -8,6 +12,7 @@
 #include <glm/ext.hpp>
 #include <SDL.h>
 
+// Project Include
 #include "Movement.h"
 #include "Transform.h"
 #include "Entity.h"
@@ -16,19 +21,17 @@ namespace Aspect
 {
 	namespace Engine
 	{
-		class Movement;
-		
+		class Movement; // Initilise Movement class
 
-
-		Movement::Movement()
+		Movement::Movement() // Constructor 
 		{
 
 
 		}
 
-		void Movement::onCount()
+		void Movement::onCount() // Update function called every frame
 		{
-	
+			// Moves the enemy objects depending on the transform position 
 				if (getEntity()->getComponent<Transform>()->getPosition().y <= -7.0f || getEntity()->getComponent<Transform>()->getPosition().y >= 7.0f)
 				{
 					getEntity()->getComponent<Transform>()->vel = -getEntity()->getComponent<Transform>()->vel;

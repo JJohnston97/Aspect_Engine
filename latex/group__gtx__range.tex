@@ -1,0 +1,94 @@
+\hypertarget{group__gtx__range}{}\section{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}
+\label{group__gtx__range}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\+\_\+t}} \mbox{\hyperlink{group__gtx__range_gaf2831875a8cee7cc000abadba2aa1265}{glm\+::components}} (\mbox{\hyperlink{structglm_1_1vec}{vec}}$<$ 1, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\+\_\+t}} \mbox{\hyperlink{group__gtx__range_ga30085e4904149502aac186e95d5604bf}{glm\+::components}} (\mbox{\hyperlink{structglm_1_1vec}{vec}}$<$ 2, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\+\_\+t}} \mbox{\hyperlink{group__gtx__range_gae7c3451f88f2550ed896da642cdbfd2d}{glm\+::components}} (\mbox{\hyperlink{structglm_1_1vec}{vec}}$<$ 3, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\+\_\+t}} \mbox{\hyperlink{group__gtx__range_ga6a306e940263c39ce05d378f68a7caff}{glm\+::components}} (\mbox{\hyperlink{structglm_1_1vec}{vec}}$<$ 4, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\+\_\+t}} \mbox{\hyperlink{group__gtx__range_ga946358ba868fc33d234e7ee3ac1b7912}{glm\+::components}} (gen\+Type const \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_af593500c283bf1a787a6f947f503a5c2}{m}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\gen\+Type\+::value\+\_\+type const  $\ast$ \mbox{\hyperlink{group__gtx__range_gaadcca0cd1ffc54deb39e983bfdcbcdd2}{glm\+::begin}} (gen\+Type const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\gen\+Type\+::value\+\_\+type const  $\ast$ \mbox{\hyperlink{group__gtx__range_ga785aa0c9cf7d925318863f950eb81618}{glm\+::end}} (gen\+Type const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\gen\+Type\+::value\+\_\+type $\ast$ \mbox{\hyperlink{group__gtx__range_gacc3851df89b9238430e39525c3518ced}{glm\+::begin}} (gen\+Type \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\gen\+Type\+::value\+\_\+type $\ast$ \mbox{\hyperlink{group__gtx__range_ga0c303e8c522b139252646a93d5e490d4}{glm\+::end}} (gen\+Type \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include $<$\mbox{\hyperlink{range_8hpp}{glm/gtx/range.\+hpp}}$>$ to use the features of this extension.
+
+Defines begin and end for vectors and matrices. Useful for range-\/based for loop. The range is defined over the elements, not over columns or rows (e.\+g. mat4 has 16 elements). 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__gtx__range_gaadcca0cd1ffc54deb39e983bfdcbcdd2}\label{group__gtx__range_gaadcca0cd1ffc54deb39e983bfdcbcdd2}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}!begin@{begin}}
+\index{begin@{begin}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}}
+\subsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename gen\+Type $>$ \\
+gen\+Type\+::value\+\_\+type const$\ast$ glm\+::begin (\begin{DoxyParamCaption}\item[{gen\+Type const \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{group__gtx__range_gacc3851df89b9238430e39525c3518ced}\label{group__gtx__range_gacc3851df89b9238430e39525c3518ced}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}!begin@{begin}}
+\index{begin@{begin}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}}
+\subsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename gen\+Type $>$ \\
+gen\+Type\+::value\+\_\+type$\ast$ glm\+::begin (\begin{DoxyParamCaption}\item[{gen\+Type \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{group__gtx__range_gaf2831875a8cee7cc000abadba2aa1265}\label{group__gtx__range_gaf2831875a8cee7cc000abadba2aa1265}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}!components@{components}}
+\index{components@{components}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}}
+\subsubsection{\texorpdfstring{components()}{components()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename T , qualifier Q$>$ \\
+\mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\+\_\+t}} glm\+::components (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structglm_1_1vec}{vec}}$<$ 1, T, Q $>$ const \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{group__gtx__range_ga30085e4904149502aac186e95d5604bf}\label{group__gtx__range_ga30085e4904149502aac186e95d5604bf}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}!components@{components}}
+\index{components@{components}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}}
+\subsubsection{\texorpdfstring{components()}{components()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename T , qualifier Q$>$ \\
+\mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\+\_\+t}} glm\+::components (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structglm_1_1vec}{vec}}$<$ 2, T, Q $>$ const \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{group__gtx__range_gae7c3451f88f2550ed896da642cdbfd2d}\label{group__gtx__range_gae7c3451f88f2550ed896da642cdbfd2d}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}!components@{components}}
+\index{components@{components}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}}
+\subsubsection{\texorpdfstring{components()}{components()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename T , qualifier Q$>$ \\
+\mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\+\_\+t}} glm\+::components (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structglm_1_1vec}{vec}}$<$ 3, T, Q $>$ const \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{group__gtx__range_ga6a306e940263c39ce05d378f68a7caff}\label{group__gtx__range_ga6a306e940263c39ce05d378f68a7caff}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}!components@{components}}
+\index{components@{components}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}}
+\subsubsection{\texorpdfstring{components()}{components()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename T , qualifier Q$>$ \\
+\mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\+\_\+t}} glm\+::components (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structglm_1_1vec}{vec}}$<$ 4, T, Q $>$ const \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{group__gtx__range_ga946358ba868fc33d234e7ee3ac1b7912}\label{group__gtx__range_ga946358ba868fc33d234e7ee3ac1b7912}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}!components@{components}}
+\index{components@{components}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}}
+\subsubsection{\texorpdfstring{components()}{components()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename gen\+Type $>$ \\
+\mbox{\hyperlink{namespaceglm_a090a0de2260835bee80e71a702492ed9}{length\+\_\+t}} glm\+::components (\begin{DoxyParamCaption}\item[{gen\+Type const \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{group__gtx__range_ga785aa0c9cf7d925318863f950eb81618}\label{group__gtx__range_ga785aa0c9cf7d925318863f950eb81618}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}!end@{end}}
+\index{end@{end}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}}
+\subsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename gen\+Type $>$ \\
+gen\+Type\+::value\+\_\+type const$\ast$ glm\+::end (\begin{DoxyParamCaption}\item[{gen\+Type const \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{group__gtx__range_ga0c303e8c522b139252646a93d5e490d4}\label{group__gtx__range_ga0c303e8c522b139252646a93d5e490d4}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}!end@{end}}
+\index{end@{end}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+range@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+range}}
+\subsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename gen\+Type $>$ \\
+gen\+Type\+::value\+\_\+type$\ast$ glm\+::end (\begin{DoxyParamCaption}\item[{gen\+Type \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+

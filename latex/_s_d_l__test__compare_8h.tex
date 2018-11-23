@@ -1,0 +1,41 @@
+\hypertarget{_s_d_l__test__compare_8h}{}\section{Contrib/\+S\+D\+L2-\/2.0.8/include/\+S\+D\+L\+\_\+test\+\_\+compare.h File Reference}
+\label{_s_d_l__test__compare_8h}\index{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+test\+\_\+compare.\+h@{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+test\+\_\+compare.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+test\+\_\+images.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_s_d_l__test__compare_8h_a3921b6606c5897e6fcb46c6a4ab5fec2}{S\+D\+L\+Test\+\_\+\+Compare\+Surfaces}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface, \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$reference\+Surface, int allowable\+\_\+error)
+\begin{DoxyCompactList}\small\item\em Compares a surface and with reference image data for equality. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include file for S\+DL test framework.
+
+This code is a part of the S\+D\+L2\+\_\+test library, not the main S\+DL library. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_s_d_l__test__compare_8h_a3921b6606c5897e6fcb46c6a4ab5fec2}\label{_s_d_l__test__compare_8h_a3921b6606c5897e6fcb46c6a4ab5fec2}} 
+\index{S\+D\+L\+\_\+test\+\_\+compare.\+h@{S\+D\+L\+\_\+test\+\_\+compare.\+h}!S\+D\+L\+Test\+\_\+\+Compare\+Surfaces@{S\+D\+L\+Test\+\_\+\+Compare\+Surfaces}}
+\index{S\+D\+L\+Test\+\_\+\+Compare\+Surfaces@{S\+D\+L\+Test\+\_\+\+Compare\+Surfaces}!S\+D\+L\+\_\+test\+\_\+compare.\+h@{S\+D\+L\+\_\+test\+\_\+compare.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+Test\+\_\+\+Compare\+Surfaces()}{SDLTest\_CompareSurfaces()}}
+{\footnotesize\ttfamily int S\+D\+L\+Test\+\_\+\+Compare\+Surfaces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{reference\+Surface,  }\item[{int}]{allowable\+\_\+error }\end{DoxyParamCaption})}
+
+
+
+Compares a surface and with reference image data for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surface} & Surface used in comparison \\
+\hline
+{\em reference\+Surface} & Test Surface used in comparison \\
+\hline
+{\em allowable\+\_\+error} & Allowable difference (=sum of squared difference for each R\+GB component) in blending accuracy.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if comparison succeeded, $>$0 (=number of pixels for which the comparison failed) if comparison failed, -\/1 if any of the surfaces were N\+U\+LL, -\/2 if the surface sizes differ. 
+\end{DoxyReturn}

@@ -1,0 +1,335 @@
+\hypertarget{_s_d_l__assert_8h}{}\section{Contrib/\+S\+D\+L2-\/2.0.8/include/\+S\+D\+L\+\_\+assert.h File Reference}
+\label{_s_d_l__assert_8h}\index{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+assert.\+h@{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+assert.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_d_l___assert_data}{S\+D\+L\+\_\+\+Assert\+Data}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__assert_8h_afbd8fdb86f3bba968efccbd932877731}{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+L\+E\+V\+EL}}~1
+\item 
+\#define \mbox{\hyperlink{_s_d_l__assert_8h_a42e8a6e0677acca7c1a927238b8dfe32}{S\+D\+L\+\_\+\+Trigger\+Breakpoint}}()
+\item 
+\#define \mbox{\hyperlink{_s_d_l__assert_8h_a30da3daba50f032ecda2c701e97da79d}{S\+D\+L\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}~\char`\"{}???\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__assert_8h_a195c2795832718d008000d969eed96c3}{S\+D\+L\+\_\+\+F\+I\+LE}}~\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{_s_d_l__assert_8h_a421a39f96c53fe309aa6d66b5c5bec22}{S\+D\+L\+\_\+\+L\+I\+NE}}~\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{_s_d_l__assert_8h_a2ffca06819acf027ec29d6fd14c94cbe}{S\+D\+L\+\_\+\+N\+U\+L\+L\+\_\+\+W\+H\+I\+L\+E\+\_\+\+L\+O\+O\+P\+\_\+\+C\+O\+N\+D\+I\+T\+I\+ON}}~(0)
+\item 
+\#define \mbox{\hyperlink{_s_d_l__assert_8h_aeee78c1e2347a3cfe4ee3c215d497acd}{S\+D\+L\+\_\+disabled\+\_\+assert}}(\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})~do \{ (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}) sizeof ((\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})); \} while (\mbox{\hyperlink{_s_d_l__assert_8h_a2ffca06819acf027ec29d6fd14c94cbe}{S\+D\+L\+\_\+\+N\+U\+L\+L\+\_\+\+W\+H\+I\+L\+E\+\_\+\+L\+O\+O\+P\+\_\+\+C\+O\+N\+D\+I\+T\+I\+ON}})
+\item 
+\#define \mbox{\hyperlink{_s_d_l__assert_8h_a560c9df30e5f2db3d81daef3bbe81992}{S\+D\+L\+\_\+enabled\+\_\+assert}}(\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})
+\item 
+\#define \mbox{\hyperlink{_s_d_l__assert_8h_af03d71e27f06835f6a09358943c33b1d}{S\+D\+L\+\_\+assert}}(\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})~\mbox{\hyperlink{_s_d_l__assert_8h_aeee78c1e2347a3cfe4ee3c215d497acd}{S\+D\+L\+\_\+disabled\+\_\+assert}}(\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})
+\item 
+\#define \mbox{\hyperlink{_s_d_l__assert_8h_a3af3f7dba7e28942c17e16745028a7da}{S\+D\+L\+\_\+assert\+\_\+release}}(\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})~\mbox{\hyperlink{_s_d_l__assert_8h_a560c9df30e5f2db3d81daef3bbe81992}{S\+D\+L\+\_\+enabled\+\_\+assert}}(\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})
+\item 
+\#define \mbox{\hyperlink{_s_d_l__assert_8h_a4cc20db7eed29c5cd0e83f4f3d10860a}{S\+D\+L\+\_\+assert\+\_\+paranoid}}(\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})~\mbox{\hyperlink{_s_d_l__assert_8h_aeee78c1e2347a3cfe4ee3c215d497acd}{S\+D\+L\+\_\+disabled\+\_\+assert}}(\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})
+\item 
+\#define \mbox{\hyperlink{_s_d_l__assert_8h_a22dedc823eb26ea054cbc584b614718e}{S\+D\+L\+\_\+assert\+\_\+always}}(\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})~\mbox{\hyperlink{_s_d_l__assert_8h_a560c9df30e5f2db3d81daef3bbe81992}{S\+D\+L\+\_\+enabled\+\_\+assert}}(\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})
+\item 
+\#define \mbox{\hyperlink{_s_d_l__assert_8h_a15ee0b48c2893f92f851d251424837b6}{S\+D\+L\+\_\+assert\+\_\+state}}~\mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1a}{S\+D\+L\+\_\+\+Assert\+State}}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__assert_8h_a74c575b310128e12358caf79aec09da7}{S\+D\+L\+\_\+assert\+\_\+data}}~\mbox{\hyperlink{struct_s_d_l___assert_data}{S\+D\+L\+\_\+\+Assert\+Data}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_s_d_l___assert_data}{S\+D\+L\+\_\+\+Assert\+Data}} \mbox{\hyperlink{_s_d_l__assert_8h_a275e9594c5da765f5118f9cbf5d015ec}{S\+D\+L\+\_\+\+Assert\+Data}}
+\item 
+typedef \mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1a}{S\+D\+L\+\_\+\+Assert\+State}}(\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} $\ast$ \mbox{\hyperlink{_s_d_l__assert_8h_aa63dc5ca0d954add6893512583b08071}{S\+D\+L\+\_\+\+Assertion\+Handler}}) (const \mbox{\hyperlink{struct_s_d_l___assert_data}{S\+D\+L\+\_\+\+Assert\+Data}} $\ast$\mbox{\hyperlink{_s_d_l__opengl_8h_a2e335d56e2846b0fea47eed068b2d34a}{data}}, \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$userdata)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1a}{S\+D\+L\+\_\+\+Assert\+State}} \{ \newline
+\mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aa0ccce3254f1d981283e0792cd70437df}{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+R\+E\+T\+RY}}, 
+\mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aace6f6a41a6b303e220828fbe25b5d2a6}{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+B\+R\+E\+AK}}, 
+\mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aa4cf9444bddf799c7638bbcc9c542799c}{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+A\+B\+O\+RT}}, 
+\mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aa76eace7638278c093e24d78a91d6d772}{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+I\+G\+N\+O\+RE}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aaf8d1af4dc16f160217acadf2b8585fea}{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+G\+N\+O\+RE}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1a}{S\+D\+L\+\_\+\+Assert\+State}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__assert_8h_a01ef51d076f7e9c3839fff4161a16550}{S\+D\+L\+\_\+\+Report\+Assertion}} (\mbox{\hyperlink{struct_s_d_l___assert_data}{S\+D\+L\+\_\+\+Assert\+Data}} $\ast$, const char $\ast$, const char $\ast$, int)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__assert_8h_a12dc8edd25f52f3add69369b2978e689}{S\+D\+L\+\_\+\+Set\+Assertion\+Handler}} (\mbox{\hyperlink{_s_d_l__assert_8h_aa63dc5ca0d954add6893512583b08071}{S\+D\+L\+\_\+\+Assertion\+Handler}} handler, \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$userdata)
+\begin{DoxyCompactList}\small\item\em Set an application-\/defined assertion handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__assert_8h_aa63dc5ca0d954add6893512583b08071}{S\+D\+L\+\_\+\+Assertion\+Handler}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__assert_8h_a34dc4d9332bcdc32b3a0baa3fc2966bc}{S\+D\+L\+\_\+\+Get\+Default\+Assertion\+Handler}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\begin{DoxyCompactList}\small\item\em Get the default assertion handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__assert_8h_aa63dc5ca0d954add6893512583b08071}{S\+D\+L\+\_\+\+Assertion\+Handler}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__assert_8h_a61c95d5aa8a1bd701e829b0842e04f07}{S\+D\+L\+\_\+\+Get\+Assertion\+Handler}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$$\ast$puserdata)
+\begin{DoxyCompactList}\small\item\em Get the current assertion handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const \mbox{\hyperlink{struct_s_d_l___assert_data}{S\+D\+L\+\_\+\+Assert\+Data}} $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__assert_8h_aed3c2bfa62b62df905d6cd309a066e03}{S\+D\+L\+\_\+\+Get\+Assertion\+Report}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\begin{DoxyCompactList}\small\item\em Get a list of all assertion failures. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__assert_8h_abdbad45c4ede1953c784a7b312349a32}{S\+D\+L\+\_\+\+Reset\+Assertion\+Report}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\begin{DoxyCompactList}\small\item\em Reset the list of all assertion failures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_s_d_l__assert_8h_af03d71e27f06835f6a09358943c33b1d}\label{_s_d_l__assert_8h_af03d71e27f06835f6a09358943c33b1d}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+assert@{S\+D\+L\+\_\+assert}}
+\index{S\+D\+L\+\_\+assert@{S\+D\+L\+\_\+assert}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+assert}{SDL\_assert}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+assert(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}} }\end{DoxyParamCaption})~\mbox{\hyperlink{_s_d_l__assert_8h_aeee78c1e2347a3cfe4ee3c215d497acd}{S\+D\+L\+\_\+disabled\+\_\+assert}}(\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})}
+
+\mbox{\Hypertarget{_s_d_l__assert_8h_a22dedc823eb26ea054cbc584b614718e}\label{_s_d_l__assert_8h_a22dedc823eb26ea054cbc584b614718e}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+assert\+\_\+always@{S\+D\+L\+\_\+assert\+\_\+always}}
+\index{S\+D\+L\+\_\+assert\+\_\+always@{S\+D\+L\+\_\+assert\+\_\+always}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+assert\+\_\+always}{SDL\_assert\_always}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+assert\+\_\+always(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}} }\end{DoxyParamCaption})~\mbox{\hyperlink{_s_d_l__assert_8h_a560c9df30e5f2db3d81daef3bbe81992}{S\+D\+L\+\_\+enabled\+\_\+assert}}(\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})}
+
+\mbox{\Hypertarget{_s_d_l__assert_8h_a74c575b310128e12358caf79aec09da7}\label{_s_d_l__assert_8h_a74c575b310128e12358caf79aec09da7}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+assert\+\_\+data@{S\+D\+L\+\_\+assert\+\_\+data}}
+\index{S\+D\+L\+\_\+assert\+\_\+data@{S\+D\+L\+\_\+assert\+\_\+data}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+assert\+\_\+data}{SDL\_assert\_data}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+assert\+\_\+data~\mbox{\hyperlink{struct_s_d_l___assert_data}{S\+D\+L\+\_\+\+Assert\+Data}}}
+
+\mbox{\Hypertarget{_s_d_l__assert_8h_afbd8fdb86f3bba968efccbd932877731}\label{_s_d_l__assert_8h_afbd8fdb86f3bba968efccbd932877731}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+L\+E\+V\+EL@{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+L\+E\+V\+EL}}
+\index{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+L\+E\+V\+EL@{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+L\+E\+V\+EL}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+L\+E\+V\+EL}{SDL\_ASSERT\_LEVEL}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+L\+E\+V\+EL~1}
+
+\mbox{\Hypertarget{_s_d_l__assert_8h_a4cc20db7eed29c5cd0e83f4f3d10860a}\label{_s_d_l__assert_8h_a4cc20db7eed29c5cd0e83f4f3d10860a}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+assert\+\_\+paranoid@{S\+D\+L\+\_\+assert\+\_\+paranoid}}
+\index{S\+D\+L\+\_\+assert\+\_\+paranoid@{S\+D\+L\+\_\+assert\+\_\+paranoid}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+assert\+\_\+paranoid}{SDL\_assert\_paranoid}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+assert\+\_\+paranoid(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}} }\end{DoxyParamCaption})~\mbox{\hyperlink{_s_d_l__assert_8h_aeee78c1e2347a3cfe4ee3c215d497acd}{S\+D\+L\+\_\+disabled\+\_\+assert}}(\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})}
+
+\mbox{\Hypertarget{_s_d_l__assert_8h_a3af3f7dba7e28942c17e16745028a7da}\label{_s_d_l__assert_8h_a3af3f7dba7e28942c17e16745028a7da}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+assert\+\_\+release@{S\+D\+L\+\_\+assert\+\_\+release}}
+\index{S\+D\+L\+\_\+assert\+\_\+release@{S\+D\+L\+\_\+assert\+\_\+release}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+assert\+\_\+release}{SDL\_assert\_release}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+assert\+\_\+release(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}} }\end{DoxyParamCaption})~\mbox{\hyperlink{_s_d_l__assert_8h_a560c9df30e5f2db3d81daef3bbe81992}{S\+D\+L\+\_\+enabled\+\_\+assert}}(\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})}
+
+\mbox{\Hypertarget{_s_d_l__assert_8h_a15ee0b48c2893f92f851d251424837b6}\label{_s_d_l__assert_8h_a15ee0b48c2893f92f851d251424837b6}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+assert\+\_\+state@{S\+D\+L\+\_\+assert\+\_\+state}}
+\index{S\+D\+L\+\_\+assert\+\_\+state@{S\+D\+L\+\_\+assert\+\_\+state}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+assert\+\_\+state}{SDL\_assert\_state}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+assert\+\_\+state~\mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1a}{S\+D\+L\+\_\+\+Assert\+State}}}
+
+\mbox{\Hypertarget{_s_d_l__assert_8h_aeee78c1e2347a3cfe4ee3c215d497acd}\label{_s_d_l__assert_8h_aeee78c1e2347a3cfe4ee3c215d497acd}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+disabled\+\_\+assert@{S\+D\+L\+\_\+disabled\+\_\+assert}}
+\index{S\+D\+L\+\_\+disabled\+\_\+assert@{S\+D\+L\+\_\+disabled\+\_\+assert}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+disabled\+\_\+assert}{SDL\_disabled\_assert}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+disabled\+\_\+assert(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}} }\end{DoxyParamCaption})~do \{ (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}) sizeof ((\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}})); \} while (\mbox{\hyperlink{_s_d_l__assert_8h_a2ffca06819acf027ec29d6fd14c94cbe}{S\+D\+L\+\_\+\+N\+U\+L\+L\+\_\+\+W\+H\+I\+L\+E\+\_\+\+L\+O\+O\+P\+\_\+\+C\+O\+N\+D\+I\+T\+I\+ON}})}
+
+\mbox{\Hypertarget{_s_d_l__assert_8h_a560c9df30e5f2db3d81daef3bbe81992}\label{_s_d_l__assert_8h_a560c9df30e5f2db3d81daef3bbe81992}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+enabled\+\_\+assert@{S\+D\+L\+\_\+enabled\+\_\+assert}}
+\index{S\+D\+L\+\_\+enabled\+\_\+assert@{S\+D\+L\+\_\+enabled\+\_\+assert}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+enabled\+\_\+assert}{SDL\_enabled\_assert}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+enabled\+\_\+assert(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+        while ( !(\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}}) ) \{ \(\backslash\)
+            static \textcolor{keyword}{struct }\mbox{\hyperlink{struct_s_d_l___assert_data}{SDL\_AssertData}} sdl\_assert\_data = \{ \(\backslash\)
+                0, 0, #\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3fd7759b3d6e5284475eee14a613b9f9}{condition}}, 0, 0, 0, 0 \(\backslash\)
+            \}; \(\backslash\)
+            const \mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1a}{SDL\_AssertState}} sdl\_assert\_state = 
+      \mbox{\hyperlink{_s_d_l__assert_8h_a01ef51d076f7e9c3839fff4161a16550}{SDL\_ReportAssertion}}(&sdl\_assert\_data, \mbox{\hyperlink{_s_d_l__assert_8h_a30da3daba50f032ecda2c701e97da79d}{SDL\_FUNCTION}}, 
+      \mbox{\hyperlink{_s_d_l__assert_8h_a195c2795832718d008000d969eed96c3}{SDL\_FILE}}, \mbox{\hyperlink{_s_d_l__assert_8h_a421a39f96c53fe309aa6d66b5c5bec22}{SDL\_LINE}}); \(\backslash\)
+            if (sdl\_assert\_state == \mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aa0ccce3254f1d981283e0792cd70437df}{SDL\_ASSERTION\_RETRY}}) \{ \(\backslash\)
+                continue; \textcolor{comment}{/* go again. */} \(\backslash\)
+            \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (sdl\_assert\_state == \mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aace6f6a41a6b303e220828fbe25b5d2a6}{SDL\_ASSERTION\_BREAK}}) \{ \(\backslash\)
+                SDL\_TriggerBreakpoint(); \(\backslash\)
+            \} \(\backslash\)
+            break; \textcolor{comment}{/* not retrying. */} \(\backslash\)
+        \} \(\backslash\)
+    \} \textcolor{keywordflow}{while} (\mbox{\hyperlink{_s_d_l__assert_8h_a2ffca06819acf027ec29d6fd14c94cbe}{SDL\_NULL\_WHILE\_LOOP\_CONDITION}})
+\end{DoxyCode}
+\mbox{\Hypertarget{_s_d_l__assert_8h_a195c2795832718d008000d969eed96c3}\label{_s_d_l__assert_8h_a195c2795832718d008000d969eed96c3}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+F\+I\+LE@{S\+D\+L\+\_\+\+F\+I\+LE}}
+\index{S\+D\+L\+\_\+\+F\+I\+LE@{S\+D\+L\+\_\+\+F\+I\+LE}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+F\+I\+LE}{SDL\_FILE}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+F\+I\+LE~\+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{_s_d_l__assert_8h_a30da3daba50f032ecda2c701e97da79d}\label{_s_d_l__assert_8h_a30da3daba50f032ecda2c701e97da79d}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{S\+D\+L\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}
+\index{S\+D\+L\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{S\+D\+L\+\_\+\+F\+U\+N\+C\+T\+I\+ON}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+F\+U\+N\+C\+T\+I\+ON}{SDL\_FUNCTION}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+F\+U\+N\+C\+T\+I\+ON~\char`\"{}???\char`\"{}}
+
+\mbox{\Hypertarget{_s_d_l__assert_8h_a421a39f96c53fe309aa6d66b5c5bec22}\label{_s_d_l__assert_8h_a421a39f96c53fe309aa6d66b5c5bec22}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+L\+I\+NE@{S\+D\+L\+\_\+\+L\+I\+NE}}
+\index{S\+D\+L\+\_\+\+L\+I\+NE@{S\+D\+L\+\_\+\+L\+I\+NE}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+L\+I\+NE}{SDL\_LINE}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+L\+I\+NE~\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{_s_d_l__assert_8h_a2ffca06819acf027ec29d6fd14c94cbe}\label{_s_d_l__assert_8h_a2ffca06819acf027ec29d6fd14c94cbe}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+N\+U\+L\+L\+\_\+\+W\+H\+I\+L\+E\+\_\+\+L\+O\+O\+P\+\_\+\+C\+O\+N\+D\+I\+T\+I\+ON@{S\+D\+L\+\_\+\+N\+U\+L\+L\+\_\+\+W\+H\+I\+L\+E\+\_\+\+L\+O\+O\+P\+\_\+\+C\+O\+N\+D\+I\+T\+I\+ON}}
+\index{S\+D\+L\+\_\+\+N\+U\+L\+L\+\_\+\+W\+H\+I\+L\+E\+\_\+\+L\+O\+O\+P\+\_\+\+C\+O\+N\+D\+I\+T\+I\+ON@{S\+D\+L\+\_\+\+N\+U\+L\+L\+\_\+\+W\+H\+I\+L\+E\+\_\+\+L\+O\+O\+P\+\_\+\+C\+O\+N\+D\+I\+T\+I\+ON}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+N\+U\+L\+L\+\_\+\+W\+H\+I\+L\+E\+\_\+\+L\+O\+O\+P\+\_\+\+C\+O\+N\+D\+I\+T\+I\+ON}{SDL\_NULL\_WHILE\_LOOP\_CONDITION}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+N\+U\+L\+L\+\_\+\+W\+H\+I\+L\+E\+\_\+\+L\+O\+O\+P\+\_\+\+C\+O\+N\+D\+I\+T\+I\+ON~(0)}
+
+\mbox{\Hypertarget{_s_d_l__assert_8h_a42e8a6e0677acca7c1a927238b8dfe32}\label{_s_d_l__assert_8h_a42e8a6e0677acca7c1a927238b8dfe32}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+Trigger\+Breakpoint@{S\+D\+L\+\_\+\+Trigger\+Breakpoint}}
+\index{S\+D\+L\+\_\+\+Trigger\+Breakpoint@{S\+D\+L\+\_\+\+Trigger\+Breakpoint}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Trigger\+Breakpoint}{SDL\_TriggerBreakpoint}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+Trigger\+Breakpoint(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_s_d_l__assert_8h_a275e9594c5da765f5118f9cbf5d015ec}\label{_s_d_l__assert_8h_a275e9594c5da765f5118f9cbf5d015ec}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+Assert\+Data@{S\+D\+L\+\_\+\+Assert\+Data}}
+\index{S\+D\+L\+\_\+\+Assert\+Data@{S\+D\+L\+\_\+\+Assert\+Data}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Assert\+Data}{SDL\_AssertData}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_s_d_l___assert_data}{S\+D\+L\+\_\+\+Assert\+Data}}  \mbox{\hyperlink{struct_s_d_l___assert_data}{S\+D\+L\+\_\+\+Assert\+Data}}}
+
+\mbox{\Hypertarget{_s_d_l__assert_8h_aa63dc5ca0d954add6893512583b08071}\label{_s_d_l__assert_8h_aa63dc5ca0d954add6893512583b08071}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+Assertion\+Handler@{S\+D\+L\+\_\+\+Assertion\+Handler}}
+\index{S\+D\+L\+\_\+\+Assertion\+Handler@{S\+D\+L\+\_\+\+Assertion\+Handler}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Assertion\+Handler}{SDL\_AssertionHandler}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1a}{S\+D\+L\+\_\+\+Assert\+State}}(\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} $\ast$ S\+D\+L\+\_\+\+Assertion\+Handler) (const \mbox{\hyperlink{struct_s_d_l___assert_data}{S\+D\+L\+\_\+\+Assert\+Data}} $\ast$\mbox{\hyperlink{_s_d_l__opengl_8h_a2e335d56e2846b0fea47eed068b2d34a}{data}}, \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$userdata)}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1a}\label{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1a}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+Assert\+State@{S\+D\+L\+\_\+\+Assert\+State}}
+\index{S\+D\+L\+\_\+\+Assert\+State@{S\+D\+L\+\_\+\+Assert\+State}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Assert\+State}{SDL\_AssertState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1a}{S\+D\+L\+\_\+\+Assert\+State}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+R\+E\+T\+RY@{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+R\+E\+T\+RY}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+R\+E\+T\+RY@{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+R\+E\+T\+RY}}}\mbox{\Hypertarget{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aa0ccce3254f1d981283e0792cd70437df}\label{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aa0ccce3254f1d981283e0792cd70437df}} 
+S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+R\+E\+T\+RY&Retry the assert immediately. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+B\+R\+E\+AK@{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+B\+R\+E\+AK}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+B\+R\+E\+AK@{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+B\+R\+E\+AK}}}\mbox{\Hypertarget{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aace6f6a41a6b303e220828fbe25b5d2a6}\label{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aace6f6a41a6b303e220828fbe25b5d2a6}} 
+S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+B\+R\+E\+AK&Make the debugger trigger a breakpoint. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+A\+B\+O\+RT@{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+A\+B\+O\+RT}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+A\+B\+O\+RT@{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+A\+B\+O\+RT}}}\mbox{\Hypertarget{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aa4cf9444bddf799c7638bbcc9c542799c}\label{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aa4cf9444bddf799c7638bbcc9c542799c}} 
+S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+A\+B\+O\+RT&Terminate the program. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+I\+G\+N\+O\+RE@{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+I\+G\+N\+O\+RE}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+I\+G\+N\+O\+RE@{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+I\+G\+N\+O\+RE}}}\mbox{\Hypertarget{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aa76eace7638278c093e24d78a91d6d772}\label{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aa76eace7638278c093e24d78a91d6d772}} 
+S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+I\+G\+N\+O\+RE&Ignore the assert. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+G\+N\+O\+RE@{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+G\+N\+O\+RE}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+G\+N\+O\+RE@{S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+G\+N\+O\+RE}}}\mbox{\Hypertarget{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aaf8d1af4dc16f160217acadf2b8585fea}\label{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1aaf8d1af4dc16f160217acadf2b8585fea}} 
+S\+D\+L\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+I\+G\+N\+O\+RE&Ignore the assert from now on. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_s_d_l__assert_8h_a61c95d5aa8a1bd701e829b0842e04f07}\label{_s_d_l__assert_8h_a61c95d5aa8a1bd701e829b0842e04f07}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+Get\+Assertion\+Handler@{S\+D\+L\+\_\+\+Get\+Assertion\+Handler}}
+\index{S\+D\+L\+\_\+\+Get\+Assertion\+Handler@{S\+D\+L\+\_\+\+Get\+Assertion\+Handler}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Assertion\+Handler()}{SDL\_GetAssertionHandler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__assert_8h_aa63dc5ca0d954add6893512583b08071}{S\+D\+L\+\_\+\+Assertion\+Handler}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Assertion\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$$\ast$}]{puserdata }\end{DoxyParamCaption})}
+
+
+
+Get the current assertion handler. 
+
+This returns the function pointer that is called when an assertion is triggered. This is either the value last passed to \mbox{\hyperlink{_s_d_l__assert_8h_a12dc8edd25f52f3add69369b2978e689}{S\+D\+L\+\_\+\+Set\+Assertion\+Handler()}}, or if no application-\/specified function is set, is equivalent to calling \mbox{\hyperlink{_s_d_l__assert_8h_a34dc4d9332bcdc32b3a0baa3fc2966bc}{S\+D\+L\+\_\+\+Get\+Default\+Assertion\+Handler()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em puserdata} & Pointer to a void$\ast$, which will store the \char`\"{}userdata\char`\"{} pointer that was passed to \mbox{\hyperlink{_s_d_l__assert_8h_a12dc8edd25f52f3add69369b2978e689}{S\+D\+L\+\_\+\+Set\+Assertion\+Handler()}}. This value will always be N\+U\+LL for the default handler. If you don\textquotesingle{}t care about this data, it is safe to pass a N\+U\+LL pointer to this function to ignore it. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The S\+D\+L\+\_\+\+Assertion\+Handler that is called when an assert triggers. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__assert_8h_aed3c2bfa62b62df905d6cd309a066e03}\label{_s_d_l__assert_8h_aed3c2bfa62b62df905d6cd309a066e03}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+Get\+Assertion\+Report@{S\+D\+L\+\_\+\+Get\+Assertion\+Report}}
+\index{S\+D\+L\+\_\+\+Get\+Assertion\+Report@{S\+D\+L\+\_\+\+Get\+Assertion\+Report}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Assertion\+Report()}{SDL\_GetAssertionReport()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const \mbox{\hyperlink{struct_s_d_l___assert_data}{S\+D\+L\+\_\+\+Assert\+Data}}$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Assertion\+Report (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Get a list of all assertion failures. 
+
+Get all assertions triggered since last call to \mbox{\hyperlink{_s_d_l__assert_8h_abdbad45c4ede1953c784a7b312349a32}{S\+D\+L\+\_\+\+Reset\+Assertion\+Report()}}, or the start of the program.
+
+The proper way to examine this data looks something like this\+:
+
+{\ttfamily  const \mbox{\hyperlink{struct_s_d_l___assert_data}{S\+D\+L\+\_\+\+Assert\+Data}} $\ast$item = \mbox{\hyperlink{_s_d_l__assert_8h_aed3c2bfa62b62df905d6cd309a066e03}{S\+D\+L\+\_\+\+Get\+Assertion\+Report()}}; while (item) \{ printf(\char`\"{}\textquotesingle{}\%s\textquotesingle{}, \%s (\%s\+:\%d), triggered \%u times, always ignore\+: \%s.\textbackslash{}\textbackslash{}n\char`\"{}, item-\/$>$condition, item-\/$>$function, item-\/$>$filename, item-\/$>$linenum, item-\/$>$trigger\+\_\+count, item-\/$>$always\+\_\+ignore ? \char`\"{}yes\char`\"{} \+: \char`\"{}no\char`\"{}); item = item-\/$>$next; \} }
+
+\begin{DoxyReturn}{Returns}
+List of all assertions. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__assert_8h_abdbad45c4ede1953c784a7b312349a32}{S\+D\+L\+\_\+\+Reset\+Assertion\+Report}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__assert_8h_a34dc4d9332bcdc32b3a0baa3fc2966bc}\label{_s_d_l__assert_8h_a34dc4d9332bcdc32b3a0baa3fc2966bc}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+Get\+Default\+Assertion\+Handler@{S\+D\+L\+\_\+\+Get\+Default\+Assertion\+Handler}}
+\index{S\+D\+L\+\_\+\+Get\+Default\+Assertion\+Handler@{S\+D\+L\+\_\+\+Get\+Default\+Assertion\+Handler}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Default\+Assertion\+Handler()}{SDL\_GetDefaultAssertionHandler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__assert_8h_aa63dc5ca0d954add6893512583b08071}{S\+D\+L\+\_\+\+Assertion\+Handler}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Default\+Assertion\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the default assertion handler. 
+
+This returns the function pointer that is called by default when an assertion is triggered. This is an internal function provided by S\+DL, that is used for assertions when \mbox{\hyperlink{_s_d_l__assert_8h_a12dc8edd25f52f3add69369b2978e689}{S\+D\+L\+\_\+\+Set\+Assertion\+Handler()}} hasn\textquotesingle{}t been used to provide a different function.
+
+\begin{DoxyReturn}{Returns}
+The default S\+D\+L\+\_\+\+Assertion\+Handler that is called when an assert triggers. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__assert_8h_a01ef51d076f7e9c3839fff4161a16550}\label{_s_d_l__assert_8h_a01ef51d076f7e9c3839fff4161a16550}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+Report\+Assertion@{S\+D\+L\+\_\+\+Report\+Assertion}}
+\index{S\+D\+L\+\_\+\+Report\+Assertion@{S\+D\+L\+\_\+\+Report\+Assertion}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Report\+Assertion()}{SDL\_ReportAssertion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__assert_8h_a06d6a46a43cc7b34764c37398573ef1a}{S\+D\+L\+\_\+\+Assert\+State}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Report\+Assertion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___assert_data}{S\+D\+L\+\_\+\+Assert\+Data}} $\ast$}]{,  }\item[{const char $\ast$}]{,  }\item[{const char $\ast$}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_d_l__assert_8h_abdbad45c4ede1953c784a7b312349a32}\label{_s_d_l__assert_8h_abdbad45c4ede1953c784a7b312349a32}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+Reset\+Assertion\+Report@{S\+D\+L\+\_\+\+Reset\+Assertion\+Report}}
+\index{S\+D\+L\+\_\+\+Reset\+Assertion\+Report@{S\+D\+L\+\_\+\+Reset\+Assertion\+Report}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Reset\+Assertion\+Report()}{SDL\_ResetAssertionReport()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Reset\+Assertion\+Report (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Reset the list of all assertion failures. 
+
+Reset list of all assertions triggered.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__assert_8h_aed3c2bfa62b62df905d6cd309a066e03}{S\+D\+L\+\_\+\+Get\+Assertion\+Report}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__assert_8h_a12dc8edd25f52f3add69369b2978e689}\label{_s_d_l__assert_8h_a12dc8edd25f52f3add69369b2978e689}} 
+\index{S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}!S\+D\+L\+\_\+\+Set\+Assertion\+Handler@{S\+D\+L\+\_\+\+Set\+Assertion\+Handler}}
+\index{S\+D\+L\+\_\+\+Set\+Assertion\+Handler@{S\+D\+L\+\_\+\+Set\+Assertion\+Handler}!S\+D\+L\+\_\+assert.\+h@{S\+D\+L\+\_\+assert.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Set\+Assertion\+Handler()}{SDL\_SetAssertionHandler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Set\+Assertion\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__assert_8h_aa63dc5ca0d954add6893512583b08071}{S\+D\+L\+\_\+\+Assertion\+Handler}}}]{handler,  }\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$}]{userdata }\end{DoxyParamCaption})}
+
+
+
+Set an application-\/defined assertion handler. 
+
+This allows an app to show its own assertion UI and/or force the response to an assertion failure. If the app doesn\textquotesingle{}t provide this, S\+DL will try to do the right thing, popping up a system-\/specific G\+UI dialog, and probably minimizing any fullscreen windows.
+
+This callback may fire from any thread, but it runs wrapped in a mutex, so it will only fire from one thread at a time.
+
+Setting the callback to N\+U\+LL restores S\+DL\textquotesingle{}s original internal handler.
+
+This callback is N\+OT reset to S\+DL\textquotesingle{}s internal handler upon \mbox{\hyperlink{_s_d_l_8h_afdabaf714781099083592051f2d9ac11}{S\+D\+L\+\_\+\+Quit()}}!
+
+Return S\+D\+L\+\_\+\+Assert\+State value of how to handle the assertion failure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & Callback function, called when an assertion fails. \\
+\hline
+{\em userdata} & A pointer passed to the callback as-\/is. \\
+\hline
+\end{DoxyParams}

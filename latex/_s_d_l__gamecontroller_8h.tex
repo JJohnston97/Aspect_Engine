@@ -1,0 +1,528 @@
+\hypertarget{_s_d_l__gamecontroller_8h}{}\section{Contrib/\+S\+D\+L2-\/2.0.8/include/\+S\+D\+L\+\_\+gamecontroller.h File Reference}
+\label{_s_d_l__gamecontroller_8h}\index{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+gamecontroller.\+h@{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+gamecontroller.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+rwops.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+joystick.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_d_l___game_controller_button_bind}{S\+D\+L\+\_\+\+Game\+Controller\+Button\+Bind}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a86b050862858714f651a4cf08fea2d3a}{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+File}}(file)~\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a01da8611222d5648872fbb4440c886af}{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+RW}}(\mbox{\hyperlink{_s_d_l__rwops_8h_aef7e843c3486bd1770667a594aa0b439}{S\+D\+L\+\_\+\+R\+W\+From\+File}}(file, \char`\"{}rb\char`\"{}), 1)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \+\_\+\+S\+D\+L\+\_\+\+Game\+Controller \mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}}
+\item 
+typedef struct \mbox{\hyperlink{struct_s_d_l___game_controller_button_bind}{S\+D\+L\+\_\+\+Game\+Controller\+Button\+Bind}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a5d9786518715fe1e5510dab47ef7df40}{S\+D\+L\+\_\+\+Game\+Controller\+Button\+Bind}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6fa}{S\+D\+L\+\_\+\+Game\+Controller\+Bind\+Type}} \{ \mbox{\hyperlink{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6faa924aaca26baf8152bb7762076f60bf96}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+N\+O\+NE}} = 0, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6faac9fbdda70bc3b9777ae1b469e625059b}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+B\+U\+T\+T\+ON}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6faa2b8d3e7e77373e167b9c5222ba415b84}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+A\+X\+IS}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6faa5a1573b45526156d1f9dac3a9ae5e39f}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+H\+AT}}
+ \}
+\item 
+enum \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1c}{S\+D\+L\+\_\+\+Game\+Controller\+Axis}} \{ \newline
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1ca5de779d8bd6705e149a7716938343eff}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+I\+N\+V\+A\+L\+ID}} = -\/1, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1ca1bfd993bdf7fba84fbff1136bf0544e8}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+L\+E\+F\+TX}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1cafc13ab2522c6ebc3341a79b49c7c7676}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+L\+E\+F\+TY}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1cae585879e750723896120b1cab1339bd5}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+R\+I\+G\+H\+TX}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1caadb3ea3a60521d9f7302aac903344ce6}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+R\+I\+G\+H\+TY}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1cafaa85151001c0a30a15cdfaf5ae8f339}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+L\+E\+FT}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1ca592ce519a63cd82125ca0560a204eb2f}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+R\+I\+G\+HT}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1cae5c03400ecb6557710d76c9f08bf7440}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+M\+AX}}
+ \}
+\item 
+enum \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98}{S\+D\+L\+\_\+\+Game\+Controller\+Button}} \{ \newline
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a766cfa477e7e2f3b9f43b06c17867e4e}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+I\+N\+V\+A\+L\+ID}} = -\/1, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98aeb919ef0e2e348a4376301a5ecbbfe7b}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+A}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a070a080f115d0feea90bd1c422ef6fc1}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+B}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98ac3631495ee81400f9593e9371c419c76}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+X}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98ae73050ab476745463294d68fc8b7511b}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+Y}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a180b1a4d5433cee7a806cab698da8477}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+CK}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98ab5408020b11da1ed3a8208ca8089bc59}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+G\+U\+I\+DE}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a294c504c7fcb6632f69976c57886e9be}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+S\+T\+A\+RT}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a1c9e6552dd22452a5f7ad952bdd986d4}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T\+S\+T\+I\+CK}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98adb5779ee1b56e30e407e424c9d544b98}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T\+S\+T\+I\+CK}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98aaf052d8d37a07c9544ab0bf4529ed804}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T\+S\+H\+O\+U\+L\+D\+ER}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a6a898ff460e56c9dc4976d79b9082037}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T\+S\+H\+O\+U\+L\+D\+ER}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98aa0f0fd22b168ec69174d19c48d689842}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+UP}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a779a4c74ab01a93c3168b8942c22dd27}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+D\+O\+WN}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a65fdf618f56696b2065edf885b9f3987}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+L\+E\+FT}}, 
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98aba83de7c7c7988fd100baa570eb47be6}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+R\+I\+G\+HT}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98aa61e388a5ffcb7d516bc461c6129b2be}{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+AX}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a01da8611222d5648872fbb4440c886af}{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops}} $\ast$rw, int freerw)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a62cb682b1c589135cd32cce381d403f8}{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mapping}} (const char $\ast$mapping\+String)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_ac14eb47ec6097d89c7bec14f6b27ebfe}{S\+D\+L\+\_\+\+Game\+Controller\+Num\+Mappings}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} char $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_ac5ddf8927b92d95968f568ec6399bc18}{S\+D\+L\+\_\+\+Game\+Controller\+Mapping\+For\+Index}} (int mapping\+\_\+index)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} char $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a2bd404799b40e27d75d3699c866904cf}{S\+D\+L\+\_\+\+Game\+Controller\+Mapping\+For\+G\+U\+ID}} (\mbox{\hyperlink{struct_s_d_l___joystick_g_u_i_d}{S\+D\+L\+\_\+\+Joystick\+G\+U\+ID}} guid)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} char $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a6d56a421a407e4587dfd0be98255fdf7}{S\+D\+L\+\_\+\+Game\+Controller\+Mapping}} (\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$gamecontroller)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a3307c27938a336b83c317b6054d91bd4}{S\+D\+L\+\_\+\+Is\+Game\+Controller}} (int joystick\+\_\+index)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa27333eaf19fbcf39df244aa19c5d043}{S\+D\+L\+\_\+\+Game\+Controller\+Name\+For\+Index}} (int joystick\+\_\+index)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_ac7725e08ac17961bd7d5f8d4eb0c4033}{S\+D\+L\+\_\+\+Game\+Controller\+Open}} (int joystick\+\_\+index)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a34e43c763202a2d7124f24fdaf508a2a}{S\+D\+L\+\_\+\+Game\+Controller\+From\+Instance\+ID}} (\mbox{\hyperlink{_s_d_l__joystick_8h_a3c3d32500cb08f76ee8077983912c0bd}{S\+D\+L\+\_\+\+Joystick\+ID}} joyid)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_add465dba60b0e2ff4e0b53f15471be1e}{S\+D\+L\+\_\+\+Game\+Controller\+Name}} (\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$gamecontroller)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_ab0032725dcea365502694731c37605f7}{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Vendor}} (\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$gamecontroller)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a8ea81761681d1666a3b447eb9ef2dee8}{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Product}} (\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$gamecontroller)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a2e3eda7c9faf9bf0f4e06d89f3859c72}{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Product\+Version}} (\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$gamecontroller)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_adeeeba5a268842412f6578f38e75d231}{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Attached}} (\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$gamecontroller)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__joystick_8h_a1246a982e91df301042a77e65c694987}{S\+D\+L\+\_\+\+Joystick}} $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_af2aac9107334b73d94b93f9c5ef51eb4}{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Joystick}} (\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$gamecontroller)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a457fd59b3dec7d1b6ed384973b584bc6}{S\+D\+L\+\_\+\+Game\+Controller\+Event\+State}} (int state)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a92fe68241a17b60b2240c04d01b73e6b}{S\+D\+L\+\_\+\+Game\+Controller\+Update}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1c}{S\+D\+L\+\_\+\+Game\+Controller\+Axis}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a44a5320a7241b218417d9bfb995907d7}{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Axis\+From\+String}} (const char $\ast$pch\+String)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a66cbcb3062d6e99e896611a2bde88456}{S\+D\+L\+\_\+\+Game\+Controller\+Get\+String\+For\+Axis}} (\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1c}{S\+D\+L\+\_\+\+Game\+Controller\+Axis}} axis)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{struct_s_d_l___game_controller_button_bind}{S\+D\+L\+\_\+\+Game\+Controller\+Button\+Bind}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_acdb9303cc6b67f1a0ec3ee55ad8e29d5}{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Bind\+For\+Axis}} (\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$gamecontroller, \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1c}{S\+D\+L\+\_\+\+Game\+Controller\+Axis}} axis)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a9d0257032c0e146ab6121bf0122712f5}{Sint16}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a067291389e9a8a1fbc8cb2b0dabb8dd2}{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Axis}} (\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$gamecontroller, \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1c}{S\+D\+L\+\_\+\+Game\+Controller\+Axis}} axis)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98}{S\+D\+L\+\_\+\+Game\+Controller\+Button}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_ae40707a1ec3121ce7a891c8a5417c918}{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Button\+From\+String}} (const char $\ast$pch\+String)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a5afc30d12ed8c51e24e2ce32eca032de}{S\+D\+L\+\_\+\+Game\+Controller\+Get\+String\+For\+Button}} (\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98}{S\+D\+L\+\_\+\+Game\+Controller\+Button}} button)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{struct_s_d_l___game_controller_button_bind}{S\+D\+L\+\_\+\+Game\+Controller\+Button\+Bind}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a4ee15324cc28aa53bab9f28e71c96840}{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Bind\+For\+Button}} (\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$gamecontroller, \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98}{S\+D\+L\+\_\+\+Game\+Controller\+Button}} button)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_afa9f025f4262bdfba38c364ec9cc31bf}{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Button}} (\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$gamecontroller, \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98}{S\+D\+L\+\_\+\+Game\+Controller\+Button}} button)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a97fcf011947b35403c7d5319673a35e9}{S\+D\+L\+\_\+\+Game\+Controller\+Close}} (\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$gamecontroller)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include file for S\+DL game controller event handling
+
+In order to use these functions, \mbox{\hyperlink{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8}{S\+D\+L\+\_\+\+Init()}} must have been called with the \mbox{\hyperlink{_s_d_l_8h_ac224a9aa4208de0e9b03948ff9b5fe0a}{S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+ER}} flag. This causes S\+DL to scan the system for game controllers, and load appropriate drivers.
+
+If you would like to receive controller updates while the application is in the background, you should set the following hint before calling \mbox{\hyperlink{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8}{S\+D\+L\+\_\+\+Init()}}\+: S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+L\+L\+O\+W\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+E\+V\+E\+N\+TS 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a86b050862858714f651a4cf08fea2d3a}\label{_s_d_l__gamecontroller_8h_a86b050862858714f651a4cf08fea2d3a}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+File@{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+File}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+File@{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+File}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+File}{SDL\_GameControllerAddMappingsFromFile}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+File(\begin{DoxyParamCaption}\item[{}]{file }\end{DoxyParamCaption})~\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a01da8611222d5648872fbb4440c886af}{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+RW}}(\mbox{\hyperlink{_s_d_l__rwops_8h_aef7e843c3486bd1770667a594aa0b439}{S\+D\+L\+\_\+\+R\+W\+From\+File}}(file, \char`\"{}rb\char`\"{}), 1)}
+
+Load a set of mappings from a file, filtered by the current \mbox{\hyperlink{_s_d_l__platform_8h_a55905e7a299221262fc655e785ab2dc7}{S\+D\+L\+\_\+\+Get\+Platform()}}
+
+Convenience macro. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}\label{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller@{S\+D\+L\+\_\+\+Game\+Controller}}
+\index{S\+D\+L\+\_\+\+Game\+Controller@{S\+D\+L\+\_\+\+Game\+Controller}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller}{SDL\_GameController}}
+{\footnotesize\ttfamily typedef struct \+\_\+\+S\+D\+L\+\_\+\+Game\+Controller \mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}}}
+
+\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a5d9786518715fe1e5510dab47ef7df40}\label{_s_d_l__gamecontroller_8h_a5d9786518715fe1e5510dab47ef7df40}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Button\+Bind@{S\+D\+L\+\_\+\+Game\+Controller\+Button\+Bind}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Button\+Bind@{S\+D\+L\+\_\+\+Game\+Controller\+Button\+Bind}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Button\+Bind}{SDL\_GameControllerButtonBind}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_s_d_l___game_controller_button_bind}{S\+D\+L\+\_\+\+Game\+Controller\+Button\+Bind}}  \mbox{\hyperlink{struct_s_d_l___game_controller_button_bind}{S\+D\+L\+\_\+\+Game\+Controller\+Button\+Bind}}}
+
+Get the S\+DL joystick layer binding for this controller button/axis mapping 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1c}\label{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1c}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Axis@{S\+D\+L\+\_\+\+Game\+Controller\+Axis}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Axis@{S\+D\+L\+\_\+\+Game\+Controller\+Axis}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Axis}{SDL\_GameControllerAxis}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1c}{S\+D\+L\+\_\+\+Game\+Controller\+Axis}}}
+
+The list of axes available from a controller
+
+Thumbstick axis values range from S\+D\+L\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+X\+I\+S\+\_\+\+M\+IN to S\+D\+L\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+X\+I\+S\+\_\+\+M\+AX, and are centered within $\sim$8000 of zero, though advanced UI will allow users to set or autodetect the dead zone, which varies between controllers.
+
+Trigger axis values range from 0 to S\+D\+L\+\_\+\+J\+O\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+X\+I\+S\+\_\+\+M\+AX. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+I\+N\+V\+A\+L\+ID@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+I\+N\+V\+A\+L\+ID}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+I\+N\+V\+A\+L\+ID@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+I\+N\+V\+A\+L\+ID}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1ca5de779d8bd6705e149a7716938343eff}\label{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1ca5de779d8bd6705e149a7716938343eff}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+I\+N\+V\+A\+L\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+L\+E\+F\+TX@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+L\+E\+F\+TX}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+L\+E\+F\+TX@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+L\+E\+F\+TX}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1ca1bfd993bdf7fba84fbff1136bf0544e8}\label{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1ca1bfd993bdf7fba84fbff1136bf0544e8}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+L\+E\+F\+TX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+L\+E\+F\+TY@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+L\+E\+F\+TY}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+L\+E\+F\+TY@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+L\+E\+F\+TY}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1cafc13ab2522c6ebc3341a79b49c7c7676}\label{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1cafc13ab2522c6ebc3341a79b49c7c7676}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+L\+E\+F\+TY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+R\+I\+G\+H\+TX@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+R\+I\+G\+H\+TX}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+R\+I\+G\+H\+TX@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+R\+I\+G\+H\+TX}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1cae585879e750723896120b1cab1339bd5}\label{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1cae585879e750723896120b1cab1339bd5}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+R\+I\+G\+H\+TX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+R\+I\+G\+H\+TY@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+R\+I\+G\+H\+TY}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+R\+I\+G\+H\+TY@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+R\+I\+G\+H\+TY}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1caadb3ea3a60521d9f7302aac903344ce6}\label{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1caadb3ea3a60521d9f7302aac903344ce6}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+R\+I\+G\+H\+TY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+L\+E\+FT@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+L\+E\+FT}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+L\+E\+FT@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+L\+E\+FT}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1cafaa85151001c0a30a15cdfaf5ae8f339}\label{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1cafaa85151001c0a30a15cdfaf5ae8f339}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+L\+E\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+R\+I\+G\+HT@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+R\+I\+G\+HT}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+R\+I\+G\+HT@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+R\+I\+G\+HT}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1ca592ce519a63cd82125ca0560a204eb2f}\label{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1ca592ce519a63cd82125ca0560a204eb2f}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+R\+I\+G\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+M\+AX@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+M\+AX}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+M\+AX@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+M\+AX}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1cae5c03400ecb6557710d76c9f08bf7440}\label{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1cae5c03400ecb6557710d76c9f08bf7440}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+A\+X\+I\+S\+\_\+\+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6fa}\label{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6fa}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Bind\+Type@{S\+D\+L\+\_\+\+Game\+Controller\+Bind\+Type}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Bind\+Type@{S\+D\+L\+\_\+\+Game\+Controller\+Bind\+Type}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Bind\+Type}{SDL\_GameControllerBindType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6fa}{S\+D\+L\+\_\+\+Game\+Controller\+Bind\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+N\+O\+NE@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+N\+O\+NE}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+N\+O\+NE@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6faa924aaca26baf8152bb7762076f60bf96}\label{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6faa924aaca26baf8152bb7762076f60bf96}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+B\+U\+T\+T\+ON@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+B\+U\+T\+T\+ON}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+B\+U\+T\+T\+ON@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+B\+U\+T\+T\+ON}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6faac9fbdda70bc3b9777ae1b469e625059b}\label{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6faac9fbdda70bc3b9777ae1b469e625059b}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+B\+U\+T\+T\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+A\+X\+IS@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+A\+X\+IS}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+A\+X\+IS@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+A\+X\+IS}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6faa2b8d3e7e77373e167b9c5222ba415b84}\label{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6faa2b8d3e7e77373e167b9c5222ba415b84}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+A\+X\+IS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+H\+AT@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+H\+AT}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+H\+AT@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+H\+AT}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6faa5a1573b45526156d1f9dac3a9ae5e39f}\label{_s_d_l__gamecontroller_8h_aff63e7281b46e5275134938c52f5d6faa5a1573b45526156d1f9dac3a9ae5e39f}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+I\+N\+D\+T\+Y\+P\+E\+\_\+\+H\+AT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Button@{S\+D\+L\+\_\+\+Game\+Controller\+Button}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Button@{S\+D\+L\+\_\+\+Game\+Controller\+Button}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Button}{SDL\_GameControllerButton}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98}{S\+D\+L\+\_\+\+Game\+Controller\+Button}}}
+
+The list of buttons available from a controller \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+I\+N\+V\+A\+L\+ID@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+I\+N\+V\+A\+L\+ID}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+I\+N\+V\+A\+L\+ID@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+I\+N\+V\+A\+L\+ID}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a766cfa477e7e2f3b9f43b06c17867e4e}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a766cfa477e7e2f3b9f43b06c17867e4e}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+I\+N\+V\+A\+L\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+A@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+A}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+A@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+A}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98aeb919ef0e2e348a4376301a5ecbbfe7b}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98aeb919ef0e2e348a4376301a5ecbbfe7b}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+A&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+B@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+B}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+B@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+B}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a070a080f115d0feea90bd1c422ef6fc1}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a070a080f115d0feea90bd1c422ef6fc1}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+X@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+X}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+X@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+X}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98ac3631495ee81400f9593e9371c419c76}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98ac3631495ee81400f9593e9371c419c76}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+Y@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+Y}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+Y@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+Y}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98ae73050ab476745463294d68fc8b7511b}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98ae73050ab476745463294d68fc8b7511b}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+CK@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+CK}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+CK@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+CK}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a180b1a4d5433cee7a806cab698da8477}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a180b1a4d5433cee7a806cab698da8477}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+B\+A\+CK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+G\+U\+I\+DE@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+G\+U\+I\+DE}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+G\+U\+I\+DE@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+G\+U\+I\+DE}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98ab5408020b11da1ed3a8208ca8089bc59}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98ab5408020b11da1ed3a8208ca8089bc59}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+G\+U\+I\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+S\+T\+A\+RT@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+S\+T\+A\+RT}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+S\+T\+A\+RT@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+S\+T\+A\+RT}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a294c504c7fcb6632f69976c57886e9be}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a294c504c7fcb6632f69976c57886e9be}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+S\+T\+A\+RT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T\+S\+T\+I\+CK@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T\+S\+T\+I\+CK}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T\+S\+T\+I\+CK@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T\+S\+T\+I\+CK}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a1c9e6552dd22452a5f7ad952bdd986d4}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a1c9e6552dd22452a5f7ad952bdd986d4}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T\+S\+T\+I\+CK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T\+S\+T\+I\+CK@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T\+S\+T\+I\+CK}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T\+S\+T\+I\+CK@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T\+S\+T\+I\+CK}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98adb5779ee1b56e30e407e424c9d544b98}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98adb5779ee1b56e30e407e424c9d544b98}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T\+S\+T\+I\+CK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T\+S\+H\+O\+U\+L\+D\+ER@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T\+S\+H\+O\+U\+L\+D\+ER}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T\+S\+H\+O\+U\+L\+D\+ER@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T\+S\+H\+O\+U\+L\+D\+ER}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98aaf052d8d37a07c9544ab0bf4529ed804}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98aaf052d8d37a07c9544ab0bf4529ed804}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+F\+T\+S\+H\+O\+U\+L\+D\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T\+S\+H\+O\+U\+L\+D\+ER@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T\+S\+H\+O\+U\+L\+D\+ER}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T\+S\+H\+O\+U\+L\+D\+ER@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T\+S\+H\+O\+U\+L\+D\+ER}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a6a898ff460e56c9dc4976d79b9082037}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a6a898ff460e56c9dc4976d79b9082037}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+H\+T\+S\+H\+O\+U\+L\+D\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+UP@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+UP}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+UP@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+UP}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98aa0f0fd22b168ec69174d19c48d689842}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98aa0f0fd22b168ec69174d19c48d689842}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+D\+O\+WN@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+D\+O\+WN}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+D\+O\+WN@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+D\+O\+WN}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a779a4c74ab01a93c3168b8942c22dd27}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a779a4c74ab01a93c3168b8942c22dd27}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+D\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+L\+E\+FT@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+L\+E\+FT}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+L\+E\+FT@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+L\+E\+FT}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a65fdf618f56696b2065edf885b9f3987}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98a65fdf618f56696b2065edf885b9f3987}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+L\+E\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+R\+I\+G\+HT@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+R\+I\+G\+HT}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+R\+I\+G\+HT@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+R\+I\+G\+HT}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98aba83de7c7c7988fd100baa570eb47be6}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98aba83de7c7c7988fd100baa570eb47be6}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+P\+A\+D\+\_\+\+R\+I\+G\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+AX@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+AX}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+AX@{S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+AX}}}\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98aa61e388a5ffcb7d516bc461c6129b2be}\label{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98aa61e388a5ffcb7d516bc461c6129b2be}} 
+S\+D\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a62cb682b1c589135cd32cce381d403f8}\label{_s_d_l__gamecontroller_8h_a62cb682b1c589135cd32cce381d403f8}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mapping@{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mapping}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mapping@{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mapping}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mapping()}{SDL\_GameControllerAddMapping()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mapping (\begin{DoxyParamCaption}\item[{const char $\ast$}]{mapping\+String }\end{DoxyParamCaption})}
+
+Add or update an existing mapping configuration
+
+\begin{DoxyReturn}{Returns}
+1 if mapping is added, 0 if updated, -\/1 on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a01da8611222d5648872fbb4440c886af}\label{_s_d_l__gamecontroller_8h_a01da8611222d5648872fbb4440c886af}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+RW@{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+RW}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+RW@{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+RW}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+R\+W()}{SDL\_GameControllerAddMappingsFromRW()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mappings\+From\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops}} $\ast$}]{rw,  }\item[{int}]{freerw }\end{DoxyParamCaption})}
+
+To count the number of game controllers in the system for the following\+: int n\+Joysticks = \mbox{\hyperlink{_s_d_l__joystick_8h_a2ab130eaa28f8e3bd544a5432041a311}{S\+D\+L\+\_\+\+Num\+Joysticks()}}; int n\+Game\+Controllers = 0; for (int i = 0; i $<$ n\+Joysticks; i++) \{ if (S\+D\+L\+\_\+\+Is\+Game\+Controller(i)) \{ n\+Game\+Controllers++; \} \}
+
+Using the S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+C\+O\+N\+F\+IG hint or the \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a62cb682b1c589135cd32cce381d403f8}{S\+D\+L\+\_\+\+Game\+Controller\+Add\+Mapping()}} you can add support for controllers S\+DL is unaware of or cause an existing controller to have a different binding. The format is\+: guid,name,mappings
+
+Where G\+U\+ID is the string value from \mbox{\hyperlink{_s_d_l__joystick_8h_a7f615ef8040e7e9de3af6482d8d9908c}{S\+D\+L\+\_\+\+Joystick\+Get\+G\+U\+I\+D\+String()}}, name is the human readable string for the device and mappings are controller mappings to joystick ones. Under Windows there is a reserved G\+U\+ID of \char`\"{}xinput\char`\"{} that covers any X\+Input devices. The mapping format for joystick is\+: bX -\/ a joystick button, index X h\+X.\+Y -\/ hat X with value Y aX -\/ axis X of the joystick Buttons can be used as a controller axis and vice versa.
+
+This string shows an example of a valid mapping for a controller \char`\"{}03000000341a00003608000000000000,\+P\+S3 Controller,a\+:b1,b\+:b2,y\+:b3,x\+:b0,start\+:b9,guide\+:b12,back\+:b8,dpup\+:h0.\+1,dpleft\+:h0.\+8,dpdown\+:h0.\+4,dpright\+:h0.\+2,leftshoulder\+:b4,rightshoulder\+:b5,leftstick\+:b10,rightstick\+:b11,leftx\+:a0,lefty\+:a1,rightx\+:a2,righty\+:a3,lefttrigger\+:b6,righttrigger\+:b7\char`\"{}, Load a set of mappings from a seekable S\+DL data stream (memory or file), filtered by the current \mbox{\hyperlink{_s_d_l__platform_8h_a55905e7a299221262fc655e785ab2dc7}{S\+D\+L\+\_\+\+Get\+Platform()}} A community sourced database of controllers is available at \href{https://raw.github.com/gabomdq/SDL_GameControllerDB/master/gamecontrollerdb.txt}{\tt https\+://raw.\+github.\+com/gabomdq/\+S\+D\+L\+\_\+\+Game\+Controller\+D\+B/master/gamecontrollerdb.\+txt}
+
+If {\ttfamily freerw} is non-\/zero, the stream will be closed after being read.
+
+\begin{DoxyReturn}{Returns}
+number of mappings added, -\/1 on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a97fcf011947b35403c7d5319673a35e9}\label{_s_d_l__gamecontroller_8h_a97fcf011947b35403c7d5319673a35e9}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Close@{S\+D\+L\+\_\+\+Game\+Controller\+Close}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Close@{S\+D\+L\+\_\+\+Game\+Controller\+Close}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Close()}{SDL\_GameControllerClose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$}]{gamecontroller }\end{DoxyParamCaption})}
+
+Close a controller previously opened with \mbox{\hyperlink{_s_d_l__gamecontroller_8h_ac7725e08ac17961bd7d5f8d4eb0c4033}{S\+D\+L\+\_\+\+Game\+Controller\+Open()}}. \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a457fd59b3dec7d1b6ed384973b584bc6}\label{_s_d_l__gamecontroller_8h_a457fd59b3dec7d1b6ed384973b584bc6}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Event\+State@{S\+D\+L\+\_\+\+Game\+Controller\+Event\+State}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Event\+State@{S\+D\+L\+\_\+\+Game\+Controller\+Event\+State}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Event\+State()}{SDL\_GameControllerEventState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Event\+State (\begin{DoxyParamCaption}\item[{int}]{state }\end{DoxyParamCaption})}
+
+Enable/disable controller event polling.
+
+If controller events are disabled, you must call \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a92fe68241a17b60b2240c04d01b73e6b}{S\+D\+L\+\_\+\+Game\+Controller\+Update()}} yourself and check the state of the controller when you want controller information.
+
+The state can be one of \mbox{\hyperlink{_s_d_l__events_8h_a56cee6a1344dd6d33598af982fa9607f}{S\+D\+L\+\_\+\+Q\+U\+E\+RY}}, \mbox{\hyperlink{_s_d_l__events_8h_ae8ffaa5d3d65f4dd75dcf1563e1cc8a9}{S\+D\+L\+\_\+\+E\+N\+A\+B\+LE}} or \mbox{\hyperlink{_s_d_l__events_8h_af1ff071ae5e1576d6de5663d68391ac5}{S\+D\+L\+\_\+\+I\+G\+N\+O\+RE}}. \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a34e43c763202a2d7124f24fdaf508a2a}\label{_s_d_l__gamecontroller_8h_a34e43c763202a2d7124f24fdaf508a2a}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+From\+Instance\+ID@{S\+D\+L\+\_\+\+Game\+Controller\+From\+Instance\+ID}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+From\+Instance\+ID@{S\+D\+L\+\_\+\+Game\+Controller\+From\+Instance\+ID}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+From\+Instance\+I\+D()}{SDL\_GameControllerFromInstanceID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}}$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+From\+Instance\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__joystick_8h_a3c3d32500cb08f76ee8077983912c0bd}{S\+D\+L\+\_\+\+Joystick\+ID}}}]{joyid }\end{DoxyParamCaption})}
+
+Return the S\+D\+L\+\_\+\+Game\+Controller associated with an instance id. \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_adeeeba5a268842412f6578f38e75d231}\label{_s_d_l__gamecontroller_8h_adeeeba5a268842412f6578f38e75d231}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Get\+Attached@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Attached}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Attached@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Attached}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Attached()}{SDL\_GameControllerGetAttached()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Get\+Attached (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$}]{gamecontroller }\end{DoxyParamCaption})}
+
+Returns S\+D\+L\+\_\+\+T\+R\+UE if the controller has been opened and currently connected, or S\+D\+L\+\_\+\+F\+A\+L\+SE if it has not. \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a067291389e9a8a1fbc8cb2b0dabb8dd2}\label{_s_d_l__gamecontroller_8h_a067291389e9a8a1fbc8cb2b0dabb8dd2}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Get\+Axis@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Axis}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Axis@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Axis}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Axis()}{SDL\_GameControllerGetAxis()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a9d0257032c0e146ab6121bf0122712f5}{Sint16}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Get\+Axis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$}]{gamecontroller,  }\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1c}{S\+D\+L\+\_\+\+Game\+Controller\+Axis}}}]{axis }\end{DoxyParamCaption})}
+
+Get the current state of an axis control on a game controller.
+
+The state is a value ranging from -\/32768 to 32767 (except for the triggers, which range from 0 to 32767).
+
+The axis indices start at index 0. \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a44a5320a7241b218417d9bfb995907d7}\label{_s_d_l__gamecontroller_8h_a44a5320a7241b218417d9bfb995907d7}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Get\+Axis\+From\+String@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Axis\+From\+String}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Axis\+From\+String@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Axis\+From\+String}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Axis\+From\+String()}{SDL\_GameControllerGetAxisFromString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1c}{S\+D\+L\+\_\+\+Game\+Controller\+Axis}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Get\+Axis\+From\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{pch\+String }\end{DoxyParamCaption})}
+
+turn this string into a axis mapping \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_acdb9303cc6b67f1a0ec3ee55ad8e29d5}\label{_s_d_l__gamecontroller_8h_acdb9303cc6b67f1a0ec3ee55ad8e29d5}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Get\+Bind\+For\+Axis@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Bind\+For\+Axis}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Bind\+For\+Axis@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Bind\+For\+Axis}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Bind\+For\+Axis()}{SDL\_GameControllerGetBindForAxis()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{struct_s_d_l___game_controller_button_bind}{S\+D\+L\+\_\+\+Game\+Controller\+Button\+Bind}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Get\+Bind\+For\+Axis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$}]{gamecontroller,  }\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1c}{S\+D\+L\+\_\+\+Game\+Controller\+Axis}}}]{axis }\end{DoxyParamCaption})}
+
+Get the S\+DL joystick layer binding for this controller button mapping \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a4ee15324cc28aa53bab9f28e71c96840}\label{_s_d_l__gamecontroller_8h_a4ee15324cc28aa53bab9f28e71c96840}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Get\+Bind\+For\+Button@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Bind\+For\+Button}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Bind\+For\+Button@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Bind\+For\+Button}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Bind\+For\+Button()}{SDL\_GameControllerGetBindForButton()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{struct_s_d_l___game_controller_button_bind}{S\+D\+L\+\_\+\+Game\+Controller\+Button\+Bind}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Get\+Bind\+For\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$}]{gamecontroller,  }\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98}{S\+D\+L\+\_\+\+Game\+Controller\+Button}}}]{button }\end{DoxyParamCaption})}
+
+Get the S\+DL joystick layer binding for this controller button mapping \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_afa9f025f4262bdfba38c364ec9cc31bf}\label{_s_d_l__gamecontroller_8h_afa9f025f4262bdfba38c364ec9cc31bf}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Get\+Button@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Button}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Button@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Button}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Button()}{SDL\_GameControllerGetButton()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Get\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$}]{gamecontroller,  }\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98}{S\+D\+L\+\_\+\+Game\+Controller\+Button}}}]{button }\end{DoxyParamCaption})}
+
+Get the current state of a button on a game controller.
+
+The button indices start at index 0. \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_ae40707a1ec3121ce7a891c8a5417c918}\label{_s_d_l__gamecontroller_8h_ae40707a1ec3121ce7a891c8a5417c918}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Get\+Button\+From\+String@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Button\+From\+String}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Button\+From\+String@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Button\+From\+String}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Button\+From\+String()}{SDL\_GameControllerGetButtonFromString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98}{S\+D\+L\+\_\+\+Game\+Controller\+Button}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Get\+Button\+From\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{pch\+String }\end{DoxyParamCaption})}
+
+turn this string into a button mapping \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_af2aac9107334b73d94b93f9c5ef51eb4}\label{_s_d_l__gamecontroller_8h_af2aac9107334b73d94b93f9c5ef51eb4}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Get\+Joystick@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Joystick}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Joystick@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Joystick}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Joystick()}{SDL\_GameControllerGetJoystick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__joystick_8h_a1246a982e91df301042a77e65c694987}{S\+D\+L\+\_\+\+Joystick}}$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Get\+Joystick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$}]{gamecontroller }\end{DoxyParamCaption})}
+
+Get the underlying joystick object used by a controller \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a8ea81761681d1666a3b447eb9ef2dee8}\label{_s_d_l__gamecontroller_8h_a8ea81761681d1666a3b447eb9ef2dee8}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Get\+Product@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Product}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Product@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Product}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Product()}{SDL\_GameControllerGetProduct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Get\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$}]{gamecontroller }\end{DoxyParamCaption})}
+
+Get the U\+SB product ID of an opened controller, if available. If the product ID isn\textquotesingle{}t available this function returns 0. \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a2e3eda7c9faf9bf0f4e06d89f3859c72}\label{_s_d_l__gamecontroller_8h_a2e3eda7c9faf9bf0f4e06d89f3859c72}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Get\+Product\+Version@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Product\+Version}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Product\+Version@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Product\+Version}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Product\+Version()}{SDL\_GameControllerGetProductVersion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Get\+Product\+Version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$}]{gamecontroller }\end{DoxyParamCaption})}
+
+Get the product version of an opened controller, if available. If the product version isn\textquotesingle{}t available this function returns 0. \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a66cbcb3062d6e99e896611a2bde88456}\label{_s_d_l__gamecontroller_8h_a66cbcb3062d6e99e896611a2bde88456}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Get\+String\+For\+Axis@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+String\+For\+Axis}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Get\+String\+For\+Axis@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+String\+For\+Axis}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Get\+String\+For\+Axis()}{SDL\_GameControllerGetStringForAxis()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Get\+String\+For\+Axis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a96d0bda99d806397e4c697241ccffa1c}{S\+D\+L\+\_\+\+Game\+Controller\+Axis}}}]{axis }\end{DoxyParamCaption})}
+
+turn this axis enum into a string mapping \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a5afc30d12ed8c51e24e2ce32eca032de}\label{_s_d_l__gamecontroller_8h_a5afc30d12ed8c51e24e2ce32eca032de}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Get\+String\+For\+Button@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+String\+For\+Button}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Get\+String\+For\+Button@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+String\+For\+Button}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Get\+String\+For\+Button()}{SDL\_GameControllerGetStringForButton()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Get\+String\+For\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_a9e4d3f8c9c9860064a68a700e0486f98}{S\+D\+L\+\_\+\+Game\+Controller\+Button}}}]{button }\end{DoxyParamCaption})}
+
+turn this button enum into a string mapping \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_ab0032725dcea365502694731c37605f7}\label{_s_d_l__gamecontroller_8h_ab0032725dcea365502694731c37605f7}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Get\+Vendor@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Vendor}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Vendor@{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Vendor}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Get\+Vendor()}{SDL\_GameControllerGetVendor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Get\+Vendor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$}]{gamecontroller }\end{DoxyParamCaption})}
+
+Get the U\+SB vendor ID of an opened controller, if available. If the vendor ID isn\textquotesingle{}t available this function returns 0. \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a6d56a421a407e4587dfd0be98255fdf7}\label{_s_d_l__gamecontroller_8h_a6d56a421a407e4587dfd0be98255fdf7}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Mapping@{S\+D\+L\+\_\+\+Game\+Controller\+Mapping}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Mapping@{S\+D\+L\+\_\+\+Game\+Controller\+Mapping}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Mapping()}{SDL\_GameControllerMapping()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} char$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Mapping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$}]{gamecontroller }\end{DoxyParamCaption})}
+
+Get a mapping string for an open Game\+Controller
+
+\begin{DoxyReturn}{Returns}
+the mapping string. Must be freed with \mbox{\hyperlink{_s_d_l__stdinc_8h_a0e4ade894d550ada1fa19dc2d46e88b8}{S\+D\+L\+\_\+free()}}. Returns N\+U\+LL if no mapping is available 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a2bd404799b40e27d75d3699c866904cf}\label{_s_d_l__gamecontroller_8h_a2bd404799b40e27d75d3699c866904cf}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Mapping\+For\+G\+U\+ID@{S\+D\+L\+\_\+\+Game\+Controller\+Mapping\+For\+G\+U\+ID}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Mapping\+For\+G\+U\+ID@{S\+D\+L\+\_\+\+Game\+Controller\+Mapping\+For\+G\+U\+ID}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Mapping\+For\+G\+U\+I\+D()}{SDL\_GameControllerMappingForGUID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} char$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Mapping\+For\+G\+U\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___joystick_g_u_i_d}{S\+D\+L\+\_\+\+Joystick\+G\+U\+ID}}}]{guid }\end{DoxyParamCaption})}
+
+Get a mapping string for a G\+U\+ID
+
+\begin{DoxyReturn}{Returns}
+the mapping string. Must be freed with \mbox{\hyperlink{_s_d_l__stdinc_8h_a0e4ade894d550ada1fa19dc2d46e88b8}{S\+D\+L\+\_\+free()}}. Returns N\+U\+LL if no mapping is available 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_ac5ddf8927b92d95968f568ec6399bc18}\label{_s_d_l__gamecontroller_8h_ac5ddf8927b92d95968f568ec6399bc18}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Mapping\+For\+Index@{S\+D\+L\+\_\+\+Game\+Controller\+Mapping\+For\+Index}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Mapping\+For\+Index@{S\+D\+L\+\_\+\+Game\+Controller\+Mapping\+For\+Index}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Mapping\+For\+Index()}{SDL\_GameControllerMappingForIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} char$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Mapping\+For\+Index (\begin{DoxyParamCaption}\item[{int}]{mapping\+\_\+index }\end{DoxyParamCaption})}
+
+Get the mapping at a particular index.
+
+\begin{DoxyReturn}{Returns}
+the mapping string. Must be freed with \mbox{\hyperlink{_s_d_l__stdinc_8h_a0e4ade894d550ada1fa19dc2d46e88b8}{S\+D\+L\+\_\+free()}}. Returns N\+U\+LL if the index is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_add465dba60b0e2ff4e0b53f15471be1e}\label{_s_d_l__gamecontroller_8h_add465dba60b0e2ff4e0b53f15471be1e}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Name@{S\+D\+L\+\_\+\+Game\+Controller\+Name}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Name@{S\+D\+L\+\_\+\+Game\+Controller\+Name}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Name()}{SDL\_GameControllerName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}} $\ast$}]{gamecontroller }\end{DoxyParamCaption})}
+
+Return the name for this currently opened controller \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_aa27333eaf19fbcf39df244aa19c5d043}\label{_s_d_l__gamecontroller_8h_aa27333eaf19fbcf39df244aa19c5d043}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Name\+For\+Index@{S\+D\+L\+\_\+\+Game\+Controller\+Name\+For\+Index}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Name\+For\+Index@{S\+D\+L\+\_\+\+Game\+Controller\+Name\+For\+Index}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Name\+For\+Index()}{SDL\_GameControllerNameForIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Name\+For\+Index (\begin{DoxyParamCaption}\item[{int}]{joystick\+\_\+index }\end{DoxyParamCaption})}
+
+Get the implementation dependent name of a game controller. This can be called before any controllers are opened. If no name can be found, this function returns N\+U\+LL. \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_ac14eb47ec6097d89c7bec14f6b27ebfe}\label{_s_d_l__gamecontroller_8h_ac14eb47ec6097d89c7bec14f6b27ebfe}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Num\+Mappings@{S\+D\+L\+\_\+\+Game\+Controller\+Num\+Mappings}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Num\+Mappings@{S\+D\+L\+\_\+\+Game\+Controller\+Num\+Mappings}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Num\+Mappings()}{SDL\_GameControllerNumMappings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Num\+Mappings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+Get the number of mappings installed
+
+\begin{DoxyReturn}{Returns}
+the number of mappings 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_ac7725e08ac17961bd7d5f8d4eb0c4033}\label{_s_d_l__gamecontroller_8h_ac7725e08ac17961bd7d5f8d4eb0c4033}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Open@{S\+D\+L\+\_\+\+Game\+Controller\+Open}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Open@{S\+D\+L\+\_\+\+Game\+Controller\+Open}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Open()}{SDL\_GameControllerOpen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__gamecontroller_8h_aa434ddee85ce43a59567b39c20acf873}{S\+D\+L\+\_\+\+Game\+Controller}}$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Open (\begin{DoxyParamCaption}\item[{int}]{joystick\+\_\+index }\end{DoxyParamCaption})}
+
+Open a game controller for use. The index passed as an argument refers to the N\textquotesingle{}th game controller on the system. This index is not the value which will identify this controller in future controller events. The joystick\textquotesingle{}s instance id (\mbox{\hyperlink{_s_d_l__joystick_8h_a3c3d32500cb08f76ee8077983912c0bd}{S\+D\+L\+\_\+\+Joystick\+ID}}) will be used there instead.
+
+\begin{DoxyReturn}{Returns}
+A controller identifier, or N\+U\+LL if an error occurred. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a92fe68241a17b60b2240c04d01b73e6b}\label{_s_d_l__gamecontroller_8h_a92fe68241a17b60b2240c04d01b73e6b}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Game\+Controller\+Update@{S\+D\+L\+\_\+\+Game\+Controller\+Update}}
+\index{S\+D\+L\+\_\+\+Game\+Controller\+Update@{S\+D\+L\+\_\+\+Game\+Controller\+Update}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Game\+Controller\+Update()}{SDL\_GameControllerUpdate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Game\+Controller\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+Update the current state of the open game controllers.
+
+This is called automatically by the event loop if any game controller events are enabled. \mbox{\Hypertarget{_s_d_l__gamecontroller_8h_a3307c27938a336b83c317b6054d91bd4}\label{_s_d_l__gamecontroller_8h_a3307c27938a336b83c317b6054d91bd4}} 
+\index{S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}!S\+D\+L\+\_\+\+Is\+Game\+Controller@{S\+D\+L\+\_\+\+Is\+Game\+Controller}}
+\index{S\+D\+L\+\_\+\+Is\+Game\+Controller@{S\+D\+L\+\_\+\+Is\+Game\+Controller}!S\+D\+L\+\_\+gamecontroller.\+h@{S\+D\+L\+\_\+gamecontroller.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Is\+Game\+Controller()}{SDL\_IsGameController()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Is\+Game\+Controller (\begin{DoxyParamCaption}\item[{int}]{joystick\+\_\+index }\end{DoxyParamCaption})}
+
+Is the joystick on this index supported by the game controller interface? 

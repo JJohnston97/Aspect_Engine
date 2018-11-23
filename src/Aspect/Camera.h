@@ -1,23 +1,28 @@
-#include <vector>
-#include <memory>
+#include <vector> // Include vector for use of vectors
+#include <memory> // Include memeory for use of shared_ptr
 
-#include "Component.h"
+#include "Component.h" // Include Component header
 
-namespace Aspect
+#ifndef _CAMERA_H_
+#define _CAMERA_H_
+
+namespace Aspect	// Use of part 1 aspect namespace
 {
-	namespace Engine
+	namespace Engine // Use of second part engine namespace
 	{
-		class Camera : public Component
+		class Camera : public Component /// Camera class inherits from component as camera is a component
 		{
 		public:
 			
-			void onInit();
+			void onInit(); /// Init for camera class
 
-			glm::mat4 getProjectionMatrix();
-
+			glm::mat4 getProjectionMatrix(); /// Projecttion matrix used within the mesh render for the camera draw
+											 // Returns inverse view matrix
 
 		};
 
 	}
 
 }
+
+#endif // _CAMERA_h_

@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="Aspect_Logo.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Aspect Engine
    </div>
+   <div id="projectbrief">Aspect Engine is my final year project for Games Engine Programming</div>
   </td>
  </tr>
  </tbody>
@@ -68,11 +68,17 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_aspect_1_1_engine_1_1_mesh_render-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Aspect::Engine::MeshRender Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Initialise Shader <a class="el" href="class_aspect_1_1_engine_1_1_program.html" title="Program class the main class that oganises the program. ">Program</a>.  
+ <a href="class_aspect_1_1_engine_1_1_mesh_render.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_mesh_render_8h_source.html">MeshRender.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -81,23 +87,164 @@ Inheritance diagram for Aspect::Engine::MeshRender:</div>
  <div class="center">
   <img src="class_aspect_1_1_engine_1_1_mesh_render.png" usemap="#Aspect::Engine::MeshRender_map" alt=""/>
   <map id="Aspect::Engine::MeshRender_map" name="Aspect::Engine::MeshRender_map">
-<area href="class_aspect_1_1_engine_1_1_component.html" alt="Aspect::Engine::Component" shape="rect" coords="0,0,174,24"/>
+<area href="class_aspect_1_1_engine_1_1_component.html" title="Initialise Program class rather than include. " alt="Aspect::Engine::Component" shape="rect" coords="0,0,174,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a54bb4394dafdc30e919a0ba5d9854871"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#a54bb4394dafdc30e919a0ba5d9854871">onInit</a> ()</td></tr>
+<tr class="memitem:a54bb4394dafdc30e919a0ba5d9854871"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#a54bb4394dafdc30e919a0ba5d9854871">onInit</a> ()</td></tr>
 <tr class="separator:a54bb4394dafdc30e919a0ba5d9854871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31478e2366177bf2e3c98fe71c769c33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#a31478e2366177bf2e3c98fe71c769c33">Cube</a> ()</td></tr>
+<tr class="separator:a31478e2366177bf2e3c98fe71c769c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8ca6b05b335b228943f4c034c02100d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#ae8ca6b05b335b228943f4c034c02100d">Triangle</a> ()</td></tr>
+<tr class="memdesc:ae8ca6b05b335b228943f4c034c02100d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw cube object.  <a href="#ae8ca6b05b335b228943f4c034c02100d">More...</a><br /></td></tr>
+<tr class="separator:ae8ca6b05b335b228943f4c034c02100d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16ef5a49a05bd542a33a78e67b4e3067"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#a16ef5a49a05bd542a33a78e67b4e3067">Mesh</a> (const <a class="el" href="_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;_mesh)</td></tr>
+<tr class="memdesc:a16ef5a49a05bd542a33a78e67b4e3067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw Triangle.  <a href="#a16ef5a49a05bd542a33a78e67b4e3067">More...</a><br /></td></tr>
+<tr class="separator:a16ef5a49a05bd542a33a78e67b4e3067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadfc13cdafe27ff3f63e80e68fdfbaa0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#aadfc13cdafe27ff3f63e80e68fdfbaa0">setTexture</a> (const <a class="el" href="_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;_texture)</td></tr>
+<tr class="memdesc:aadfc13cdafe27ff3f63e80e68fdfbaa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a mesh of any obj.  <a href="#aadfc13cdafe27ff3f63e80e68fdfbaa0">More...</a><br /></td></tr>
+<tr class="separator:aadfc13cdafe27ff3f63e80e68fdfbaa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_aspect_1_1_engine_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_aspect_1_1_engine_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_aspect_1_1_engine_1_1_component.html">Aspect::Engine::Component</a></td></tr>
 <tr class="memitem:a8ceb47c002468c4ad876b7220da579f8 inherit pub_methods_class_aspect_1_1_engine_1_1_component"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#a8ceb47c002468c4ad876b7220da579f8">~Component</a> ()</td></tr>
 <tr class="separator:a8ceb47c002468c4ad876b7220da579f8 inherit pub_methods_class_aspect_1_1_engine_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96e352a6d49b6e108572c0c19088aa52 inherit pub_methods_class_aspect_1_1_engine_1_1_component"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_program.html">Program</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#a96e352a6d49b6e108572c0c19088aa52">getProgram</a> ()</td></tr>
+<tr class="memdesc:a96e352a6d49b6e108572c0c19088aa52 inherit pub_methods_class_aspect_1_1_engine_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class distructor.  <a href="class_aspect_1_1_engine_1_1_component.html#a96e352a6d49b6e108572c0c19088aa52">More...</a><br /></td></tr>
 <tr class="separator:a96e352a6d49b6e108572c0c19088aa52 inherit pub_methods_class_aspect_1_1_engine_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1422571aabd1882f712e16ef4bf0cb77 inherit pub_methods_class_aspect_1_1_engine_1_1_component"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#a1422571aabd1882f712e16ef4bf0cb77">getEntity</a> ()</td></tr>
+<tr class="memdesc:a1422571aabd1882f712e16ef4bf0cb77 inherit pub_methods_class_aspect_1_1_engine_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a shared ptr function getProgram.  <a href="class_aspect_1_1_engine_1_1_component.html#a1422571aabd1882f712e16ef4bf0cb77">More...</a><br /></td></tr>
 <tr class="separator:a1422571aabd1882f712e16ef4bf0cb77 inherit pub_methods_class_aspect_1_1_engine_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accb4c932c2e93369ca168e1cd204ee31 inherit pub_methods_class_aspect_1_1_engine_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#accb4c932c2e93369ca168e1cd204ee31">addEntity</a> (std::weak_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a> &gt; _entity)</td></tr>
+<tr class="memdesc:accb4c932c2e93369ca168e1cd204ee31 inherit pub_methods_class_aspect_1_1_engine_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a shared ptr function to getEntiy.  <a href="class_aspect_1_1_engine_1_1_component.html#accb4c932c2e93369ca168e1cd204ee31">More...</a><br /></td></tr>
+<tr class="separator:accb4c932c2e93369ca168e1cd204ee31 inherit pub_methods_class_aspect_1_1_engine_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:acd7bb5d1bfd42ecfe1a3d94b12271068"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#acd7bb5d1bfd42ecfe1a3d94b12271068">camera</a></td></tr>
+<tr class="memdesc:acd7bb5d1bfd42ecfe1a3d94b12271068"><td class="mdescLeft">&#160;</td><td class="mdescRight">On init component function.  <a href="#acd7bb5d1bfd42ecfe1a3d94b12271068">More...</a><br /></td></tr>
+<tr class="separator:acd7bb5d1bfd42ecfe1a3d94b12271068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a242e0980538e23b839f7ad8434bb1aa7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#a242e0980538e23b839f7ad8434bb1aa7">MrEnable</a> = true</td></tr>
+<tr class="separator:a242e0980538e23b839f7ad8434bb1aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aed81ecbd6bf1d63acb06171f729e4927"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#aed81ecbd6bf1d63acb06171f729e4927">onDisplay</a> ()</td></tr>
+<tr class="memdesc:aed81ecbd6bf1d63acb06171f729e4927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the texture of that model.  <a href="#aed81ecbd6bf1d63acb06171f729e4927">More...</a><br /></td></tr>
+<tr class="separator:aed81ecbd6bf1d63acb06171f729e4927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebaa5a60d373d3363a13336cfbaa4141"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#aebaa5a60d373d3363a13336cfbaa4141">onCount</a> ()</td></tr>
+<tr class="memdesc:aebaa5a60d373d3363a13336cfbaa4141"><td class="mdescLeft">&#160;</td><td class="mdescRight">On display works similar to draw function.  <a href="#aebaa5a60d373d3363a13336cfbaa4141">More...</a><br /></td></tr>
+<tr class="separator:aebaa5a60d373d3363a13336cfbaa4141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af137747f679a92eec890a25cbdbc9e8a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_vertex_array.html">VertexArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#af137747f679a92eec890a25cbdbc9e8a">shape</a></td></tr>
+<tr class="memdesc:af137747f679a92eec890a25cbdbc9e8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">On count is update.  <a href="#af137747f679a92eec890a25cbdbc9e8a">More...</a><br /></td></tr>
+<tr class="separator:af137747f679a92eec890a25cbdbc9e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af49c803c0ee4b4e72e8d87455e74ae5e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_shader_program.html">ShaderProgram</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#af49c803c0ee4b4e72e8d87455e74ae5e">shader</a></td></tr>
+<tr class="separator:af49c803c0ee4b4e72e8d87455e74ae5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1db374346473ead0d1c8c1801390dbe"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_material.html">Material</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#ad1db374346473ead0d1c8c1801390dbe">mat</a></td></tr>
+<tr class="separator:ad1db374346473ead0d1c8c1801390dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Initialise Shader <a class="el" href="class_aspect_1_1_engine_1_1_program.html" title="Program class the main class that oganises the program. ">Program</a>. </p>
+<p><a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html" title="Initialise Shader Program. ">MeshRender</a> is an inherited class of component </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a31478e2366177bf2e3c98fe71c769c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31478e2366177bf2e3c98fe71c769c33">&#9670;&nbsp;</a></span>Cube()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Aspect::Engine::MeshRender::Cube </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16ef5a49a05bd542a33a78e67b4e3067"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16ef5a49a05bd542a33a78e67b4e3067">&#9670;&nbsp;</a></span>Mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Aspect::Engine::MeshRender::Mesh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;&#160;</td>
+          <td class="paramname"><em>_mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw Triangle. </p>
+
+</div>
+</div>
+<a id="aebaa5a60d373d3363a13336cfbaa4141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebaa5a60d373d3363a13336cfbaa4141">&#9670;&nbsp;</a></span>onCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Aspect::Engine::MeshRender::onCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>On display works similar to draw function. </p>
+
+<p>Reimplemented from <a class="el" href="class_aspect_1_1_engine_1_1_component.html#a02de673a0591459bd0d39e3022c1d3fc">Aspect::Engine::Component</a>.</p>
+
+</div>
+</div>
+<a id="aed81ecbd6bf1d63acb06171f729e4927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed81ecbd6bf1d63acb06171f729e4927">&#9670;&nbsp;</a></span>onDisplay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Aspect::Engine::MeshRender::onDisplay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the texture of that model. </p>
+
+<p>Reimplemented from <a class="el" href="class_aspect_1_1_engine_1_1_component.html#ac67307dba854cdc9535a0de75e5a3d09">Aspect::Engine::Component</a>.</p>
+
+</div>
+</div>
 <a id="a54bb4394dafdc30e919a0ba5d9854871"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a54bb4394dafdc30e919a0ba5d9854871">&#9670;&nbsp;</a></span>onInit()</h2>
 
@@ -108,7 +255,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Aspect::Engine::MeshRender::onInit </td>
+          <td class="memname"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Aspect::Engine::MeshRender::onInit </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -121,7 +268,145 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="class_aspect_1_1_engine_1_1_component.html">Aspect::Engine::Component</a>.</p>
+<p>Reimplemented from <a class="el" href="class_aspect_1_1_engine_1_1_component.html#a3a1fbf76e3fd208be7ffe0ffa449dcf9">Aspect::Engine::Component</a>.</p>
+
+</div>
+</div>
+<a id="aadfc13cdafe27ff3f63e80e68fdfbaa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadfc13cdafe27ff3f63e80e68fdfbaa0">&#9670;&nbsp;</a></span>setTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Aspect::Engine::MeshRender::setTexture </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> &amp;&#160;</td>
+          <td class="paramname"><em>_texture</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a mesh of any obj. </p>
+
+</div>
+</div>
+<a id="ae8ca6b05b335b228943f4c034c02100d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8ca6b05b335b228943f4c034c02100d">&#9670;&nbsp;</a></span>Triangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Aspect::Engine::MeshRender::Triangle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw cube object. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="acd7bb5d1bfd42ecfe1a3d94b12271068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd7bb5d1bfd42ecfe1a3d94b12271068">&#9670;&nbsp;</a></span>camera</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a>&gt; Aspect::Engine::MeshRender::camera</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>On init component function. </p>
+
+</div>
+</div>
+<a id="ad1db374346473ead0d1c8c1801390dbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1db374346473ead0d1c8c1801390dbe">&#9670;&nbsp;</a></span>mat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_aspect_1_1_engine_1_1_material.html">Material</a>&gt; Aspect::Engine::MeshRender::mat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a242e0980538e23b839f7ad8434bb1aa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a242e0980538e23b839f7ad8434bb1aa7">&#9670;&nbsp;</a></span>MrEnable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Aspect::Engine::MeshRender::MrEnable = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af49c803c0ee4b4e72e8d87455e74ae5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af49c803c0ee4b4e72e8d87455e74ae5e">&#9670;&nbsp;</a></span>shader</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_aspect_1_1_engine_1_1_shader_program.html">ShaderProgram</a>&gt; Aspect::Engine::MeshRender::shader</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af137747f679a92eec890a25cbdbc9e8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af137747f679a92eec890a25cbdbc9e8a">&#9670;&nbsp;</a></span>shape</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_aspect_1_1_engine_1_1_vertex_array.html">VertexArray</a>&gt; Aspect::Engine::MeshRender::shape</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>On count is update. </p>
 
 </div>
 </div>

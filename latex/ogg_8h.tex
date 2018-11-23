@@ -1,0 +1,593 @@
+\hypertarget{ogg_8h}{}\section{Contrib/ogg/include/ogg/ogg.h File Reference}
+\label{ogg_8h}\index{Contrib/ogg/include/ogg/ogg.\+h@{Contrib/ogg/include/ogg/ogg.\+h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$ogg/os\+\_\+types.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structogg__iovec__t}{ogg\+\_\+iovec\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}}
+\item 
+struct \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}}
+\item 
+struct \mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}}
+\item 
+struct \mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_ad65b5bd71ff1e2d4d7c8dc0d5767f580}{oggpack\+\_\+writeinit}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+int \mbox{\hyperlink{ogg_8h_ac07a7afbd7d6ef9cbef4934e86125485}{oggpack\+\_\+writecheck}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_a7e629a16865518a073109ec5496c1db5}{oggpack\+\_\+writetrunc}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, long \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8dc2cc80c52413d48ac45732e90d3a66}{bits}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_a954dc6d19d32b82851970138fe2c54a9}{oggpack\+\_\+writealign}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_adc9ef879e4c946efd285937e53a57dd8}{oggpack\+\_\+writecopy}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a633906574fe6e39b7f2840bed0e49832}{source}}, long \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8dc2cc80c52413d48ac45732e90d3a66}{bits}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_a149a7ea2f5b6c732c716b2267ef46b82}{oggpack\+\_\+reset}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_a1ed2493438bb950987014f3dc671be5f}{oggpack\+\_\+writeclear}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_a5586b0772a73f943fcaf0db8ab788e4d}{oggpack\+\_\+readinit}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, unsigned char $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_aa3b73d9ca9f2e2396cbeae1ce6ce14be}{buf}}, int bytes)
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_af2e77bfb7ad82b12c81e725d7b4c2133}{oggpack\+\_\+write}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, unsigned long \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8ad81492d410ff2ac11f754f4042150f}{value}}, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8dc2cc80c52413d48ac45732e90d3a66}{bits}})
+\item 
+long \mbox{\hyperlink{ogg_8h_ad49883be3d28269b4dc245460dd4753c}{oggpack\+\_\+look}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8dc2cc80c52413d48ac45732e90d3a66}{bits}})
+\item 
+long \mbox{\hyperlink{ogg_8h_a42a32a4d9f328fe7259a5ed47ccae14e}{oggpack\+\_\+look1}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_ab1072d1dfae8866cce6014489fa926f0}{oggpack\+\_\+adv}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8dc2cc80c52413d48ac45732e90d3a66}{bits}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_af11de3c5c31f4ab567826c66e6a2cb5c}{oggpack\+\_\+adv1}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+long \mbox{\hyperlink{ogg_8h_a7e3e346e19e4a74bfe4e21f90578eee6}{oggpack\+\_\+read}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8dc2cc80c52413d48ac45732e90d3a66}{bits}})
+\item 
+long \mbox{\hyperlink{ogg_8h_af78224170f805b432381042401635165}{oggpack\+\_\+read1}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+long \mbox{\hyperlink{ogg_8h_a6483ce3b4718d510fd506a7d0099d8e4}{oggpack\+\_\+bytes}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+long \mbox{\hyperlink{ogg_8h_ac3f0fcfb088cdf281e676653d74a918f}{oggpack\+\_\+bits}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{ogg_8h_abf824fd3dd4a0bd810adb2d3490e3b70}{oggpack\+\_\+get\+\_\+buffer}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_a6617bd89f2f26221195126f7d9937772}{oggpack\+B\+\_\+writeinit}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+int \mbox{\hyperlink{ogg_8h_af070521872121dde6a7ff51df5b3b53a}{oggpack\+B\+\_\+writecheck}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_a6f1d4a7f3a6af4e122bcd35aa5f9bd4f}{oggpack\+B\+\_\+writetrunc}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, long \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8dc2cc80c52413d48ac45732e90d3a66}{bits}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_a67f128fbd1c2823097e24e924c9500b5}{oggpack\+B\+\_\+writealign}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_ae033d573c9e7a5a9338250f887af287b}{oggpack\+B\+\_\+writecopy}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a633906574fe6e39b7f2840bed0e49832}{source}}, long \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8dc2cc80c52413d48ac45732e90d3a66}{bits}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_a3a5d1e5244feb038ddb2b171a1ae8879}{oggpack\+B\+\_\+reset}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_a12aeb63fb274f529b6bd25b795aca6f6}{oggpack\+B\+\_\+writeclear}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_a85caa0815737960c1215bd5ca9cc12ba}{oggpack\+B\+\_\+readinit}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, unsigned char $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_aa3b73d9ca9f2e2396cbeae1ce6ce14be}{buf}}, int bytes)
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_a81cec9a7d04f473b38cfbc083d747042}{oggpack\+B\+\_\+write}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, unsigned long \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8ad81492d410ff2ac11f754f4042150f}{value}}, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8dc2cc80c52413d48ac45732e90d3a66}{bits}})
+\item 
+long \mbox{\hyperlink{ogg_8h_afca6a2cfacb4e02fd30fa2c5d809ad81}{oggpack\+B\+\_\+look}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8dc2cc80c52413d48ac45732e90d3a66}{bits}})
+\item 
+long \mbox{\hyperlink{ogg_8h_a00c0f5aa56f411dbed471144dd36aa4c}{oggpack\+B\+\_\+look1}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_af9237517e47a58059cc028019f760482}{oggpack\+B\+\_\+adv}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8dc2cc80c52413d48ac45732e90d3a66}{bits}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_a7ba15c21247b46a4ef85b672495335d5}{oggpack\+B\+\_\+adv1}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+long \mbox{\hyperlink{ogg_8h_a7182bc320e5e6b94cb8d90caa0c0b2b0}{oggpack\+B\+\_\+read}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8dc2cc80c52413d48ac45732e90d3a66}{bits}})
+\item 
+long \mbox{\hyperlink{ogg_8h_a38d53b127663e1365e734b48e700f0c5}{oggpack\+B\+\_\+read1}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+long \mbox{\hyperlink{ogg_8h_ad267f53b9522efe31e1721af11af3fdb}{oggpack\+B\+\_\+bytes}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+long \mbox{\hyperlink{ogg_8h_a317d9e0c9bd3396b131d7c9bea6762c0}{oggpack\+B\+\_\+bits}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{ogg_8h_a8d92daddf7e4c4024555585197759c61}{oggpack\+B\+\_\+get\+\_\+buffer}} (\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+int \mbox{\hyperlink{ogg_8h_a57ec8183300b01784037b7fd845894e4}{ogg\+\_\+stream\+\_\+packetin}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os, \mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} $\ast$op)
+\item 
+int \mbox{\hyperlink{ogg_8h_aa16a1d6d26dbc8c0cbf4a3994f3116d7}{ogg\+\_\+stream\+\_\+iovecin}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os, \mbox{\hyperlink{structogg__iovec__t}{ogg\+\_\+iovec\+\_\+t}} $\ast$iov, int \mbox{\hyperlink{_s_d_l__opengl_8h_a619bc20e8198de3bd3f3d7fc34de66b2}{count}}, long e\+\_\+o\+\_\+s, ogg\+\_\+int64\+\_\+t granulepos)
+\item 
+int \mbox{\hyperlink{ogg_8h_a75f6056bc13fa979a2443a3c309dc83f}{ogg\+\_\+stream\+\_\+pageout}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os, \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og)
+\item 
+int \mbox{\hyperlink{ogg_8h_ab167ba3c3ce03270cb6a8b99953ef060}{ogg\+\_\+stream\+\_\+pageout\+\_\+fill}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os, \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og, int nfill)
+\item 
+int \mbox{\hyperlink{ogg_8h_aae837247e0edb7003c7ce5b7ae76d20e}{ogg\+\_\+stream\+\_\+flush}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os, \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og)
+\item 
+int \mbox{\hyperlink{ogg_8h_af5bac9d5dbc1f8e9a182b31442b17598}{ogg\+\_\+stream\+\_\+flush\+\_\+fill}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os, \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og, int nfill)
+\item 
+int \mbox{\hyperlink{ogg_8h_a20504c78ff5a937b38729c6b220e78a6}{ogg\+\_\+sync\+\_\+init}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$oy)
+\item 
+int \mbox{\hyperlink{ogg_8h_a43833b30d583f7522224fb28849fc479}{ogg\+\_\+sync\+\_\+clear}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$oy)
+\item 
+int \mbox{\hyperlink{ogg_8h_aac95c26af4c17a724fe8c574fb7d04ec}{ogg\+\_\+sync\+\_\+reset}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$oy)
+\item 
+int \mbox{\hyperlink{ogg_8h_a721f1f5279730065c0cef7278ec45525}{ogg\+\_\+sync\+\_\+destroy}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$oy)
+\item 
+int \mbox{\hyperlink{ogg_8h_ac985c6bd3c1e06399e65cef6a5bb28f7}{ogg\+\_\+sync\+\_\+check}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$oy)
+\item 
+char $\ast$ \mbox{\hyperlink{ogg_8h_a699610803ac0cd2cc36224e57e7f783c}{ogg\+\_\+sync\+\_\+buffer}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$oy, long \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}})
+\item 
+int \mbox{\hyperlink{ogg_8h_abd197a9cda5a6cec788c65c79530e20d}{ogg\+\_\+sync\+\_\+wrote}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$oy, long bytes)
+\item 
+long \mbox{\hyperlink{ogg_8h_a5345f2f7f8b48e8dcaad082aa047a04d}{ogg\+\_\+sync\+\_\+pageseek}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$oy, \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og)
+\item 
+int \mbox{\hyperlink{ogg_8h_abcb8ea90cec5a3e5bb19686432c11da6}{ogg\+\_\+sync\+\_\+pageout}} (\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$oy, \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og)
+\item 
+int \mbox{\hyperlink{ogg_8h_a60db38b6032f1fb0729e14adb61f11a2}{ogg\+\_\+stream\+\_\+pagein}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os, \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og)
+\item 
+int \mbox{\hyperlink{ogg_8h_a387e608bc7cc9d39e74c962475f2e9d4}{ogg\+\_\+stream\+\_\+packetout}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os, \mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} $\ast$op)
+\item 
+int \mbox{\hyperlink{ogg_8h_a55245182c6e49c3e474fb8c83a39faae}{ogg\+\_\+stream\+\_\+packetpeek}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os, \mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} $\ast$op)
+\item 
+int \mbox{\hyperlink{ogg_8h_abbbbea9bc3d14e9aff39582854d96d94}{ogg\+\_\+stream\+\_\+init}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os, int serialno)
+\item 
+int \mbox{\hyperlink{ogg_8h_a305dff20a5476305be61e46f6b34d4e1}{ogg\+\_\+stream\+\_\+clear}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os)
+\item 
+int \mbox{\hyperlink{ogg_8h_a675ce59aae7b53cba0ed6a8bf913ae98}{ogg\+\_\+stream\+\_\+reset}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os)
+\item 
+int \mbox{\hyperlink{ogg_8h_af6da3e5f5a7980513878576c9499d192}{ogg\+\_\+stream\+\_\+reset\+\_\+serialno}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os, int serialno)
+\item 
+int \mbox{\hyperlink{ogg_8h_a0498b400e1248e86151c21083bb1abaf}{ogg\+\_\+stream\+\_\+destroy}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os)
+\item 
+int \mbox{\hyperlink{ogg_8h_a19a4792d729d1a199dcd974733702acd}{ogg\+\_\+stream\+\_\+check}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os)
+\item 
+int \mbox{\hyperlink{ogg_8h_a79150395233a093faa465fd2e2e2a6d3}{ogg\+\_\+stream\+\_\+eos}} (\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$os)
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_aaada108f98be64cc8230044709bf452d}{ogg\+\_\+page\+\_\+checksum\+\_\+set}} (\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og)
+\item 
+int \mbox{\hyperlink{ogg_8h_a4c3333898b90e1df4734abd96e2d5cb1}{ogg\+\_\+page\+\_\+version}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og)
+\item 
+int \mbox{\hyperlink{ogg_8h_a01e13664fc5db742a2658dcb5dbec978}{ogg\+\_\+page\+\_\+continued}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og)
+\item 
+int \mbox{\hyperlink{ogg_8h_a9c0d96d6060b511e6ad4c0a2aec3bc49}{ogg\+\_\+page\+\_\+bos}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og)
+\item 
+int \mbox{\hyperlink{ogg_8h_ad970fa8d2ee19a0c965a45f55f108ec6}{ogg\+\_\+page\+\_\+eos}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og)
+\item 
+ogg\+\_\+int64\+\_\+t \mbox{\hyperlink{ogg_8h_a538a0abd2b69e7548eb6638475ede669}{ogg\+\_\+page\+\_\+granulepos}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og)
+\item 
+int \mbox{\hyperlink{ogg_8h_a6194aa97806e93b0889a3b376c7ceb8f}{ogg\+\_\+page\+\_\+serialno}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og)
+\item 
+long \mbox{\hyperlink{ogg_8h_a5b4cfa61e780b79880071f927c22800e}{ogg\+\_\+page\+\_\+pageno}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og)
+\item 
+int \mbox{\hyperlink{ogg_8h_a18b465902d8c13d626058868c24c8db4}{ogg\+\_\+page\+\_\+packets}} (const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$og)
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{ogg_8h_ae4136972678f564c382a54015bab3c9c}{ogg\+\_\+packet\+\_\+clear}} (\mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} $\ast$op)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ogg_8h_ae4136972678f564c382a54015bab3c9c}\label{ogg_8h_ae4136972678f564c382a54015bab3c9c}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+packet\+\_\+clear@{ogg\+\_\+packet\+\_\+clear}}
+\index{ogg\+\_\+packet\+\_\+clear@{ogg\+\_\+packet\+\_\+clear}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+packet\+\_\+clear()}{ogg\_packet\_clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} ogg\+\_\+packet\+\_\+clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} $\ast$}]{op }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a9c0d96d6060b511e6ad4c0a2aec3bc49}\label{ogg_8h_a9c0d96d6060b511e6ad4c0a2aec3bc49}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+page\+\_\+bos@{ogg\+\_\+page\+\_\+bos}}
+\index{ogg\+\_\+page\+\_\+bos@{ogg\+\_\+page\+\_\+bos}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+page\+\_\+bos()}{ogg\_page\_bos()}}
+{\footnotesize\ttfamily int ogg\+\_\+page\+\_\+bos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_aaada108f98be64cc8230044709bf452d}\label{ogg_8h_aaada108f98be64cc8230044709bf452d}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+page\+\_\+checksum\+\_\+set@{ogg\+\_\+page\+\_\+checksum\+\_\+set}}
+\index{ogg\+\_\+page\+\_\+checksum\+\_\+set@{ogg\+\_\+page\+\_\+checksum\+\_\+set}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+page\+\_\+checksum\+\_\+set()}{ogg\_page\_checksum\_set()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} ogg\+\_\+page\+\_\+checksum\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a01e13664fc5db742a2658dcb5dbec978}\label{ogg_8h_a01e13664fc5db742a2658dcb5dbec978}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+page\+\_\+continued@{ogg\+\_\+page\+\_\+continued}}
+\index{ogg\+\_\+page\+\_\+continued@{ogg\+\_\+page\+\_\+continued}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+page\+\_\+continued()}{ogg\_page\_continued()}}
+{\footnotesize\ttfamily int ogg\+\_\+page\+\_\+continued (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_ad970fa8d2ee19a0c965a45f55f108ec6}\label{ogg_8h_ad970fa8d2ee19a0c965a45f55f108ec6}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+page\+\_\+eos@{ogg\+\_\+page\+\_\+eos}}
+\index{ogg\+\_\+page\+\_\+eos@{ogg\+\_\+page\+\_\+eos}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+page\+\_\+eos()}{ogg\_page\_eos()}}
+{\footnotesize\ttfamily int ogg\+\_\+page\+\_\+eos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a538a0abd2b69e7548eb6638475ede669}\label{ogg_8h_a538a0abd2b69e7548eb6638475ede669}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+page\+\_\+granulepos@{ogg\+\_\+page\+\_\+granulepos}}
+\index{ogg\+\_\+page\+\_\+granulepos@{ogg\+\_\+page\+\_\+granulepos}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+page\+\_\+granulepos()}{ogg\_page\_granulepos()}}
+{\footnotesize\ttfamily ogg\+\_\+int64\+\_\+t ogg\+\_\+page\+\_\+granulepos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a18b465902d8c13d626058868c24c8db4}\label{ogg_8h_a18b465902d8c13d626058868c24c8db4}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+page\+\_\+packets@{ogg\+\_\+page\+\_\+packets}}
+\index{ogg\+\_\+page\+\_\+packets@{ogg\+\_\+page\+\_\+packets}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+page\+\_\+packets()}{ogg\_page\_packets()}}
+{\footnotesize\ttfamily int ogg\+\_\+page\+\_\+packets (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a5b4cfa61e780b79880071f927c22800e}\label{ogg_8h_a5b4cfa61e780b79880071f927c22800e}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+page\+\_\+pageno@{ogg\+\_\+page\+\_\+pageno}}
+\index{ogg\+\_\+page\+\_\+pageno@{ogg\+\_\+page\+\_\+pageno}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+page\+\_\+pageno()}{ogg\_page\_pageno()}}
+{\footnotesize\ttfamily long ogg\+\_\+page\+\_\+pageno (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a6194aa97806e93b0889a3b376c7ceb8f}\label{ogg_8h_a6194aa97806e93b0889a3b376c7ceb8f}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+page\+\_\+serialno@{ogg\+\_\+page\+\_\+serialno}}
+\index{ogg\+\_\+page\+\_\+serialno@{ogg\+\_\+page\+\_\+serialno}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+page\+\_\+serialno()}{ogg\_page\_serialno()}}
+{\footnotesize\ttfamily int ogg\+\_\+page\+\_\+serialno (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a4c3333898b90e1df4734abd96e2d5cb1}\label{ogg_8h_a4c3333898b90e1df4734abd96e2d5cb1}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+page\+\_\+version@{ogg\+\_\+page\+\_\+version}}
+\index{ogg\+\_\+page\+\_\+version@{ogg\+\_\+page\+\_\+version}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+page\+\_\+version()}{ogg\_page\_version()}}
+{\footnotesize\ttfamily int ogg\+\_\+page\+\_\+version (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a19a4792d729d1a199dcd974733702acd}\label{ogg_8h_a19a4792d729d1a199dcd974733702acd}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+check@{ogg\+\_\+stream\+\_\+check}}
+\index{ogg\+\_\+stream\+\_\+check@{ogg\+\_\+stream\+\_\+check}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+check()}{ogg\_stream\_check()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a305dff20a5476305be61e46f6b34d4e1}\label{ogg_8h_a305dff20a5476305be61e46f6b34d4e1}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+clear@{ogg\+\_\+stream\+\_\+clear}}
+\index{ogg\+\_\+stream\+\_\+clear@{ogg\+\_\+stream\+\_\+clear}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+clear()}{ogg\_stream\_clear()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a0498b400e1248e86151c21083bb1abaf}\label{ogg_8h_a0498b400e1248e86151c21083bb1abaf}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+destroy@{ogg\+\_\+stream\+\_\+destroy}}
+\index{ogg\+\_\+stream\+\_\+destroy@{ogg\+\_\+stream\+\_\+destroy}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+destroy()}{ogg\_stream\_destroy()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a79150395233a093faa465fd2e2e2a6d3}\label{ogg_8h_a79150395233a093faa465fd2e2e2a6d3}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+eos@{ogg\+\_\+stream\+\_\+eos}}
+\index{ogg\+\_\+stream\+\_\+eos@{ogg\+\_\+stream\+\_\+eos}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+eos()}{ogg\_stream\_eos()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+eos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_aae837247e0edb7003c7ce5b7ae76d20e}\label{ogg_8h_aae837247e0edb7003c7ce5b7ae76d20e}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+flush@{ogg\+\_\+stream\+\_\+flush}}
+\index{ogg\+\_\+stream\+\_\+flush@{ogg\+\_\+stream\+\_\+flush}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+flush()}{ogg\_stream\_flush()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+flush (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os,  }\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_af5bac9d5dbc1f8e9a182b31442b17598}\label{ogg_8h_af5bac9d5dbc1f8e9a182b31442b17598}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+flush\+\_\+fill@{ogg\+\_\+stream\+\_\+flush\+\_\+fill}}
+\index{ogg\+\_\+stream\+\_\+flush\+\_\+fill@{ogg\+\_\+stream\+\_\+flush\+\_\+fill}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+flush\+\_\+fill()}{ogg\_stream\_flush\_fill()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+flush\+\_\+fill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os,  }\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og,  }\item[{int}]{nfill }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_abbbbea9bc3d14e9aff39582854d96d94}\label{ogg_8h_abbbbea9bc3d14e9aff39582854d96d94}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+init@{ogg\+\_\+stream\+\_\+init}}
+\index{ogg\+\_\+stream\+\_\+init@{ogg\+\_\+stream\+\_\+init}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+init()}{ogg\_stream\_init()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os,  }\item[{int}]{serialno }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_aa16a1d6d26dbc8c0cbf4a3994f3116d7}\label{ogg_8h_aa16a1d6d26dbc8c0cbf4a3994f3116d7}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+iovecin@{ogg\+\_\+stream\+\_\+iovecin}}
+\index{ogg\+\_\+stream\+\_\+iovecin@{ogg\+\_\+stream\+\_\+iovecin}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+iovecin()}{ogg\_stream\_iovecin()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+iovecin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os,  }\item[{\mbox{\hyperlink{structogg__iovec__t}{ogg\+\_\+iovec\+\_\+t}} $\ast$}]{iov,  }\item[{int}]{count,  }\item[{long}]{e\+\_\+o\+\_\+s,  }\item[{ogg\+\_\+int64\+\_\+t}]{granulepos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a57ec8183300b01784037b7fd845894e4}\label{ogg_8h_a57ec8183300b01784037b7fd845894e4}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+packetin@{ogg\+\_\+stream\+\_\+packetin}}
+\index{ogg\+\_\+stream\+\_\+packetin@{ogg\+\_\+stream\+\_\+packetin}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+packetin()}{ogg\_stream\_packetin()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+packetin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os,  }\item[{\mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} $\ast$}]{op }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a387e608bc7cc9d39e74c962475f2e9d4}\label{ogg_8h_a387e608bc7cc9d39e74c962475f2e9d4}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+packetout@{ogg\+\_\+stream\+\_\+packetout}}
+\index{ogg\+\_\+stream\+\_\+packetout@{ogg\+\_\+stream\+\_\+packetout}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+packetout()}{ogg\_stream\_packetout()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+packetout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os,  }\item[{\mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} $\ast$}]{op }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a55245182c6e49c3e474fb8c83a39faae}\label{ogg_8h_a55245182c6e49c3e474fb8c83a39faae}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+packetpeek@{ogg\+\_\+stream\+\_\+packetpeek}}
+\index{ogg\+\_\+stream\+\_\+packetpeek@{ogg\+\_\+stream\+\_\+packetpeek}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+packetpeek()}{ogg\_stream\_packetpeek()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+packetpeek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os,  }\item[{\mbox{\hyperlink{structogg__packet}{ogg\+\_\+packet}} $\ast$}]{op }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a60db38b6032f1fb0729e14adb61f11a2}\label{ogg_8h_a60db38b6032f1fb0729e14adb61f11a2}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+pagein@{ogg\+\_\+stream\+\_\+pagein}}
+\index{ogg\+\_\+stream\+\_\+pagein@{ogg\+\_\+stream\+\_\+pagein}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+pagein()}{ogg\_stream\_pagein()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+pagein (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os,  }\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a75f6056bc13fa979a2443a3c309dc83f}\label{ogg_8h_a75f6056bc13fa979a2443a3c309dc83f}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+pageout@{ogg\+\_\+stream\+\_\+pageout}}
+\index{ogg\+\_\+stream\+\_\+pageout@{ogg\+\_\+stream\+\_\+pageout}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+pageout()}{ogg\_stream\_pageout()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+pageout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os,  }\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_ab167ba3c3ce03270cb6a8b99953ef060}\label{ogg_8h_ab167ba3c3ce03270cb6a8b99953ef060}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+pageout\+\_\+fill@{ogg\+\_\+stream\+\_\+pageout\+\_\+fill}}
+\index{ogg\+\_\+stream\+\_\+pageout\+\_\+fill@{ogg\+\_\+stream\+\_\+pageout\+\_\+fill}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+pageout\+\_\+fill()}{ogg\_stream\_pageout\_fill()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+pageout\+\_\+fill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os,  }\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og,  }\item[{int}]{nfill }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a675ce59aae7b53cba0ed6a8bf913ae98}\label{ogg_8h_a675ce59aae7b53cba0ed6a8bf913ae98}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+reset@{ogg\+\_\+stream\+\_\+reset}}
+\index{ogg\+\_\+stream\+\_\+reset@{ogg\+\_\+stream\+\_\+reset}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+reset()}{ogg\_stream\_reset()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_af6da3e5f5a7980513878576c9499d192}\label{ogg_8h_af6da3e5f5a7980513878576c9499d192}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+stream\+\_\+reset\+\_\+serialno@{ogg\+\_\+stream\+\_\+reset\+\_\+serialno}}
+\index{ogg\+\_\+stream\+\_\+reset\+\_\+serialno@{ogg\+\_\+stream\+\_\+reset\+\_\+serialno}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+stream\+\_\+reset\+\_\+serialno()}{ogg\_stream\_reset\_serialno()}}
+{\footnotesize\ttfamily int ogg\+\_\+stream\+\_\+reset\+\_\+serialno (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__stream__state}{ogg\+\_\+stream\+\_\+state}} $\ast$}]{os,  }\item[{int}]{serialno }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a699610803ac0cd2cc36224e57e7f783c}\label{ogg_8h_a699610803ac0cd2cc36224e57e7f783c}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+sync\+\_\+buffer@{ogg\+\_\+sync\+\_\+buffer}}
+\index{ogg\+\_\+sync\+\_\+buffer@{ogg\+\_\+sync\+\_\+buffer}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+sync\+\_\+buffer()}{ogg\_sync\_buffer()}}
+{\footnotesize\ttfamily char$\ast$ ogg\+\_\+sync\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$}]{oy,  }\item[{long}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_ac985c6bd3c1e06399e65cef6a5bb28f7}\label{ogg_8h_ac985c6bd3c1e06399e65cef6a5bb28f7}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+sync\+\_\+check@{ogg\+\_\+sync\+\_\+check}}
+\index{ogg\+\_\+sync\+\_\+check@{ogg\+\_\+sync\+\_\+check}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+sync\+\_\+check()}{ogg\_sync\_check()}}
+{\footnotesize\ttfamily int ogg\+\_\+sync\+\_\+check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$}]{oy }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a43833b30d583f7522224fb28849fc479}\label{ogg_8h_a43833b30d583f7522224fb28849fc479}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+sync\+\_\+clear@{ogg\+\_\+sync\+\_\+clear}}
+\index{ogg\+\_\+sync\+\_\+clear@{ogg\+\_\+sync\+\_\+clear}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+sync\+\_\+clear()}{ogg\_sync\_clear()}}
+{\footnotesize\ttfamily int ogg\+\_\+sync\+\_\+clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$}]{oy }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a721f1f5279730065c0cef7278ec45525}\label{ogg_8h_a721f1f5279730065c0cef7278ec45525}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+sync\+\_\+destroy@{ogg\+\_\+sync\+\_\+destroy}}
+\index{ogg\+\_\+sync\+\_\+destroy@{ogg\+\_\+sync\+\_\+destroy}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+sync\+\_\+destroy()}{ogg\_sync\_destroy()}}
+{\footnotesize\ttfamily int ogg\+\_\+sync\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$}]{oy }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a20504c78ff5a937b38729c6b220e78a6}\label{ogg_8h_a20504c78ff5a937b38729c6b220e78a6}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+sync\+\_\+init@{ogg\+\_\+sync\+\_\+init}}
+\index{ogg\+\_\+sync\+\_\+init@{ogg\+\_\+sync\+\_\+init}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+sync\+\_\+init()}{ogg\_sync\_init()}}
+{\footnotesize\ttfamily int ogg\+\_\+sync\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$}]{oy }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_abcb8ea90cec5a3e5bb19686432c11da6}\label{ogg_8h_abcb8ea90cec5a3e5bb19686432c11da6}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+sync\+\_\+pageout@{ogg\+\_\+sync\+\_\+pageout}}
+\index{ogg\+\_\+sync\+\_\+pageout@{ogg\+\_\+sync\+\_\+pageout}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+sync\+\_\+pageout()}{ogg\_sync\_pageout()}}
+{\footnotesize\ttfamily int ogg\+\_\+sync\+\_\+pageout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$}]{oy,  }\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a5345f2f7f8b48e8dcaad082aa047a04d}\label{ogg_8h_a5345f2f7f8b48e8dcaad082aa047a04d}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+sync\+\_\+pageseek@{ogg\+\_\+sync\+\_\+pageseek}}
+\index{ogg\+\_\+sync\+\_\+pageseek@{ogg\+\_\+sync\+\_\+pageseek}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+sync\+\_\+pageseek()}{ogg\_sync\_pageseek()}}
+{\footnotesize\ttfamily long ogg\+\_\+sync\+\_\+pageseek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$}]{oy,  }\item[{\mbox{\hyperlink{structogg__page}{ogg\+\_\+page}} $\ast$}]{og }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_aac95c26af4c17a724fe8c574fb7d04ec}\label{ogg_8h_aac95c26af4c17a724fe8c574fb7d04ec}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+sync\+\_\+reset@{ogg\+\_\+sync\+\_\+reset}}
+\index{ogg\+\_\+sync\+\_\+reset@{ogg\+\_\+sync\+\_\+reset}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+sync\+\_\+reset()}{ogg\_sync\_reset()}}
+{\footnotesize\ttfamily int ogg\+\_\+sync\+\_\+reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$}]{oy }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_abd197a9cda5a6cec788c65c79530e20d}\label{ogg_8h_abd197a9cda5a6cec788c65c79530e20d}} 
+\index{ogg.\+h@{ogg.\+h}!ogg\+\_\+sync\+\_\+wrote@{ogg\+\_\+sync\+\_\+wrote}}
+\index{ogg\+\_\+sync\+\_\+wrote@{ogg\+\_\+sync\+\_\+wrote}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{ogg\+\_\+sync\+\_\+wrote()}{ogg\_sync\_wrote()}}
+{\footnotesize\ttfamily int ogg\+\_\+sync\+\_\+wrote (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structogg__sync__state}{ogg\+\_\+sync\+\_\+state}} $\ast$}]{oy,  }\item[{long}]{bytes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_ab1072d1dfae8866cce6014489fa926f0}\label{ogg_8h_ab1072d1dfae8866cce6014489fa926f0}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+adv@{oggpack\+\_\+adv}}
+\index{oggpack\+\_\+adv@{oggpack\+\_\+adv}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+adv()}{oggpack\_adv()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+\_\+adv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b,  }\item[{int}]{bits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_af11de3c5c31f4ab567826c66e6a2cb5c}\label{ogg_8h_af11de3c5c31f4ab567826c66e6a2cb5c}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+adv1@{oggpack\+\_\+adv1}}
+\index{oggpack\+\_\+adv1@{oggpack\+\_\+adv1}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+adv1()}{oggpack\_adv1()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+\_\+adv1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_ac3f0fcfb088cdf281e676653d74a918f}\label{ogg_8h_ac3f0fcfb088cdf281e676653d74a918f}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+bits@{oggpack\+\_\+bits}}
+\index{oggpack\+\_\+bits@{oggpack\+\_\+bits}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+bits()}{oggpack\_bits()}}
+{\footnotesize\ttfamily long oggpack\+\_\+bits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a6483ce3b4718d510fd506a7d0099d8e4}\label{ogg_8h_a6483ce3b4718d510fd506a7d0099d8e4}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+bytes@{oggpack\+\_\+bytes}}
+\index{oggpack\+\_\+bytes@{oggpack\+\_\+bytes}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+bytes()}{oggpack\_bytes()}}
+{\footnotesize\ttfamily long oggpack\+\_\+bytes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_abf824fd3dd4a0bd810adb2d3490e3b70}\label{ogg_8h_abf824fd3dd4a0bd810adb2d3490e3b70}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+get\+\_\+buffer@{oggpack\+\_\+get\+\_\+buffer}}
+\index{oggpack\+\_\+get\+\_\+buffer@{oggpack\+\_\+get\+\_\+buffer}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+get\+\_\+buffer()}{oggpack\_get\_buffer()}}
+{\footnotesize\ttfamily unsigned char$\ast$ oggpack\+\_\+get\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_ad49883be3d28269b4dc245460dd4753c}\label{ogg_8h_ad49883be3d28269b4dc245460dd4753c}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+look@{oggpack\+\_\+look}}
+\index{oggpack\+\_\+look@{oggpack\+\_\+look}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+look()}{oggpack\_look()}}
+{\footnotesize\ttfamily long oggpack\+\_\+look (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b,  }\item[{int}]{bits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a42a32a4d9f328fe7259a5ed47ccae14e}\label{ogg_8h_a42a32a4d9f328fe7259a5ed47ccae14e}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+look1@{oggpack\+\_\+look1}}
+\index{oggpack\+\_\+look1@{oggpack\+\_\+look1}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+look1()}{oggpack\_look1()}}
+{\footnotesize\ttfamily long oggpack\+\_\+look1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a7e3e346e19e4a74bfe4e21f90578eee6}\label{ogg_8h_a7e3e346e19e4a74bfe4e21f90578eee6}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+read@{oggpack\+\_\+read}}
+\index{oggpack\+\_\+read@{oggpack\+\_\+read}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+read()}{oggpack\_read()}}
+{\footnotesize\ttfamily long oggpack\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b,  }\item[{int}]{bits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_af78224170f805b432381042401635165}\label{ogg_8h_af78224170f805b432381042401635165}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+read1@{oggpack\+\_\+read1}}
+\index{oggpack\+\_\+read1@{oggpack\+\_\+read1}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+read1()}{oggpack\_read1()}}
+{\footnotesize\ttfamily long oggpack\+\_\+read1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a5586b0772a73f943fcaf0db8ab788e4d}\label{ogg_8h_a5586b0772a73f943fcaf0db8ab788e4d}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+readinit@{oggpack\+\_\+readinit}}
+\index{oggpack\+\_\+readinit@{oggpack\+\_\+readinit}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+readinit()}{oggpack\_readinit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+\_\+readinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b,  }\item[{unsigned char $\ast$}]{buf,  }\item[{int}]{bytes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a149a7ea2f5b6c732c716b2267ef46b82}\label{ogg_8h_a149a7ea2f5b6c732c716b2267ef46b82}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+reset@{oggpack\+\_\+reset}}
+\index{oggpack\+\_\+reset@{oggpack\+\_\+reset}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+reset()}{oggpack\_reset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+\_\+reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_af2e77bfb7ad82b12c81e725d7b4c2133}\label{ogg_8h_af2e77bfb7ad82b12c81e725d7b4c2133}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+write@{oggpack\+\_\+write}}
+\index{oggpack\+\_\+write@{oggpack\+\_\+write}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+write()}{oggpack\_write()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b,  }\item[{unsigned long}]{value,  }\item[{int}]{bits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a954dc6d19d32b82851970138fe2c54a9}\label{ogg_8h_a954dc6d19d32b82851970138fe2c54a9}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+writealign@{oggpack\+\_\+writealign}}
+\index{oggpack\+\_\+writealign@{oggpack\+\_\+writealign}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+writealign()}{oggpack\_writealign()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+\_\+writealign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_ac07a7afbd7d6ef9cbef4934e86125485}\label{ogg_8h_ac07a7afbd7d6ef9cbef4934e86125485}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+writecheck@{oggpack\+\_\+writecheck}}
+\index{oggpack\+\_\+writecheck@{oggpack\+\_\+writecheck}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+writecheck()}{oggpack\_writecheck()}}
+{\footnotesize\ttfamily int oggpack\+\_\+writecheck (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a1ed2493438bb950987014f3dc671be5f}\label{ogg_8h_a1ed2493438bb950987014f3dc671be5f}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+writeclear@{oggpack\+\_\+writeclear}}
+\index{oggpack\+\_\+writeclear@{oggpack\+\_\+writeclear}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+writeclear()}{oggpack\_writeclear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+\_\+writeclear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_adc9ef879e4c946efd285937e53a57dd8}\label{ogg_8h_adc9ef879e4c946efd285937e53a57dd8}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+writecopy@{oggpack\+\_\+writecopy}}
+\index{oggpack\+\_\+writecopy@{oggpack\+\_\+writecopy}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+writecopy()}{oggpack\_writecopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+\_\+writecopy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b,  }\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$}]{source,  }\item[{long}]{bits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_ad65b5bd71ff1e2d4d7c8dc0d5767f580}\label{ogg_8h_ad65b5bd71ff1e2d4d7c8dc0d5767f580}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+writeinit@{oggpack\+\_\+writeinit}}
+\index{oggpack\+\_\+writeinit@{oggpack\+\_\+writeinit}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+writeinit()}{oggpack\_writeinit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+\_\+writeinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a7e629a16865518a073109ec5496c1db5}\label{ogg_8h_a7e629a16865518a073109ec5496c1db5}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+\_\+writetrunc@{oggpack\+\_\+writetrunc}}
+\index{oggpack\+\_\+writetrunc@{oggpack\+\_\+writetrunc}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+\_\+writetrunc()}{oggpack\_writetrunc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+\_\+writetrunc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b,  }\item[{long}]{bits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_af9237517e47a58059cc028019f760482}\label{ogg_8h_af9237517e47a58059cc028019f760482}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+adv@{oggpack\+B\+\_\+adv}}
+\index{oggpack\+B\+\_\+adv@{oggpack\+B\+\_\+adv}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+adv()}{oggpackB\_adv()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+B\+\_\+adv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b,  }\item[{int}]{bits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a7ba15c21247b46a4ef85b672495335d5}\label{ogg_8h_a7ba15c21247b46a4ef85b672495335d5}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+adv1@{oggpack\+B\+\_\+adv1}}
+\index{oggpack\+B\+\_\+adv1@{oggpack\+B\+\_\+adv1}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+adv1()}{oggpackB\_adv1()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+B\+\_\+adv1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a317d9e0c9bd3396b131d7c9bea6762c0}\label{ogg_8h_a317d9e0c9bd3396b131d7c9bea6762c0}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+bits@{oggpack\+B\+\_\+bits}}
+\index{oggpack\+B\+\_\+bits@{oggpack\+B\+\_\+bits}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+bits()}{oggpackB\_bits()}}
+{\footnotesize\ttfamily long oggpack\+B\+\_\+bits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_ad267f53b9522efe31e1721af11af3fdb}\label{ogg_8h_ad267f53b9522efe31e1721af11af3fdb}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+bytes@{oggpack\+B\+\_\+bytes}}
+\index{oggpack\+B\+\_\+bytes@{oggpack\+B\+\_\+bytes}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+bytes()}{oggpackB\_bytes()}}
+{\footnotesize\ttfamily long oggpack\+B\+\_\+bytes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a8d92daddf7e4c4024555585197759c61}\label{ogg_8h_a8d92daddf7e4c4024555585197759c61}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+get\+\_\+buffer@{oggpack\+B\+\_\+get\+\_\+buffer}}
+\index{oggpack\+B\+\_\+get\+\_\+buffer@{oggpack\+B\+\_\+get\+\_\+buffer}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+get\+\_\+buffer()}{oggpackB\_get\_buffer()}}
+{\footnotesize\ttfamily unsigned char$\ast$ oggpack\+B\+\_\+get\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_afca6a2cfacb4e02fd30fa2c5d809ad81}\label{ogg_8h_afca6a2cfacb4e02fd30fa2c5d809ad81}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+look@{oggpack\+B\+\_\+look}}
+\index{oggpack\+B\+\_\+look@{oggpack\+B\+\_\+look}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+look()}{oggpackB\_look()}}
+{\footnotesize\ttfamily long oggpack\+B\+\_\+look (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b,  }\item[{int}]{bits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a00c0f5aa56f411dbed471144dd36aa4c}\label{ogg_8h_a00c0f5aa56f411dbed471144dd36aa4c}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+look1@{oggpack\+B\+\_\+look1}}
+\index{oggpack\+B\+\_\+look1@{oggpack\+B\+\_\+look1}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+look1()}{oggpackB\_look1()}}
+{\footnotesize\ttfamily long oggpack\+B\+\_\+look1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a7182bc320e5e6b94cb8d90caa0c0b2b0}\label{ogg_8h_a7182bc320e5e6b94cb8d90caa0c0b2b0}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+read@{oggpack\+B\+\_\+read}}
+\index{oggpack\+B\+\_\+read@{oggpack\+B\+\_\+read}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+read()}{oggpackB\_read()}}
+{\footnotesize\ttfamily long oggpack\+B\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b,  }\item[{int}]{bits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a38d53b127663e1365e734b48e700f0c5}\label{ogg_8h_a38d53b127663e1365e734b48e700f0c5}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+read1@{oggpack\+B\+\_\+read1}}
+\index{oggpack\+B\+\_\+read1@{oggpack\+B\+\_\+read1}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+read1()}{oggpackB\_read1()}}
+{\footnotesize\ttfamily long oggpack\+B\+\_\+read1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a85caa0815737960c1215bd5ca9cc12ba}\label{ogg_8h_a85caa0815737960c1215bd5ca9cc12ba}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+readinit@{oggpack\+B\+\_\+readinit}}
+\index{oggpack\+B\+\_\+readinit@{oggpack\+B\+\_\+readinit}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+readinit()}{oggpackB\_readinit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+B\+\_\+readinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b,  }\item[{unsigned char $\ast$}]{buf,  }\item[{int}]{bytes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a3a5d1e5244feb038ddb2b171a1ae8879}\label{ogg_8h_a3a5d1e5244feb038ddb2b171a1ae8879}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+reset@{oggpack\+B\+\_\+reset}}
+\index{oggpack\+B\+\_\+reset@{oggpack\+B\+\_\+reset}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+reset()}{oggpackB\_reset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+B\+\_\+reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a81cec9a7d04f473b38cfbc083d747042}\label{ogg_8h_a81cec9a7d04f473b38cfbc083d747042}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+write@{oggpack\+B\+\_\+write}}
+\index{oggpack\+B\+\_\+write@{oggpack\+B\+\_\+write}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+write()}{oggpackB\_write()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+B\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b,  }\item[{unsigned long}]{value,  }\item[{int}]{bits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a67f128fbd1c2823097e24e924c9500b5}\label{ogg_8h_a67f128fbd1c2823097e24e924c9500b5}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+writealign@{oggpack\+B\+\_\+writealign}}
+\index{oggpack\+B\+\_\+writealign@{oggpack\+B\+\_\+writealign}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+writealign()}{oggpackB\_writealign()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+B\+\_\+writealign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_af070521872121dde6a7ff51df5b3b53a}\label{ogg_8h_af070521872121dde6a7ff51df5b3b53a}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+writecheck@{oggpack\+B\+\_\+writecheck}}
+\index{oggpack\+B\+\_\+writecheck@{oggpack\+B\+\_\+writecheck}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+writecheck()}{oggpackB\_writecheck()}}
+{\footnotesize\ttfamily int oggpack\+B\+\_\+writecheck (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a12aeb63fb274f529b6bd25b795aca6f6}\label{ogg_8h_a12aeb63fb274f529b6bd25b795aca6f6}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+writeclear@{oggpack\+B\+\_\+writeclear}}
+\index{oggpack\+B\+\_\+writeclear@{oggpack\+B\+\_\+writeclear}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+writeclear()}{oggpackB\_writeclear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+B\+\_\+writeclear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_ae033d573c9e7a5a9338250f887af287b}\label{ogg_8h_ae033d573c9e7a5a9338250f887af287b}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+writecopy@{oggpack\+B\+\_\+writecopy}}
+\index{oggpack\+B\+\_\+writecopy@{oggpack\+B\+\_\+writecopy}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+writecopy()}{oggpackB\_writecopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+B\+\_\+writecopy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b,  }\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$}]{source,  }\item[{long}]{bits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a6617bd89f2f26221195126f7d9937772}\label{ogg_8h_a6617bd89f2f26221195126f7d9937772}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+writeinit@{oggpack\+B\+\_\+writeinit}}
+\index{oggpack\+B\+\_\+writeinit@{oggpack\+B\+\_\+writeinit}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+writeinit()}{oggpackB\_writeinit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+B\+\_\+writeinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ogg_8h_a6f1d4a7f3a6af4e122bcd35aa5f9bd4f}\label{ogg_8h_a6f1d4a7f3a6af4e122bcd35aa5f9bd4f}} 
+\index{ogg.\+h@{ogg.\+h}!oggpack\+B\+\_\+writetrunc@{oggpack\+B\+\_\+writetrunc}}
+\index{oggpack\+B\+\_\+writetrunc@{oggpack\+B\+\_\+writetrunc}!ogg.\+h@{ogg.\+h}}
+\subsubsection{\texorpdfstring{oggpack\+B\+\_\+writetrunc()}{oggpackB\_writetrunc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} oggpack\+B\+\_\+writetrunc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structoggpack__buffer}{oggpack\+\_\+buffer}} $\ast$}]{b,  }\item[{long}]{bits }\end{DoxyParamCaption})}
+

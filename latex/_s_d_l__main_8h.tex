@@ -1,0 +1,66 @@
+\hypertarget{_s_d_l__main_8h}{}\section{Contrib/\+S\+D\+L2-\/2.0.8/include/\+S\+D\+L\+\_\+main.h File Reference}
+\label{_s_d_l__main_8h}\index{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+main.\+h@{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+main.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__main_8h_aff46224d961128004c2b4223648f3d40}{C\+\_\+\+L\+I\+N\+K\+A\+GE}}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__main_8h_a3934e9a3a2bfa70c194144202edf41bb}{S\+D\+L\+M\+A\+I\+N\+\_\+\+D\+E\+C\+L\+S\+P\+EC}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_s_d_l__main_8h_aff46224d961128004c2b4223648f3d40}{C\+\_\+\+L\+I\+N\+K\+A\+GE}} \mbox{\hyperlink{_s_d_l__main_8h_a3934e9a3a2bfa70c194144202edf41bb}{S\+D\+L\+M\+A\+I\+N\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{_s_d_l__main_8h_a76f28ab03bb126b3bb81fdaecea030d5}{S\+D\+L\+\_\+main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__main_8h_a6a4bb5ffb489bf0956bc1b813397306d}{S\+D\+L\+\_\+\+Set\+Main\+Ready}} (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Redefine \mbox{\hyperlink{_c_make_c_compiler_id_8c_a0ddf1224851353fc92bfbff6f499fa97}{main()}} on some platforms so that it is called by S\+DL.
+
+The application\textquotesingle{}s \mbox{\hyperlink{_c_make_c_compiler_id_8c_a0ddf1224851353fc92bfbff6f499fa97}{main()}} function must be called with C linkage, and should be declared like this\+: 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#ifdef \_\_cplusplus}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"}
+\textcolor{preprocessor}{#endif}
+\textcolor{keywordtype}{int} \mbox{\hyperlink{_c_make_c_compiler_id_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])
+\{
+\}
+\end{DoxyCode}
+ 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_s_d_l__main_8h_aff46224d961128004c2b4223648f3d40}\label{_s_d_l__main_8h_aff46224d961128004c2b4223648f3d40}} 
+\index{S\+D\+L\+\_\+main.\+h@{S\+D\+L\+\_\+main.\+h}!C\+\_\+\+L\+I\+N\+K\+A\+GE@{C\+\_\+\+L\+I\+N\+K\+A\+GE}}
+\index{C\+\_\+\+L\+I\+N\+K\+A\+GE@{C\+\_\+\+L\+I\+N\+K\+A\+GE}!S\+D\+L\+\_\+main.\+h@{S\+D\+L\+\_\+main.\+h}}
+\subsubsection{\texorpdfstring{C\+\_\+\+L\+I\+N\+K\+A\+GE}{C\_LINKAGE}}
+{\footnotesize\ttfamily \#define C\+\_\+\+L\+I\+N\+K\+A\+GE}
+
+\mbox{\Hypertarget{_s_d_l__main_8h_a3934e9a3a2bfa70c194144202edf41bb}\label{_s_d_l__main_8h_a3934e9a3a2bfa70c194144202edf41bb}} 
+\index{S\+D\+L\+\_\+main.\+h@{S\+D\+L\+\_\+main.\+h}!S\+D\+L\+M\+A\+I\+N\+\_\+\+D\+E\+C\+L\+S\+P\+EC@{S\+D\+L\+M\+A\+I\+N\+\_\+\+D\+E\+C\+L\+S\+P\+EC}}
+\index{S\+D\+L\+M\+A\+I\+N\+\_\+\+D\+E\+C\+L\+S\+P\+EC@{S\+D\+L\+M\+A\+I\+N\+\_\+\+D\+E\+C\+L\+S\+P\+EC}!S\+D\+L\+\_\+main.\+h@{S\+D\+L\+\_\+main.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+M\+A\+I\+N\+\_\+\+D\+E\+C\+L\+S\+P\+EC}{SDLMAIN\_DECLSPEC}}
+{\footnotesize\ttfamily \#define S\+D\+L\+M\+A\+I\+N\+\_\+\+D\+E\+C\+L\+S\+P\+EC}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_s_d_l__main_8h_a76f28ab03bb126b3bb81fdaecea030d5}\label{_s_d_l__main_8h_a76f28ab03bb126b3bb81fdaecea030d5}} 
+\index{S\+D\+L\+\_\+main.\+h@{S\+D\+L\+\_\+main.\+h}!S\+D\+L\+\_\+main@{S\+D\+L\+\_\+main}}
+\index{S\+D\+L\+\_\+main@{S\+D\+L\+\_\+main}!S\+D\+L\+\_\+main.\+h@{S\+D\+L\+\_\+main.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+main()}{SDL\_main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__main_8h_aff46224d961128004c2b4223648f3d40}{C\+\_\+\+L\+I\+N\+K\+A\+GE}} \mbox{\hyperlink{_s_d_l__main_8h_a3934e9a3a2bfa70c194144202edf41bb}{S\+D\+L\+M\+A\+I\+N\+\_\+\+D\+E\+C\+L\+S\+P\+EC}} int S\+D\+L\+\_\+main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+The prototype for the application\textquotesingle{}s \mbox{\hyperlink{_c_make_c_compiler_id_8c_a0ddf1224851353fc92bfbff6f499fa97}{main()}} function \mbox{\Hypertarget{_s_d_l__main_8h_a6a4bb5ffb489bf0956bc1b813397306d}\label{_s_d_l__main_8h_a6a4bb5ffb489bf0956bc1b813397306d}} 
+\index{S\+D\+L\+\_\+main.\+h@{S\+D\+L\+\_\+main.\+h}!S\+D\+L\+\_\+\+Set\+Main\+Ready@{S\+D\+L\+\_\+\+Set\+Main\+Ready}}
+\index{S\+D\+L\+\_\+\+Set\+Main\+Ready@{S\+D\+L\+\_\+\+Set\+Main\+Ready}!S\+D\+L\+\_\+main.\+h@{S\+D\+L\+\_\+main.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Set\+Main\+Ready()}{SDL\_SetMainReady()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Set\+Main\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}}}]{ }\end{DoxyParamCaption})}
+
+This is called by the real S\+DL main function to let the rest of the library know that initialization was done properly.
+
+Calling this yourself without knowing what you\textquotesingle{}re doing can cause crashes and hard to diagnose problems with your application. 

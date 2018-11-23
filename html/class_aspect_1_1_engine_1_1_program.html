@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="Aspect_Logo.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Aspect Engine
    </div>
+   <div id="projectbrief">Aspect Engine is my final year project for Games Engine Programming</div>
   </td>
  </tr>
  </tbody>
@@ -69,31 +69,85 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_aspect_1_1_engine_1_1_program-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Aspect::Engine::Program Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="class_aspect_1_1_engine_1_1_program.html" title="Program class the main class that oganises the program. ">Program</a> class the main class that oganises the program.  
+ <a href="class_aspect_1_1_engine_1_1_program.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_program_8h_source.html">Program.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aee19a120d828c74bd868a62f33a61e57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#aee19a120d828c74bd868a62f33a61e57">Start</a> ()</td></tr>
-<tr class="separator:aee19a120d828c74bd868a62f33a61e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebf5093c9edb094862fc4fa0823d87e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#aebf5093c9edb094862fc4fa0823d87e5">End</a> ()</td></tr>
+<tr class="memitem:acd8c11ab08516997e18bc97412cb65cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#acd8c11ab08516997e18bc97412cb65cc">Start</a> (std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a> &gt; _cam, std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a> &gt; _player)</td></tr>
+<tr class="separator:acd8c11ab08516997e18bc97412cb65cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf5093c9edb094862fc4fa0823d87e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#aebf5093c9edb094862fc4fa0823d87e5">End</a> ()</td></tr>
+<tr class="memdesc:aebf5093c9edb094862fc4fa0823d87e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the program, also contains the game loop.  <a href="#aebf5093c9edb094862fc4fa0823d87e5">More...</a><br /></td></tr>
 <tr class="separator:aebf5093c9edb094862fc4fa0823d87e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2226e1a84c31b158c05492c9db9de1a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#a2226e1a84c31b158c05492c9db9de1a2">setCurrentCamera</a> (std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_camera.html">Camera</a> &gt; cam)</td></tr>
+<tr class="memdesc:a2226e1a84c31b158c05492c9db9de1a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add entity function.  <a href="#a2226e1a84c31b158c05492c9db9de1a2">More...</a><br /></td></tr>
+<tr class="separator:a2226e1a84c31b158c05492c9db9de1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44f49997a17637fdc60a890c44f74eca"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_camera.html">Camera</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#a44f49997a17637fdc60a890c44f74eca">getCurrentCamera</a> ()</td></tr>
+<tr class="memdesc:a44f49997a17637fdc60a890c44f74eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current camera.  <a href="#a44f49997a17637fdc60a890c44f74eca">More...</a><br /></td></tr>
+<tr class="separator:a44f49997a17637fdc60a890c44f74eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad43c625aadbe66c58cf2c89f3aea0b67"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#ad43c625aadbe66c58cf2c89f3aea0b67">InitGlew</a> ()</td></tr>
+<tr class="memdesc:ad43c625aadbe66c58cf2c89f3aea0b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clean up and close the program.  <a href="#ad43c625aadbe66c58cf2c89f3aea0b67">More...</a><br /></td></tr>
 <tr class="separator:ad43c625aadbe66c58cf2c89f3aea0b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0defbfe96a9811ed16b1d02d786caba0"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_program.html">Program</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#a0defbfe96a9811ed16b1d02d786caba0">InitSDL</a> ()</td></tr>
+<tr class="memdesc:a0defbfe96a9811ed16b1d02d786caba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise Glew.  <a href="#a0defbfe96a9811ed16b1d02d786caba0">More...</a><br /></td></tr>
 <tr class="separator:a0defbfe96a9811ed16b1d02d786caba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a937df3d57a425f25be2f40c3dcaff072"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#a937df3d57a425f25be2f40c3dcaff072">addEntity</a> ()</td></tr>
+<tr class="memdesc:a937df3d57a425f25be2f40c3dcaff072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise SDL.  <a href="#a937df3d57a425f25be2f40c3dcaff072">More...</a><br /></td></tr>
 <tr class="separator:a937df3d57a425f25be2f40c3dcaff072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ab387e4928975cfedaa081f8fc7b61bc1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#ab387e4928975cfedaa081f8fc7b61bc1">lastCubeX</a> = -6.0f</td></tr>
+<tr class="memdesc:ab387e4928975cfedaa081f8fc7b61bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the location and martix of the current camera.  <a href="#ab387e4928975cfedaa081f8fc7b61bc1">More...</a><br /></td></tr>
+<tr class="separator:ab387e4928975cfedaa081f8fc7b61bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2cae5125b23074393f6ad5681a24fa0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#ad2cae5125b23074393f6ad5681a24fa0">RandomX</a> = -10.0f</td></tr>
+<tr class="separator:ad2cae5125b23074393f6ad5681a24fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5779fcff2573e7c5e92878c964f5a701"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#a5779fcff2573e7c5e92878c964f5a701">backgroundX</a> = -10.0f</td></tr>
+<tr class="separator:a5779fcff2573e7c5e92878c964f5a701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e0a879e2a03987fc7242275d311579"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#a76e0a879e2a03987fc7242275d311579">running</a></td></tr>
+<tr class="separator:a76e0a879e2a03987fc7242275d311579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a713b2d1d51158b44ffcc97f7f69933a4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__core__types.html#ga7dcd2365c2e368e6af5b7adeb6a9c8df">glm::mat4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#a713b2d1d51158b44ffcc97f7f69933a4">modelMatrix</a></td></tr>
+<tr class="separator:a713b2d1d51158b44ffcc97f7f69933a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa4689537736d1273e4e644947a61c465"><td class="memItemLeft" align="right" valign="top"><a class="el" href="alc_8h.html#aba8742179fd52ef41c66adacdec5383e">ALCdevice</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#aa4689537736d1273e4e644947a61c465">device</a></td></tr>
+<tr class="separator:aa4689537736d1273e4e644947a61c465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c7dbe0c0a08b0603625567e08e5c46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="alc_8h.html#ad085cf94ff96646b5a2b5401c4489e23">ALCcontext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#ac5c7dbe0c0a08b0603625567e08e5c46">context</a></td></tr>
+<tr class="separator:ac5c7dbe0c0a08b0603625567e08e5c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab013b5b5fc5de055ccbb70d44b49de8a"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_camera.html">Camera</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#ab013b5b5fc5de055ccbb70d44b49de8a">currentCam</a></td></tr>
+<tr class="separator:ab013b5b5fc5de055ccbb70d44b49de8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a553a6feb2e63f3901ddfad5ebba9fa99"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#a553a6feb2e63f3901ddfad5ebba9fa99">entities</a></td></tr>
+<tr class="separator:a553a6feb2e63f3901ddfad5ebba9fa99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a956d0f100139d714030fa5449c2c2849"><td class="memItemLeft" align="right" valign="top">static std::weak_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_program.html">Program</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#a956d0f100139d714030fa5449c2c2849">self</a></td></tr>
+<tr class="separator:a956d0f100139d714030fa5449c2c2849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a674502c50c3ab53a86dd2d7966b2506d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_program.html#a674502c50c3ab53a86dd2d7966b2506d">_window</a></td></tr>
+<tr class="separator:a674502c50c3ab53a86dd2d7966b2506d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_aspect_1_1_engine_1_1_program.html" title="Program class the main class that oganises the program. ">Program</a> class the main class that oganises the program. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a937df3d57a425f25be2f40c3dcaff072"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a937df3d57a425f25be2f40c3dcaff072">&#9670;&nbsp;</a></span>addEntity()</h2>
 
@@ -117,6 +171,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initialise SDL. </p>
+
 </div>
 </div>
 <a id="aebf5093c9edb094862fc4fa0823d87e5"></a>
@@ -126,13 +182,34 @@ Static Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aspect::Engine::Program::End </td>
+          <td class="memname"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Aspect::Engine::Program::End </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Start the program, also contains the game loop. </p>
+
+</div>
+</div>
+<a id="a44f49997a17637fdc60a890c44f74eca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44f49997a17637fdc60a890c44f74eca">&#9670;&nbsp;</a></span>getCurrentCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_camera.html">Camera</a> &gt; Aspect::Engine::Program::getCurrentCamera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the current camera. </p>
 
 </div>
 </div>
@@ -159,6 +236,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Clean up and close the program. </p>
+
 </div>
 </div>
 <a id="a0defbfe96a9811ed16b1d02d786caba0"></a>
@@ -184,21 +263,267 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initialise Glew. </p>
+
 </div>
 </div>
-<a id="aee19a120d828c74bd868a62f33a61e57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee19a120d828c74bd868a62f33a61e57">&#9670;&nbsp;</a></span>Start()</h2>
+<a id="a2226e1a84c31b158c05492c9db9de1a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2226e1a84c31b158c05492c9db9de1a2">&#9670;&nbsp;</a></span>setCurrentCamera()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Aspect::Engine::Program::Start </td>
+          <td class="memname"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Aspect::Engine::Program::setCurrentCamera </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_camera.html">Camera</a> &gt;&#160;</td>
+          <td class="paramname"><em>cam</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+<p>Add entity function. </p>
+
+</div>
+</div>
+<a id="acd8c11ab08516997e18bc97412cb65cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd8c11ab08516997e18bc97412cb65cc">&#9670;&nbsp;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Aspect::Engine::Program::Start </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a> &gt;&#160;</td>
+          <td class="paramname"><em>_cam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a> &gt;&#160;</td>
+          <td class="paramname"><em>_player</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a674502c50c3ab53a86dd2d7966b2506d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a674502c50c3ab53a86dd2d7966b2506d">&#9670;&nbsp;</a></span>_window</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_l__video_8h.html#a55a196c7d3b8497538632c79ae1e6392">SDL_Window</a> * Aspect::Engine::Program::_window</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5779fcff2573e7c5e92878c964f5a701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5779fcff2573e7c5e92878c964f5a701">&#9670;&nbsp;</a></span>backgroundX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Aspect::Engine::Program::backgroundX = -10.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5c7dbe0c0a08b0603625567e08e5c46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5c7dbe0c0a08b0603625567e08e5c46">&#9670;&nbsp;</a></span>context</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="alc_8h.html#ad085cf94ff96646b5a2b5401c4489e23">ALCcontext</a>* Aspect::Engine::Program::context</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab013b5b5fc5de055ccbb70d44b49de8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab013b5b5fc5de055ccbb70d44b49de8a">&#9670;&nbsp;</a></span>currentCam</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::weak_ptr&lt;<a class="el" href="class_aspect_1_1_engine_1_1_camera.html">Camera</a>&gt; Aspect::Engine::Program::currentCam</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4689537736d1273e4e644947a61c465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4689537736d1273e4e644947a61c465">&#9670;&nbsp;</a></span>device</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="alc_8h.html#aba8742179fd52ef41c66adacdec5383e">ALCdevice</a>* Aspect::Engine::Program::device</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a553a6feb2e63f3901ddfad5ebba9fa99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a553a6feb2e63f3901ddfad5ebba9fa99">&#9670;&nbsp;</a></span>entities</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a> &gt; &gt; Aspect::Engine::Program::entities</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab387e4928975cfedaa081f8fc7b61bc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab387e4928975cfedaa081f8fc7b61bc1">&#9670;&nbsp;</a></span>lastCubeX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Aspect::Engine::Program::lastCubeX = -6.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the location and martix of the current camera. </p>
+
+</div>
+</div>
+<a id="a713b2d1d51158b44ffcc97f7f69933a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a713b2d1d51158b44ffcc97f7f69933a4">&#9670;&nbsp;</a></span>modelMatrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__types.html#ga7dcd2365c2e368e6af5b7adeb6a9c8df">glm::mat4</a> Aspect::Engine::Program::modelMatrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2cae5125b23074393f6ad5681a24fa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2cae5125b23074393f6ad5681a24fa0">&#9670;&nbsp;</a></span>RandomX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Aspect::Engine::Program::RandomX = -10.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76e0a879e2a03987fc7242275d311579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76e0a879e2a03987fc7242275d311579">&#9670;&nbsp;</a></span>running</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Aspect::Engine::Program::running</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a956d0f100139d714030fa5449c2c2849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a956d0f100139d714030fa5449c2c2849">&#9670;&nbsp;</a></span>self</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::weak_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_program.html">Program</a> &gt; Aspect::Engine::Program::self</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

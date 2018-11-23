@@ -1,0 +1,185 @@
+\hypertarget{func__common_8inl}{}\section{Contrib/glm/detail/func\+\_\+common.inl File Reference}
+\label{func__common_8inl}\index{Contrib/glm/detail/func\+\_\+common.\+inl@{Contrib/glm/detail/func\+\_\+common.\+inl}}
+{\ttfamily \#include \char`\"{}../vector\+\_\+relational.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}type\+\_\+vec2.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}type\+\_\+vec3.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}type\+\_\+vec4.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}\+\_\+vectorize.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__abs}{glm\+::detail\+::compute\+\_\+abs$<$ gen\+F\+I\+Type, bool $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__abs_3_01gen_f_i_type_00_01true_01_4}{glm\+::detail\+::compute\+\_\+abs$<$ gen\+F\+I\+Type, true $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__abs_3_01gen_f_i_type_00_01false_01_4}{glm\+::detail\+::compute\+\_\+abs$<$ gen\+F\+I\+Type, false $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__abs__vector}{glm\+::detail\+::compute\+\_\+abs\+\_\+vector$<$ L, T, Q, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__mix__vector}{glm\+::detail\+::compute\+\_\+mix\+\_\+vector$<$ L, T, U, Q, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__mix__vector_3_01_l_00_01_t_00_01bool_00_01_q_00_01_aligned_01_4}{glm\+::detail\+::compute\+\_\+mix\+\_\+vector$<$ L, T, bool, Q, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__mix__scalar}{glm\+::detail\+::compute\+\_\+mix\+\_\+scalar$<$ L, T, U, Q, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__mix__scalar_3_01_l_00_01_t_00_01bool_00_01_q_00_01_aligned_01_4}{glm\+::detail\+::compute\+\_\+mix\+\_\+scalar$<$ L, T, bool, Q, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__mix}{glm\+::detail\+::compute\+\_\+mix$<$ T, U $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__mix_3_01_t_00_01bool_01_4}{glm\+::detail\+::compute\+\_\+mix$<$ T, bool $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__sign}{glm\+::detail\+::compute\+\_\+sign$<$ L, T, Q, is\+Float, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__floor}{glm\+::detail\+::compute\+\_\+floor$<$ L, T, Q, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__ceil}{glm\+::detail\+::compute\+\_\+ceil$<$ L, T, Q, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__fract}{glm\+::detail\+::compute\+\_\+fract$<$ L, T, Q, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__trunc}{glm\+::detail\+::compute\+\_\+trunc$<$ L, T, Q, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__round}{glm\+::detail\+::compute\+\_\+round$<$ L, T, Q, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__mod}{glm\+::detail\+::compute\+\_\+mod$<$ L, T, Q, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__min__vector}{glm\+::detail\+::compute\+\_\+min\+\_\+vector$<$ L, T, Q, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__max__vector}{glm\+::detail\+::compute\+\_\+max\+\_\+vector$<$ L, T, Q, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__clamp__vector}{glm\+::detail\+::compute\+\_\+clamp\+\_\+vector$<$ L, T, Q, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__step__vector}{glm\+::detail\+::compute\+\_\+step\+\_\+vector$<$ L, T, Q, Aligned $>$}}
+\item 
+struct \mbox{\hyperlink{structglm_1_1detail_1_1compute__smoothstep__vector}{glm\+::detail\+::compute\+\_\+smoothstep\+\_\+vector$<$ L, T, Q, Aligned $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceglm}{glm}}
+\item 
+ \mbox{\hyperlink{namespaceglm_1_1detail}{glm\+::detail}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+Type \mbox{\hyperlink{group__core__func__common_ga2c2bde1cec025b7ddff83c74a1113719}{glm\+::min}} (gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_a1675d9d7bb68e1657ff028643b4037e3}{y}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+Type \mbox{\hyperlink{group__core__func__common_ga98caa7f95a94c86a86ebce893a45326c}{glm\+::max}} (gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_a1675d9d7bb68e1657ff028643b4037e3}{y}})
+\item 
+{\footnotesize template$<$$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} int32 \mbox{\hyperlink{namespaceglm_a297722642f818493a6e4b02f4cf7781b}{glm\+::abs}} (int32 \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+Type \mbox{\hyperlink{namespaceglm_a63066719f14195375ae55b9770460301}{glm\+::round}} (gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+Type \mbox{\hyperlink{namespaceglm_a1bd4a73a4a1f73950597df2f67c01c43}{glm\+::trunc}} (gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$typename gen\+F\+I\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+F\+I\+Type \mbox{\hyperlink{namespaceglm_a20ebe8867152652a4830a35894b5ab33}{glm\+::abs}} (gen\+F\+I\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_ga3e141c9738c73d3e581efa471dba8b4c}{glm\+::abs}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$typename gen\+F\+I\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+F\+I\+Type \mbox{\hyperlink{namespaceglm_a4cb99d6c397185120f49d1d56cf45b84}{glm\+::sign}} (gen\+F\+I\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_ga1e2e5cfff800056540e32f6c9b604b28}{glm\+::sign}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_gaa9d0742639e85b29c7c5de11cfd6840d}{glm\+::floor}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_gaf9375e3e06173271d49e6ffa3a334259}{glm\+::trunc}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_gafa03aca8c4713e1cc892aa92ca135a7e}{glm\+::round}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+Type \mbox{\hyperlink{namespaceglm_ae02684863360f29d6e9fb9b5ad4ab5d9}{glm\+::round\+Even}} (gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_ga76b81785045a057989a84d99aeeb1578}{glm\+::round\+Even}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_gafb9d2a645a23aca12d4d6de0104b7657}{glm\+::ceil}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+Type \mbox{\hyperlink{group__core__func__common_ga8ba89e40e55ae5cdf228548f9b7639c7}{glm\+::fract}} (gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_ga2df623004f634b440d61e018d62c751b}{glm\+::fract}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+Type \mbox{\hyperlink{group__core__func__common_ga12201563ef902e3b07e0d1d7656efdb1}{glm\+::mod}} (gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_a1675d9d7bb68e1657ff028643b4037e3}{y}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_gafddfd397d57f94556b9560594172a439}{glm\+::mod}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, T \mbox{\hyperlink{_s_d_l__opengl_8h_a1675d9d7bb68e1657ff028643b4037e3}{y}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_ga9b197a452cd52db3c5c18bac72bd7798}{glm\+::mod}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a1675d9d7bb68e1657ff028643b4037e3}{y}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+Type \mbox{\hyperlink{group__core__func__common_ga85e33f139b8db1b39b590a5713b9e679}{glm\+::modf}} (gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, gen\+Type \&i)
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ 1, T, Q $>$ \mbox{\hyperlink{namespaceglm_ae1f87270f9792f92fd1bbc769564e8e3}{glm\+::modf}} (vec$<$ 1, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, vec$<$ 1, T, Q $>$ \&i)
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ 2, T, Q $>$ \mbox{\hyperlink{namespaceglm_a0c0ecf61b9a8f9f4d6f901b4e6542dca}{glm\+::modf}} (vec$<$ 2, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, vec$<$ 2, T, Q $>$ \&i)
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ 3, T, Q $>$ \mbox{\hyperlink{namespaceglm_a80404a2674e2aa9d6f3966e56bcdfbbf}{glm\+::modf}} (vec$<$ 3, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, vec$<$ 3, T, Q $>$ \&i)
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ 4, T, Q $>$ \mbox{\hyperlink{namespaceglm_a415c6e0838a276a74f7ad598ff57befb}{glm\+::modf}} (vec$<$ 4, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, vec$<$ 4, T, Q $>$ \&i)
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_ga2d274e8b537c173dba983331a2620736}{glm\+::min}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3309789fc188587d666cda5ece79cf82}{a}}, T \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_ga734a374ca5c808e7bd9f74b6acfd7478}{glm\+::min}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3309789fc188587d666cda5ece79cf82}{a}}, vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_gae8b0964d30deabd0867b8d7ac44f067e}{glm\+::max}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3309789fc188587d666cda5ece79cf82}{a}}, T \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_gad48b723358c68d45477c22ff0101985e}{glm\+::max}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3309789fc188587d666cda5ece79cf82}{a}}, vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+Type \mbox{\hyperlink{group__core__func__common_ga93bce26c7d80d30a62f5c508f8498a6c}{glm\+::clamp}} (gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, gen\+Type min\+Val, gen\+Type max\+Val)
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_gabff13e6547edac08f52b4133ff4bf183}{glm\+::clamp}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, T min\+Val, T max\+Val)
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_ga748333282a6f2f87762c0a4739c8c364}{glm\+::clamp}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, vec$<$ L, T, Q $>$ const \&min\+Val, vec$<$ L, T, Q $>$ const \&max\+Val)
+\item 
+{\footnotesize template$<$typename gen\+TypeT , typename gen\+TypeU $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+TypeT \mbox{\hyperlink{group__core__func__common_ga8e93f374aae27d1a88b921860351f8d4}{glm\+::mix}} (gen\+TypeT \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, gen\+TypeT \mbox{\hyperlink{_s_d_l__opengl_8h_a1675d9d7bb68e1657ff028643b4037e3}{y}}, gen\+TypeU \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3309789fc188587d666cda5ece79cf82}{a}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , typename U , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_gac18f8fdaae00f0a27a4d01d3aa507aad}{glm\+::mix}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a1675d9d7bb68e1657ff028643b4037e3}{y}}, U \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3309789fc188587d666cda5ece79cf82}{a}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , typename U , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_ga2f4d9048be98850541fca540eaad50e9}{glm\+::mix}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a1675d9d7bb68e1657ff028643b4037e3}{y}}, vec$<$ L, U, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3309789fc188587d666cda5ece79cf82}{a}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+Type \mbox{\hyperlink{group__core__func__common_ga015a1261ff23e12650211aa872863cce}{glm\+::step}} (gen\+Type edge, gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_ga8f9a911a48ef244b51654eaefc81c551}{glm\+::step}} (T edge, vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_gaf4a5fc81619c7d3e8b22f53d4a098c7f}{glm\+::step}} (vec$<$ L, T, Q $>$ const \&edge, vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+Type \mbox{\hyperlink{group__core__func__common_ga562edf7eca082cc5b7a0aaf180436daf}{glm\+::smoothstep}} (gen\+Type edge0, gen\+Type edge1, gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_gade789a876643ff09880a2714d398b06f}{glm\+::smoothstep}} (T edge0, T edge1, vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{group__core__func__common_ga86a29708af325a4cd7d75cf5bdc8c3f8}{glm\+::smoothstep}} (vec$<$ L, T, Q $>$ const \&edge0, vec$<$ L, T, Q $>$ const \&edge1, vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} bool \mbox{\hyperlink{namespaceglm_afd4cba966f582de51d0957ed0abdb244}{glm\+::isnan}} (gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, bool, Q $>$ \mbox{\hyperlink{group__core__func__common_ga29ef934c00306490de837b4746b4e14d}{glm\+::isnan}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} bool \mbox{\hyperlink{namespaceglm_a2c0ee7d7e149b7ddf60abb7b73845330}{glm\+::isinf}} (gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, bool, Q $>$ \mbox{\hyperlink{group__core__func__common_ga2885587c23a106301f20443896365b62}{glm\+::isinf}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL}} int \mbox{\hyperlink{group__core__func__common_gadc6a536a7bef046c3293d2ccad6d9ca2}{glm\+::float\+Bits\+To\+Int}} (float const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, int, Q $>$ \mbox{\hyperlink{group__core__func__common_ga99f7d62f78ac5ea3b49bae715c9488ed}{glm\+::float\+Bits\+To\+Int}} (vec$<$ L, float, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL}} uint \mbox{\hyperlink{group__core__func__common_ga748b4d2819b48d28ca09dc8733488873}{glm\+::float\+Bits\+To\+Uint}} (float const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, uint, Q $>$ \mbox{\hyperlink{group__core__func__common_ga49418ba4c8a60fbbb5d57b705f3e26db}{glm\+::float\+Bits\+To\+Uint}} (vec$<$ L, float, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL}} float \mbox{\hyperlink{group__core__func__common_ga2650dc57b2148a6ffbce20944fb4d97a}{glm\+::int\+Bits\+To\+Float}} (int const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, float, Q $>$ \mbox{\hyperlink{group__core__func__common_ga7a0a8291a1cf3e1c2aee33030a1bd7b0}{glm\+::int\+Bits\+To\+Float}} (vec$<$ L, int, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+\mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL}} float \mbox{\hyperlink{group__core__func__common_ga97464ca9ff4267de30ea408f700d4ca8}{glm\+::uint\+Bits\+To\+Float}} (uint const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+{\footnotesize template$<$length\+\_\+t L, qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, float, Q $>$ \mbox{\hyperlink{group__core__func__common_ga97f46b5f7b42fe44482e13356eb394ae}{glm\+::uint\+Bits\+To\+Float}} (vec$<$ L, uint, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+Type \mbox{\hyperlink{group__core__func__common_gad0f444d4b81cc53c3b6edf5aa25078c2}{glm\+::fma}} (gen\+Type const \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3309789fc188587d666cda5ece79cf82}{a}}, gen\+Type const \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}}, gen\+Type const \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a1f2d7f8147412c43ba2303a56f97ee73}{c}})
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+Type \mbox{\hyperlink{namespaceglm_a90f422cea9e6e5c383bb69b593434c97}{glm\+::frexp}} (gen\+Type \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, int \&exp)
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{namespaceglm_a1dcaee68d7c967da4d9a5a31768934cf}{glm\+::frexp}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, vec$<$ L, int, Q $>$ \&exp)
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} gen\+Type \mbox{\hyperlink{namespaceglm_a2632eefd82cbdf3ca860c41579a5ef9e}{glm\+::ldexp}} (gen\+Type const \&\mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, int const \&exp)
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\\mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}} vec$<$ L, T, Q $>$ \mbox{\hyperlink{namespaceglm_ae65a4386c739936ac636e56cfdb9dc19}{glm\+::ldexp}} (vec$<$ L, T, Q $>$ const \&\mbox{\hyperlink{_s_d_l__opengl_8h_a10a82eabcb59d2fcd74acee063775f90}{v}}, vec$<$ L, int, Q $>$ const \&exp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{group__core}{Core features}} 

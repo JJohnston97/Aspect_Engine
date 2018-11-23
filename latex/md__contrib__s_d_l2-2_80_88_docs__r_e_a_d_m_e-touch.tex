@@ -1,0 +1,65 @@
+\section*{System Specific Notes }
+
+Linux\+: The linux touch system is currently based off event streams, and proc/bus/devices. The active user must be given permissions to read /dev/input/\+T\+O\+U\+C\+H\+D\+E\+V\+I\+CE, where T\+O\+U\+C\+H\+D\+E\+V\+I\+CE is the event stream for your device. Currently only Wacom tablets are supported. If you have an unsupported tablet contact me at \href{mailto:jim.tla+sdl_touch@gmail.com}{\tt jim.\+tla+sdl\+\_\+touch@gmail.\+com} and I will help you get support for it.
+
+Mac\+: The Mac and i\+Phone A\+P\+Is are pretty. If your touch device supports them then you\textquotesingle{}ll be fine. If it doesn\textquotesingle{}t, then there isn\textquotesingle{}t much we can do.
+
+i\+Phone\+: Works out of box.
+
+Windows\+: Unfortunately there is no windows support as of yet. Support for Windows 7 is planned, but we currently have no way to test. If you have a Windows 7 W\+M\+\_\+\+T\+O\+U\+CH supported device, and are willing to help test please contact me at \href{mailto:jim.tla+sdl_touch@gmail.com}{\tt jim.\+tla+sdl\+\_\+touch@gmail.\+com} 
+
+ \section*{Events }
+
+S\+D\+L\+\_\+\+F\+I\+N\+G\+E\+R\+D\+O\+WN\+: Sent when a finger (or stylus) is placed on a touch device. Fields\+:
+\begin{DoxyItemize}
+\item event.\+tfinger.\+touch\+Id -\/ the Id of the touch device.
+\item event.\+tfinger.\+finger\+Id -\/ the Id of the finger which just went down.
+\item event.\+tfinger.\+x -\/ the x coordinate of the touch (0..1)
+\item event.\+tfinger.\+y -\/ the y coordinate of the touch (0..1)
+\item event.\+tfinger.\+pressure -\/ the pressure of the touch (0..1)
+\end{DoxyItemize}
+
+S\+D\+L\+\_\+\+F\+I\+N\+G\+E\+R\+M\+O\+T\+I\+ON\+: Sent when a finger (or stylus) is moved on the touch device. Fields\+: Same as S\+D\+L\+\_\+\+F\+I\+N\+G\+E\+R\+D\+O\+WN but with additional\+:
+\begin{DoxyItemize}
+\item event.\+tfinger.\+dx -\/ change in x coordinate during this motion event.
+\item event.\+tfinger.\+dy -\/ change in y coordinate during this motion event.
+\end{DoxyItemize}
+
+S\+D\+L\+\_\+\+F\+I\+N\+G\+E\+R\+UP\+: Sent when a finger (or stylus) is lifted from the touch device. Fields\+: Same as S\+D\+L\+\_\+\+F\+I\+N\+G\+E\+R\+D\+O\+WN.
+
+
+
+ \section*{Functions }
+
+S\+DL provides the ability to access the underlying \mbox{\hyperlink{struct_s_d_l___finger}{S\+D\+L\+\_\+\+Finger}} structures. These structures should {\itshape never} be modified.
+
+The following functions are included from S\+D\+L\+\_\+touch.\+h
+
+To get a S\+D\+L\+\_\+\+Touch\+ID call \mbox{\hyperlink{_s_d_l__touch_8h_af23f09dc79eace93cdc8dd770eed0d0a}{S\+D\+L\+\_\+\+Get\+Touch\+Device(int index)}}. This returns a S\+D\+L\+\_\+\+Touch\+ID. I\+M\+P\+O\+R\+T\+A\+NT\+: If the touch has been removed, or there is no touch with the given index, \mbox{\hyperlink{_s_d_l__touch_8h_af23f09dc79eace93cdc8dd770eed0d0a}{S\+D\+L\+\_\+\+Get\+Touch\+Device()}} will return 0. Be sure to check for this!
+
+The number of touch devices can be queried with \mbox{\hyperlink{_s_d_l__touch_8h_a14a41a2964ddf868a180e42ccfd441d1}{S\+D\+L\+\_\+\+Get\+Num\+Touch\+Devices()}}.
+
+A S\+D\+L\+\_\+\+Touch\+ID may be used to get pointers to \mbox{\hyperlink{struct_s_d_l___finger}{S\+D\+L\+\_\+\+Finger}}.
+
+S\+D\+L\+\_\+\+Get\+Num\+Touch\+Fingers(touch\+I\+D) may be used to get the number of fingers currently down on the device.
+
+The most common reason to access \mbox{\hyperlink{struct_s_d_l___finger}{S\+D\+L\+\_\+\+Finger}} is to query the fingers outside the event. In most cases accessing the fingers is using the event. This would be accomplished by code like the following\+: \begin{DoxyVerb}  float x = event.tfinger.x;
+  float y = event.tfinger.y;
+\end{DoxyVerb}
+
+
+To get a \mbox{\hyperlink{struct_s_d_l___finger}{S\+D\+L\+\_\+\+Finger}}, call \mbox{\hyperlink{_s_d_l__touch_8h_a50902a3c1e4dba0b82cb73cb786dae41}{S\+D\+L\+\_\+\+Get\+Touch\+Finger(\+S\+D\+L\+\_\+\+Touch\+I\+D touch\+I\+D, int index)}}, where touch\+ID is a S\+D\+L\+\_\+\+Touch\+ID, and index is the requested finger. This returns a \mbox{\hyperlink{struct_s_d_l___finger}{S\+D\+L\+\_\+\+Finger}} $\ast$, or N\+U\+LL if the finger does not exist, or has been removed. A \mbox{\hyperlink{struct_s_d_l___finger}{S\+D\+L\+\_\+\+Finger}} is guaranteed to be persistent for the duration of a touch, but it will be de-\/allocated as soon as the finger is removed. This occurs when the S\+D\+L\+\_\+\+F\+I\+N\+G\+E\+R\+UP event is {\itshape added} to the event queue, and thus {\itshape before} the S\+D\+L\+\_\+\+F\+I\+N\+G\+E\+R\+UP event is polled. As a result, be very careful to check for N\+U\+LL return values.
+
+A \mbox{\hyperlink{struct_s_d_l___finger}{S\+D\+L\+\_\+\+Finger}} has the following fields\+:
+\begin{DoxyItemize}
+\item x, y\+: The current coordinates of the touch.
+\item pressure\+: The pressure of the touch.
+\end{DoxyItemize}
+
+
+
+ \section*{Notes }
+
+For a complete example see test/testgesture.\+c
+
+Please direct questions/comments to\+: \href{mailto:jim.tla+sdl_touch@gmail.com}{\tt jim.\+tla+sdl\+\_\+touch@gmail.\+com} (original author, A\+PI was changed since) 

@@ -1,0 +1,233 @@
+\hypertarget{union_s_d_l___event}{}\section{S\+D\+L\+\_\+\+Event Union Reference}
+\label{union_s_d_l___event}\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+
+
+General event structure.  
+
+
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+events.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} \mbox{\hyperlink{union_s_d_l___event_a237648bec242d2d5835f1a4250ddfa46}{type}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___common_event}{S\+D\+L\+\_\+\+Common\+Event}} \mbox{\hyperlink{union_s_d_l___event_abe5cb8767f93de55163c8ddd4562a7f2}{common}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___window_event}{S\+D\+L\+\_\+\+Window\+Event}} \mbox{\hyperlink{union_s_d_l___event_a826936b3275406d857bc6654669fae71}{window}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___keyboard_event}{S\+D\+L\+\_\+\+Keyboard\+Event}} \mbox{\hyperlink{union_s_d_l___event_ab99927835cc77a9b6bb50b419b4a27df}{key}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___text_editing_event}{S\+D\+L\+\_\+\+Text\+Editing\+Event}} \mbox{\hyperlink{union_s_d_l___event_a9a7e3b67b2654d4c5fc509676c6a7183}{edit}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___text_input_event}{S\+D\+L\+\_\+\+Text\+Input\+Event}} \mbox{\hyperlink{union_s_d_l___event_aa4fc65c559d69f33c057c0c23d8414b8}{text}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___mouse_motion_event}{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}} \mbox{\hyperlink{union_s_d_l___event_ac3c89e190faacbe84280cd539453bab6}{motion}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___mouse_button_event}{S\+D\+L\+\_\+\+Mouse\+Button\+Event}} \mbox{\hyperlink{union_s_d_l___event_ab6da2fa2687e5f849f270adecc64785f}{button}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___mouse_wheel_event}{S\+D\+L\+\_\+\+Mouse\+Wheel\+Event}} \mbox{\hyperlink{union_s_d_l___event_a267d3f550715519ec90a81ccd0e6cbda}{wheel}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___joy_axis_event}{S\+D\+L\+\_\+\+Joy\+Axis\+Event}} \mbox{\hyperlink{union_s_d_l___event_ac4611acd0e9c675e67dc20919f0accb4}{jaxis}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___joy_ball_event}{S\+D\+L\+\_\+\+Joy\+Ball\+Event}} \mbox{\hyperlink{union_s_d_l___event_ae433f511e3383d17f8fe02df745ee8f8}{jball}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___joy_hat_event}{S\+D\+L\+\_\+\+Joy\+Hat\+Event}} \mbox{\hyperlink{union_s_d_l___event_a421b40e0f8e01f181c8d5548cff1dd1d}{jhat}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___joy_button_event}{S\+D\+L\+\_\+\+Joy\+Button\+Event}} \mbox{\hyperlink{union_s_d_l___event_a591104d64903ae1cf70874fb5d3124ff}{jbutton}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___joy_device_event}{S\+D\+L\+\_\+\+Joy\+Device\+Event}} \mbox{\hyperlink{union_s_d_l___event_a17514dc19a846ea1b5fbe44123700c4c}{jdevice}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___controller_axis_event}{S\+D\+L\+\_\+\+Controller\+Axis\+Event}} \mbox{\hyperlink{union_s_d_l___event_aa8f6df0f2716fae56204b12ab4a4c289}{caxis}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___controller_button_event}{S\+D\+L\+\_\+\+Controller\+Button\+Event}} \mbox{\hyperlink{union_s_d_l___event_aee2b5671c8dcdb447023715cc21593cb}{cbutton}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___controller_device_event}{S\+D\+L\+\_\+\+Controller\+Device\+Event}} \mbox{\hyperlink{union_s_d_l___event_ad3beed01e690b885728e0b0e1d636378}{cdevice}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___audio_device_event}{S\+D\+L\+\_\+\+Audio\+Device\+Event}} \mbox{\hyperlink{union_s_d_l___event_a111e01fcac4fd8e251a6058ff9f17e72}{adevice}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___quit_event}{S\+D\+L\+\_\+\+Quit\+Event}} \mbox{\hyperlink{union_s_d_l___event_a102a3008afe67a1c02ae7504e232dcef}{quit}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___user_event}{S\+D\+L\+\_\+\+User\+Event}} \mbox{\hyperlink{union_s_d_l___event_ab7c394e3ce7bf1e4f8d68bc0e9f1b042}{user}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___sys_w_m_event}{S\+D\+L\+\_\+\+Sys\+W\+M\+Event}} \mbox{\hyperlink{union_s_d_l___event_ab3b2eaf5348d4c50a51b1f297fdef537}{syswm}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___touch_finger_event}{S\+D\+L\+\_\+\+Touch\+Finger\+Event}} \mbox{\hyperlink{union_s_d_l___event_ab18d7d60794cb056948ffa58541bc3c5}{tfinger}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___multi_gesture_event}{S\+D\+L\+\_\+\+Multi\+Gesture\+Event}} \mbox{\hyperlink{union_s_d_l___event_ac19b3c6a6b5181a51eb4fbe2cbe726a9}{mgesture}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___dollar_gesture_event}{S\+D\+L\+\_\+\+Dollar\+Gesture\+Event}} \mbox{\hyperlink{union_s_d_l___event_a4481167b9f8549aeb254e97ca812e74d}{dgesture}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___drop_event}{S\+D\+L\+\_\+\+Drop\+Event}} \mbox{\hyperlink{union_s_d_l___event_acff77bccbca65abbb876360a3f5209c9}{drop}}
+\item 
+\mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}} \mbox{\hyperlink{union_s_d_l___event_aabb599570edfa54aad6255c1f24f2ad2}{padding}} \mbox{[}56\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+General event structure. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{union_s_d_l___event_a111e01fcac4fd8e251a6058ff9f17e72}\label{union_s_d_l___event_a111e01fcac4fd8e251a6058ff9f17e72}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!adevice@{adevice}}
+\index{adevice@{adevice}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{adevice}{adevice}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___audio_device_event}{S\+D\+L\+\_\+\+Audio\+Device\+Event}} S\+D\+L\+\_\+\+Event\+::adevice}
+
+Audio device event data \mbox{\Hypertarget{union_s_d_l___event_ab6da2fa2687e5f849f270adecc64785f}\label{union_s_d_l___event_ab6da2fa2687e5f849f270adecc64785f}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!button@{button}}
+\index{button@{button}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{button}{button}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___mouse_button_event}{S\+D\+L\+\_\+\+Mouse\+Button\+Event}} S\+D\+L\+\_\+\+Event\+::button}
+
+Mouse button event data \mbox{\Hypertarget{union_s_d_l___event_aa8f6df0f2716fae56204b12ab4a4c289}\label{union_s_d_l___event_aa8f6df0f2716fae56204b12ab4a4c289}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!caxis@{caxis}}
+\index{caxis@{caxis}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{caxis}{caxis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___controller_axis_event}{S\+D\+L\+\_\+\+Controller\+Axis\+Event}} S\+D\+L\+\_\+\+Event\+::caxis}
+
+Game Controller axis event data \mbox{\Hypertarget{union_s_d_l___event_aee2b5671c8dcdb447023715cc21593cb}\label{union_s_d_l___event_aee2b5671c8dcdb447023715cc21593cb}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!cbutton@{cbutton}}
+\index{cbutton@{cbutton}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{cbutton}{cbutton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___controller_button_event}{S\+D\+L\+\_\+\+Controller\+Button\+Event}} S\+D\+L\+\_\+\+Event\+::cbutton}
+
+Game Controller button event data \mbox{\Hypertarget{union_s_d_l___event_ad3beed01e690b885728e0b0e1d636378}\label{union_s_d_l___event_ad3beed01e690b885728e0b0e1d636378}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!cdevice@{cdevice}}
+\index{cdevice@{cdevice}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{cdevice}{cdevice}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___controller_device_event}{S\+D\+L\+\_\+\+Controller\+Device\+Event}} S\+D\+L\+\_\+\+Event\+::cdevice}
+
+Game Controller device event data \mbox{\Hypertarget{union_s_d_l___event_abe5cb8767f93de55163c8ddd4562a7f2}\label{union_s_d_l___event_abe5cb8767f93de55163c8ddd4562a7f2}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!common@{common}}
+\index{common@{common}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{common}{common}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___common_event}{S\+D\+L\+\_\+\+Common\+Event}} S\+D\+L\+\_\+\+Event\+::common}
+
+Common event data \mbox{\Hypertarget{union_s_d_l___event_a4481167b9f8549aeb254e97ca812e74d}\label{union_s_d_l___event_a4481167b9f8549aeb254e97ca812e74d}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!dgesture@{dgesture}}
+\index{dgesture@{dgesture}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{dgesture}{dgesture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___dollar_gesture_event}{S\+D\+L\+\_\+\+Dollar\+Gesture\+Event}} S\+D\+L\+\_\+\+Event\+::dgesture}
+
+Gesture event data \mbox{\Hypertarget{union_s_d_l___event_acff77bccbca65abbb876360a3f5209c9}\label{union_s_d_l___event_acff77bccbca65abbb876360a3f5209c9}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!drop@{drop}}
+\index{drop@{drop}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{drop}{drop}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___drop_event}{S\+D\+L\+\_\+\+Drop\+Event}} S\+D\+L\+\_\+\+Event\+::drop}
+
+Drag and drop event data \mbox{\Hypertarget{union_s_d_l___event_a9a7e3b67b2654d4c5fc509676c6a7183}\label{union_s_d_l___event_a9a7e3b67b2654d4c5fc509676c6a7183}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!edit@{edit}}
+\index{edit@{edit}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{edit}{edit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___text_editing_event}{S\+D\+L\+\_\+\+Text\+Editing\+Event}} S\+D\+L\+\_\+\+Event\+::edit}
+
+Text editing event data \mbox{\Hypertarget{union_s_d_l___event_ac4611acd0e9c675e67dc20919f0accb4}\label{union_s_d_l___event_ac4611acd0e9c675e67dc20919f0accb4}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!jaxis@{jaxis}}
+\index{jaxis@{jaxis}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{jaxis}{jaxis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___joy_axis_event}{S\+D\+L\+\_\+\+Joy\+Axis\+Event}} S\+D\+L\+\_\+\+Event\+::jaxis}
+
+Joystick axis event data \mbox{\Hypertarget{union_s_d_l___event_ae433f511e3383d17f8fe02df745ee8f8}\label{union_s_d_l___event_ae433f511e3383d17f8fe02df745ee8f8}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!jball@{jball}}
+\index{jball@{jball}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{jball}{jball}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___joy_ball_event}{S\+D\+L\+\_\+\+Joy\+Ball\+Event}} S\+D\+L\+\_\+\+Event\+::jball}
+
+Joystick ball event data \mbox{\Hypertarget{union_s_d_l___event_a591104d64903ae1cf70874fb5d3124ff}\label{union_s_d_l___event_a591104d64903ae1cf70874fb5d3124ff}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!jbutton@{jbutton}}
+\index{jbutton@{jbutton}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{jbutton}{jbutton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___joy_button_event}{S\+D\+L\+\_\+\+Joy\+Button\+Event}} S\+D\+L\+\_\+\+Event\+::jbutton}
+
+Joystick button event data \mbox{\Hypertarget{union_s_d_l___event_a17514dc19a846ea1b5fbe44123700c4c}\label{union_s_d_l___event_a17514dc19a846ea1b5fbe44123700c4c}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!jdevice@{jdevice}}
+\index{jdevice@{jdevice}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{jdevice}{jdevice}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___joy_device_event}{S\+D\+L\+\_\+\+Joy\+Device\+Event}} S\+D\+L\+\_\+\+Event\+::jdevice}
+
+Joystick device change event data \mbox{\Hypertarget{union_s_d_l___event_a421b40e0f8e01f181c8d5548cff1dd1d}\label{union_s_d_l___event_a421b40e0f8e01f181c8d5548cff1dd1d}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!jhat@{jhat}}
+\index{jhat@{jhat}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{jhat}{jhat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___joy_hat_event}{S\+D\+L\+\_\+\+Joy\+Hat\+Event}} S\+D\+L\+\_\+\+Event\+::jhat}
+
+Joystick hat event data \mbox{\Hypertarget{union_s_d_l___event_ab99927835cc77a9b6bb50b419b4a27df}\label{union_s_d_l___event_ab99927835cc77a9b6bb50b419b4a27df}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!key@{key}}
+\index{key@{key}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___keyboard_event}{S\+D\+L\+\_\+\+Keyboard\+Event}} S\+D\+L\+\_\+\+Event\+::key}
+
+Keyboard event data \mbox{\Hypertarget{union_s_d_l___event_ac19b3c6a6b5181a51eb4fbe2cbe726a9}\label{union_s_d_l___event_ac19b3c6a6b5181a51eb4fbe2cbe726a9}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!mgesture@{mgesture}}
+\index{mgesture@{mgesture}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{mgesture}{mgesture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___multi_gesture_event}{S\+D\+L\+\_\+\+Multi\+Gesture\+Event}} S\+D\+L\+\_\+\+Event\+::mgesture}
+
+Gesture event data \mbox{\Hypertarget{union_s_d_l___event_ac3c89e190faacbe84280cd539453bab6}\label{union_s_d_l___event_ac3c89e190faacbe84280cd539453bab6}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!motion@{motion}}
+\index{motion@{motion}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{motion}{motion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___mouse_motion_event}{S\+D\+L\+\_\+\+Mouse\+Motion\+Event}} S\+D\+L\+\_\+\+Event\+::motion}
+
+Mouse motion event data \mbox{\Hypertarget{union_s_d_l___event_aabb599570edfa54aad6255c1f24f2ad2}\label{union_s_d_l___event_aabb599570edfa54aad6255c1f24f2ad2}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!padding@{padding}}
+\index{padding@{padding}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{padding}{padding}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}} S\+D\+L\+\_\+\+Event\+::padding\mbox{[}56\mbox{]}}
+
+\mbox{\Hypertarget{union_s_d_l___event_a102a3008afe67a1c02ae7504e232dcef}\label{union_s_d_l___event_a102a3008afe67a1c02ae7504e232dcef}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!quit@{quit}}
+\index{quit@{quit}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{quit}{quit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___quit_event}{S\+D\+L\+\_\+\+Quit\+Event}} S\+D\+L\+\_\+\+Event\+::quit}
+
+Quit request event data \mbox{\Hypertarget{union_s_d_l___event_ab3b2eaf5348d4c50a51b1f297fdef537}\label{union_s_d_l___event_ab3b2eaf5348d4c50a51b1f297fdef537}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!syswm@{syswm}}
+\index{syswm@{syswm}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{syswm}{syswm}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___sys_w_m_event}{S\+D\+L\+\_\+\+Sys\+W\+M\+Event}} S\+D\+L\+\_\+\+Event\+::syswm}
+
+System dependent window event data \mbox{\Hypertarget{union_s_d_l___event_aa4fc65c559d69f33c057c0c23d8414b8}\label{union_s_d_l___event_aa4fc65c559d69f33c057c0c23d8414b8}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!text@{text}}
+\index{text@{text}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___text_input_event}{S\+D\+L\+\_\+\+Text\+Input\+Event}} S\+D\+L\+\_\+\+Event\+::text}
+
+Text input event data \mbox{\Hypertarget{union_s_d_l___event_ab18d7d60794cb056948ffa58541bc3c5}\label{union_s_d_l___event_ab18d7d60794cb056948ffa58541bc3c5}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!tfinger@{tfinger}}
+\index{tfinger@{tfinger}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{tfinger}{tfinger}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___touch_finger_event}{S\+D\+L\+\_\+\+Touch\+Finger\+Event}} S\+D\+L\+\_\+\+Event\+::tfinger}
+
+Touch finger event data \mbox{\Hypertarget{union_s_d_l___event_a237648bec242d2d5835f1a4250ddfa46}\label{union_s_d_l___event_a237648bec242d2d5835f1a4250ddfa46}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!type@{type}}
+\index{type@{type}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} S\+D\+L\+\_\+\+Event\+::type}
+
+Event type, shared with all events \mbox{\Hypertarget{union_s_d_l___event_ab7c394e3ce7bf1e4f8d68bc0e9f1b042}\label{union_s_d_l___event_ab7c394e3ce7bf1e4f8d68bc0e9f1b042}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!user@{user}}
+\index{user@{user}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{user}{user}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___user_event}{S\+D\+L\+\_\+\+User\+Event}} S\+D\+L\+\_\+\+Event\+::user}
+
+Custom event data \mbox{\Hypertarget{union_s_d_l___event_a267d3f550715519ec90a81ccd0e6cbda}\label{union_s_d_l___event_a267d3f550715519ec90a81ccd0e6cbda}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!wheel@{wheel}}
+\index{wheel@{wheel}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{wheel}{wheel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___mouse_wheel_event}{S\+D\+L\+\_\+\+Mouse\+Wheel\+Event}} S\+D\+L\+\_\+\+Event\+::wheel}
+
+Mouse wheel event data \mbox{\Hypertarget{union_s_d_l___event_a826936b3275406d857bc6654669fae71}\label{union_s_d_l___event_a826936b3275406d857bc6654669fae71}} 
+\index{S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}!window@{window}}
+\index{window@{window}!S\+D\+L\+\_\+\+Event@{S\+D\+L\+\_\+\+Event}}
+\subsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___window_event}{S\+D\+L\+\_\+\+Window\+Event}} S\+D\+L\+\_\+\+Event\+::window}
+
+Window event data 
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\mbox{\hyperlink{_s_d_l__events_8h}{S\+D\+L\+\_\+events.\+h}}\end{DoxyCompactItemize}

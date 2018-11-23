@@ -1,0 +1,49 @@
+\hypertarget{structov__callbacks}{}\section{ov\+\_\+callbacks Struct Reference}
+\label{structov__callbacks}\index{ov\+\_\+callbacks@{ov\+\_\+callbacks}}
+
+
+{\ttfamily \#include $<$vorbisfile.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_s_d_l__config_8h_a7c94ea6f8948649f8d181ae55911eeaf}{size\+\_\+t}}($\ast$ \mbox{\hyperlink{structov__callbacks_a301b93b9f0436e5bde6dbdeb0edeae77}{read\+\_\+func}} )(\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$ptr, \mbox{\hyperlink{_s_d_l__config_8h_a7c94ea6f8948649f8d181ae55911eeaf}{size\+\_\+t}} \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}}, \mbox{\hyperlink{_s_d_l__config_8h_a7c94ea6f8948649f8d181ae55911eeaf}{size\+\_\+t}} nmemb, \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$datasource)
+\item 
+int($\ast$ \mbox{\hyperlink{structov__callbacks_aa49d8079756c1c26e2ba9b974e463dfa}{seek\+\_\+func}} )(\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$datasource, ogg\+\_\+int64\+\_\+t \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ac915cd848f42b26af51745f204a3b9af}{offset}}, int whence)
+\item 
+int($\ast$ \mbox{\hyperlink{structov__callbacks_a4d1141e00251a23b27e1de261e8717ec}{close\+\_\+func}} )(\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$datasource)
+\item 
+long($\ast$ \mbox{\hyperlink{structov__callbacks_ab078f3f386b7c58e9fab2ede904e0e36}{tell\+\_\+func}} )(\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$datasource)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structov__callbacks_a4d1141e00251a23b27e1de261e8717ec}\label{structov__callbacks_a4d1141e00251a23b27e1de261e8717ec}} 
+\index{ov\+\_\+callbacks@{ov\+\_\+callbacks}!close\+\_\+func@{close\+\_\+func}}
+\index{close\+\_\+func@{close\+\_\+func}!ov\+\_\+callbacks@{ov\+\_\+callbacks}}
+\subsubsection{\texorpdfstring{close\+\_\+func}{close\_func}}
+{\footnotesize\ttfamily int($\ast$ ov\+\_\+callbacks\+::close\+\_\+func) (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$datasource)}
+
+\mbox{\Hypertarget{structov__callbacks_a301b93b9f0436e5bde6dbdeb0edeae77}\label{structov__callbacks_a301b93b9f0436e5bde6dbdeb0edeae77}} 
+\index{ov\+\_\+callbacks@{ov\+\_\+callbacks}!read\+\_\+func@{read\+\_\+func}}
+\index{read\+\_\+func@{read\+\_\+func}!ov\+\_\+callbacks@{ov\+\_\+callbacks}}
+\subsubsection{\texorpdfstring{read\+\_\+func}{read\_func}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__config_8h_a7c94ea6f8948649f8d181ae55911eeaf}{size\+\_\+t}}($\ast$ ov\+\_\+callbacks\+::read\+\_\+func) (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$ptr, \mbox{\hyperlink{_s_d_l__config_8h_a7c94ea6f8948649f8d181ae55911eeaf}{size\+\_\+t}} \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}}, \mbox{\hyperlink{_s_d_l__config_8h_a7c94ea6f8948649f8d181ae55911eeaf}{size\+\_\+t}} nmemb, \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$datasource)}
+
+\mbox{\Hypertarget{structov__callbacks_aa49d8079756c1c26e2ba9b974e463dfa}\label{structov__callbacks_aa49d8079756c1c26e2ba9b974e463dfa}} 
+\index{ov\+\_\+callbacks@{ov\+\_\+callbacks}!seek\+\_\+func@{seek\+\_\+func}}
+\index{seek\+\_\+func@{seek\+\_\+func}!ov\+\_\+callbacks@{ov\+\_\+callbacks}}
+\subsubsection{\texorpdfstring{seek\+\_\+func}{seek\_func}}
+{\footnotesize\ttfamily int($\ast$ ov\+\_\+callbacks\+::seek\+\_\+func) (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$datasource, ogg\+\_\+int64\+\_\+t \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ac915cd848f42b26af51745f204a3b9af}{offset}}, int whence)}
+
+\mbox{\Hypertarget{structov__callbacks_ab078f3f386b7c58e9fab2ede904e0e36}\label{structov__callbacks_ab078f3f386b7c58e9fab2ede904e0e36}} 
+\index{ov\+\_\+callbacks@{ov\+\_\+callbacks}!tell\+\_\+func@{tell\+\_\+func}}
+\index{tell\+\_\+func@{tell\+\_\+func}!ov\+\_\+callbacks@{ov\+\_\+callbacks}}
+\subsubsection{\texorpdfstring{tell\+\_\+func}{tell\_func}}
+{\footnotesize\ttfamily long($\ast$ ov\+\_\+callbacks\+::tell\+\_\+func) (\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} $\ast$datasource)}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Contrib/vorbis/include/vorbis/\mbox{\hyperlink{vorbisfile_8h}{vorbisfile.\+h}}\end{DoxyCompactItemize}

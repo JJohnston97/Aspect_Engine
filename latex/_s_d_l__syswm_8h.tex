@@ -1,0 +1,163 @@
+\hypertarget{_s_d_l__syswm_8h}{}\section{Contrib/\+S\+D\+L2-\/2.0.8/include/\+S\+D\+L\+\_\+syswm.h File Reference}
+\label{_s_d_l__syswm_8h}\index{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+syswm.\+h@{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+syswm.\+h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+version.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_d_l___sys_w_mmsg}{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}}
+\item 
+struct \mbox{\hyperlink{struct_s_d_l___sys_w_minfo}{S\+D\+L\+\_\+\+Sys\+W\+Minfo}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__syswm_8h_ac7bef5d85e3dcd73eef56ad39ffc84a9}{W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_s_d_l___sys_w_minfo}{S\+D\+L\+\_\+\+Sys\+W\+Minfo}} \mbox{\hyperlink{_s_d_l__syswm_8h_a25c885f5150c5d1202a70a6a4a135a4a}{S\+D\+L\+\_\+\+Sys\+W\+Minfo}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+PE}} \{ \newline
+\mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a2092ff1b6f64c9425c2671fc8d2a41a3}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+U\+N\+K\+N\+O\+WN}}, 
+\mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a742b98a86d65f462c8e71761f0d94cc8}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+I\+N\+D\+O\+WS}}, 
+\mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a058ec6dbf52ef47653898a98fad28f98}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+X11}}, 
+\mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a0a1dd75758eee6a20c1563eb353fc60b}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+D\+I\+R\+E\+C\+T\+FB}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7aaa5db40b547b1f26ad9929aeea898951}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+C\+O\+C\+OA}}, 
+\mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a9a3ed7d8a77990281a88e87c69ad7bf8}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+U\+I\+K\+IT}}, 
+\mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7aadd4f69005f2b67dec9d59c93b967d99}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+A\+Y\+L\+A\+ND}}, 
+\mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7ad247a114ba9ad8c6d7e9cead6d151ef7}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+M\+IR}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7adbfa1e5eb411358b409099b87c8ada40}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+I\+N\+RT}}, 
+\mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7ad171b4f9e1c8819a5c08f8290d3533b2}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+A\+N\+D\+R\+O\+ID}}, 
+\mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7ab66656fc6b88f7ae88397b10f9dff28f}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+V\+I\+V\+A\+N\+TE}}, 
+\mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a2191fbd3981b985a2a34a2566f9c9624}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+O\+S2}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__syswm_8h_ad6e40121a96c88af20d9469a04706fef}{S\+D\+L\+\_\+\+Get\+Window\+W\+M\+Info}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, \mbox{\hyperlink{struct_s_d_l___sys_w_minfo}{S\+D\+L\+\_\+\+Sys\+W\+Minfo}} $\ast$info)
+\begin{DoxyCompactList}\small\item\em This function allows access to driver-\/dependent window information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include file for S\+DL custom system window manager hooks.
+
+Your application has access to a special type of event \mbox{\hyperlink{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa73749d735a18ce6ef17a09ee70d5dbe7}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+E\+V\+E\+NT}}, which contains window-\/manager specific information and arrives whenever an unhandled window event occurs. This event is ignored by default, but you can enable it with \mbox{\hyperlink{_s_d_l__events_8h_afb772893e1c46f186fa39a4defe76df3}{S\+D\+L\+\_\+\+Event\+State()}}. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_s_d_l__syswm_8h_ac7bef5d85e3dcd73eef56ad39ffc84a9}\label{_s_d_l__syswm_8h_ac7bef5d85e3dcd73eef56ad39ffc84a9}} 
+\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN@{W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN}}
+\index{W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN@{W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}
+\subsubsection{\texorpdfstring{W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN}{WIN32\_LEAN\_AND\_MEAN}}
+{\footnotesize\ttfamily \#define W\+I\+N32\+\_\+\+L\+E\+A\+N\+\_\+\+A\+N\+D\+\_\+\+M\+E\+AN}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_s_d_l__syswm_8h_a25c885f5150c5d1202a70a6a4a135a4a}\label{_s_d_l__syswm_8h_a25c885f5150c5d1202a70a6a4a135a4a}} 
+\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+Sys\+W\+Minfo@{S\+D\+L\+\_\+\+Sys\+W\+Minfo}}
+\index{S\+D\+L\+\_\+\+Sys\+W\+Minfo@{S\+D\+L\+\_\+\+Sys\+W\+Minfo}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Sys\+W\+Minfo}{SDL\_SysWMinfo}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_s_d_l___sys_w_minfo}{S\+D\+L\+\_\+\+Sys\+W\+Minfo}} \mbox{\hyperlink{struct_s_d_l___sys_w_minfo}{S\+D\+L\+\_\+\+Sys\+W\+Minfo}}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7}\label{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7}} 
+\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+PE@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+PE}}
+\index{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+PE@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+PE}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+PE}{SDL\_SYSWM\_TYPE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+PE}}}
+
+These are the various supported windowing subsystems \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+U\+N\+K\+N\+O\+WN@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+U\+N\+K\+N\+O\+WN}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+U\+N\+K\+N\+O\+WN@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+U\+N\+K\+N\+O\+WN}}}\mbox{\Hypertarget{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a2092ff1b6f64c9425c2671fc8d2a41a3}\label{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a2092ff1b6f64c9425c2671fc8d2a41a3}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+U\+N\+K\+N\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+I\+N\+D\+O\+WS@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+I\+N\+D\+O\+WS}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+I\+N\+D\+O\+WS@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+I\+N\+D\+O\+WS}}}\mbox{\Hypertarget{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a742b98a86d65f462c8e71761f0d94cc8}\label{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a742b98a86d65f462c8e71761f0d94cc8}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+I\+N\+D\+O\+WS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+X11@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+X11}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+X11@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+X11}}}\mbox{\Hypertarget{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a058ec6dbf52ef47653898a98fad28f98}\label{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a058ec6dbf52ef47653898a98fad28f98}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+X11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+D\+I\+R\+E\+C\+T\+FB@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+D\+I\+R\+E\+C\+T\+FB}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+D\+I\+R\+E\+C\+T\+FB@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+D\+I\+R\+E\+C\+T\+FB}}}\mbox{\Hypertarget{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a0a1dd75758eee6a20c1563eb353fc60b}\label{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a0a1dd75758eee6a20c1563eb353fc60b}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+D\+I\+R\+E\+C\+T\+FB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+C\+O\+C\+OA@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+C\+O\+C\+OA}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+C\+O\+C\+OA@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+C\+O\+C\+OA}}}\mbox{\Hypertarget{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7aaa5db40b547b1f26ad9929aeea898951}\label{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7aaa5db40b547b1f26ad9929aeea898951}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+C\+O\+C\+OA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+U\+I\+K\+IT@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+U\+I\+K\+IT}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+U\+I\+K\+IT@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+U\+I\+K\+IT}}}\mbox{\Hypertarget{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a9a3ed7d8a77990281a88e87c69ad7bf8}\label{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a9a3ed7d8a77990281a88e87c69ad7bf8}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+U\+I\+K\+IT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+A\+Y\+L\+A\+ND@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+A\+Y\+L\+A\+ND}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+A\+Y\+L\+A\+ND@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+A\+Y\+L\+A\+ND}}}\mbox{\Hypertarget{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7aadd4f69005f2b67dec9d59c93b967d99}\label{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7aadd4f69005f2b67dec9d59c93b967d99}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+A\+Y\+L\+A\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+M\+IR@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+M\+IR}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+M\+IR@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+M\+IR}}}\mbox{\Hypertarget{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7ad247a114ba9ad8c6d7e9cead6d151ef7}\label{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7ad247a114ba9ad8c6d7e9cead6d151ef7}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+M\+IR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+I\+N\+RT@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+I\+N\+RT}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+I\+N\+RT@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+I\+N\+RT}}}\mbox{\Hypertarget{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7adbfa1e5eb411358b409099b87c8ada40}\label{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7adbfa1e5eb411358b409099b87c8ada40}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+W\+I\+N\+RT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+A\+N\+D\+R\+O\+ID@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+A\+N\+D\+R\+O\+ID}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+A\+N\+D\+R\+O\+ID@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+A\+N\+D\+R\+O\+ID}}}\mbox{\Hypertarget{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7ad171b4f9e1c8819a5c08f8290d3533b2}\label{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7ad171b4f9e1c8819a5c08f8290d3533b2}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+A\+N\+D\+R\+O\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+V\+I\+V\+A\+N\+TE@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+V\+I\+V\+A\+N\+TE}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+V\+I\+V\+A\+N\+TE@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+V\+I\+V\+A\+N\+TE}}}\mbox{\Hypertarget{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7ab66656fc6b88f7ae88397b10f9dff28f}\label{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7ab66656fc6b88f7ae88397b10f9dff28f}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+V\+I\+V\+A\+N\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+O\+S2@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+O\+S2}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+O\+S2@{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+O\+S2}}}\mbox{\Hypertarget{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a2191fbd3981b985a2a34a2566f9c9624}\label{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7a2191fbd3981b985a2a34a2566f9c9624}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+O\+S2&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_s_d_l__syswm_8h_ad6e40121a96c88af20d9469a04706fef}\label{_s_d_l__syswm_8h_ad6e40121a96c88af20d9469a04706fef}} 
+\index{S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}!S\+D\+L\+\_\+\+Get\+Window\+W\+M\+Info@{S\+D\+L\+\_\+\+Get\+Window\+W\+M\+Info}}
+\index{S\+D\+L\+\_\+\+Get\+Window\+W\+M\+Info@{S\+D\+L\+\_\+\+Get\+Window\+W\+M\+Info}!S\+D\+L\+\_\+syswm.\+h@{S\+D\+L\+\_\+syswm.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Get\+Window\+W\+M\+Info()}{SDL\_GetWindowWMInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Window\+W\+M\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{\mbox{\hyperlink{struct_s_d_l___sys_w_minfo}{S\+D\+L\+\_\+\+Sys\+W\+Minfo}} $\ast$}]{info }\end{DoxyParamCaption})}
+
+
+
+This function allows access to driver-\/dependent window information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window about which information is being requested \\
+\hline
+{\em info} & This structure must be initialized with the S\+DL version, and is then filled in with information about the given window.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+D\+L\+\_\+\+T\+R\+UE if the function is implemented and the version member of the {\ttfamily info} struct is valid, S\+D\+L\+\_\+\+F\+A\+L\+SE otherwise.
+\end{DoxyReturn}
+You typically use this function like this\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{struct_s_d_l___sys_w_minfo}{SDL\_SysWMinfo}} info;
+\mbox{\hyperlink{_s_d_l__version_8h_a7154bc5c2a95a644b5187e4225cdcbd0}{SDL\_VERSION}}(&info.\mbox{\hyperlink{struct_s_d_l___sys_w_minfo_ac3a70af022d4849e9ff546595e94627f}{version}});
+\textcolor{keywordflow}{if} ( \mbox{\hyperlink{_s_d_l__syswm_8h_ad6e40121a96c88af20d9469a04706fef}{SDL\_GetWindowWMInfo}}(window, &info) ) \{ ... \}
+\end{DoxyCode}
+ 

@@ -1,0 +1,31 @@
+Build\+: \begin{DoxyVerb}$ mkdir build
+$ cd build
+$ emconfigure ../configure --host=asmjs-unknown-emscripten --disable-assembly --disable-threads --disable-cpuinfo CFLAGS="-O2"
+$ emmake make
+\end{DoxyVerb}
+
+
+Or with cmake\+: \begin{DoxyVerb}$ mkdir build
+$ cd build
+$ emcmake cmake ..
+$ emmake make
+\end{DoxyVerb}
+
+
+To build one of the tests\+: \begin{DoxyVerb}$ cd test/
+$ emcc -O2 --js-opts 0 -g4 testdraw2.c -I../include ../build/.libs/libSDL2.a ../build/libSDL2_test.a -o a.html
+\end{DoxyVerb}
+
+
+Uses G\+L\+E\+S2 renderer or software
+
+Some other S\+D\+L2 libraries can be easily built (assuming S\+D\+L2 is installed somewhere)\+:
+
+S\+D\+L\+\_\+mixer (\href{http://www.libsdl.org/projects/SDL_mixer/}{\tt http\+://www.\+libsdl.\+org/projects/\+S\+D\+L\+\_\+mixer/})\+: \begin{DoxyVerb}$ EMCONFIGURE_JS=1 emconfigure ../configure
+build as usual...
+\end{DoxyVerb}
+
+
+S\+D\+L\+\_\+gfx (\href{http://cms.ferzkopp.net/index.php/software/13-sdl-gfx}{\tt http\+://cms.\+ferzkopp.\+net/index.\+php/software/13-\/sdl-\/gfx})\+: \begin{DoxyVerb}$ EMCONFIGURE_JS=1 emconfigure ../configure --disable-mmx
+build as usual...\end{DoxyVerb}
+ 

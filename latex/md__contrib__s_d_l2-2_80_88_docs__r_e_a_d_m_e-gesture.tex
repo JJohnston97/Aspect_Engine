@@ -1,0 +1,69 @@
+S\+DL provides an implementation of the \$1 gesture recognition system. This allows for recording, saving, loading, and performing single stroke gestures.
+
+Gestures can be performed with any number of fingers (the centroid of the fingers must follow the path of the gesture), but the number of fingers must be constant (a finger cannot go down in the middle of a gesture). The path of a gesture is considered the path from the time when the final finger went down, to the first time any finger comes up.
+
+Dollar gestures are assigned an Id based on a hash function. This is guaranteed to remain constant for a given gesture. There is a (small) chance that two different gestures will be assigned the same ID. In this case, simply re-\/recording one of the gestures should result in a different ID.
+
+\subsection*{Recording\+: }
+
+To begin recording on a touch device call\+: \mbox{\hyperlink{_s_d_l__gesture_8h_ad06776e2e199d5d48e466a0ecbbb06c3}{S\+D\+L\+\_\+\+Record\+Gesture(\+S\+D\+L\+\_\+\+Touch\+I\+D touch\+Id)}}, where touch\+Id is the id of the touch device you wish to record on, or -\/1 to record on all connected devices.
+
+Recording terminates as soon as a finger comes up. Recording is acknowledged by an S\+D\+L\+\_\+\+D\+O\+L\+L\+A\+R\+R\+E\+C\+O\+RD event. A S\+D\+L\+\_\+\+D\+O\+L\+L\+A\+R\+R\+E\+C\+O\+RD event is a dgesture with the following fields\+:
+
+
+\begin{DoxyItemize}
+\item event.\+dgesture.\+touch\+Id -\/ the Id of the touch used to record the gesture.
+\item event.\+dgesture.\+gesture\+Id -\/ the unique id of the recorded gesture.
+\end{DoxyItemize}
+
+\subsection*{Performing\+: }
+
+As long as there is a dollar gesture assigned to a touch, every finger-\/up event will also cause an S\+D\+L\+\_\+\+D\+O\+L\+L\+A\+R\+G\+E\+S\+T\+U\+RE event with the following fields\+:
+
+
+\begin{DoxyItemize}
+\item event.\+dgesture.\+touch\+Id -\/ the Id of the touch which performed the gesture.
+\item event.\+dgesture.\+gesture\+Id -\/ the unique id of the closest gesture to the performed stroke.
+\item event.\+dgesture.\+error -\/ the difference between the gesture template and the actual performed gesture. Lower error is a better match.
+\item event.\+dgesture.\+num\+Fingers -\/ the number of fingers used to draw the stroke.
+\end{DoxyItemize}
+
+Most programs will want to define an appropriate error threshold and check to be sure that the error of a gesture is not abnormally high (an indicator that no gesture was performed).
+
+\subsection*{Saving\+: }
+
+To save a template, call S\+D\+L\+\_\+\+Save\+Dollar\+Template(gesture\+Id, dst) where gesture\+Id is the id of the gesture you want to save, and dst is an \mbox{\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops}} pointer to the file where the gesture will be stored.
+
+To save all currently loaded templates, call S\+D\+L\+\_\+\+Save\+All\+Dollar\+Templates(dst) where dst is an \mbox{\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops}} pointer to the file where the gesture will be stored.
+
+Both functions return the number of gestures successfully saved.
+
+\subsection*{Loading\+: }
+
+To load templates from a file, call S\+D\+L\+\_\+\+Load\+Dollar\+Templates(touch\+Id,src) where touch\+Id is the id of the touch to load to (or -\/1 to load to all touch devices), and src is an \mbox{\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops}} pointer to a gesture save file.
+
+S\+D\+L\+\_\+\+Load\+Dollar\+Templates returns the number of templates successfully loaded.
+
+
+
+ \section*{Multi Gestures }
+
+S\+DL provides simple support for pinch/rotate/swipe gestures. Every time a finger is moved an S\+D\+L\+\_\+\+M\+U\+L\+T\+I\+G\+E\+S\+T\+U\+RE event is sent with the following fields\+:
+
+
+\begin{DoxyItemize}
+\item event.\+mgesture.\+touch\+Id -\/ the Id of the touch on which the gesture was performed.
+\item event.\+mgesture.\+x -\/ the normalized x coordinate of the gesture. (0..1)
+\item event.\+mgesture.\+y -\/ the normalized y coordinate of the gesture. (0..1)
+\item event.\+mgesture.\+d\+Theta -\/ the amount that the fingers rotated during this motion.
+\item event.\+mgesture.\+d\+Dist -\/ the amount that the fingers pinched during this motion.
+\item event.\+mgesture.\+num\+Fingers -\/ the number of fingers used in the gesture.
+\end{DoxyItemize}
+
+
+
+ \section*{Notes }
+
+For a complete example see test/testgesture.\+c
+
+Please direct questions/comments to\+: \href{mailto:jim.tla+sdl_touch@gmail.com}{\tt jim.\+tla+sdl\+\_\+touch@gmail.\+com} 

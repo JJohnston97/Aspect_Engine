@@ -1,0 +1,56 @@
+By default S\+DL will only link against glibc, the rest of the features will be enabled dynamically at runtime depending on the available features on the target system. So, for example if you built S\+DL with Xinerama support and the target system does not have the Xinerama libraries installed, it will be disabled at runtime, and you won\textquotesingle{}t get a missing library error, at least with the default configuration parameters.
+
+
+
+ \section*{Build Dependencies }
+
+Ubuntu 13.\+04, all available features enabled\+:
+
+sudo apt-\/get install build-\/essential mercurial make cmake autoconf automake \textbackslash{} libtool libasound2-\/dev libpulse-\/dev libaudio-\/dev libx11-\/dev libxext-\/dev \textbackslash{} libxrandr-\/dev libxcursor-\/dev libxi-\/dev libxinerama-\/dev libxxf86vm-\/dev \textbackslash{} libxss-\/dev libgl1-\/mesa-\/dev libesd0-\/dev libdbus-\/1-\/dev libudev-\/dev \textbackslash{} libgles1-\/mesa-\/dev libgles2-\/mesa-\/dev libegl1-\/mesa-\/dev libibus-\/1.\+0-\/dev \textbackslash{} fcitx-\/libs-\/dev libsamplerate0-\/dev libsndio-\/dev
+
+Ubuntu 16.\+04+ can also add \char`\"{}libwayland-\/dev libxkbcommon-\/dev wayland-\/protocols\char`\"{} to that command line for Wayland support.
+
+Ubuntu 16.\+10 can also add \char`\"{}libmirclient-\/dev libxkbcommon-\/dev\char`\"{} to that command line for Mir support.
+
+N\+O\+T\+ES\+:
+\begin{DoxyItemize}
+\item This includes all the audio targets except arts, because Ubuntu pulled the artsc0-\/dev package, but in theory S\+DL still supports it.
+\item libsamplerate0-\/dev lets S\+DL optionally link to libresamplerate at runtime for higher-\/quality audio resampling. S\+DL will work without it if the library is missing, so it\textquotesingle{}s safe to build in support even if the end user doesn\textquotesingle{}t have this library installed.
+\item Direct\+FB isn\textquotesingle{}t included because the configure script (currently) fails to find it at all. You can do \char`\"{}sudo apt-\/get install libdirectfb-\/dev\char`\"{} and fix the configure script to include Direct\+FB support. Send patches. \+:)
+\end{DoxyItemize}
+
+
+
+ \section*{Joystick does not work }
+
+If you compiled or are using a version of S\+DL with udev support (and you should!) there\textquotesingle{}s a few issues that may cause S\+DL to fail to detect your joystick. To debug this, start by installing the evtest utility. On Ubuntu/\+Debian\+: \begin{DoxyVerb}sudo apt-get install evtest
+\end{DoxyVerb}
+
+
+Then run\+: \begin{DoxyVerb}sudo evtest
+\end{DoxyVerb}
+
+
+You\textquotesingle{}ll hopefully see your joystick listed along with a name like \char`\"{}/dev/input/event\+X\+X\char`\"{} Now run\+: \begin{DoxyVerb}cat /dev/input/event/XX
+\end{DoxyVerb}
+
+
+If you get a permission error, you need to set a udev rule to change the mode of your device (see below) ~\newline
+ Also, try\+: \begin{DoxyVerb}sudo udevadm info --query=all --name=input/eventXX
+\end{DoxyVerb}
+
+
+If you see a line stating I\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+CK=1, great, if you don\textquotesingle{}t see it, you need to set up an udev rule to force this variable.
+
+A combined rule for the Saitek Pro Flight Rudder Pedals to fix both issues looks like\+:
+
+S\+U\+B\+S\+Y\+S\+T\+EM==\char`\"{}input\char`\"{}, A\+T\+T\+RS\{id\+Product\}==\char`\"{}0763\char`\"{}, A\+T\+T\+RS\{id\+Vendor\}==\char`\"{}06a3\char`\"{}, M\+O\+DE=\char`\"{}0666\char`\"{}, E\+NV\{I\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+CK\}=\char`\"{}1\char`\"{} S\+U\+B\+S\+Y\+S\+T\+EM==\char`\"{}input\char`\"{}, A\+T\+T\+RS\{id\+Product\}==\char`\"{}0764\char`\"{}, A\+T\+T\+RS\{id\+Vendor\}==\char`\"{}06a3\char`\"{}, M\+O\+DE=\char`\"{}0666\char`\"{}, E\+NV\{I\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+CK\}=\char`\"{}1\char`\"{}
+
+You can set up similar rules for your device by changing the values listed in id\+Product and id\+Vendor. To obtain these values, try\+: \begin{DoxyVerb}sudo udevadm info -a --name=input/eventXX | grep idVendor
+sudo udevadm info -a --name=input/eventXX | grep idProduct
+\end{DoxyVerb}
+
+
+If multiple values come up for each of these, the one you want is the first one of each. ~\newline
+ On other systems which ship with an older udev (such as Cent\+OS), you may need to set up a rule such as\+: \begin{DoxyVerb}SUBSYSTEM=="input", ENV{ID_CLASS}=="joystick", ENV{ID_INPUT_JOYSTICK}="1"\end{DoxyVerb}
+ 

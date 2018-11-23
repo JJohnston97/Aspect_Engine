@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="Aspect_Logo.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Aspect Engine
    </div>
+   <div id="projectbrief">Aspect Engine is my final year project for Games Engine Programming</div>
   </td>
  </tr>
  </tbody>
@@ -84,6 +84,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Aspect::Engine::Entity</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the component class.  <a href="class_aspect_1_1_engine_1_1_entity.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -95,10 +96,26 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:adf0fb5fb7c55a8ea2c95063dddd6a779"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_entity_8h.html#adf0fb5fb7c55a8ea2c95063dddd6a779">_ENTITY_H_</a></td></tr>
+<tr class="separator:adf0fb5fb7c55a8ea2c95063dddd6a779"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6869d9f71eebbab486a7839b37bfc3c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_entity_8h.html#a6869d9f71eebbab486a7839b37bfc3c6">ADDCOMPONENT</a></td></tr>
 <tr class="separator:a6869d9f71eebbab486a7839b37bfc3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="adf0fb5fb7c55a8ea2c95063dddd6a779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf0fb5fb7c55a8ea2c95063dddd6a779">&#9670;&nbsp;</a></span>_ENTITY_H_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _ENTITY_H_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6869d9f71eebbab486a7839b37bfc3c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6869d9f71eebbab486a7839b37bfc3c6">&#9670;&nbsp;</a></span>ADDCOMPONENT</h2>
 
@@ -110,7 +127,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">std::shared_ptr&lt;T&gt; rtn = std::make_shared&lt;T&gt;(); \</div><div class="line">  components.push_back(rtn);</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line">std::shared_ptr&lt;T&gt; rtn = std::make_shared&lt;T&gt;(); \</div><div class="line">  rtn-&gt;entity = <span class="keyword">self</span>; \</div><div class="line">  rtn-&gt;m_begin = <span class="keyword">false</span>; \</div><div class="line">  components.push_back(rtn);</div></div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

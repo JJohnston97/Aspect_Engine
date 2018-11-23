@@ -1,0 +1,25 @@
+(www.\+cmake.\+org)
+
+S\+DL\textquotesingle{}s build system was traditionally based on autotools. Over time, this approach has suffered from several issues across the different supported platforms. To solve these problems, a new build system based on C\+Make is under development. It works in parallel to the legacy system, so users can experiment with it without complication. While still experimental, the build system should be usable on the following platforms\+:
+
+
+\begin{DoxyItemize}
+\item Free\+B\+SD
+\item Linux
+\item V\+S.\+N\+ET 2010
+\item Min\+GW and Msys
+\item OS X with support for X\+Code
+\end{DoxyItemize}
+
+
+
+ \section*{Usage }
+
+Assuming the source for S\+DL is located at $\sim$/sdl \begin{DoxyVerb}cd ~
+mkdir build
+cd build
+cmake ../sdl
+\end{DoxyVerb}
+
+
+This will build the static and dynamic versions of S\+DL in the $\sim$/build directory. 

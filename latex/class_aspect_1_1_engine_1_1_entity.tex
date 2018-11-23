@@ -2,33 +2,53 @@
 \label{class_aspect_1_1_engine_1_1_entity}\index{Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}}
 
 
+Initialise the component class.  
+
+
+
+
 {\ttfamily \#include $<$Entity.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_a5fdedcbe74684afa991dc83b6c7b96a1}{get\+Component}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Type T Template class to get a single component. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_accfb5d56f8f88f9007504e580120a777}{has\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Type T Template class to get a single component. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_ae7a087ed64f4fec3b61ff2cba098d19a}{add\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Type t template class to add a single component. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_aac44f29e1ad32261d7853e59a7562671}{add\+Component}} (A \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3309789fc188587d666cda5ece79cf82}{a}})
+\begin{DoxyCompactList}\small\item\em Type t template class to add 2 components. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename A , typename B $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_a73a023e500fddd340cf843e6e11796dd}{add\+Component}} (A \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3309789fc188587d666cda5ece79cf82}{a}}, B \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}})
+\begin{DoxyCompactList}\small\item\em Type t template class to add 3 components. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_ad3a033d6bbe1dfa9011e4f2d5ce8c928}{count}} ()
 \item 
-{\footnotesize template$<$typename T , typename A $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_aac44f29e1ad32261d7853e59a7562671}{add\+Component}} (A a)
-\item 
-{\footnotesize template$<$typename T , typename A , typename B $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_a73a023e500fddd340cf843e6e11796dd}{add\+Component}} (A a, B b)
-\item 
-void \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_ad3a033d6bbe1dfa9011e4f2d5ce8c928}{count}} ()
-\item 
-void \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_ac889f58ccf361ce3ec1126f9df141679}{display}} ()
-\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_ac889f58ccf361ce3ec1126f9df141679}{display}} ()
+\begin{DoxyCompactList}\small\item\em Update function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_a9e6f9d5884b67082bcafc76b6cfacd79}{set\+Destroy}} (bool \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_a425294ababc4132392204443f47cb36a}{destroy}})
+\begin{DoxyCompactList}\small\item\em Draw function. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_a62a6db91aaf6b188d57edeb2bfa24767}{is\+Destroyed}} ()
+\begin{DoxyCompactList}\small\item\em Destory game objects. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_program}{Program}} $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_a39566f856dd82efb948383c3037290a0}{get\+Program}} ()
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
+bool \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_a425294ababc4132392204443f47cb36a}{destroy}}
+\item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component}{Component}} $>$ $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_ae7380f6b33ebbb9d4859a9de11549769}{components}}
 \item 
 std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_program}{Program}} $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_a39a0c787c384f192878e9c16f566b892}{program}}
+\begin{DoxyCompactList}\small\item\em Get program function. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity_a23ba239d52c76b8c7f86a4ebdd189d26}{self}}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Initialise the component class. 
+
+Initialise the entity class 
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_entity_ae7a087ed64f4fec3b61ff2cba098d19a}\label{class_aspect_1_1_engine_1_1_entity_ae7a087ed64f4fec3b61ff2cba098d19a}} 
@@ -38,12 +58,20 @@ std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_program}{Pr
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 std\+::shared\+\_\+ptr$<$T$>$ Aspect\+::\+Engine\+::\+Entity\+::add\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Type t template class to add a single component. 
+
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_entity_aac44f29e1ad32261d7853e59a7562671}\label{class_aspect_1_1_engine_1_1_entity_aac44f29e1ad32261d7853e59a7562671}} 
 \index{Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}!add\+Component@{add\+Component}}
 \index{add\+Component@{add\+Component}!Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}}
 \subsubsection{\texorpdfstring{add\+Component()}{addComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily template$<$typename T , typename A $>$ \\
 std\+::shared\+\_\+ptr$<$T$>$ Aspect\+::\+Engine\+::\+Entity\+::add\+Component (\begin{DoxyParamCaption}\item[{A}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Type t template class to add 2 components. 
 
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_entity_a73a023e500fddd340cf843e6e11796dd}\label{class_aspect_1_1_engine_1_1_entity_a73a023e500fddd340cf843e6e11796dd}} 
 \index{Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}!add\+Component@{add\+Component}}
@@ -52,17 +80,25 @@ std\+::shared\+\_\+ptr$<$T$>$ Aspect\+::\+Engine\+::\+Entity\+::add\+Component (
 {\footnotesize\ttfamily template$<$typename T , typename A , typename B $>$ \\
 std\+::shared\+\_\+ptr$<$T$>$ Aspect\+::\+Engine\+::\+Entity\+::add\+Component (\begin{DoxyParamCaption}\item[{A}]{a,  }\item[{B}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Type t template class to add 3 components. 
+
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_entity_ad3a033d6bbe1dfa9011e4f2d5ce8c928}\label{class_aspect_1_1_engine_1_1_entity_ad3a033d6bbe1dfa9011e4f2d5ce8c928}} 
 \index{Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}!count@{count}}
 \index{count@{count}!Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}}
 \subsubsection{\texorpdfstring{count()}{count()}}
-{\footnotesize\ttfamily void Aspect\+::\+Engine\+::\+Entity\+::count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Entity\+::count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_entity_ac889f58ccf361ce3ec1126f9df141679}\label{class_aspect_1_1_engine_1_1_entity_ac889f58ccf361ce3ec1126f9df141679}} 
 \index{Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}!display@{display}}
 \index{display@{display}!Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}}
 \subsubsection{\texorpdfstring{display()}{display()}}
-{\footnotesize\ttfamily void Aspect\+::\+Engine\+::\+Entity\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Entity\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update function. 
 
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_entity_a5fdedcbe74684afa991dc83b6c7b96a1}\label{class_aspect_1_1_engine_1_1_entity_a5fdedcbe74684afa991dc83b6c7b96a1}} 
 \index{Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}!get\+Component@{get\+Component}}
@@ -71,11 +107,46 @@ std\+::shared\+\_\+ptr$<$T$>$ Aspect\+::\+Engine\+::\+Entity\+::add\+Component (
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 std\+::shared\+\_\+ptr$<$T$>$ Aspect\+::\+Engine\+::\+Entity\+::get\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Type T Template class to get a single component. 
+
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_entity_a39566f856dd82efb948383c3037290a0}\label{class_aspect_1_1_engine_1_1_entity_a39566f856dd82efb948383c3037290a0}} 
 \index{Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}!get\+Program@{get\+Program}}
 \index{get\+Program@{get\+Program}!Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}}
 \subsubsection{\texorpdfstring{get\+Program()}{getProgram()}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_program}{Program}} $>$ Aspect\+::\+Engine\+::\+Entity\+::get\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_entity_accfb5d56f8f88f9007504e580120a777}\label{class_aspect_1_1_engine_1_1_entity_accfb5d56f8f88f9007504e580120a777}} 
+\index{Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}!has\+Component@{has\+Component}}
+\index{has\+Component@{has\+Component}!Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{has\+Component()}{hasComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool Aspect\+::\+Engine\+::\+Entity\+::has\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Type T Template class to get a single component. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_entity_a62a6db91aaf6b188d57edeb2bfa24767}\label{class_aspect_1_1_engine_1_1_entity_a62a6db91aaf6b188d57edeb2bfa24767}} 
+\index{Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}!is\+Destroyed@{is\+Destroyed}}
+\index{is\+Destroyed@{is\+Destroyed}!Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{is\+Destroyed()}{isDestroyed()}}
+{\footnotesize\ttfamily bool Aspect\+::\+Engine\+::\+Entity\+::is\+Destroyed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destory game objects. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_entity_a9e6f9d5884b67082bcafc76b6cfacd79}\label{class_aspect_1_1_engine_1_1_entity_a9e6f9d5884b67082bcafc76b6cfacd79}} 
+\index{Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}!set\+Destroy@{set\+Destroy}}
+\index{set\+Destroy@{set\+Destroy}!Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{set\+Destroy()}{setDestroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Entity\+::set\+Destroy (\begin{DoxyParamCaption}\item[{bool}]{destroy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Draw function. 
 
 
 
@@ -86,11 +157,27 @@ std\+::shared\+\_\+ptr$<$T$>$ Aspect\+::\+Engine\+::\+Entity\+::get\+Component (
 \subsubsection{\texorpdfstring{components}{components}}
 {\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_aspect_1_1_engine_1_1_component}{Component}}$>$ $>$ Aspect\+::\+Engine\+::\+Entity\+::components}
 
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_entity_a425294ababc4132392204443f47cb36a}\label{class_aspect_1_1_engine_1_1_entity_a425294ababc4132392204443f47cb36a}} 
+\index{Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}!destroy@{destroy}}
+\index{destroy@{destroy}!Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{destroy}{destroy}}
+{\footnotesize\ttfamily bool Aspect\+::\+Engine\+::\+Entity\+::destroy}
+
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_entity_a39a0c787c384f192878e9c16f566b892}\label{class_aspect_1_1_engine_1_1_entity_a39a0c787c384f192878e9c16f566b892}} 
 \index{Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}!program@{program}}
 \index{program@{program}!Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}}
 \subsubsection{\texorpdfstring{program}{program}}
 {\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{class_aspect_1_1_engine_1_1_program}{Program}}$>$ Aspect\+::\+Engine\+::\+Entity\+::program}
+
+
+
+Get program function. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_entity_a23ba239d52c76b8c7f86a4ebdd189d26}\label{class_aspect_1_1_engine_1_1_entity_a23ba239d52c76b8c7f86a4ebdd189d26}} 
+\index{Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}!self@{self}}
+\index{self@{self}!Aspect\+::\+Engine\+::\+Entity@{Aspect\+::\+Engine\+::\+Entity}}
+\subsubsection{\texorpdfstring{self}{self}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity}{Entity}}$>$ Aspect\+::\+Engine\+::\+Entity\+::self}
 
 
 

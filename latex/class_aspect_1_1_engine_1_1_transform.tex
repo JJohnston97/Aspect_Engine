@@ -1,0 +1,324 @@
+\hypertarget{class_aspect_1_1_engine_1_1_transform}{}\section{Aspect\+:\+:Engine\+:\+:Transform Class Reference}
+\label{class_aspect_1_1_engine_1_1_transform}\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+
+
+\mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform}{Transform}} class allows the use of translate, rotate and scale for game objects, added to every entity when created.  
+
+
+
+
+{\ttfamily \#include $<$Transform.\+h$>$}
+
+Inheritance diagram for Aspect\+:\+:Engine\+:\+:Transform\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_aspect_1_1_engine_1_1_transform}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_ad7f417015e9ea12b8cfeb07b7819ddf7}{Transform}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_aeeb5cdf768c6e6760649e87985f24ac1}{Translate}} (float \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, float \mbox{\hyperlink{_s_d_l__opengl_8h_a1675d9d7bb68e1657ff028643b4037e3}{y}}, float \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a5e74030ebb3297ce1b37ff716fedd68f}{z}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform}{Transform}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_aa8fb62f3dd866556d14f8074657270d5}{Translate}} (const \mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} \&dir)
+\begin{DoxyCompactList}\small\item\em Translate function allows to move the game objects. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_ab5208de8f6b510f894d1fc3665a76eb8}{set\+Position}} (\mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} \&pos)
+\begin{DoxyCompactList}\small\item\em Translate that takes a glm vec3 rather than three float variables. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_a027f4280deda36eea07dfc396bc076cb}{Rotate}} (float \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, float \mbox{\hyperlink{_s_d_l__opengl_8h_a1675d9d7bb68e1657ff028643b4037e3}{y}}, float \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a5e74030ebb3297ce1b37ff716fedd68f}{z}})
+\begin{DoxyCompactList}\small\item\em Set position function to take a glm vec 3 and set the new position to the pass in vec. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_a002e393cc28fde31c5899e566876c762}{Rotate}} (const \mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} \&dir)
+\begin{DoxyCompactList}\small\item\em Rotate function taking 3 floats. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_afdb7357a3b7b7306151764443a92e38b}{set\+Rotation}} (const \mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} \&rot)
+\begin{DoxyCompactList}\small\item\em Rotate takes a glm vec 3. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_a5c5737047cae0a4c0c6972171f32c2c4}{set\+Scale}} (float scaleX, float scaleY, float scaleZ)
+\begin{DoxyCompactList}\small\item\em Set position for when an object is first created. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_acb53a815498eea17774cc42cfa6c03bd}{on\+Count}} () override
+\begin{DoxyCompactList}\small\item\em Set scale of the object, set to 1,1,1 on create. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_a518b259100172bc76833d9f5580bfa11}{get\+Model\+Matrix}} ()
+\item 
+\mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_abda17c27d2ebf07d0e2acd66f953f93f}{get\+View\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Mat4 return of the model matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_a19574dc0c02837b729f58fbf8b5ad608}{get\+Orientation}} ()
+\begin{DoxyCompactList}\small\item\em Mat4 return of view matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_af606b12afa98e381b03af23063ce3762}{get\+Scale}} ()
+\begin{DoxyCompactList}\small\item\em Mat4 get orientation of the object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_a22d598d49c4a1605119ecdb51ec69b3b}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Get the scale of the object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_ab28c4e6547fca905528a650edd0bf8b3}{get\+Rotation}} ()
+\begin{DoxyCompactList}\small\item\em Get the position of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_a03724de24cdee495ce9518639f530497}{vel}} = 0.\+1f
+\begin{DoxyCompactList}\small\item\em Allows use of an overriden update function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_a87dec7395e05a8ecd54c984e150dd57a}{camera\+AngleX}}
+\begin{DoxyCompactList}\small\item\em Get the rotation of the object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_a621e0bab9b65e5de7bb745876cf13c66}{camera\+AngleY}}
+\item 
+\mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_aeafb7dd172b70418ff850771286462eb}{position}}
+\item 
+\mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_afde97c0c524a34d7212345319ad83d04}{rotation}}
+\item 
+\mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_a5f845f5e281af2236c903f3822202800}{scale}}
+\item 
+\mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_a30ea00544d4f26b287e7d480f6435cef}{translation}}
+\item 
+\mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_a217656ee4e26feb290ac5dca72f475c3}{orientation}}
+\item 
+\mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_ab87f32fab46029a334a4665342abe4d7}{model\+Matrix}}
+\item 
+\mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_a75334024916c9cdfd3bdcd1488bd3999}{rot\+Matrix}}
+\item 
+\mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_af56074cbe77a1b2fcdb5e077eaa33660}{view\+Matrix}}
+\item 
+\mbox{\hyperlink{namespaceglm_ac1f6a5957091b849730ea6f05a6b7ad6}{glm\+::quat}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_a07acedf2ea9258d1c5ee99cf62f25e56}{camera\+Orientation}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform}{Transform}} class allows the use of translate, rotate and scale for game objects, added to every entity when created. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_ad7f417015e9ea12b8cfeb07b7819ddf7}\label{class_aspect_1_1_engine_1_1_transform_ad7f417015e9ea12b8cfeb07b7819ddf7}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!Transform@{Transform}}
+\index{Transform@{Transform}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{Transform()}{Transform()}}
+{\footnotesize\ttfamily Aspect\+::\+Engine\+::\+Transform\+::\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_a518b259100172bc76833d9f5580bfa11}\label{class_aspect_1_1_engine_1_1_transform_a518b259100172bc76833d9f5580bfa11}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!get\+Model\+Matrix@{get\+Model\+Matrix}}
+\index{get\+Model\+Matrix@{get\+Model\+Matrix}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{get\+Model\+Matrix()}{getModelMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} Aspect\+::\+Engine\+::\+Transform\+::get\+Model\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_a19574dc0c02837b729f58fbf8b5ad608}\label{class_aspect_1_1_engine_1_1_transform_a19574dc0c02837b729f58fbf8b5ad608}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!get\+Orientation@{get\+Orientation}}
+\index{get\+Orientation@{get\+Orientation}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{get\+Orientation()}{getOrientation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} Aspect\+::\+Engine\+::\+Transform\+::get\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mat4 return of view matrix. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_a22d598d49c4a1605119ecdb51ec69b3b}\label{class_aspect_1_1_engine_1_1_transform_a22d598d49c4a1605119ecdb51ec69b3b}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} Aspect\+::\+Engine\+::\+Transform\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the scale of the object. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_ab28c4e6547fca905528a650edd0bf8b3}\label{class_aspect_1_1_engine_1_1_transform_ab28c4e6547fca905528a650edd0bf8b3}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!get\+Rotation@{get\+Rotation}}
+\index{get\+Rotation@{get\+Rotation}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{get\+Rotation()}{getRotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} Aspect\+::\+Engine\+::\+Transform\+::get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the position of the object. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_af606b12afa98e381b03af23063ce3762}\label{class_aspect_1_1_engine_1_1_transform_af606b12afa98e381b03af23063ce3762}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!get\+Scale@{get\+Scale}}
+\index{get\+Scale@{get\+Scale}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{get\+Scale()}{getScale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} Aspect\+::\+Engine\+::\+Transform\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mat4 get orientation of the object. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_abda17c27d2ebf07d0e2acd66f953f93f}\label{class_aspect_1_1_engine_1_1_transform_abda17c27d2ebf07d0e2acd66f953f93f}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!get\+View\+Matrix@{get\+View\+Matrix}}
+\index{get\+View\+Matrix@{get\+View\+Matrix}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{get\+View\+Matrix()}{getViewMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} Aspect\+::\+Engine\+::\+Transform\+::get\+View\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mat4 return of the model matrix. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_acb53a815498eea17774cc42cfa6c03bd}\label{class_aspect_1_1_engine_1_1_transform_acb53a815498eea17774cc42cfa6c03bd}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!on\+Count@{on\+Count}}
+\index{on\+Count@{on\+Count}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{on\+Count()}{onCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Transform\+::on\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set scale of the object, set to 1,1,1 on create. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_a02de673a0591459bd0d39e3022c1d3fc}{Aspect\+::\+Engine\+::\+Component}}.
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_a027f4280deda36eea07dfc396bc076cb}\label{class_aspect_1_1_engine_1_1_transform_a027f4280deda36eea07dfc396bc076cb}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{Rotate()}{Rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Transform\+::\+Rotate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+Set position function to take a glm vec 3 and set the new position to the pass in vec. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_a002e393cc28fde31c5899e566876c762}\label{class_aspect_1_1_engine_1_1_transform_a002e393cc28fde31c5899e566876c762}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{Rotate()}{Rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Transform\+::\+Rotate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} \&}]{dir }\end{DoxyParamCaption})}
+
+
+
+Rotate function taking 3 floats. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_ab5208de8f6b510f894d1fc3665a76eb8}\label{class_aspect_1_1_engine_1_1_transform_ab5208de8f6b510f894d1fc3665a76eb8}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Transform\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} \&}]{pos }\end{DoxyParamCaption})}
+
+
+
+Translate that takes a glm vec3 rather than three float variables. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_afdb7357a3b7b7306151764443a92e38b}\label{class_aspect_1_1_engine_1_1_transform_afdb7357a3b7b7306151764443a92e38b}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!set\+Rotation@{set\+Rotation}}
+\index{set\+Rotation@{set\+Rotation}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{set\+Rotation()}{setRotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Transform\+::set\+Rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} \&}]{rot }\end{DoxyParamCaption})}
+
+
+
+Rotate takes a glm vec 3. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_a5c5737047cae0a4c0c6972171f32c2c4}\label{class_aspect_1_1_engine_1_1_transform_a5c5737047cae0a4c0c6972171f32c2c4}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!set\+Scale@{set\+Scale}}
+\index{set\+Scale@{set\+Scale}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{set\+Scale()}{setScale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Transform\+::set\+Scale (\begin{DoxyParamCaption}\item[{float}]{scaleX,  }\item[{float}]{scaleY,  }\item[{float}]{scaleZ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set position for when an object is first created. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_aeeb5cdf768c6e6760649e87985f24ac1}\label{class_aspect_1_1_engine_1_1_transform_aeeb5cdf768c6e6760649e87985f24ac1}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!Translate@{Translate}}
+\index{Translate@{Translate}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{Translate()}{Translate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Transform\+::\+Translate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform}{Transform}} constructor. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_aa8fb62f3dd866556d14f8074657270d5}\label{class_aspect_1_1_engine_1_1_transform_aa8fb62f3dd866556d14f8074657270d5}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!Translate@{Translate}}
+\index{Translate@{Translate}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{Translate()}{Translate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Transform\+::\+Translate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} \&}]{dir }\end{DoxyParamCaption})}
+
+
+
+Translate function allows to move the game objects. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_a87dec7395e05a8ecd54c984e150dd57a}\label{class_aspect_1_1_engine_1_1_transform_a87dec7395e05a8ecd54c984e150dd57a}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!camera\+AngleX@{camera\+AngleX}}
+\index{camera\+AngleX@{camera\+AngleX}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{camera\+AngleX}{cameraAngleX}}
+{\footnotesize\ttfamily float Aspect\+::\+Engine\+::\+Transform\+::camera\+AngleX\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get the rotation of the object. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_a621e0bab9b65e5de7bb745876cf13c66}\label{class_aspect_1_1_engine_1_1_transform_a621e0bab9b65e5de7bb745876cf13c66}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!camera\+AngleY@{camera\+AngleY}}
+\index{camera\+AngleY@{camera\+AngleY}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{camera\+AngleY}{cameraAngleY}}
+{\footnotesize\ttfamily float Aspect\+::\+Engine\+::\+Transform\+::camera\+AngleY\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_a07acedf2ea9258d1c5ee99cf62f25e56}\label{class_aspect_1_1_engine_1_1_transform_a07acedf2ea9258d1c5ee99cf62f25e56}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!camera\+Orientation@{camera\+Orientation}}
+\index{camera\+Orientation@{camera\+Orientation}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{camera\+Orientation}{cameraOrientation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceglm_ac1f6a5957091b849730ea6f05a6b7ad6}{glm\+::quat}} Aspect\+::\+Engine\+::\+Transform\+::camera\+Orientation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_ab87f32fab46029a334a4665342abe4d7}\label{class_aspect_1_1_engine_1_1_transform_ab87f32fab46029a334a4665342abe4d7}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!model\+Matrix@{model\+Matrix}}
+\index{model\+Matrix@{model\+Matrix}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{model\+Matrix}{modelMatrix}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} Aspect\+::\+Engine\+::\+Transform\+::model\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_a217656ee4e26feb290ac5dca72f475c3}\label{class_aspect_1_1_engine_1_1_transform_a217656ee4e26feb290ac5dca72f475c3}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!orientation@{orientation}}
+\index{orientation@{orientation}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{orientation}{orientation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} Aspect\+::\+Engine\+::\+Transform\+::orientation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_aeafb7dd172b70418ff850771286462eb}\label{class_aspect_1_1_engine_1_1_transform_aeafb7dd172b70418ff850771286462eb}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!position@{position}}
+\index{position@{position}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} Aspect\+::\+Engine\+::\+Transform\+::position\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_afde97c0c524a34d7212345319ad83d04}\label{class_aspect_1_1_engine_1_1_transform_afde97c0c524a34d7212345319ad83d04}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!rotation@{rotation}}
+\index{rotation@{rotation}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{rotation}{rotation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} Aspect\+::\+Engine\+::\+Transform\+::rotation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_a75334024916c9cdfd3bdcd1488bd3999}\label{class_aspect_1_1_engine_1_1_transform_a75334024916c9cdfd3bdcd1488bd3999}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!rot\+Matrix@{rot\+Matrix}}
+\index{rot\+Matrix@{rot\+Matrix}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{rot\+Matrix}{rotMatrix}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} Aspect\+::\+Engine\+::\+Transform\+::rot\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_a5f845f5e281af2236c903f3822202800}\label{class_aspect_1_1_engine_1_1_transform_a5f845f5e281af2236c903f3822202800}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!scale@{scale}}
+\index{scale@{scale}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_ga1c47e8b3386109bc992b6c48e91b0be7}{glm\+::vec3}} Aspect\+::\+Engine\+::\+Transform\+::scale\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_a30ea00544d4f26b287e7d480f6435cef}\label{class_aspect_1_1_engine_1_1_transform_a30ea00544d4f26b287e7d480f6435cef}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!translation@{translation}}
+\index{translation@{translation}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{translation}{translation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} Aspect\+::\+Engine\+::\+Transform\+::translation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_a03724de24cdee495ce9518639f530497}\label{class_aspect_1_1_engine_1_1_transform_a03724de24cdee495ce9518639f530497}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!vel@{vel}}
+\index{vel@{vel}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{vel}{vel}}
+{\footnotesize\ttfamily float Aspect\+::\+Engine\+::\+Transform\+::vel = 0.\+1f}
+
+
+
+Allows use of an overriden update function. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_transform_af56074cbe77a1b2fcdb5e077eaa33660}\label{class_aspect_1_1_engine_1_1_transform_af56074cbe77a1b2fcdb5e077eaa33660}} 
+\index{Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}!view\+Matrix@{view\+Matrix}}
+\index{view\+Matrix@{view\+Matrix}!Aspect\+::\+Engine\+::\+Transform@{Aspect\+::\+Engine\+::\+Transform}}
+\subsubsection{\texorpdfstring{view\+Matrix}{viewMatrix}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} Aspect\+::\+Engine\+::\+Transform\+::view\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Aspect/\mbox{\hyperlink{_transform_8h}{Transform.\+h}}\item 
+src/\+Aspect/\mbox{\hyperlink{_transform_8cpp}{Transform.\+cpp}}\end{DoxyCompactItemize}

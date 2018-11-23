@@ -1,0 +1,54 @@
+\hypertarget{struct_s_d_l___sys_w_m_event}{}\section{S\+D\+L\+\_\+\+Sys\+W\+M\+Event Struct Reference}
+\label{struct_s_d_l___sys_w_m_event}\index{S\+D\+L\+\_\+\+Sys\+W\+M\+Event@{S\+D\+L\+\_\+\+Sys\+W\+M\+Event}}
+
+
+A video driver dependent system event (event.\+syswm.$\ast$) This event is disabled by default, you can enable it with \mbox{\hyperlink{_s_d_l__events_8h_afb772893e1c46f186fa39a4defe76df3}{S\+D\+L\+\_\+\+Event\+State()}}  
+
+
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+events.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} \mbox{\hyperlink{struct_s_d_l___sys_w_m_event_a84697e96cb16bf6a570e10b5bfdcd392}{type}}
+\item 
+\mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} \mbox{\hyperlink{struct_s_d_l___sys_w_m_event_a5d3cb97006d99b620c2671c27bd82c06}{timestamp}}
+\item 
+\mbox{\hyperlink{struct_s_d_l___sys_w_mmsg}{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}} $\ast$ \mbox{\hyperlink{struct_s_d_l___sys_w_m_event_ad5e3dc68aa15582cd0641847d41c74e8}{msg}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A video driver dependent system event (event.\+syswm.$\ast$) This event is disabled by default, you can enable it with \mbox{\hyperlink{_s_d_l__events_8h_afb772893e1c46f186fa39a4defe76df3}{S\+D\+L\+\_\+\+Event\+State()}} 
+
+\begin{DoxyNote}{Note}
+If you want to use this event, you should include S\+D\+L\+\_\+syswm.\+h. 
+\end{DoxyNote}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_s_d_l___sys_w_m_event_ad5e3dc68aa15582cd0641847d41c74e8}\label{struct_s_d_l___sys_w_m_event_ad5e3dc68aa15582cd0641847d41c74e8}} 
+\index{S\+D\+L\+\_\+\+Sys\+W\+M\+Event@{S\+D\+L\+\_\+\+Sys\+W\+M\+Event}!msg@{msg}}
+\index{msg@{msg}!S\+D\+L\+\_\+\+Sys\+W\+M\+Event@{S\+D\+L\+\_\+\+Sys\+W\+M\+Event}}
+\subsubsection{\texorpdfstring{msg}{msg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l___sys_w_mmsg}{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}}$\ast$ S\+D\+L\+\_\+\+Sys\+W\+M\+Event\+::msg}
+
+driver dependent data, defined in S\+D\+L\+\_\+syswm.\+h \mbox{\Hypertarget{struct_s_d_l___sys_w_m_event_a5d3cb97006d99b620c2671c27bd82c06}\label{struct_s_d_l___sys_w_m_event_a5d3cb97006d99b620c2671c27bd82c06}} 
+\index{S\+D\+L\+\_\+\+Sys\+W\+M\+Event@{S\+D\+L\+\_\+\+Sys\+W\+M\+Event}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!S\+D\+L\+\_\+\+Sys\+W\+M\+Event@{S\+D\+L\+\_\+\+Sys\+W\+M\+Event}}
+\subsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} S\+D\+L\+\_\+\+Sys\+W\+M\+Event\+::timestamp}
+
+In milliseconds, populated using \mbox{\hyperlink{_s_d_l__timer_8h_a0b9bc71d6287e0ffafdc3419760fe2b3}{S\+D\+L\+\_\+\+Get\+Ticks()}} \mbox{\Hypertarget{struct_s_d_l___sys_w_m_event_a84697e96cb16bf6a570e10b5bfdcd392}\label{struct_s_d_l___sys_w_m_event_a84697e96cb16bf6a570e10b5bfdcd392}} 
+\index{S\+D\+L\+\_\+\+Sys\+W\+M\+Event@{S\+D\+L\+\_\+\+Sys\+W\+M\+Event}!type@{type}}
+\index{type@{type}!S\+D\+L\+\_\+\+Sys\+W\+M\+Event@{S\+D\+L\+\_\+\+Sys\+W\+M\+Event}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} S\+D\+L\+\_\+\+Sys\+W\+M\+Event\+::type}
+
+\mbox{\hyperlink{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa73749d735a18ce6ef17a09ee70d5dbe7}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+E\+V\+E\+NT}} 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\mbox{\hyperlink{_s_d_l__events_8h}{S\+D\+L\+\_\+events.\+h}}\end{DoxyCompactItemize}

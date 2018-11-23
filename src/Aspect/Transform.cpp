@@ -1,3 +1,4 @@
+// System includes
 #include <iostream>
 #include <memory>
 #include <windows.h>
@@ -7,8 +8,9 @@
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
 #include <SDL.h>
-#include "Transform.h"
 
+// Project Includes
+#include "Transform.h"
 #include "Entity.h"
 
 
@@ -16,19 +18,21 @@ namespace Aspect
 {
 	namespace Engine
 	{
-		class Transform;
+		class Transform; // Forward declarations of Transform
 		
-
+		// Transform constructor
 		Transform::Transform()
 		{
 			scale = glm::vec3(1, 1, 1);
 		}
-
+		
+		// Translate the position with floats
 		void Transform::Translate(float x, float y, float z)
 		{
 			position += glm::vec3(x, y, z);
 		}
 
+		// Translate the object position
 		void Transform::Translate(const glm::vec3 & dir)
 		{
 			position += dir;
@@ -40,6 +44,7 @@ namespace Aspect
 
 		}
 
+		// Calculate the model matrix 
 		glm::mat4 Transform::getModelMatrix()
 		{
 			while (rotation.y > (3.14159265358979323846 * 2.0))
@@ -58,31 +63,40 @@ namespace Aspect
 			return modelMatrix;
 		}
 
+
+		// Calculates the view matirx
 		glm::mat4 Transform::getViewMatrix()
 		{
 			return glm::inverse(getModelMatrix());
 		}
 
+
+		// Set the position with a GLM ::vec3
 		void Transform::setPosition(glm::vec3 &pos)
 		{
 			position = pos;
 		}
 
+		// Rotate the object with floats
 		void Transform::Rotate(float x, float y, float z)
 		{
 			rotation += glm::vec3(x, y, z);
 		}
 
+		// Rotate the object with GLM::vec3
 		void Transform::Rotate(const glm::vec3 &dir)
 		{
 			rotation += dir;
 		}
 
+		// Set the rotation
 		void Transform::setRotation(const glm::vec3 &rot)
 		{
 			rotation = rot;
 		}
 
+
+		// Get the orientation of the object
 		glm::mat4 Transform::getOrientation()
 		{
 			orientation = glm::rotate(orientation, rotation.x, glm::vec3(1, 0, 0));
@@ -91,14 +105,6 @@ namespace Aspect
 
 			return orientation;
 		}
-
-		//glm::mat4 Transform::getTranslation()
-		//{
-		//	//translation = glm::translate(position.x, position.y, position.z);
-		//	return translation;
-		//}
-
-
 
 	}
 

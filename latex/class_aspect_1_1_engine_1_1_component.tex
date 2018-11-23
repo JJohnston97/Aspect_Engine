@@ -2,12 +2,17 @@
 \label{class_aspect_1_1_engine_1_1_component}\index{Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}}
 
 
+Initialise \mbox{\hyperlink{class_aspect_1_1_engine_1_1_program}{Program}} class rather than include.  
+
+
+
+
 {\ttfamily \#include $<$Component.\+h$>$}
 
 Inheritance diagram for Aspect\+:\+:Engine\+:\+:Component\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_aspect_1_1_engine_1_1_component}
+\includegraphics[height=1.230769cm]{class_aspect_1_1_engine_1_1_component}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -16,8 +21,34 @@ Inheritance diagram for Aspect\+:\+:Engine\+:\+:Component\+:\begin{figure}[H]
 virtual \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_a8ceb47c002468c4ad876b7220da579f8}{$\sim$\+Component}} ()
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_program}{Program}} $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_a96e352a6d49b6e108572c0c19088aa52}{get\+Program}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Class distructor. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_a1422571aabd1882f712e16ef4bf0cb77}{get\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Creates a shared ptr function get\+Program. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_accb4c932c2e93369ca168e1cd204ee31}{add\+Entity}} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity}{Entity}} $>$ \+\_\+entity)
+\begin{DoxyCompactList}\small\item\em Creates a shared ptr function to get\+Entiy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_a3a1fbf76e3fd208be7ffe0ffa449dcf9}{on\+Init}} ()
+\item 
+virtual \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_a74ced87351b55406936e9d0009743557}{on\+Begin}} ()
+\begin{DoxyCompactList}\small\item\em Initialise component function. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_a02de673a0591459bd0d39e3022c1d3fc}{on\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Begin function for components for entities. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_ac67307dba854cdc9535a0de75e5a3d09}{on\+Display}} ()
+\begin{DoxyCompactList}\small\item\em On count same as update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_adc1d5c50c770bd9a173c0d63a61fe46c}{entity}}
+\begin{DoxyCompactList}\small\item\em Creates the add entity function to add more entites to the program and entities list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_a648bedde21f792635f87889357fa2965}{m\+\_\+begin}}
+\item 
+\mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_a8307884a0e42764fd72af572e4ffdc7f}{view\+Matrix}}
+\item 
+float \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_ae5201488df91c23147632cc507b36c82}{camera\+AngleX}}
+\item 
+float \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_a9767131422976b1fb5b253c1ac114981}{camera\+AngleY}}
 \end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -25,6 +56,11 @@ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity}{E
 class \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_a614439ccac0344926adc4c0165d64060}{Entity}}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Initialise \mbox{\hyperlink{class_aspect_1_1_engine_1_1_program}{Program}} class rather than include. 
+
+\mbox{\hyperlink{class_aspect_1_1_engine_1_1_component}{Component}} class 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_component_a8ceb47c002468c4ad876b7220da579f8}\label{class_aspect_1_1_engine_1_1_component_a8ceb47c002468c4ad876b7220da579f8}} 
@@ -36,11 +72,25 @@ class \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_a614439ccac0344926a
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_component_accb4c932c2e93369ca168e1cd204ee31}\label{class_aspect_1_1_engine_1_1_component_accb4c932c2e93369ca168e1cd204ee31}} 
+\index{Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}!add\+Entity@{add\+Entity}}
+\index{add\+Entity@{add\+Entity}!Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}}
+\subsubsection{\texorpdfstring{add\+Entity()}{addEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Component\+::add\+Entity (\begin{DoxyParamCaption}\item[{std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity}{Entity}} $>$}]{\+\_\+entity }\end{DoxyParamCaption})}
+
+
+
+Creates a shared ptr function to get\+Entiy. 
+
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_component_a1422571aabd1882f712e16ef4bf0cb77}\label{class_aspect_1_1_engine_1_1_component_a1422571aabd1882f712e16ef4bf0cb77}} 
 \index{Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}!get\+Entity@{get\+Entity}}
 \index{get\+Entity@{get\+Entity}!Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}}
 \subsubsection{\texorpdfstring{get\+Entity()}{getEntity()}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity}{Entity}} $>$ Aspect\+::\+Engine\+::\+Component\+::get\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a shared ptr function get\+Program. 
 
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_component_a96e352a6d49b6e108572c0c19088aa52}\label{class_aspect_1_1_engine_1_1_component_a96e352a6d49b6e108572c0c19088aa52}} 
 \index{Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}!get\+Program@{get\+Program}}
@@ -50,12 +100,101 @@ class \mbox{\hyperlink{class_aspect_1_1_engine_1_1_component_a614439ccac0344926a
 
 
 
+Class distructor. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_component_a74ced87351b55406936e9d0009743557}\label{class_aspect_1_1_engine_1_1_component_a74ced87351b55406936e9d0009743557}} 
+\index{Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}!on\+Begin@{on\+Begin}}
+\index{on\+Begin@{on\+Begin}!Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}}
+\subsubsection{\texorpdfstring{on\+Begin()}{onBegin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Component\+::on\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Initialise component function. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_component_a02de673a0591459bd0d39e3022c1d3fc}\label{class_aspect_1_1_engine_1_1_component_a02de673a0591459bd0d39e3022c1d3fc}} 
+\index{Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}!on\+Count@{on\+Count}}
+\index{on\+Count@{on\+Count}!Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}}
+\subsubsection{\texorpdfstring{on\+Count()}{onCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Component\+::on\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Begin function for components for entities. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_aebaa5a60d373d3363a13336cfbaa4141}{Aspect\+::\+Engine\+::\+Mesh\+Render}}, \mbox{\hyperlink{class_aspect_1_1_engine_1_1_transform_acb53a815498eea17774cc42cfa6c03bd}{Aspect\+::\+Engine\+::\+Transform}}, and \mbox{\hyperlink{class_aspect_1_1_engine_1_1_movement_a4dc9ec0157d8d24dafeb69c3c3f60e23}{Aspect\+::\+Engine\+::\+Movement}}.
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_component_ac67307dba854cdc9535a0de75e5a3d09}\label{class_aspect_1_1_engine_1_1_component_ac67307dba854cdc9535a0de75e5a3d09}} 
+\index{Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}!on\+Display@{on\+Display}}
+\index{on\+Display@{on\+Display}!Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}}
+\subsubsection{\texorpdfstring{on\+Display()}{onDisplay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Component\+::on\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+On count same as update. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_aed81ecbd6bf1d63acb06171f729e4927}{Aspect\+::\+Engine\+::\+Mesh\+Render}}.
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_component_a3a1fbf76e3fd208be7ffe0ffa449dcf9}\label{class_aspect_1_1_engine_1_1_component_a3a1fbf76e3fd208be7ffe0ffa449dcf9}} 
+\index{Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}!on\+Init@{on\+Init}}
+\index{on\+Init@{on\+Init}!Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}}
+\subsubsection{\texorpdfstring{on\+Init()}{onInit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Component\+::on\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_aspect_1_1_engine_1_1_mesh_render_a54bb4394dafdc30e919a0ba5d9854871}{Aspect\+::\+Engine\+::\+Mesh\+Render}}, and \mbox{\hyperlink{class_aspect_1_1_engine_1_1_camera_a30e0d0ecb4c5c9fd43cfe8323e600d17}{Aspect\+::\+Engine\+::\+Camera}}.
+
+
+
 \subsection{Friends And Related Function Documentation}
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_component_a614439ccac0344926adc4c0165d64060}\label{class_aspect_1_1_engine_1_1_component_a614439ccac0344926adc4c0165d64060}} 
 \index{Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}!Entity@{Entity}}
 \index{Entity@{Entity}!Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}}
 \subsubsection{\texorpdfstring{Entity}{Entity}}
 {\footnotesize\ttfamily friend class \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity}{Entity}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_component_ae5201488df91c23147632cc507b36c82}\label{class_aspect_1_1_engine_1_1_component_ae5201488df91c23147632cc507b36c82}} 
+\index{Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}!camera\+AngleX@{camera\+AngleX}}
+\index{camera\+AngleX@{camera\+AngleX}!Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}}
+\subsubsection{\texorpdfstring{camera\+AngleX}{cameraAngleX}}
+{\footnotesize\ttfamily float Aspect\+::\+Engine\+::\+Component\+::camera\+AngleX\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_component_a9767131422976b1fb5b253c1ac114981}\label{class_aspect_1_1_engine_1_1_component_a9767131422976b1fb5b253c1ac114981}} 
+\index{Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}!camera\+AngleY@{camera\+AngleY}}
+\index{camera\+AngleY@{camera\+AngleY}!Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}}
+\subsubsection{\texorpdfstring{camera\+AngleY}{cameraAngleY}}
+{\footnotesize\ttfamily float Aspect\+::\+Engine\+::\+Component\+::camera\+AngleY\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_component_adc1d5c50c770bd9a173c0d63a61fe46c}\label{class_aspect_1_1_engine_1_1_component_adc1d5c50c770bd9a173c0d63a61fe46c}} 
+\index{Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}!entity@{entity}}
+\index{entity@{entity}!Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}}
+\subsubsection{\texorpdfstring{entity}{entity}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity}{Entity}}$>$ Aspect\+::\+Engine\+::\+Component\+::entity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creates the add entity function to add more entites to the program and entities list. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_component_a648bedde21f792635f87889357fa2965}\label{class_aspect_1_1_engine_1_1_component_a648bedde21f792635f87889357fa2965}} 
+\index{Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}!m\+\_\+begin@{m\+\_\+begin}}
+\index{m\+\_\+begin@{m\+\_\+begin}!Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}}
+\subsubsection{\texorpdfstring{m\+\_\+begin}{m\_begin}}
+{\footnotesize\ttfamily bool Aspect\+::\+Engine\+::\+Component\+::m\+\_\+begin\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_component_a8307884a0e42764fd72af572e4ffdc7f}\label{class_aspect_1_1_engine_1_1_component_a8307884a0e42764fd72af572e4ffdc7f}} 
+\index{Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}!view\+Matrix@{view\+Matrix}}
+\index{view\+Matrix@{view\+Matrix}!Aspect\+::\+Engine\+::\+Component@{Aspect\+::\+Engine\+::\+Component}}
+\subsubsection{\texorpdfstring{view\+Matrix}{viewMatrix}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} Aspect\+::\+Engine\+::\+Component\+::view\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

@@ -1,0 +1,138 @@
+Requirements\+:
+
+Raspbian (other Linux distros may work as well). 
+
+ \section*{Features }
+
+
+\begin{DoxyItemize}
+\item Works without X11
+\item Hardware accelerated Open\+GL ES 2.\+x
+\item Sound via A\+L\+SA
+\item Input (mouse/keyboard/joystick) via E\+V\+D\+EV
+\item Hotplugging of input devices via U\+D\+EV
+\end{DoxyItemize}
+
+
+
+ \section*{Raspbian Build Dependencies }
+
+sudo apt-\/get install libudev-\/dev libasound2-\/dev libdbus-\/1-\/dev
+
+You also need the Video\+Core binary stuff that ships in /opt/vc for E\+GL and Open\+GL ES 2.\+x, it usually comes pre-\/installed, but in any case\+:
+
+sudo apt-\/get install libraspberrypi0 libraspberrypi-\/bin libraspberrypi-\/dev 
+
+ \section*{Cross compiling from x86 Linux }
+
+To cross compile S\+DL for Raspbian from your desktop machine, you\textquotesingle{}ll need a Raspbian system root and the cross compilation tools. We\textquotesingle{}ll assume these tools will be placed in /opt/rpi-\/tools \begin{DoxyVerb}sudo git clone --depth 1 https://github.com/raspberrypi/tools /opt/rpi-tools
+\end{DoxyVerb}
+
+
+You\textquotesingle{}ll also need a Raspbian binary image. Get it from\+: \href{http://downloads.raspberrypi.org/raspbian_latest}{\tt http\+://downloads.\+raspberrypi.\+org/raspbian\+\_\+latest} After unzipping, you\textquotesingle{}ll get file with a name like\+: \char`\"{}$<$date$>$-\/wheezy-\/raspbian.\+img\char`\"{} Let\textquotesingle{}s assume the sysroot will be built in /opt/rpi-\/sysroot. \begin{DoxyVerb}export SYSROOT=/opt/rpi-sysroot
+sudo kpartx -a -v <path_to_raspbian_image>.img
+sudo mount -o loop /dev/mapper/loop0p2 /mnt
+sudo cp -r /mnt $SYSROOT
+sudo apt-get install qemu binfmt-support qemu-user-static
+sudo cp /usr/bin/qemu-arm-static $SYSROOT/usr/bin
+sudo mount --bind /dev $SYSROOT/dev
+sudo mount --bind /proc $SYSROOT/proc
+sudo mount --bind /sys $SYSROOT/sys
+\end{DoxyVerb}
+
+
+Now, before chrooting into the A\+RM sysroot, you\textquotesingle{}ll need to apply a workaround, edit \$\+S\+Y\+S\+R\+O\+OT/etc/ld.so.\+preload and comment out all lines in it. \begin{DoxyVerb}sudo chroot $SYSROOT
+apt-get install libudev-dev libasound2-dev libdbus-1-dev libraspberrypi0 libraspberrypi-bin libraspberrypi-dev libx11-dev libxext-dev libxrandr-dev libxcursor-dev libxi-dev libxinerama-dev libxxf86vm-dev libxss-dev
+exit
+sudo umount $SYSROOT/dev
+sudo umount $SYSROOT/proc
+sudo umount $SYSROOT/sys
+sudo umount /mnt
+\end{DoxyVerb}
+
+
+There\textquotesingle{}s one more fix required, as the libdl.\+so symlink uses an absolute path which doesn\textquotesingle{}t quite work in our setup. \begin{DoxyVerb}sudo rm -rf $SYSROOT/usr/lib/arm-linux-gnueabihf/libdl.so
+sudo ln -s ../../../lib/arm-linux-gnueabihf/libdl.so.2 $SYSROOT/usr/lib/arm-linux-gnueabihf/libdl.so
+\end{DoxyVerb}
+
+
+The final step is compiling S\+DL itself. \begin{DoxyVerb}export CC="/opt/rpi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin/arm-linux-gnueabihf-gcc --sysroot=$SYSROOT -I$SYSROOT/opt/vc/include -I$SYSROOT/usr/include -I$SYSROOT/opt/vc/include/interface/vcos/pthreads -I$SYSROOT/opt/vc/include/interface/vmcs_host/linux"
+cd <SDL SOURCE>
+mkdir -p build;cd build
+LDFLAGS="-L$SYSROOT/opt/vc/lib" ../configure --with-sysroot=$SYSROOT --host=arm-raspberry-linux-gnueabihf --prefix=$PWD/rpi-sdl2-installed --disable-pulseaudio --disable-esd
+make
+make install
+\end{DoxyVerb}
+
+
+To be able to deploy this to /usr/local in the Raspbian system you need to fix up a few paths\+: \begin{DoxyVerb}perl -w -pi -e "s#$PWD/rpi-sdl2-installed#/usr/local#g;" ./rpi-sdl2-installed/lib/libSDL2.la ./rpi-sdl2-installed/lib/pkgconfig/sdl2.pc ./rpi-sdl2-installed/bin/sdl2-config
+\end{DoxyVerb}
+
+
+================================================================================ \section*{Apps don\textquotesingle{}t work or poor video/audio performance }
+
+If you get sound problems, buffer underruns, etc, run \char`\"{}sudo rpi-\/update\char`\"{} to update the R\+Pi\textquotesingle{}s firmware. Note that doing so will fix these problems, but it will also render the C\+MA -\/ Dynamic Memory Split functionality useless.
+
+Also, by default the Raspbian distro configures the G\+PU R\+AM at 64\+MB, this is too low in general, specially if a 1080p TV is hooked up.
+
+See here how to configure this setting\+: \href{http://elinux.org/RPiconfig}{\tt http\+://elinux.\+org/\+R\+Piconfig}
+
+Using a fixed gpu\+\_\+mem=128 is the best option (specially if you updated the firmware, using C\+MA probably won\textquotesingle{}t work, at least it\textquotesingle{}s the current case). 
+
+ \section*{No input }
+
+Make sure you belong to the \char`\"{}input\char`\"{} group. \begin{DoxyVerb}sudo usermod -aG input `whoami`
+\end{DoxyVerb}
+
+
+================================================================================ \section*{No H\+D\+MI Audio }
+
+If you notice that A\+L\+SA works but there\textquotesingle{}s no audio over H\+D\+MI, try adding\+: \begin{DoxyVerb}hdmi_drive=2
+\end{DoxyVerb}
+
+
+to your config.\+txt file and reboot.
+
+Reference\+: \href{http://www.raspberrypi.org/phpBB3/viewtopic.php?t=5062}{\tt http\+://www.\+raspberrypi.\+org/php\+B\+B3/viewtopic.\+php?t=5062} 
+
+ \section*{Text Input A\+PI support }
+
+The Text Input A\+PI is supported, with translation of scan codes done via the kernel symbol tables. For this to work, S\+DL needs access to a valid console. If you notice there\textquotesingle{}s no S\+D\+L\+\_\+\+T\+E\+X\+T\+I\+N\+P\+UT message being emitted, double check that your app has read access to one of the following\+:
+
+
+\begin{DoxyItemize}
+\item /proc/self/fd/0
+\item /dev/tty
+\item /dev/tty\mbox{[}0...6\mbox{]}
+\item /dev/vc/0
+\item /dev/console
+\end{DoxyItemize}
+
+This is usually not a problem if you run from the physical terminal (as opposed to running from a pseudo terminal, such as via S\+SH). If running from a P\+TS, a quick workaround is to run your app as root or add yourself to the tty group, then re-\/login to the system. \begin{DoxyVerb}sudo usermod -aG tty `whoami`
+\end{DoxyVerb}
+
+
+The keyboard layout used by S\+DL is the same as the one the kernel uses. To configure the layout on Raspbian\+: \begin{DoxyVerb}sudo dpkg-reconfigure keyboard-configuration
+\end{DoxyVerb}
+
+
+To configure the locale, which controls which keys are interpreted as letters, this determining the C\+A\+PS L\+O\+CK behavior\+: \begin{DoxyVerb}sudo dpkg-reconfigure locales
+\end{DoxyVerb}
+
+
+================================================================================ \section*{Open\+GL problems }
+
+If you have desktop Open\+GL headers installed at build time in your R\+Pi or cross compilation environment, support for it will be built in. However, the chipset does not actually have support for it, which causes issues in certain S\+DL apps since the presence of Open\+GL support supersedes the E\+S/\+E\+S2 variants. The workaround is to disable Open\+GL at configuration time\+: \begin{DoxyVerb}./configure --disable-video-opengl
+\end{DoxyVerb}
+
+
+Or if the application uses the Render functions, you can use the S\+D\+L\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+D\+R\+I\+V\+ER environment variable\+: \begin{DoxyVerb}export SDL_RENDER_DRIVER=opengles2
+\end{DoxyVerb}
+
+
+================================================================================ \section*{Notes }
+
+
+\begin{DoxyItemize}
+\item When launching apps remotely (via S\+SH), S\+DL can prevent local keystrokes from leaking into the console only if it has root privileges. Launching apps locally does not suffer from this issue. 
+\end{DoxyItemize}

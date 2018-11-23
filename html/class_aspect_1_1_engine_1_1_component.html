@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="Aspect_Logo.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Aspect Engine
    </div>
+   <div id="projectbrief">Aspect Engine is my final year project for Games Engine Programming</div>
   </td>
  </tr>
  </tbody>
@@ -68,12 +68,17 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_aspect_1_1_engine_1_1_component-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Aspect::Engine::Component Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Initialise <a class="el" href="class_aspect_1_1_engine_1_1_program.html" title="Program class the main class that oganises the program. ">Program</a> class rather than include.  
+ <a href="class_aspect_1_1_engine_1_1_component.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_component_8h_source.html">Component.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -82,7 +87,11 @@ Inheritance diagram for Aspect::Engine::Component:</div>
  <div class="center">
   <img src="class_aspect_1_1_engine_1_1_component.png" usemap="#Aspect::Engine::Component_map" alt=""/>
   <map id="Aspect::Engine::Component_map" name="Aspect::Engine::Component_map">
-<area href="class_aspect_1_1_engine_1_1_mesh_render.html" alt="Aspect::Engine::MeshRender" shape="rect" coords="0,56,174,80"/>
+<area href="class_aspect_1_1_engine_1_1_box_collider.html" title="Box collide class, inherits from component. " alt="Aspect::Engine::BoxCollider" shape="rect" coords="0,56,174,80"/>
+<area href="class_aspect_1_1_engine_1_1_camera.html" title="Camera class inherits from component as camera is a component. " alt="Aspect::Engine::Camera" shape="rect" coords="184,56,358,80"/>
+<area href="class_aspect_1_1_engine_1_1_mesh_render.html" title="Initialise Shader Program. " alt="Aspect::Engine::MeshRender" shape="rect" coords="368,56,542,80"/>
+<area href="class_aspect_1_1_engine_1_1_movement.html" title="Movement class used to add a constant movement to the enemys. " alt="Aspect::Engine::Movement" shape="rect" coords="552,56,726,80"/>
+<area href="class_aspect_1_1_engine_1_1_transform.html" title="Transform class allows the use of translate, rotate and scale for game objects, added to every entity..." alt="Aspect::Engine::Transform" shape="rect" coords="736,56,910,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -91,16 +100,52 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8ceb47c002468c4ad876b7220da579f8"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#a8ceb47c002468c4ad876b7220da579f8">~Component</a> ()</td></tr>
 <tr class="separator:a8ceb47c002468c4ad876b7220da579f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96e352a6d49b6e108572c0c19088aa52"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_program.html">Program</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#a96e352a6d49b6e108572c0c19088aa52">getProgram</a> ()</td></tr>
+<tr class="memdesc:a96e352a6d49b6e108572c0c19088aa52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class distructor.  <a href="#a96e352a6d49b6e108572c0c19088aa52">More...</a><br /></td></tr>
 <tr class="separator:a96e352a6d49b6e108572c0c19088aa52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1422571aabd1882f712e16ef4bf0cb77"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#a1422571aabd1882f712e16ef4bf0cb77">getEntity</a> ()</td></tr>
+<tr class="memdesc:a1422571aabd1882f712e16ef4bf0cb77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a shared ptr function getProgram.  <a href="#a1422571aabd1882f712e16ef4bf0cb77">More...</a><br /></td></tr>
 <tr class="separator:a1422571aabd1882f712e16ef4bf0cb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accb4c932c2e93369ca168e1cd204ee31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#accb4c932c2e93369ca168e1cd204ee31">addEntity</a> (std::weak_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a> &gt; _entity)</td></tr>
+<tr class="memdesc:accb4c932c2e93369ca168e1cd204ee31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a shared ptr function to getEntiy.  <a href="#accb4c932c2e93369ca168e1cd204ee31">More...</a><br /></td></tr>
+<tr class="separator:accb4c932c2e93369ca168e1cd204ee31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a3a1fbf76e3fd208be7ffe0ffa449dcf9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#a3a1fbf76e3fd208be7ffe0ffa449dcf9">onInit</a> ()</td></tr>
+<tr class="separator:a3a1fbf76e3fd208be7ffe0ffa449dcf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ced87351b55406936e9d0009743557"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#a74ced87351b55406936e9d0009743557">onBegin</a> ()</td></tr>
+<tr class="memdesc:a74ced87351b55406936e9d0009743557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise component function.  <a href="#a74ced87351b55406936e9d0009743557">More...</a><br /></td></tr>
+<tr class="separator:a74ced87351b55406936e9d0009743557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02de673a0591459bd0d39e3022c1d3fc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#a02de673a0591459bd0d39e3022c1d3fc">onCount</a> ()</td></tr>
+<tr class="memdesc:a02de673a0591459bd0d39e3022c1d3fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin function for components for entities.  <a href="#a02de673a0591459bd0d39e3022c1d3fc">More...</a><br /></td></tr>
+<tr class="separator:a02de673a0591459bd0d39e3022c1d3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac67307dba854cdc9535a0de75e5a3d09"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#ac67307dba854cdc9535a0de75e5a3d09">onDisplay</a> ()</td></tr>
+<tr class="memdesc:ac67307dba854cdc9535a0de75e5a3d09"><td class="mdescLeft">&#160;</td><td class="mdescRight">On count same as update.  <a href="#ac67307dba854cdc9535a0de75e5a3d09">More...</a><br /></td></tr>
+<tr class="separator:ac67307dba854cdc9535a0de75e5a3d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:adc1d5c50c770bd9a173c0d63a61fe46c"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#adc1d5c50c770bd9a173c0d63a61fe46c">entity</a></td></tr>
+<tr class="memdesc:adc1d5c50c770bd9a173c0d63a61fe46c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the add entity function to add more entites to the program and entities list.  <a href="#adc1d5c50c770bd9a173c0d63a61fe46c">More...</a><br /></td></tr>
+<tr class="separator:adc1d5c50c770bd9a173c0d63a61fe46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a648bedde21f792635f87889357fa2965"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#a648bedde21f792635f87889357fa2965">m_begin</a></td></tr>
+<tr class="separator:a648bedde21f792635f87889357fa2965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8307884a0e42764fd72af572e4ffdc7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__types.html#ga7dcd2365c2e368e6af5b7adeb6a9c8df">glm::mat4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#a8307884a0e42764fd72af572e4ffdc7f">viewMatrix</a></td></tr>
+<tr class="separator:a8307884a0e42764fd72af572e4ffdc7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5201488df91c23147632cc507b36c82"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#ae5201488df91c23147632cc507b36c82">cameraAngleX</a></td></tr>
+<tr class="separator:ae5201488df91c23147632cc507b36c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9767131422976b1fb5b253c1ac114981"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#a9767131422976b1fb5b253c1ac114981">cameraAngleY</a></td></tr>
+<tr class="separator:a9767131422976b1fb5b253c1ac114981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a614439ccac0344926adc4c0165d64060"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_component.html#a614439ccac0344926adc4c0165d64060">Entity</a></td></tr>
 <tr class="separator:a614439ccac0344926adc4c0165d64060"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Initialise <a class="el" href="class_aspect_1_1_engine_1_1_program.html" title="Program class the main class that oganises the program. ">Program</a> class rather than include. </p>
+<p><a class="el" href="class_aspect_1_1_engine_1_1_component.html" title="Initialise Program class rather than include. ">Component</a> class </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8ceb47c002468c4ad876b7220da579f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ceb47c002468c4ad876b7220da579f8">&#9670;&nbsp;</a></span>~Component()</h2>
 
@@ -127,6 +172,26 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="accb4c932c2e93369ca168e1cd204ee31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accb4c932c2e93369ca168e1cd204ee31">&#9670;&nbsp;</a></span>addEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Aspect::Engine::Component::addEntity </td>
+          <td>(</td>
+          <td class="paramtype">std::weak_ptr&lt; <a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a> &gt;&#160;</td>
+          <td class="paramname"><em>_entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a shared ptr function to getEntiy. </p>
+
+</div>
+</div>
 <a id="a1422571aabd1882f712e16ef4bf0cb77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1422571aabd1882f712e16ef4bf0cb77">&#9670;&nbsp;</a></span>getEntity()</h2>
 
@@ -141,6 +206,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates a shared ptr function getProgram. </p>
 
 </div>
 </div>
@@ -158,6 +225,120 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Class distructor. </p>
+
+</div>
+</div>
+<a id="a74ced87351b55406936e9d0009743557"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74ced87351b55406936e9d0009743557">&#9670;&nbsp;</a></span>onBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Aspect::Engine::Component::onBegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialise component function. </p>
+
+</div>
+</div>
+<a id="a02de673a0591459bd0d39e3022c1d3fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02de673a0591459bd0d39e3022c1d3fc">&#9670;&nbsp;</a></span>onCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Aspect::Engine::Component::onCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Begin function for components for entities. </p>
+
+<p>Reimplemented in <a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#aebaa5a60d373d3363a13336cfbaa4141">Aspect::Engine::MeshRender</a>, <a class="el" href="class_aspect_1_1_engine_1_1_transform.html#acb53a815498eea17774cc42cfa6c03bd">Aspect::Engine::Transform</a>, and <a class="el" href="class_aspect_1_1_engine_1_1_movement.html#a4dc9ec0157d8d24dafeb69c3c3f60e23">Aspect::Engine::Movement</a>.</p>
+
+</div>
+</div>
+<a id="ac67307dba854cdc9535a0de75e5a3d09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac67307dba854cdc9535a0de75e5a3d09">&#9670;&nbsp;</a></span>onDisplay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Aspect::Engine::Component::onDisplay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>On count same as update. </p>
+
+<p>Reimplemented in <a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#aed81ecbd6bf1d63acb06171f729e4927">Aspect::Engine::MeshRender</a>.</p>
+
+</div>
+</div>
+<a id="a3a1fbf76e3fd208be7ffe0ffa449dcf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a1fbf76e3fd208be7ffe0ffa449dcf9">&#9670;&nbsp;</a></span>onInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_s_d_l__opengles2__gl2ext_8h.html#ae5d8fa23ad07c48bb609509eae494c95">void</a> Aspect::Engine::Component::onInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_aspect_1_1_engine_1_1_mesh_render.html#a54bb4394dafdc30e919a0ba5d9854871">Aspect::Engine::MeshRender</a>, and <a class="el" href="class_aspect_1_1_engine_1_1_camera.html#a30e0d0ecb4c5c9fd43cfe8323e600d17">Aspect::Engine::Camera</a>.</p>
 
 </div>
 </div>
@@ -178,6 +359,119 @@ Friends</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae5201488df91c23147632cc507b36c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5201488df91c23147632cc507b36c82">&#9670;&nbsp;</a></span>cameraAngleX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Aspect::Engine::Component::cameraAngleX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9767131422976b1fb5b253c1ac114981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9767131422976b1fb5b253c1ac114981">&#9670;&nbsp;</a></span>cameraAngleY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Aspect::Engine::Component::cameraAngleY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc1d5c50c770bd9a173c0d63a61fe46c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc1d5c50c770bd9a173c0d63a61fe46c">&#9670;&nbsp;</a></span>entity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::weak_ptr&lt;<a class="el" href="class_aspect_1_1_engine_1_1_entity.html">Entity</a>&gt; Aspect::Engine::Component::entity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the add entity function to add more entites to the program and entities list. </p>
+
+</div>
+</div>
+<a id="a648bedde21f792635f87889357fa2965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a648bedde21f792635f87889357fa2965">&#9670;&nbsp;</a></span>m_begin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Aspect::Engine::Component::m_begin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8307884a0e42764fd72af572e4ffdc7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8307884a0e42764fd72af572e4ffdc7f">&#9670;&nbsp;</a></span>viewMatrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__types.html#ga7dcd2365c2e368e6af5b7adeb6a9c8df">glm::mat4</a> Aspect::Engine::Component::viewMatrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

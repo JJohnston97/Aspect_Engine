@@ -2,33 +2,48 @@
 \label{class_aspect_1_1_engine_1_1_shader_program}\index{Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}}
 
 
+Shader \mbox{\hyperlink{class_aspect_1_1_engine_1_1_program}{Program}} class used for sending info to the shader.  
+
+
+
+
 {\ttfamily \#include $<$Shader\+Program.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_acfd947e0ce600660979f192b80fb41ea}{Shader\+Program}} (std\+::string vert, std\+::string frag)
+\mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_acfd947e0ce600660979f192b80fb41ea}{Shader\+Program}} (\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} vert, \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} frag)
 \item 
-void \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_a4ecfbdda05fbfb1d5a36f6d584dd0ef2}{draw}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array}{Vertex\+Array}} $>$ v\+Array)
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_a4ecfbdda05fbfb1d5a36f6d584dd0ef2}{draw}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array}{Vertex\+Array}} $>$ v\+Array)
+\begin{DoxyCompactList}\small\item\em Shader program function that sends the info through the shaders. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_aefda3028d33a268999baca3a953d0ac8}{set\+Uniform}} (\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} uniform, \mbox{\hyperlink{group__core__types_ga5881b1b022d7fd1b7218f5916532dd02}{glm\+::vec4}} \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8ad81492d410ff2ac11f754f4042150f}{value}})
+\begin{DoxyCompactList}\small\item\em Draws the object to the screen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_ac294314ed82949d84ad00deeffba56bd}{set\+Uniform}} (\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} uniform, float \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8ad81492d410ff2ac11f754f4042150f}{value}})
+\begin{DoxyCompactList}\small\item\em Set uniform will asign the uniform ID to the texture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_a9ed3540c0a42dd353b4c18b3df99d279}{set\+Uniform}} (\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} uniform, \mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}} \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8ad81492d410ff2ac11f754f4042150f}{value}})
+\begin{DoxyCompactList}\small\item\em Set uniform will asign the uniform ID to the texture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_abfaf605b8dfade33b086b2f33e07762b}{set\+Uniform}} (\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} uniform, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material}{Material}} $>$ mat)
+\begin{DoxyCompactList}\small\item\em Set uniform will asign the uniform ID to the texture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{glew_8h_a68c4714e43d8e827d80759f9cb864f3c}{G\+Luint}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_a78a54e4a39c3e605f7a5832e6ce7f692}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Allows the use of texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_aefda3028d33a268999baca3a953d0ac8}{set\+Uniform}} (std\+::string uniform, glm\+::vec4 value)
+\mbox{\hyperlink{glew_8h_a68c4714e43d8e827d80759f9cb864f3c}{G\+Luint}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_ad0427969ef1bc979a2da581799600b43}{id}}
 \item 
-void \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_ac294314ed82949d84ad00deeffba56bd}{set\+Uniform}} (std\+::string uniform, float value)
-\item 
-void \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_a9ed3540c0a42dd353b4c18b3df99d279}{set\+Uniform}} (std\+::string uniform, glm\+::mat4 value)
-\item 
-void \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_abfaf605b8dfade33b086b2f33e07762b}{set\+Uniform}} (std\+::string uniform, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material}{Material}} $>$ mat)
-\item 
-G\+Luint \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_a78a54e4a39c3e605f7a5832e6ce7f692}{get\+Id}} ()
+std\+::vector$<$ \mbox{\hyperlink{struct_aspect_1_1_engine_1_1_sampler}{Sampler}} $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_a30a7520fca74b5c529368bd6675ba79f}{samplers}}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Shader \mbox{\hyperlink{class_aspect_1_1_engine_1_1_program}{Program}} class used for sending info to the shader. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_shader_program_acfd947e0ce600660979f192b80fb41ea}\label{class_aspect_1_1_engine_1_1_shader_program_acfd947e0ce600660979f192b80fb41ea}} 
 \index{Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}!Shader\+Program@{Shader\+Program}}
 \index{Shader\+Program@{Shader\+Program}!Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}}
 \subsubsection{\texorpdfstring{Shader\+Program()}{ShaderProgram()}}
-{\footnotesize\ttfamily Aspect\+::\+Engine\+::\+Shader\+Program\+::\+Shader\+Program (\begin{DoxyParamCaption}\item[{std\+::string}]{vert,  }\item[{std\+::string}]{frag }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Aspect\+::\+Engine\+::\+Shader\+Program\+::\+Shader\+Program (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}}}]{vert,  }\item[{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}}}]{frag }\end{DoxyParamCaption})}
 
 
 
@@ -37,37 +52,76 @@ G\+Luint \mbox{\hyperlink{class_aspect_1_1_engine_1_1_shader_program_a78a54e4a39
 \index{Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}!draw@{draw}}
 \index{draw@{draw}!Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}}
 \subsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily void Aspect\+::\+Engine\+::\+Shader\+Program\+::draw (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array}{Vertex\+Array}} $>$}]{v\+Array }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Shader\+Program\+::draw (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array}{Vertex\+Array}} $>$}]{v\+Array }\end{DoxyParamCaption})}
+
+
+
+Shader program function that sends the info through the shaders. 
 
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_shader_program_a78a54e4a39c3e605f7a5832e6ce7f692}\label{class_aspect_1_1_engine_1_1_shader_program_a78a54e4a39c3e605f7a5832e6ce7f692}} 
 \index{Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}!get\+Id@{get\+Id}}
 \index{get\+Id@{get\+Id}!Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}}
 \subsubsection{\texorpdfstring{get\+Id()}{getId()}}
-{\footnotesize\ttfamily G\+Luint Aspect\+::\+Engine\+::\+Shader\+Program\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{glew_8h_a68c4714e43d8e827d80759f9cb864f3c}{G\+Luint}} Aspect\+::\+Engine\+::\+Shader\+Program\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Allows the use of texture. 
 
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_shader_program_aefda3028d33a268999baca3a953d0ac8}\label{class_aspect_1_1_engine_1_1_shader_program_aefda3028d33a268999baca3a953d0ac8}} 
 \index{Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}!set\+Uniform@{set\+Uniform}}
 \index{set\+Uniform@{set\+Uniform}!Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}}
 \subsubsection{\texorpdfstring{set\+Uniform()}{setUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
-{\footnotesize\ttfamily void Aspect\+::\+Engine\+::\+Shader\+Program\+::set\+Uniform (\begin{DoxyParamCaption}\item[{std\+::string}]{uniform,  }\item[{glm\+::vec4}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Shader\+Program\+::set\+Uniform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}}}]{uniform,  }\item[{\mbox{\hyperlink{group__core__types_ga5881b1b022d7fd1b7218f5916532dd02}{glm\+::vec4}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Draws the object to the screen. 
 
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_shader_program_ac294314ed82949d84ad00deeffba56bd}\label{class_aspect_1_1_engine_1_1_shader_program_ac294314ed82949d84ad00deeffba56bd}} 
 \index{Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}!set\+Uniform@{set\+Uniform}}
 \index{set\+Uniform@{set\+Uniform}!Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}}
 \subsubsection{\texorpdfstring{set\+Uniform()}{setUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
-{\footnotesize\ttfamily void Aspect\+::\+Engine\+::\+Shader\+Program\+::set\+Uniform (\begin{DoxyParamCaption}\item[{std\+::string}]{uniform,  }\item[{float}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Shader\+Program\+::set\+Uniform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}}}]{uniform,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Set uniform will asign the uniform ID to the texture. 
 
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_shader_program_a9ed3540c0a42dd353b4c18b3df99d279}\label{class_aspect_1_1_engine_1_1_shader_program_a9ed3540c0a42dd353b4c18b3df99d279}} 
 \index{Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}!set\+Uniform@{set\+Uniform}}
 \index{set\+Uniform@{set\+Uniform}!Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}}
 \subsubsection{\texorpdfstring{set\+Uniform()}{setUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily void Aspect\+::\+Engine\+::\+Shader\+Program\+::set\+Uniform (\begin{DoxyParamCaption}\item[{std\+::string}]{uniform,  }\item[{glm\+::mat4}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Shader\+Program\+::set\+Uniform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}}}]{uniform,  }\item[{\mbox{\hyperlink{group__core__types_ga7dcd2365c2e368e6af5b7adeb6a9c8df}{glm\+::mat4}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Set uniform will asign the uniform ID to the texture. 
 
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_shader_program_abfaf605b8dfade33b086b2f33e07762b}\label{class_aspect_1_1_engine_1_1_shader_program_abfaf605b8dfade33b086b2f33e07762b}} 
 \index{Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}!set\+Uniform@{set\+Uniform}}
 \index{set\+Uniform@{set\+Uniform}!Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}}
 \subsubsection{\texorpdfstring{set\+Uniform()}{setUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
-{\footnotesize\ttfamily void Aspect\+::\+Engine\+::\+Shader\+Program\+::set\+Uniform (\begin{DoxyParamCaption}\item[{std\+::string}]{uniform,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material}{Material}} $>$}]{mat }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Shader\+Program\+::set\+Uniform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}}}]{uniform,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_material}{Material}} $>$}]{mat }\end{DoxyParamCaption})}
+
+
+
+Set uniform will asign the uniform ID to the texture. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_shader_program_ad0427969ef1bc979a2da581799600b43}\label{class_aspect_1_1_engine_1_1_shader_program_ad0427969ef1bc979a2da581799600b43}} 
+\index{Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}!id@{id}}
+\index{id@{id}!Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{glew_8h_a68c4714e43d8e827d80759f9cb864f3c}{G\+Luint}} Aspect\+::\+Engine\+::\+Shader\+Program\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_shader_program_a30a7520fca74b5c529368bd6675ba79f}\label{class_aspect_1_1_engine_1_1_shader_program_a30a7520fca74b5c529368bd6675ba79f}} 
+\index{Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}!samplers@{samplers}}
+\index{samplers@{samplers}!Aspect\+::\+Engine\+::\+Shader\+Program@{Aspect\+::\+Engine\+::\+Shader\+Program}}
+\subsubsection{\texorpdfstring{samplers}{samplers}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_aspect_1_1_engine_1_1_sampler}{Sampler}}$>$ Aspect\+::\+Engine\+::\+Shader\+Program\+::samplers\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

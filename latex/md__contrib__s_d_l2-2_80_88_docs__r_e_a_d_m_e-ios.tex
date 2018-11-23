@@ -1,0 +1,232 @@
+============================================================================== \section*{Building the Simple Direct\+Media Layer for i\+OS 5.\+1+ }
+
+Requirements\+: Mac OS X 10.\+8 or later and the i\+OS 7+ S\+DK.
+
+Instructions\+:
+
+
+\begin{DoxyEnumerate}
+\item Open S\+D\+L.\+xcodeproj (located in Xcode-\/i\+O\+S/\+S\+DL) in Xcode.
+\item Select your desired target, and hit build.
+\end{DoxyEnumerate}
+
+There are three build targets\+:
+\begin{DoxyItemize}
+\item lib\+S\+D\+L.\+a\+: Build S\+DL as a statically linked library
+\item testsdl\+: Build a test program (there are known test failures which are fine)
+\item Template\+: Package a project template together with the S\+DL for i\+Phone static libraries and copies of the S\+DL headers. The template includes proper references to the S\+DL library and headers, skeleton code for a basic S\+DL program, and placeholder graphics for the application icon and startup screen.
+\end{DoxyItemize}
+
+
+
+ \section*{Build S\+DL for i\+OS from the command line }
+
+
+\begin{DoxyEnumerate}
+\item cd (P\+A\+TH W\+H\+E\+RE T\+HE S\+DL C\+O\+DE IS)/build-\/scripts
+\item ./iosbuild.sh
+\end{DoxyEnumerate}
+
+If everything goes fine, you should see a build/ios directory, inside there\textquotesingle{}s two directories \char`\"{}lib\char`\"{} and \char`\"{}include\char`\"{}. \char`\"{}include\char`\"{} contains a copy of the S\+DL headers that you\textquotesingle{}ll need for your project, make sure to configure X\+Code to look for headers there. \char`\"{}lib\char`\"{} contains find two files, lib\+S\+D\+L2.\+a and lib\+S\+D\+L2main.\+a, you have to add both to your X\+Code project. These libraries contain three architectures in them, armv6 for legacy devices, armv7, and i386 (for the simulator). By default, iosbuild.\+sh will autodetect the S\+DK version you have installed using xcodebuild -\/showsdks, and build for i\+OS $>$= 3.\+0, you can override this behaviour by setting the M\+I\+N\+\_\+\+O\+S\+\_\+\+V\+E\+R\+S\+I\+ON variable, ie\+:
+
+M\+I\+N\+\_\+\+O\+S\+\_\+\+V\+E\+R\+S\+I\+ON=4.\+2 ./iosbuild.sh 
+
+ \section*{Using the Simple Direct\+Media Layer for i\+OS }
+
+F\+I\+X\+ME\+: This needs to be updated for the latest methods
+
+Here is the easiest method\+:
+\begin{DoxyEnumerate}
+\item Build the S\+DL library (lib\+S\+D\+L2.\+a) and the i\+Phone S\+DL Application template.
+\item Install the i\+Phone S\+DL Application template by copying it to one of Xcode\textquotesingle{}s template directories. I recommend creating a directory called \char`\"{}\+S\+D\+L\char`\"{} in \char`\"{}/\+Developer/\+Platforms/i\+O\+S.\+platform/\+Developer/\+Library/\+Xcode/\+Project Templates/\char`\"{} and placing it there.
+\item Start a new project using the template. The project should be immediately ready for use with S\+DL.
+\end{DoxyEnumerate}
+
+Here is a more manual method\+:
+\begin{DoxyEnumerate}
+\item Create a new i\+OS view based application.
+\item Build the S\+DL static library (lib\+S\+D\+L2.\+a) for i\+OS and include them in your project. Xcode will ignore the library that is not currently of the correct architecture, hence your app will work both on i\+OS and in the i\+OS Simulator.
+\item Include the S\+DL header files in your project.
+\item Remove the Application\+Delegate.\+h and Application\+Delegate.\+m files -- S\+DL for i\+OS provides its own U\+I\+Application\+Delegate. Remove Main\+Window.\+xib -- S\+DL for i\+OS produces its user interface programmatically.
+\item Delete the contents of main.\+m and program your app as a regular S\+DL program instead. You may replace main.\+m with your own main.\+c, but you must tell Xcode not to use the project prefix file, as it includes Objective-\/C code. 
+
+ \section*{Notes -- Retina / High-\/\+D\+PI and window sizes }
+\end{DoxyEnumerate}
+
+Window and display mode sizes in S\+DL are in \char`\"{}screen coordinates\char`\"{} (or \char`\"{}points\char`\"{}, in Apple\textquotesingle{}s terminology) rather than in pixels. On i\+OS this means that a window created on an i\+Phone 6 will have a size in screen coordinates of 375 x 667, rather than a size in pixels of 750 x 1334. All i\+OS apps are expected to size their content based on screen coordinates / points rather than pixels, as this allows different i\+OS devices to have different pixel densities (Retina versus non-\/\+Retina screens, etc.) without apps caring too much.
+
+By default S\+DL will not use the full pixel density of the screen on Retina/high-\/dpi capable devices. Use the S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+L\+O\+W\+\_\+\+H\+I\+G\+H\+D\+PI flag when creating your window to enable high-\/dpi support.
+
+When high-\/dpi support is enabled, \mbox{\hyperlink{_s_d_l__video_8h_a5cbfffcfec91c22a7ca95fd1d5163db5}{S\+D\+L\+\_\+\+Get\+Window\+Size()}} and display mode sizes will still be in \char`\"{}screen coordinates\char`\"{} rather than pixels, but the window will have a much greater pixel density when the device supports it, and the \mbox{\hyperlink{_s_d_l__video_8h_ac21851bbd91760c5bab92594a58edba3}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Drawable\+Size()}} or \mbox{\hyperlink{_s_d_l__render_8h_abfc0c9a50d9d1870ab7d271b7a73d8ab}{S\+D\+L\+\_\+\+Get\+Renderer\+Output\+Size()}} functions (depending on whether raw Open\+GL or the S\+D\+L\+\_\+\+Render A\+PI is used) can be queried to determine the size in pixels of the drawable screen framebuffer.
+
+Some Open\+GL ES functions such as gl\+Viewport expect sizes in pixels rather than sizes in screen coordinates. When doing 2D rendering with Open\+GL ES, an orthographic projection matrix using the size in screen coordinates (\mbox{\hyperlink{_s_d_l__video_8h_a5cbfffcfec91c22a7ca95fd1d5163db5}{S\+D\+L\+\_\+\+Get\+Window\+Size()}}) can be used in order to display content at the same scale no matter whether a Retina device is used or not. 
+
+ \section*{Notes -- Application events }
+
+On i\+OS the application goes through a fixed life cycle and you will get notifications of state changes via application events. When these events are delivered you must handle them in an event callback because the OS may not give you any processing time after the events are delivered.
+
+e.\+g. \begin{DoxyVerb}int HandleAppEvents(void *userdata, SDL_Event *event)
+{
+    switch (event->type)
+    {
+    case SDL_APP_TERMINATING:
+        /* Terminate the app.
+           Shut everything down before returning from this function.
+        */
+        return 0;
+    case SDL_APP_LOWMEMORY:
+        /* You will get this when your app is paused and iOS wants more memory.
+           Release as much memory as possible.
+        */
+        return 0;
+    case SDL_APP_WILLENTERBACKGROUND:
+        /* Prepare your app to go into the background.  Stop loops, etc.
+           This gets called when the user hits the home button, or gets a call.
+        */
+        return 0;
+    case SDL_APP_DIDENTERBACKGROUND:
+        /* This will get called if the user accepted whatever sent your app to the background.
+           If the user got a phone call and canceled it, you'll instead get an SDL_APP_DIDENTERFOREGROUND event and restart your loops.
+           When you get this, you have 5 seconds to save all your state or the app will be terminated.
+           Your app is NOT active at this point.
+        */
+        return 0;
+    case SDL_APP_WILLENTERFOREGROUND:
+        /* This call happens when your app is coming back to the foreground.
+           Restore all your state here.
+        */
+        return 0;
+    case SDL_APP_DIDENTERFOREGROUND:
+        /* Restart your loops here.
+           Your app is interactive and getting CPU again.
+        */
+        return 0;
+    default:
+        /* No special processing, add it to the event queue */
+        return 1;
+    }
+}
+
+int main(int argc, char *argv[])
+{
+    SDL_SetEventFilter(HandleAppEvents, NULL);
+
+    ... run your main loop
+
+    return 0;
+}
+\end{DoxyVerb}
+
+
+============================================================================== \section*{Notes -- Accelerometer as Joystick }
+
+S\+DL for i\+Phone supports polling the built in accelerometer as a joystick device. For an example on how to do this, see the accelerometer.\+c in the demos directory.
+
+The main thing to note when using the accelerometer with S\+DL is that while the i\+Phone natively reports accelerometer as floating point values in units of g-\/force, \mbox{\hyperlink{_s_d_l__joystick_8h_ac6fbda13b93679bedfc34733d4b2e748}{S\+D\+L\+\_\+\+Joystick\+Get\+Axis()}} reports joystick values as signed integers. Hence, in order to convert between the two, some clamping and scaling is necessary on the part of the i\+Phone S\+DL joystick driver. To convert \mbox{\hyperlink{_s_d_l__joystick_8h_ac6fbda13b93679bedfc34733d4b2e748}{S\+D\+L\+\_\+\+Joystick\+Get\+Axis()}} reported values B\+A\+CK to units of g-\/force, simply multiply the values by S\+D\+L\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+\+M\+A\+X\+\_\+\+G\+F\+O\+R\+CE / 0x7\+F\+FF. 
+
+ \section*{Notes -- Open\+GL ES }
+
+Your S\+DL application for i\+OS uses Open\+GL ES for video by default.
+
+Open\+GL ES for i\+OS supports several display pixel formats, such as R\+G\+B\+A8 and R\+G\+B565, which provide a 32 bit and 16 bit color buffer respectively. By default, the implementation uses R\+G\+B565, but you may use R\+G\+B\+A8 by setting each color component to 8 bits in \mbox{\hyperlink{_s_d_l__video_8h_aed4d4347f2d5def1532bc22893e0e0d9}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Set\+Attribute()}}.
+
+If your application doesn\textquotesingle{}t use Open\+GL\textquotesingle{}s depth buffer, you may find significant performance improvement by setting S\+D\+L\+\_\+\+G\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+S\+I\+ZE to 0.
+
+Finally, if your application completely redraws the screen each frame, you may find significant performance improvement by setting the attribute S\+D\+L\+\_\+\+G\+L\+\_\+\+R\+E\+T\+A\+I\+N\+E\+D\+\_\+\+B\+A\+C\+K\+I\+NG to 0.
+
+Open\+GL ES on i\+OS doesn\textquotesingle{}t use the traditional system-\/framebuffer setup provided in other operating systems. Special care must be taken because of this\+:
+
+
+\begin{DoxyItemize}
+\item The drawable Renderbuffer must be bound to the G\+L\+\_\+\+R\+E\+N\+D\+E\+R\+B\+U\+F\+F\+ER binding point when \mbox{\hyperlink{_s_d_l__video_8h_a11d1245662f49f6af257627119f22835}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Swap\+Window()}} is called.
+\item The drawable Framebuffer Object must be bound while rendering to the screen and when \mbox{\hyperlink{_s_d_l__video_8h_a11d1245662f49f6af257627119f22835}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Swap\+Window()}} is called.
+\item If multisample antialiasing (M\+S\+AA) is used and gl\+Read\+Pixels is used on the screen, the drawable framebuffer must be resolved to the M\+S\+AA resolve framebuffer (via gl\+Blit\+Framebuffer or gl\+Resolve\+Multisample\+Framebuffer\+A\+P\+P\+LE), and the M\+S\+AA resolve framebuffer must be bound to the G\+L\+\_\+\+R\+E\+A\+D\+\_\+\+F\+R\+A\+M\+E\+B\+U\+F\+F\+ER binding point, before gl\+Read\+Pixels is called.
+\end{DoxyItemize}
+
+The above objects can be obtained via \mbox{\hyperlink{_s_d_l__syswm_8h_ad6e40121a96c88af20d9469a04706fef}{S\+D\+L\+\_\+\+Get\+Window\+W\+M\+Info()}} (in S\+D\+L\+\_\+syswm.\+h). 
+
+ \section*{Notes -- Keyboard }
+
+The S\+DL keyboard A\+PI has been extended to support on-\/screen keyboards\+:
+
+void \mbox{\hyperlink{_s_d_l__keyboard_8h_ab2c8474b9a8b6d07cae4f8eceab38870}{S\+D\+L\+\_\+\+Start\+Text\+Input()}} -- enables text events and reveals the onscreen keyboard.
+
+void \mbox{\hyperlink{_s_d_l__keyboard_8h_ab08b914cdfb2eaed26165cb2f6b110ec}{S\+D\+L\+\_\+\+Stop\+Text\+Input()}} -- disables text events and hides the onscreen keyboard.
+
+S\+D\+L\+\_\+bool \mbox{\hyperlink{_s_d_l__keyboard_8h_a6c84ed1daac21f8224d43bcb9d5bc597}{S\+D\+L\+\_\+\+Is\+Text\+Input\+Active()}} -- returns whether or not text events are enabled (and the onscreen keyboard is visible)
+
+
+
+ \section*{Notes -- Reading and Writing files }
+
+Each application installed on i\+Phone resides in a sandbox which includes its own Application Home directory. Your application may not access files outside this directory.
+
+Once your application is installed its directory tree looks like\+: \begin{DoxyVerb}MySDLApp Home/
+    MySDLApp.app
+    Documents/
+    Library/
+        Preferences/
+    tmp/
+\end{DoxyVerb}
+
+
+When your S\+DL based i\+Phone application starts up, it sets the working directory to the main bundle (My\+S\+D\+L\+App Home/\+My\+S\+D\+L\+App.\+app), where your application resources are stored. You cannot write to this directory. Instead, I advise you to write document files to \char`\"{}../\+Documents/\char`\"{} and preferences to \char`\"{}../\+Library/\+Preferences\char`\"{}. ~\newline
+ More information on this subject is available here\+: \href{http://developer.apple.com/library/ios/#documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html}{\tt http\+://developer.\+apple.\+com/library/ios/\#documentation/i\+Phone/\+Conceptual/i\+Phone\+O\+S\+Programming\+Guide/\+Introduction/\+Introduction.\+html} 
+
+ \section*{Notes -- i\+Phone S\+DL limitations }
+
+Windows\+: Full-\/size, single window applications only. You cannot create multi-\/window S\+DL applications for i\+Phone OS. The application window will fill the display, though you have the option of turning on or off the menu-\/bar (pass \mbox{\hyperlink{_s_d_l__video_8h_a42565088bdb739a5353fd67abbe235d2}{S\+D\+L\+\_\+\+Create\+Window()}} the flag S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+L\+E\+SS).
+
+Textures\+: The optimal texture formats on i\+OS are S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+B\+G\+R8888, S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+A\+B\+G\+R8888, S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+B\+G\+R888, and S\+D\+L\+\_\+\+P\+I\+X\+E\+L\+F\+O\+R\+M\+A\+T\+\_\+\+R\+G\+B24 pixel formats.
+
+Loading Shared Objects\+: This is disabled by default since it seems to break the terms of the i\+OS S\+DK agreement for i\+OS versions prior to i\+OS 8. It can be re-\/enabled in S\+D\+L\+\_\+config\+\_\+iphoneos.\+h. 
+
+ \section*{Game Center }
+
+Game Center integration might require that you break up your main loop in order to yield control back to the system. In other words, instead of running an endless main loop, you run each frame in a callback function, using\+: \begin{DoxyVerb}int SDL_iPhoneSetAnimationCallback(SDL_Window * window, int interval, void (*callback)(void*), void *callbackParam);
+\end{DoxyVerb}
+
+
+This will set up the given function to be called back on the animation callback, and then you have to return from \mbox{\hyperlink{_c_make_c_compiler_id_8c_a0ddf1224851353fc92bfbff6f499fa97}{main()}} to let the Cocoa event loop run.
+
+e.\+g. \begin{DoxyVerb}extern "C"
+void ShowFrame(void*)
+{
+    ... do event handling, frame logic and rendering ...
+}
+
+int main(int argc, char *argv[])
+{
+    ... initialize game ...
+
+#if __IPHONEOS__
+    // Initialize the Game Center for scoring and matchmaking
+    InitGameCenter();
+
+    // Set up the game to run in the window animation callback on iOS
+    // so that Game Center and so forth works correctly.
+    SDL_iPhoneSetAnimationCallback(window, 1, ShowFrame, NULL);
+#else
+    while ( running ) {
+        ShowFrame(0);
+        DelayFrame();
+    }
+#endif
+    return 0;
+}
+\end{DoxyVerb}
+
+
+============================================================================== \section*{Deploying to older versions of i\+OS }
+
+S\+DL supports deploying to older versions of i\+OS than are supported by the latest version of Xcode, all the way back to i\+OS 6.\+1
+
+In order to do that you need to download an older version of Xcode\+: \href{https://developer.apple.com/download/more/?name=Xcode}{\tt https\+://developer.\+apple.\+com/download/more/?name=\+Xcode}
+
+Open the package contents of the older Xcode and your newer version of Xcode and copy over the folders in Xcode.\+app/\+Contents/\+Developer/\+Platforms/i\+Phone\+OS.platform/\+Device\+Support
+
+Then open the file Xcode.\+app/\+Contents/\+Developer/\+Platforms/i\+Phone\+OS.platform/\+Developer/\+S\+D\+Ks/i\+Phone\+O\+S.\+sdk/\+S\+D\+K\+Settings.plist and add the versions of i\+OS you want to deploy to the key Root/\+Default\+Properties/\+D\+E\+P\+L\+O\+Y\+M\+E\+N\+T\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+S\+U\+G\+G\+E\+S\+T\+E\+D\+\_\+\+V\+A\+L\+U\+ES
+
+Open your project and set your deployment target to the desired version of i\+OS
+
+Finally, remove Game\+Controller from the list of frameworks linked by your application and edit the build settings for \char`\"{}\+Other Linker Flags\char`\"{} and add -\/weak\+\_\+framework Game\+Controller 

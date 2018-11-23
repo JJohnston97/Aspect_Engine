@@ -1,0 +1,45 @@
+\hypertarget{_s_d_l__test__memory_8h}{}\section{Contrib/\+S\+D\+L2-\/2.0.8/include/\+S\+D\+L\+\_\+test\+\_\+memory.h File Reference}
+\label{_s_d_l__test__memory_8h}\index{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+test\+\_\+memory.\+h@{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+test\+\_\+memory.\+h}}
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_s_d_l__test__memory_8h_a40bf863f369cc2c8a3364e4f882dafbd}{S\+D\+L\+Test\+\_\+\+Track\+Allocations}} ()
+\begin{DoxyCompactList}\small\item\em Start tracking S\+DL memory allocations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{_s_d_l__test__memory_8h_a56493f825f7a996449e1f90a0b8d469d}{S\+D\+L\+Test\+\_\+\+Log\+Allocations}} ()
+\begin{DoxyCompactList}\small\item\em Print a log of any outstanding allocations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include file for S\+DL test framework.
+
+This code is a part of the S\+D\+L2\+\_\+test library, not the main S\+DL library. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_s_d_l__test__memory_8h_a56493f825f7a996449e1f90a0b8d469d}\label{_s_d_l__test__memory_8h_a56493f825f7a996449e1f90a0b8d469d}} 
+\index{S\+D\+L\+\_\+test\+\_\+memory.\+h@{S\+D\+L\+\_\+test\+\_\+memory.\+h}!S\+D\+L\+Test\+\_\+\+Log\+Allocations@{S\+D\+L\+Test\+\_\+\+Log\+Allocations}}
+\index{S\+D\+L\+Test\+\_\+\+Log\+Allocations@{S\+D\+L\+Test\+\_\+\+Log\+Allocations}!S\+D\+L\+\_\+test\+\_\+memory.\+h@{S\+D\+L\+\_\+test\+\_\+memory.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+Test\+\_\+\+Log\+Allocations()}{SDLTest\_LogAllocations()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} S\+D\+L\+Test\+\_\+\+Log\+Allocations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print a log of any outstanding allocations. 
+
+\begin{DoxyNote}{Note}
+This can be called after \mbox{\hyperlink{_s_d_l_8h_afdabaf714781099083592051f2d9ac11}{S\+D\+L\+\_\+\+Quit()}} 
+\end{DoxyNote}
+\mbox{\Hypertarget{_s_d_l__test__memory_8h_a40bf863f369cc2c8a3364e4f882dafbd}\label{_s_d_l__test__memory_8h_a40bf863f369cc2c8a3364e4f882dafbd}} 
+\index{S\+D\+L\+\_\+test\+\_\+memory.\+h@{S\+D\+L\+\_\+test\+\_\+memory.\+h}!S\+D\+L\+Test\+\_\+\+Track\+Allocations@{S\+D\+L\+Test\+\_\+\+Track\+Allocations}}
+\index{S\+D\+L\+Test\+\_\+\+Track\+Allocations@{S\+D\+L\+Test\+\_\+\+Track\+Allocations}!S\+D\+L\+\_\+test\+\_\+memory.\+h@{S\+D\+L\+\_\+test\+\_\+memory.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+Test\+\_\+\+Track\+Allocations()}{SDLTest\_TrackAllocations()}}
+{\footnotesize\ttfamily int S\+D\+L\+Test\+\_\+\+Track\+Allocations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start tracking S\+DL memory allocations. 
+
+\begin{DoxyNote}{Note}
+This should be called before any other S\+DL functions for complete tracking coverage 
+\end{DoxyNote}

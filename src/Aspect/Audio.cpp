@@ -1,5 +1,10 @@
+/// @file Audio.cpp
+/// @Handles game audio
 
+// Header Includes
 #include "Audio.h"
+
+// Project Includes
 #include <AL/al.h>
 #include <vorbis/vorbisfile.h>
 #include <iostream>
@@ -9,7 +14,7 @@ namespace Aspect
 {
 	namespace Engine
 	{
-		struct SoundClip
+		struct SoundClip		// Creates a struct of sound clips to be added to audio clips
 		{
 			ALuint id;
 
@@ -18,6 +23,7 @@ namespace Aspect
 				alDeleteBuffers(1, &id);
 			}
 
+			//Function used to load an .ogg file for audio
 			void load_ogg(std::string fileName, std::vector<char> &buffer, ALenum &format, ALsizei &freq)
 			{
 				int endian = 0;
@@ -84,7 +90,7 @@ namespace Aspect
 			load(path); 
 		}
 
-		void Audio::load(std::string path)
+		void Audio::load(std::string path)	// Load the audio file and using OpenAL 
 		{
 			Sclip = std::make_shared<SoundClip>();
 			ALenum format = 0;
@@ -96,7 +102,7 @@ namespace Aspect
 
 		}
 
-		void Audio::play()
+		void Audio::play()	// Play the audio clip
 		{
 			ALuint sid = 0;
 			alGenSources(1, &sid);

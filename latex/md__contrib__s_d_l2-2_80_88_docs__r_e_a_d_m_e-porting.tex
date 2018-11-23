@@ -1,0 +1,32 @@
+
+\begin{DoxyItemize}
+\item Porting To A New Platform
+
+The first thing you have to do when porting to a new platform, is look at include/\+S\+D\+L\+\_\+platform.\+h and create an entry there for your operating system. The standard format is \char`\"{}\+\_\+\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+\_\+\char`\"{}, where P\+L\+A\+T\+F\+O\+RM is the name of the OS. Ideally S\+D\+L\+\_\+platform.\+h will be able to auto-\/detect the system it\textquotesingle{}s building on based on C preprocessor symbols.
+\end{DoxyItemize}
+
+There are two basic ways of building S\+DL at the moment\+:
+
+
+\begin{DoxyEnumerate}
+\item The \char`\"{}\+U\+N\+I\+X\char`\"{} way\+: ./configure; make; make install
+
+If you have a G\+N\+Uish system, then you might try this. Edit configure.\+in, take a look at the large section labelled\+:
+
+\char`\"{}\+Set up the configuration based on the host platform!\char`\"{}
+
+Add a section for your platform, and then re-\/run autogen.\+sh and build!
+\item Using an I\+DE\+:
+
+If you\textquotesingle{}re using an I\+DE or other non-\/configure build system, you\textquotesingle{}ll probably want to create a custom S\+D\+L\+\_\+config.\+h for your platform. Edit S\+D\+L\+\_\+config.\+h, add a section for your platform, and create a custom S\+D\+L\+\_\+config\+\_\+\{platform\}.h, based on S\+D\+L\+\_\+config\+\_\+minimal.\+h and S\+D\+L\+\_\+config.\+h.\+in
+
+Add the top level include directory to the header search path, and then add the following sources to the project\+:
+
+src/$\ast$.c src/atomic/$\ast$.c src/audio/$\ast$.c src/cpuinfo/$\ast$.c src/events/$\ast$.c src/file/$\ast$.c src/haptic/$\ast$.c src/joystick/$\ast$.c src/power/$\ast$.c src/render/$\ast$.c src/render/software/$\ast$.c src/stdlib/$\ast$.c src/thread/$\ast$.c src/timer/$\ast$.c src/video/$\ast$.c src/audio/disk/$\ast$.c src/audio/dummy/$\ast$.c src/filesystem/dummy/$\ast$.c src/video/dummy/$\ast$.c src/haptic/dummy/$\ast$.c src/joystick/dummy/$\ast$.c src/main/dummy/$\ast$.c src/thread/generic/$\ast$.c src/timer/dummy/$\ast$.c src/loadso/dummy/$\ast$.c
+\end{DoxyEnumerate}
+
+Once you have a working library without any drivers, you can go back to each of the major subsystems and start implementing drivers for your platform.
+
+If you have any questions, don\textquotesingle{}t hesitate to ask on the S\+DL mailing list\+: \href{http://www.libsdl.org/mailing-list.php}{\tt http\+://www.\+libsdl.\+org/mailing-\/list.\+php}
+
+Enjoy! Sam Lantinga (\href{mailto:slouken@libsdl.org}{\tt slouken@libsdl.\+org}) 

@@ -1,6 +1,12 @@
+/// @Vetex Array
+/// @File used from labs, content written by Karsten Pedersen
+
+
+// Project Includes
 #include "VertexArray.h"
 #include "VertexBuffer.h"
 
+// System Includes 
 #include <fstream>
 #include <iostream>
 

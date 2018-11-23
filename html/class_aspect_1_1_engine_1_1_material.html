@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="Aspect_Logo.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Aspect Engine
    </div>
+   <div id="projectbrief">Aspect Engine is my final year project for Games Engine Programming</div>
   </td>
  </tr>
  </tbody>
@@ -69,33 +69,49 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_aspect_1_1_engine_1_1_material-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Aspect::Engine::Material Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p>Class material used for textures.  
+ <a href="class_aspect_1_1_engine_1_1_material.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_material_8h_source.html">Material.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2c9f3f523dc327399c24b4222d4a978c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_material.html#a2c9f3f523dc327399c24b4222d4a978c">Material</a> (std::string path)</td></tr>
+<tr class="memitem:a2c9f3f523dc327399c24b4222d4a978c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_material.html#a2c9f3f523dc327399c24b4222d4a978c">Material</a> (<a class="el" href="_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a> <a class="el" href="_s_d_l__opengl__glext_8h.html#ab25d8cd967ccbd19b630d7100ff8f67e">path</a>)</td></tr>
 <tr class="separator:a2c9f3f523dc327399c24b4222d4a978c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8779008ace71c3d1ee2cd551373933be"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_material.html#a8779008ace71c3d1ee2cd551373933be">getSize</a> ()</td></tr>
+<tr class="memitem:a8779008ace71c3d1ee2cd551373933be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__types.html#gaa1618f51db67eaa145db101d8c8431d8">glm::vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_material.html#a8779008ace71c3d1ee2cd551373933be">getSize</a> ()</td></tr>
+<tr class="memdesc:a8779008ace71c3d1ee2cd551373933be"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_aspect_1_1_engine_1_1_material.html" title="Class material used for textures. ">Material</a> takes in a string, the name of the texture file.  <a href="#a8779008ace71c3d1ee2cd551373933be">More...</a><br /></td></tr>
 <tr class="separator:a8779008ace71c3d1ee2cd551373933be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4177400efde4d6ced260e707b3e5ad0"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_material.html#ac4177400efde4d6ced260e707b3e5ad0">getId</a> ()</td></tr>
+<tr class="memitem:ac4177400efde4d6ced260e707b3e5ad0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="glew_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_material.html#ac4177400efde4d6ced260e707b3e5ad0">getId</a> ()</td></tr>
+<tr class="memdesc:ac4177400efde4d6ced260e707b3e5ad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get size function to return the size of texture.  <a href="#ac4177400efde4d6ced260e707b3e5ad0">More...</a><br /></td></tr>
 <tr class="separator:ac4177400efde4d6ced260e707b3e5ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a2c52f153e9878530ae68627c9a1f16be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_material.html#a2c52f153e9878530ae68627c9a1f16be">w</a></td></tr>
+<tr class="memdesc:a2c52f153e9878530ae68627c9a1f16be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ID to get texture ID.  <a href="#a2c52f153e9878530ae68627c9a1f16be">More...</a><br /></td></tr>
 <tr class="separator:a2c52f153e9878530ae68627c9a1f16be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a495fcbe4e64c1814971cd9d815dd0e16"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_material.html#a495fcbe4e64c1814971cd9d815dd0e16">h</a></td></tr>
 <tr class="separator:a495fcbe4e64c1814971cd9d815dd0e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0b4f29080da1fdfb87763c8b72f3110"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_material.html#ae0b4f29080da1fdfb87763c8b72f3110">channels</a></td></tr>
 <tr class="separator:ae0b4f29080da1fdfb87763c8b72f3110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa8b60314ef144a43fe75e20158295cbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="glew_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_material.html#aa8b60314ef144a43fe75e20158295cbb">id</a></td></tr>
+<tr class="separator:aa8b60314ef144a43fe75e20158295cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc0e0a80a84d07e41e482ff773afbbdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__core__types.html#gaa1618f51db67eaa145db101d8c8431d8">glm::vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_aspect_1_1_engine_1_1_material.html#afc0e0a80a84d07e41e482ff773afbbdf">size</a></td></tr>
+<tr class="separator:afc0e0a80a84d07e41e482ff773afbbdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class material used for textures. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2c9f3f523dc327399c24b4222d4a978c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c9f3f523dc327399c24b4222d4a978c">&#9670;&nbsp;</a></span>Material()</h2>
 
@@ -105,7 +121,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">Aspect::Engine::Material::Material </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype"><a class="el" href="_s_d_l__opengl__glext_8h.html#ae84541b4f3d8e1ea24ec0f466a8c568b">std::string</a>&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
@@ -122,13 +138,15 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">GLuint Aspect::Engine::Material::getId </td>
+          <td class="memname"><a class="el" href="glew_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a> Aspect::Engine::Material::getId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get size function to return the size of texture. </p>
 
 </div>
 </div>
@@ -139,13 +157,15 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">glm::vec2 Aspect::Engine::Material::getSize </td>
+          <td class="memname"><a class="el" href="group__core__types.html#gaa1618f51db67eaa145db101d8c8431d8">glm::vec2</a> Aspect::Engine::Material::getSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="class_aspect_1_1_engine_1_1_material.html" title="Class material used for textures. ">Material</a> takes in a string, the name of the texture file. </p>
 
 </div>
 </div>
@@ -178,6 +198,50 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aa8b60314ef144a43fe75e20158295cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8b60314ef144a43fe75e20158295cbb">&#9670;&nbsp;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="glew_8h.html#a68c4714e43d8e827d80759f9cb864f3c">GLuint</a> Aspect::Engine::Material::id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc0e0a80a84d07e41e482ff773afbbdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc0e0a80a84d07e41e482ff773afbbdf">&#9670;&nbsp;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__core__types.html#gaa1618f51db67eaa145db101d8c8431d8">glm::vec2</a> Aspect::Engine::Material::size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2c52f153e9878530ae68627c9a1f16be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c52f153e9878530ae68627c9a1f16be">&#9670;&nbsp;</a></span>w</h2>
 
@@ -189,6 +253,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get ID to get texture ID. </p>
 
 </div>
 </div>

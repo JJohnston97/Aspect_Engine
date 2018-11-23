@@ -2,22 +2,48 @@
 \label{class_aspect_1_1_engine_1_1_vertex_array}\index{Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}}
 
 
+Initialise the vertex buffer object.  
+
+
+
+
 {\ttfamily \#include $<$Vertex\+Array.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_a48a7d8516fbe14a78e48b7494a5c569c}{Vertex\+Array}} ()
-\item 
-\mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_a684a84192f2f5f14de6cff0a14ef686b}{Vertex\+Array}} (std\+::string path)
-\item 
-void \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_a0d986459ab43f774a9201667ff49672f}{set\+Buffer}} (std\+::string attribute, \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_buffer}{Vertex\+Buffer}} $\ast$buffer)
-\item 
+\begin{DoxyCompactList}\small\item\em Function used to read information for object loader. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_a684a84192f2f5f14de6cff0a14ef686b}{Vertex\+Array}} (\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ab25d8cd967ccbd19b630d7100ff8f67e}{path}})
+\begin{DoxyCompactList}\small\item\em Constructor for vertex array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_a0d986459ab43f774a9201667ff49672f}{set\+Buffer}} (\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} attribute, \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_buffer}{Vertex\+Buffer}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a76461e97a098d2c9ae20ac193d3825ae}{buffer}})
+\begin{DoxyCompactList}\small\item\em Vert cont taking a string. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_a65dd6d4b63e56fa07470f56b21c2930c}{get\+Vertex\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Function to set the buffer object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{glew_8h_a68c4714e43d8e827d80759f9cb864f3c}{G\+Luint}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_add09721b84713dd247942d1ddad3de80}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Get the vertex count of a model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-G\+Luint \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_add09721b84713dd247942d1ddad3de80}{get\+Id}} ()
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_aeea4f92339da156685950a8426ad59b6}{split\+String\+Whitespace}} (\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ad3c78daa7d8673f71649d4840c641779}{input}}, std\+::vector$<$ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} $>$ \&output)
+\item 
+\mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_a25294fe466043546f03876f169fd8740}{split\+String}} (\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ad3c78daa7d8673f71649d4840c641779}{input}}, char splitter, std\+::vector$<$ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} $>$ \&output)
+\begin{DoxyCompactList}\small\item\em Function used to read in files for the object loader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{glew_8h_a68c4714e43d8e827d80759f9cb864f3c}{G\+Luint}} \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_a63cbf83e01a625a2080075a739b3ba8d}{id}}
+\item 
+bool \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_a501aaa7d045aebc4fa75460fd97e9d08}{dirty}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_buffer}{Vertex\+Buffer}} $\ast$ $>$ \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_add8aee69d3e44d84c2118d17f675fe15}{buffers}}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Initialise the vertex buffer object. 
+
+Vertex Array class, used to load in objs 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_vertex_array_a48a7d8516fbe14a78e48b7494a5c569c}\label{class_aspect_1_1_engine_1_1_vertex_array_a48a7d8516fbe14a78e48b7494a5c569c}} 
@@ -26,11 +52,19 @@ G\+Luint \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_add09721b8471
 \subsubsection{\texorpdfstring{Vertex\+Array()}{VertexArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Aspect\+::\+Engine\+::\+Vertex\+Array\+::\+Vertex\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Function used to read information for object loader. 
+
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_vertex_array_a684a84192f2f5f14de6cff0a14ef686b}\label{class_aspect_1_1_engine_1_1_vertex_array_a684a84192f2f5f14de6cff0a14ef686b}} 
 \index{Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}!Vertex\+Array@{Vertex\+Array}}
 \index{Vertex\+Array@{Vertex\+Array}!Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}}
 \subsubsection{\texorpdfstring{Vertex\+Array()}{VertexArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Aspect\+::\+Engine\+::\+Vertex\+Array\+::\+Vertex\+Array (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Aspect\+::\+Engine\+::\+Vertex\+Array\+::\+Vertex\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}}}]{path }\end{DoxyParamCaption})}
+
+
+
+Constructor for vertex array. 
 
 
 
@@ -39,7 +73,11 @@ G\+Luint \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_add09721b8471
 \index{Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}!get\+Id@{get\+Id}}
 \index{get\+Id@{get\+Id}!Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}}
 \subsubsection{\texorpdfstring{get\+Id()}{getId()}}
-{\footnotesize\ttfamily G\+Luint Aspect\+::\+Engine\+::\+Vertex\+Array\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{glew_8h_a68c4714e43d8e827d80759f9cb864f3c}{G\+Luint}} Aspect\+::\+Engine\+::\+Vertex\+Array\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the vertex count of a model. 
 
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_vertex_array_a65dd6d4b63e56fa07470f56b21c2930c}\label{class_aspect_1_1_engine_1_1_vertex_array_a65dd6d4b63e56fa07470f56b21c2930c}} 
 \index{Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}!get\+Vertex\+Count@{get\+Vertex\+Count}}
@@ -47,11 +85,56 @@ G\+Luint \mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_array_add09721b8471
 \subsubsection{\texorpdfstring{get\+Vertex\+Count()}{getVertexCount()}}
 {\footnotesize\ttfamily int Aspect\+::\+Engine\+::\+Vertex\+Array\+::get\+Vertex\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Function to set the buffer object. 
+
 \mbox{\Hypertarget{class_aspect_1_1_engine_1_1_vertex_array_a0d986459ab43f774a9201667ff49672f}\label{class_aspect_1_1_engine_1_1_vertex_array_a0d986459ab43f774a9201667ff49672f}} 
 \index{Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}!set\+Buffer@{set\+Buffer}}
 \index{set\+Buffer@{set\+Buffer}!Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}}
 \subsubsection{\texorpdfstring{set\+Buffer()}{setBuffer()}}
-{\footnotesize\ttfamily void Aspect\+::\+Engine\+::\+Vertex\+Array\+::set\+Buffer (\begin{DoxyParamCaption}\item[{std\+::string}]{attribute,  }\item[{\mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_buffer}{Vertex\+Buffer}} $\ast$}]{buffer }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Vertex\+Array\+::set\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}}}]{attribute,  }\item[{\mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_buffer}{Vertex\+Buffer}} $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Vert cont taking a string. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_vertex_array_a25294fe466043546f03876f169fd8740}\label{class_aspect_1_1_engine_1_1_vertex_array_a25294fe466043546f03876f169fd8740}} 
+\index{Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}!split\+String@{split\+String}}
+\index{split\+String@{split\+String}!Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{split\+String()}{splitString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Vertex\+Array\+::split\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} \&}]{input,  }\item[{char}]{splitter,  }\item[{std\+::vector$<$ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} $>$ \&}]{output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function used to read in files for the object loader. 
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_vertex_array_aeea4f92339da156685950a8426ad59b6}\label{class_aspect_1_1_engine_1_1_vertex_array_aeea4f92339da156685950a8426ad59b6}} 
+\index{Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}!split\+String\+Whitespace@{split\+String\+Whitespace}}
+\index{split\+String\+Whitespace@{split\+String\+Whitespace}!Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{split\+String\+Whitespace()}{splitStringWhitespace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengles2__gl2ext_8h_ae5d8fa23ad07c48bb609509eae494c95}{void}} Aspect\+::\+Engine\+::\+Vertex\+Array\+::split\+String\+Whitespace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} \&}]{input,  }\item[{std\+::vector$<$ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ae84541b4f3d8e1ea24ec0f466a8c568b}{std\+::string}} $>$ \&}]{output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_vertex_array_add8aee69d3e44d84c2118d17f675fe15}\label{class_aspect_1_1_engine_1_1_vertex_array_add8aee69d3e44d84c2118d17f675fe15}} 
+\index{Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}!buffers@{buffers}}
+\index{buffers@{buffers}!Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{buffers}{buffers}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_aspect_1_1_engine_1_1_vertex_buffer}{Vertex\+Buffer}} $\ast$$>$ Aspect\+::\+Engine\+::\+Vertex\+Array\+::buffers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_vertex_array_a501aaa7d045aebc4fa75460fd97e9d08}\label{class_aspect_1_1_engine_1_1_vertex_array_a501aaa7d045aebc4fa75460fd97e9d08}} 
+\index{Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}!dirty@{dirty}}
+\index{dirty@{dirty}!Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{dirty}{dirty}}
+{\footnotesize\ttfamily bool Aspect\+::\+Engine\+::\+Vertex\+Array\+::dirty\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_aspect_1_1_engine_1_1_vertex_array_a63cbf83e01a625a2080075a739b3ba8d}\label{class_aspect_1_1_engine_1_1_vertex_array_a63cbf83e01a625a2080075a739b3ba8d}} 
+\index{Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}!id@{id}}
+\index{id@{id}!Aspect\+::\+Engine\+::\+Vertex\+Array@{Aspect\+::\+Engine\+::\+Vertex\+Array}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{glew_8h_a68c4714e43d8e827d80759f9cb864f3c}{G\+Luint}} Aspect\+::\+Engine\+::\+Vertex\+Array\+::id\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

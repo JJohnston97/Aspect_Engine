@@ -1,0 +1,195 @@
+\hypertarget{_s_d_l__blendmode_8h}{}\section{Contrib/\+S\+D\+L2-\/2.0.8/include/\+S\+D\+L\+\_\+blendmode.h File Reference}
+\label{_s_d_l__blendmode_8h}\index{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+blendmode.\+h@{Contrib/\+S\+D\+L2-\/2.\+0.\+8/include/\+S\+D\+L\+\_\+blendmode.\+h}}
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1e}{S\+D\+L\+\_\+\+Blend\+Mode}} \{ \newline
+\mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1ea417f2736f69e38ae734e75afa04c57ac}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+N\+O\+NE}} = 0x00000000, 
+\mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1eae421984ebfeedd59dfea21e1bdda1883}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+B\+L\+E\+ND}} = 0x00000001, 
+\mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1ea4af39da8d41a1765fb26425a3ca4391e}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+A\+DD}} = 0x00000002, 
+\mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1eaf7714323757a614d3e506be37cd28c43}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+M\+OD}} = 0x00000004, 
+\newline
+\mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1eae478ff9a0e5e1a5d1418c69d28061e82}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+I\+N\+V\+A\+L\+ID}} = 0x7\+F\+F\+F\+F\+F\+FF
+ \}
+\begin{DoxyCompactList}\small\item\em The blend mode used in \mbox{\hyperlink{_s_d_l__render_8h_a4b6c2353384c7b7128fd5960b24f2ae6}{S\+D\+L\+\_\+\+Render\+Copy()}} and drawing operations. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502}{S\+D\+L\+\_\+\+Blend\+Operation}} \{ \newline
+\mbox{\hyperlink{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502a79c1a3992734df94dc21b0dd2eaf9cc3}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+A\+DD}} = 0x1, 
+\mbox{\hyperlink{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502acd41cbbe8ee275638a8c9ef97de2eae5}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+S\+U\+B\+T\+R\+A\+CT}} = 0x2, 
+\mbox{\hyperlink{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502a6f55ae40255c3d8c9927a85ea836d518}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+R\+E\+V\+\_\+\+S\+U\+B\+T\+R\+A\+CT}} = 0x3, 
+\mbox{\hyperlink{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502a49762d60e4bf6edcf42c7f7aa3c51fbd}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+I\+N\+I\+M\+UM}} = 0x4, 
+\newline
+\mbox{\hyperlink{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502a236541634d3e80b4932b6c8a6b278f2a}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+A\+X\+I\+M\+UM}} = 0x5
+ \}
+\begin{DoxyCompactList}\small\item\em The blend operation used when combining source and destination pixel components. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605c}{S\+D\+L\+\_\+\+Blend\+Factor}} \{ \newline
+\mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca1729e63b0e2643241b7fb83b5e00a618}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+Z\+E\+RO}} = 0x1, 
+\mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605caf2f9f66f01b413de3802f6764125a273}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+NE}} = 0x2, 
+\mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca2ae2717da790b7616c9512cd5a031b06}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+S\+R\+C\+\_\+\+C\+O\+L\+OR}} = 0x3, 
+\mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca0ef57a3ec7cfbe5a4b6d7e6aab3d7612}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+S\+R\+C\+\_\+\+C\+O\+L\+OR}} = 0x4, 
+\newline
+\mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca6709090055ddc6033c4ce7a63ac26fe5}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+S\+R\+C\+\_\+\+A\+L\+P\+HA}} = 0x5, 
+\mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca99342bc66f17946d8b6ef26452a8b010}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+S\+R\+C\+\_\+\+A\+L\+P\+HA}} = 0x6, 
+\mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605cadcd2cc1da2d79b0f696a2f79350c96fc}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+D\+S\+T\+\_\+\+C\+O\+L\+OR}} = 0x7, 
+\mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca7238a9b5d18911b67ca3e6975bc66f73}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+D\+S\+T\+\_\+\+C\+O\+L\+OR}} = 0x8, 
+\newline
+\mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605cabb3330092906beea2a5d1e275f338e42}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+D\+S\+T\+\_\+\+A\+L\+P\+HA}} = 0x9, 
+\mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca7419eb5c0c94094f26f1f5183438c9e2}{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+D\+S\+T\+\_\+\+A\+L\+P\+HA}} = 0xA
+ \}
+\begin{DoxyCompactList}\small\item\em The normalized factor used to multiply pixel components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1e}{S\+D\+L\+\_\+\+Blend\+Mode}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__blendmode_8h_a68566100acaa096e94f213a9768c6b6d}{S\+D\+L\+\_\+\+Compose\+Custom\+Blend\+Mode}} (\mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605c}{S\+D\+L\+\_\+\+Blend\+Factor}} src\+Color\+Factor, \mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605c}{S\+D\+L\+\_\+\+Blend\+Factor}} dst\+Color\+Factor, \mbox{\hyperlink{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502}{S\+D\+L\+\_\+\+Blend\+Operation}} color\+Operation, \mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605c}{S\+D\+L\+\_\+\+Blend\+Factor}} src\+Alpha\+Factor, \mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605c}{S\+D\+L\+\_\+\+Blend\+Factor}} dst\+Alpha\+Factor, \mbox{\hyperlink{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502}{S\+D\+L\+\_\+\+Blend\+Operation}} alpha\+Operation)
+\begin{DoxyCompactList}\small\item\em Create a custom blend mode, which may or may not be supported by a given renderer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file declaring the S\+D\+L\+\_\+\+Blend\+Mode enumeration 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605c}\label{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605c}} 
+\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+Blend\+Factor@{S\+D\+L\+\_\+\+Blend\+Factor}}
+\index{S\+D\+L\+\_\+\+Blend\+Factor@{S\+D\+L\+\_\+\+Blend\+Factor}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Blend\+Factor}{SDL\_BlendFactor}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605c}{S\+D\+L\+\_\+\+Blend\+Factor}}}
+
+
+
+The normalized factor used to multiply pixel components. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+Z\+E\+RO@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+Z\+E\+RO}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+Z\+E\+RO@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+Z\+E\+RO}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca1729e63b0e2643241b7fb83b5e00a618}\label{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca1729e63b0e2643241b7fb83b5e00a618}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+Z\+E\+RO&0, 0, 0, 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+NE@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+NE}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+NE@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+NE}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605caf2f9f66f01b413de3802f6764125a273}\label{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605caf2f9f66f01b413de3802f6764125a273}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+NE&1, 1, 1, 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+S\+R\+C\+\_\+\+C\+O\+L\+OR@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+S\+R\+C\+\_\+\+C\+O\+L\+OR}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+S\+R\+C\+\_\+\+C\+O\+L\+OR@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+S\+R\+C\+\_\+\+C\+O\+L\+OR}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca2ae2717da790b7616c9512cd5a031b06}\label{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca2ae2717da790b7616c9512cd5a031b06}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+S\+R\+C\+\_\+\+C\+O\+L\+OR&srcR, srcG, srcB, srcA \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+S\+R\+C\+\_\+\+C\+O\+L\+OR@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+S\+R\+C\+\_\+\+C\+O\+L\+OR}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+S\+R\+C\+\_\+\+C\+O\+L\+OR@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+S\+R\+C\+\_\+\+C\+O\+L\+OR}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca0ef57a3ec7cfbe5a4b6d7e6aab3d7612}\label{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca0ef57a3ec7cfbe5a4b6d7e6aab3d7612}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+S\+R\+C\+\_\+\+C\+O\+L\+OR&1-\/srcR, 1-\/srcG, 1-\/srcB, 1-\/srcA \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+S\+R\+C\+\_\+\+A\+L\+P\+HA@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+S\+R\+C\+\_\+\+A\+L\+P\+HA}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+S\+R\+C\+\_\+\+A\+L\+P\+HA@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+S\+R\+C\+\_\+\+A\+L\+P\+HA}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca6709090055ddc6033c4ce7a63ac26fe5}\label{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca6709090055ddc6033c4ce7a63ac26fe5}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+S\+R\+C\+\_\+\+A\+L\+P\+HA&srcA, srcA, srcA, srcA \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+S\+R\+C\+\_\+\+A\+L\+P\+HA@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+S\+R\+C\+\_\+\+A\+L\+P\+HA}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+S\+R\+C\+\_\+\+A\+L\+P\+HA@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+S\+R\+C\+\_\+\+A\+L\+P\+HA}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca99342bc66f17946d8b6ef26452a8b010}\label{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca99342bc66f17946d8b6ef26452a8b010}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+S\+R\+C\+\_\+\+A\+L\+P\+HA&1-\/srcA, 1-\/srcA, 1-\/srcA, 1-\/srcA \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+D\+S\+T\+\_\+\+C\+O\+L\+OR@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+D\+S\+T\+\_\+\+C\+O\+L\+OR}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+D\+S\+T\+\_\+\+C\+O\+L\+OR@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+D\+S\+T\+\_\+\+C\+O\+L\+OR}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605cadcd2cc1da2d79b0f696a2f79350c96fc}\label{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605cadcd2cc1da2d79b0f696a2f79350c96fc}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+D\+S\+T\+\_\+\+C\+O\+L\+OR&dstR, dstG, dstB, dstA \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+D\+S\+T\+\_\+\+C\+O\+L\+OR@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+D\+S\+T\+\_\+\+C\+O\+L\+OR}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+D\+S\+T\+\_\+\+C\+O\+L\+OR@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+D\+S\+T\+\_\+\+C\+O\+L\+OR}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca7238a9b5d18911b67ca3e6975bc66f73}\label{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca7238a9b5d18911b67ca3e6975bc66f73}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+D\+S\+T\+\_\+\+C\+O\+L\+OR&1-\/dstR, 1-\/dstG, 1-\/dstB, 1-\/dstA \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+D\+S\+T\+\_\+\+A\+L\+P\+HA@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+D\+S\+T\+\_\+\+A\+L\+P\+HA}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+D\+S\+T\+\_\+\+A\+L\+P\+HA@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+D\+S\+T\+\_\+\+A\+L\+P\+HA}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605cabb3330092906beea2a5d1e275f338e42}\label{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605cabb3330092906beea2a5d1e275f338e42}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+D\+S\+T\+\_\+\+A\+L\+P\+HA&dstA, dstA, dstA, dstA \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+D\+S\+T\+\_\+\+A\+L\+P\+HA@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+D\+S\+T\+\_\+\+A\+L\+P\+HA}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+D\+S\+T\+\_\+\+A\+L\+P\+HA@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+D\+S\+T\+\_\+\+A\+L\+P\+HA}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca7419eb5c0c94094f26f1f5183438c9e2}\label{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605ca7419eb5c0c94094f26f1f5183438c9e2}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+F\+A\+C\+T\+O\+R\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+D\+S\+T\+\_\+\+A\+L\+P\+HA&1-\/dstA, 1-\/dstA, 1-\/dstA, 1-\/dstA \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1e}\label{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1e}} 
+\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+Blend\+Mode@{S\+D\+L\+\_\+\+Blend\+Mode}}
+\index{S\+D\+L\+\_\+\+Blend\+Mode@{S\+D\+L\+\_\+\+Blend\+Mode}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Blend\+Mode}{SDL\_BlendMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1e}{S\+D\+L\+\_\+\+Blend\+Mode}}}
+
+
+
+The blend mode used in \mbox{\hyperlink{_s_d_l__render_8h_a4b6c2353384c7b7128fd5960b24f2ae6}{S\+D\+L\+\_\+\+Render\+Copy()}} and drawing operations. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+N\+O\+NE@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+N\+O\+NE}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+N\+O\+NE@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1ea417f2736f69e38ae734e75afa04c57ac}\label{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1ea417f2736f69e38ae734e75afa04c57ac}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+N\+O\+NE&no blending dst\+R\+G\+BA = src\+R\+G\+BA \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+B\+L\+E\+ND@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+B\+L\+E\+ND}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+B\+L\+E\+ND@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+B\+L\+E\+ND}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1eae421984ebfeedd59dfea21e1bdda1883}\label{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1eae421984ebfeedd59dfea21e1bdda1883}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+B\+L\+E\+ND&alpha blending dst\+R\+GB = (src\+R\+GB $\ast$ srcA) + (dst\+R\+GB $\ast$ (1-\/srcA)) dstA = srcA + (dstA $\ast$ (1-\/srcA)) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+A\+DD@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+A\+DD}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+A\+DD@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+A\+DD}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1ea4af39da8d41a1765fb26425a3ca4391e}\label{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1ea4af39da8d41a1765fb26425a3ca4391e}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+A\+DD&additive blending dst\+R\+GB = (src\+R\+GB $\ast$ srcA) + dst\+R\+GB dstA = dstA \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+M\+OD@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+M\+OD}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+M\+OD@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+M\+OD}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1eaf7714323757a614d3e506be37cd28c43}\label{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1eaf7714323757a614d3e506be37cd28c43}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+M\+OD&color modulate dst\+R\+GB = src\+R\+GB $\ast$ dst\+R\+GB dstA = dstA \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+I\+N\+V\+A\+L\+ID@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+I\+N\+V\+A\+L\+ID}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+I\+N\+V\+A\+L\+ID@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+I\+N\+V\+A\+L\+ID}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1eae478ff9a0e5e1a5d1418c69d28061e82}\label{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1eae478ff9a0e5e1a5d1418c69d28061e82}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+M\+O\+D\+E\+\_\+\+I\+N\+V\+A\+L\+ID&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502}\label{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502}} 
+\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+Blend\+Operation@{S\+D\+L\+\_\+\+Blend\+Operation}}
+\index{S\+D\+L\+\_\+\+Blend\+Operation@{S\+D\+L\+\_\+\+Blend\+Operation}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Blend\+Operation}{SDL\_BlendOperation}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502}{S\+D\+L\+\_\+\+Blend\+Operation}}}
+
+
+
+The blend operation used when combining source and destination pixel components. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+A\+DD@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+A\+DD}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+A\+DD@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+A\+DD}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502a79c1a3992734df94dc21b0dd2eaf9cc3}\label{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502a79c1a3992734df94dc21b0dd2eaf9cc3}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+A\+DD&dst + src\+: supported by all renderers \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+S\+U\+B\+T\+R\+A\+CT@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+S\+U\+B\+T\+R\+A\+CT}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+S\+U\+B\+T\+R\+A\+CT@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+S\+U\+B\+T\+R\+A\+CT}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502acd41cbbe8ee275638a8c9ef97de2eae5}\label{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502acd41cbbe8ee275638a8c9ef97de2eae5}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+S\+U\+B\+T\+R\+A\+CT&dst -\/ src \+: supported by D3\+D9, D3\+D11, Open\+GL, Open\+G\+L\+ES \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+R\+E\+V\+\_\+\+S\+U\+B\+T\+R\+A\+CT@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+R\+E\+V\+\_\+\+S\+U\+B\+T\+R\+A\+CT}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+R\+E\+V\+\_\+\+S\+U\+B\+T\+R\+A\+CT@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+R\+E\+V\+\_\+\+S\+U\+B\+T\+R\+A\+CT}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502a6f55ae40255c3d8c9927a85ea836d518}\label{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502a6f55ae40255c3d8c9927a85ea836d518}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+R\+E\+V\+\_\+\+S\+U\+B\+T\+R\+A\+CT&src -\/ dst \+: supported by D3\+D9, D3\+D11, Open\+GL, Open\+G\+L\+ES \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+I\+N\+I\+M\+UM@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+I\+N\+I\+M\+UM}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+I\+N\+I\+M\+UM@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+I\+N\+I\+M\+UM}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502a49762d60e4bf6edcf42c7f7aa3c51fbd}\label{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502a49762d60e4bf6edcf42c7f7aa3c51fbd}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+I\+N\+I\+M\+UM&min(dst, src) \+: supported by D3\+D11 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+A\+X\+I\+M\+UM@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+A\+X\+I\+M\+UM}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+A\+X\+I\+M\+UM@{S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+A\+X\+I\+M\+UM}}}\mbox{\Hypertarget{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502a236541634d3e80b4932b6c8a6b278f2a}\label{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502a236541634d3e80b4932b6c8a6b278f2a}} 
+S\+D\+L\+\_\+\+B\+L\+E\+N\+D\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+A\+X\+I\+M\+UM&max(dst, src) \+: supported by D3\+D11 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_s_d_l__blendmode_8h_a68566100acaa096e94f213a9768c6b6d}\label{_s_d_l__blendmode_8h_a68566100acaa096e94f213a9768c6b6d}} 
+\index{S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}!S\+D\+L\+\_\+\+Compose\+Custom\+Blend\+Mode@{S\+D\+L\+\_\+\+Compose\+Custom\+Blend\+Mode}}
+\index{S\+D\+L\+\_\+\+Compose\+Custom\+Blend\+Mode@{S\+D\+L\+\_\+\+Compose\+Custom\+Blend\+Mode}!S\+D\+L\+\_\+blendmode.\+h@{S\+D\+L\+\_\+blendmode.\+h}}
+\subsubsection{\texorpdfstring{S\+D\+L\+\_\+\+Compose\+Custom\+Blend\+Mode()}{SDL\_ComposeCustomBlendMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1e}{S\+D\+L\+\_\+\+Blend\+Mode}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Compose\+Custom\+Blend\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605c}{S\+D\+L\+\_\+\+Blend\+Factor}}}]{src\+Color\+Factor,  }\item[{\mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605c}{S\+D\+L\+\_\+\+Blend\+Factor}}}]{dst\+Color\+Factor,  }\item[{\mbox{\hyperlink{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502}{S\+D\+L\+\_\+\+Blend\+Operation}}}]{color\+Operation,  }\item[{\mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605c}{S\+D\+L\+\_\+\+Blend\+Factor}}}]{src\+Alpha\+Factor,  }\item[{\mbox{\hyperlink{_s_d_l__blendmode_8h_ae7649e376a461512af328b39f3d9605c}{S\+D\+L\+\_\+\+Blend\+Factor}}}]{dst\+Alpha\+Factor,  }\item[{\mbox{\hyperlink{_s_d_l__blendmode_8h_a54ae8d3f832db7354f4fda522835f502}{S\+D\+L\+\_\+\+Blend\+Operation}}}]{alpha\+Operation }\end{DoxyParamCaption})}
+
+
+
+Create a custom blend mode, which may or may not be supported by a given renderer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+Color\+Factor} & \\
+\hline
+{\em dst\+Color\+Factor} & \\
+\hline
+{\em color\+Operation} & \\
+\hline
+{\em src\+Alpha\+Factor} & \\
+\hline
+{\em dst\+Alpha\+Factor} & \\
+\hline
+{\em alpha\+Operation} & The result of the blend mode operation will be\+: dst\+R\+GB = dst\+R\+GB $\ast$ dst\+Color\+Factor color\+Operation src\+R\+GB $\ast$ src\+Color\+Factor and dstA = dstA $\ast$ dst\+Alpha\+Factor alpha\+Operation srcA $\ast$ src\+Alpha\+Factor \\
+\hline
+\end{DoxyParams}

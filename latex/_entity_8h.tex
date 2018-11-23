@@ -8,7 +8,7 @@
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity}{Aspect\+::\+Engine\+::\+Entity}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initialise the component class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,11 +19,19 @@ class \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity}{Aspect\+::\+Engine\+:
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
+\#define \mbox{\hyperlink{_entity_8h_adf0fb5fb7c55a8ea2c95063dddd6a779}{\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+H\+\_\+}}
+\item 
 \#define \mbox{\hyperlink{_entity_8h_a6869d9f71eebbab486a7839b37bfc3c6}{A\+D\+D\+C\+O\+M\+P\+O\+N\+E\+NT}}
 \end{DoxyCompactItemize}
 
 
 \subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_entity_8h_adf0fb5fb7c55a8ea2c95063dddd6a779}\label{_entity_8h_adf0fb5fb7c55a8ea2c95063dddd6a779}} 
+\index{Entity.\+h@{Entity.\+h}!\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+H\+\_\+@{\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+H\+\_\+}}
+\index{\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+H\+\_\+@{\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+H\+\_\+}!Entity.\+h@{Entity.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+H\+\_\+}{\_ENTITY\_H\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+H\+\_\+}
+
 \mbox{\Hypertarget{_entity_8h_a6869d9f71eebbab486a7839b37bfc3c6}\label{_entity_8h_a6869d9f71eebbab486a7839b37bfc3c6}} 
 \index{Entity.\+h@{Entity.\+h}!A\+D\+D\+C\+O\+M\+P\+O\+N\+E\+NT@{A\+D\+D\+C\+O\+M\+P\+O\+N\+E\+NT}}
 \index{A\+D\+D\+C\+O\+M\+P\+O\+N\+E\+NT@{A\+D\+D\+C\+O\+M\+P\+O\+N\+E\+NT}!Entity.\+h@{Entity.\+h}}
@@ -33,5 +41,7 @@ class \mbox{\hyperlink{class_aspect_1_1_engine_1_1_entity}{Aspect\+::\+Engine\+:
 {\bfseries Value\+:}
 \begin{DoxyCode}
 std::shared\_ptr<T> rtn = std::make\_shared<T>(); \(\backslash\)
+  rtn->entity = \textcolor{keyword}{self}; \(\backslash\)
+  rtn->m\_begin = \textcolor{keyword}{false}; \(\backslash\)
   components.push\_back(rtn);
 \end{DoxyCode}
